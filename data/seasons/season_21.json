@@ -1,0 +1,3155 @@
+{
+  "season_id": "21",
+  "season_name": "2020-2021",
+  "teams": [
+    {
+      "id": "juventus",
+      "name": "Juventus",
+      "real_points": 87,
+      "squad_strength": {
+        "att_ovr": 90,
+        "mid_ovr": 85,
+        "def_ovr": 85,
+        "gk_ovr": 87
+      },
+      "players": [
+        {
+          "Nome": "Cristiano Ronaldo",
+          "Ruolo": "ATT, AS",
+          "Overall": 92
+        },
+        {
+          "Nome": "P. Dybala",
+          "Ruolo": "AT, COC",
+          "Overall": 88
+        },
+        {
+          "Nome": "G. Chiellini",
+          "Ruolo": "DC",
+          "Overall": 87
+        },
+        {
+          "Nome": "W. Szczęsny",
+          "Ruolo": "POR",
+          "Overall": 87
+        },
+        {
+          "Nome": "L. Bonucci",
+          "Ruolo": "DC",
+          "Overall": 85
+        },
+        {
+          "Nome": "Alex Sandro",
+          "Ruolo": "TS, ES",
+          "Overall": 85
+        },
+        {
+          "Nome": "M. de Ligt",
+          "Ruolo": "DC",
+          "Overall": 85
+        },
+        {
+          "Nome": "Douglas Costa",
+          "Ruolo": "ES, AD, AS",
+          "Overall": 84
+        },
+        {
+          "Nome": "Arthur",
+          "Ruolo": "CC",
+          "Overall": 84
+        },
+        {
+          "Nome": "G. Buffon",
+          "Ruolo": "POR",
+          "Overall": 82
+        },
+        {
+          "Nome": "A. Ramsey",
+          "Ruolo": "CC, COC",
+          "Overall": 82
+        },
+        {
+          "Nome": "S. Khedira",
+          "Ruolo": "CC, CDC",
+          "Overall": 81
+        },
+        {
+          "Nome": "J. Cuadrado",
+          "Ruolo": "TD, ED, AD",
+          "Overall": 81
+        },
+        {
+          "Nome": "A. Rabiot",
+          "Ruolo": "CC, CDC",
+          "Overall": 81
+        },
+        {
+          "Nome": "D. Rugani",
+          "Ruolo": "DC",
+          "Overall": 80
+        },
+        {
+          "Nome": "F. Bernardeschi",
+          "Ruolo": "COC, ED",
+          "Overall": 80
+        },
+        {
+          "Nome": "Danilo",
+          "Ruolo": "TD, TS",
+          "Overall": 79
+        },
+        {
+          "Nome": "R. Bentancur",
+          "Ruolo": "CC",
+          "Overall": 79
+        },
+        {
+          "Nome": "M. De Sciglio",
+          "Ruolo": "TD, TS",
+          "Overall": 78
+        },
+        {
+          "Nome": "D. Kulusevski",
+          "Ruolo": "AD, COC",
+          "Overall": 77
+        },
+        {
+          "Nome": "M. Demiral",
+          "Ruolo": "DC",
+          "Overall": 76
+        },
+        {
+          "Nome": "W. McKennie",
+          "Ruolo": "CC, CDC, DC",
+          "Overall": 75
+        },
+        {
+          "Nome": "C. Pinsoglio",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "L. Pellegrini",
+          "Ruolo": "TS",
+          "Overall": 72
+        },
+        {
+          "Nome": "L. Clemenza",
+          "Ruolo": "COC, CC",
+          "Overall": 66
+        },
+        {
+          "Nome": "Félix Correia",
+          "Ruolo": "AD, AS",
+          "Overall": 66
+        },
+        {
+          "Nome": "H. Rafia",
+          "Ruolo": "COC",
+          "Overall": 65
+        },
+        {
+          "Nome": "D. Peeters",
+          "Ruolo": "CDC",
+          "Overall": 65
+        },
+        {
+          "Nome": "G. Frabotta",
+          "Ruolo": "TS",
+          "Overall": 64
+        },
+        {
+          "Nome": "L. Coccolo",
+          "Ruolo": "TS",
+          "Overall": 62
+        },
+        {
+          "Nome": "H. Nicolussi Caviglia",
+          "Ruolo": "CC, COC",
+          "Overall": 62
+        }
+      ]
+    },
+    {
+      "id": "inter",
+      "name": "Inter",
+      "real_points": 79,
+      "squad_strength": {
+        "att_ovr": 84,
+        "mid_ovr": 83,
+        "def_ovr": 84,
+        "gk_ovr": 88
+      },
+      "players": [
+        {
+          "Nome": "S. Handanovič",
+          "Ruolo": "POR",
+          "Overall": 88
+        },
+        {
+          "Nome": "D. Godín",
+          "Ruolo": "DC",
+          "Overall": 85
+        },
+        {
+          "Nome": "C. Eriksen",
+          "Ruolo": "COC, CC, ED",
+          "Overall": 85
+        },
+        {
+          "Nome": "R. Lukaku",
+          "Ruolo": "ATT",
+          "Overall": 85
+        },
+        {
+          "Nome": "M. Škriniar",
+          "Ruolo": "DC",
+          "Overall": 85
+        },
+        {
+          "Nome": "S. de Vrij",
+          "Ruolo": "DC",
+          "Overall": 84
+        },
+        {
+          "Nome": "M. Brozović",
+          "Ruolo": "CDC, CC",
+          "Overall": 84
+        },
+        {
+          "Nome": "L. Martínez",
+          "Ruolo": "ATT",
+          "Overall": 84
+        },
+        {
+          "Nome": "R. Nainggolan",
+          "Ruolo": "COC, CC, AT",
+          "Overall": 83
+        },
+        {
+          "Nome": "A. Vidal",
+          "Ruolo": "CC, CDC, COC",
+          "Overall": 83
+        },
+        {
+          "Nome": "A. Hakimi",
+          "Ruolo": "ED",
+          "Overall": 83
+        },
+        {
+          "Nome": "I. Perišić",
+          "Ruolo": "ES, AS",
+          "Overall": 82
+        },
+        {
+          "Nome": "A. Kolarov",
+          "Ruolo": "TS",
+          "Overall": 82
+        },
+        {
+          "Nome": "A. Sánchez",
+          "Ruolo": "AS, ES",
+          "Overall": 80
+        },
+        {
+          "Nome": "João Mário",
+          "Ruolo": "CC, COC, ES",
+          "Overall": 80
+        },
+        {
+          "Nome": "M. Vecino",
+          "Ruolo": "CDC",
+          "Overall": 80
+        },
+        {
+          "Nome": "N. Barella",
+          "Ruolo": "CC, COC",
+          "Overall": 80
+        },
+        {
+          "Nome": "A. Candreva",
+          "Ruolo": "ED",
+          "Overall": 78
+        },
+        {
+          "Nome": "R. Gagliardini",
+          "Ruolo": "CDC, CC",
+          "Overall": 78
+        },
+        {
+          "Nome": "S. Sensi",
+          "Ruolo": "CC, CDC",
+          "Overall": 78
+        },
+        {
+          "Nome": "A. Young",
+          "Ruolo": "ES, ED, TD",
+          "Overall": 77
+        },
+        {
+          "Nome": "D. D'Ambrosio",
+          "Ruolo": "TD, TS, DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "K. Asamoah",
+          "Ruolo": "ES, TS",
+          "Overall": 76
+        },
+        {
+          "Nome": "I. Radu",
+          "Ruolo": "POR",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Bastoni",
+          "Ruolo": "DC",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Ranocchia",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "D. Padelli",
+          "Ruolo": "POR",
+          "Overall": 73
+        },
+        {
+          "Nome": "Dalbert",
+          "Ruolo": "ES, TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "A. Pinamonti",
+          "Ruolo": "ATT",
+          "Overall": 68
+        },
+        {
+          "Nome": "E. Salcedo",
+          "Ruolo": "AT, ATT",
+          "Overall": 67
+        },
+        {
+          "Nome": "S. Esposito",
+          "Ruolo": "ATT",
+          "Overall": 66
+        },
+        {
+          "Nome": "L. Agoume",
+          "Ruolo": "CC",
+          "Overall": 63
+        },
+        {
+          "Nome": "L. Pirola",
+          "Ruolo": "DC",
+          "Overall": 63
+        }
+      ]
+    },
+    {
+      "id": "napoli",
+      "name": "Napoli",
+      "real_points": 66,
+      "squad_strength": {
+        "att_ovr": 85,
+        "mid_ovr": 80,
+        "def_ovr": 82,
+        "gk_ovr": 79
+      },
+      "players": [
+        {
+          "Nome": "K. Koulibaly",
+          "Ruolo": "DC",
+          "Overall": 88
+        },
+        {
+          "Nome": "D. Mertens",
+          "Ruolo": "AT, ATT",
+          "Overall": 85
+        },
+        {
+          "Nome": "L. Insigne",
+          "Ruolo": "AS, AT",
+          "Overall": 85
+        },
+        {
+          "Nome": "K. Manolas",
+          "Ruolo": "DC",
+          "Overall": 83
+        },
+        {
+          "Nome": "Fabián",
+          "Ruolo": "CC",
+          "Overall": 82
+        },
+        {
+          "Nome": "A. Milik",
+          "Ruolo": "ATT",
+          "Overall": 81
+        },
+        {
+          "Nome": "M. Politano",
+          "Ruolo": "ED, AD, ATT",
+          "Overall": 81
+        },
+        {
+          "Nome": "P. Zieliński",
+          "Ruolo": "CC, ES",
+          "Overall": 80
+        },
+        {
+          "Nome": "H. Lozano",
+          "Ruolo": "AD, ATT, AS",
+          "Overall": 80
+        },
+        {
+          "Nome": "D. Ospina",
+          "Ruolo": "POR",
+          "Overall": 79
+        },
+        {
+          "Nome": "F. Ghoulam",
+          "Ruolo": "TS",
+          "Overall": 79
+        },
+        {
+          "Nome": "Mário Rui",
+          "Ruolo": "TS",
+          "Overall": 79
+        },
+        {
+          "Nome": "V. Osimhen",
+          "Ruolo": "ATT",
+          "Overall": 79
+        },
+        {
+          "Nome": "K. Malcuit",
+          "Ruolo": "TD, ED",
+          "Overall": 78
+        },
+        {
+          "Nome": "D. Demme",
+          "Ruolo": "CDC, CC",
+          "Overall": 78
+        },
+        {
+          "Nome": "E. Hysaj",
+          "Ruolo": "TD, TS",
+          "Overall": 78
+        },
+        {
+          "Nome": "S. Lobotka",
+          "Ruolo": "CC, CDC",
+          "Overall": 78
+        },
+        {
+          "Nome": "A. Meret",
+          "Ruolo": "POR",
+          "Overall": 78
+        },
+        {
+          "Nome": "N. Maksimović",
+          "Ruolo": "DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "A. Petagna",
+          "Ruolo": "ATT",
+          "Overall": 76
+        },
+        {
+          "Nome": "G. Di Lorenzo",
+          "Ruolo": "TD, ED",
+          "Overall": 76
+        },
+        {
+          "Nome": "A. Rrahmani",
+          "Ruolo": "DC",
+          "Overall": 76
+        },
+        {
+          "Nome": "Llorente",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Younes",
+          "Ruolo": "AS, ES",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Ounas",
+          "Ruolo": "AD, AS, AT",
+          "Overall": 74
+        },
+        {
+          "Nome": "A. Ciciretti",
+          "Ruolo": "AD, COC",
+          "Overall": 73
+        },
+        {
+          "Nome": "G. Tutino",
+          "Ruolo": "ATT, AS",
+          "Overall": 72
+        },
+        {
+          "Nome": "E. Elmas",
+          "Ruolo": "CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "S. Luperto",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "L. Palmiero",
+          "Ruolo": "CC, CDC",
+          "Overall": 68
+        },
+        {
+          "Nome": "Z. Machach",
+          "Ruolo": "COC, CC, ATT",
+          "Overall": 68
+        },
+        {
+          "Nome": "N. Contini",
+          "Ruolo": "POR",
+          "Overall": 64
+        },
+        {
+          "Nome": "A. Bifulco",
+          "Ruolo": "AT, COC, AS",
+          "Overall": 62
+        }
+      ]
+    },
+    {
+      "id": "lazio",
+      "name": "Lazio",
+      "real_points": 74,
+      "squad_strength": {
+        "att_ovr": 86,
+        "mid_ovr": 83,
+        "def_ovr": 82,
+        "gk_ovr": 83
+      },
+      "players": [
+        {
+          "Nome": "C. Immobile",
+          "Ruolo": "ATT",
+          "Overall": 87
+        },
+        {
+          "Nome": "Luis Alberto",
+          "Ruolo": "COC, CC, AT",
+          "Overall": 85
+        },
+        {
+          "Nome": "S. Milinković-Savić",
+          "Ruolo": "CC, CDC, COC",
+          "Overall": 85
+        },
+        {
+          "Nome": "Lucas Leiva",
+          "Ruolo": "CDC",
+          "Overall": 84
+        },
+        {
+          "Nome": "F. Acerbi",
+          "Ruolo": "DC",
+          "Overall": 83
+        },
+        {
+          "Nome": "T. Strakosha",
+          "Ruolo": "POR",
+          "Overall": 83
+        },
+        {
+          "Nome": "J. Correa",
+          "Ruolo": "AT, ATT, COC",
+          "Overall": 81
+        },
+        {
+          "Nome": "M. Lazzari",
+          "Ruolo": "ED",
+          "Overall": 81
+        },
+        {
+          "Nome": "Pepe Reina",
+          "Ruolo": "POR",
+          "Overall": 79
+        },
+        {
+          "Nome": "M. Parolo",
+          "Ruolo": "CDC, CC",
+          "Overall": 79
+        },
+        {
+          "Nome": "Ș. Radu",
+          "Ruolo": "DC",
+          "Overall": 78
+        },
+        {
+          "Nome": "F. Caicedo",
+          "Ruolo": "AT, ATT",
+          "Overall": 78
+        },
+        {
+          "Nome": "S. Lulić",
+          "Ruolo": "ES",
+          "Overall": 78
+        },
+        {
+          "Nome": "Bastos",
+          "Ruolo": "DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "G. Escalante",
+          "Ruolo": "CDC, CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "A. Marušić",
+          "Ruolo": "ED",
+          "Overall": 77
+        },
+        {
+          "Nome": "Luiz Felipe",
+          "Ruolo": "DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "J. Lukaku",
+          "Ruolo": "ES, TS",
+          "Overall": 76
+        },
+        {
+          "Nome": "V. Muriqi",
+          "Ruolo": "ATT",
+          "Overall": 76
+        },
+        {
+          "Nome": "S. Proto",
+          "Ruolo": "POR",
+          "Overall": 75
+        },
+        {
+          "Nome": "R. Durmisi",
+          "Ruolo": "TS, ASA, ES",
+          "Overall": 74
+        },
+        {
+          "Nome": "Wallace",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "Patric",
+          "Ruolo": "DC, TD, ED",
+          "Overall": 73
+        },
+        {
+          "Nome": "D. Cataldi",
+          "Ruolo": "CC, CDC",
+          "Overall": 73
+        },
+        {
+          "Nome": "J. Akpa Akpro",
+          "Ruolo": "CC",
+          "Overall": 71
+        },
+        {
+          "Nome": "D. Vavro",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "P. Dziczek",
+          "Ruolo": "CDC",
+          "Overall": 68
+        },
+        {
+          "Nome": "S. Kiyine",
+          "Ruolo": "CC, ES, ED",
+          "Overall": 68
+        },
+        {
+          "Nome": "D. Di Gennaro",
+          "Ruolo": "CC, COC",
+          "Overall": 66
+        },
+        {
+          "Nome": "D. Anderson",
+          "Ruolo": "TD",
+          "Overall": 65
+        },
+        {
+          "Nome": "N. Armini",
+          "Ruolo": "DC",
+          "Overall": 65
+        },
+        {
+          "Nome": "B. Adekanye",
+          "Ruolo": "AD, AS",
+          "Overall": 64
+        },
+        {
+          "Nome": "André Anderson",
+          "Ruolo": "AT, COC",
+          "Overall": 64
+        }
+      ]
+    },
+    {
+      "id": "atalanta",
+      "name": "Atalanta",
+      "real_points": 64,
+      "squad_strength": {
+        "att_ovr": 85,
+        "mid_ovr": 82,
+        "def_ovr": 78,
+        "gk_ovr": 79
+      },
+      "players": [
+        {
+          "Nome": "A. Gómez",
+          "Ruolo": "COC, AT, ATT",
+          "Overall": 86
+        },
+        {
+          "Nome": "J. Iličić",
+          "Ruolo": "AT, ATT",
+          "Overall": 84
+        },
+        {
+          "Nome": "D. Zapata",
+          "Ruolo": "ATT",
+          "Overall": 83
+        },
+        {
+          "Nome": "R. Gosens",
+          "Ruolo": "ES",
+          "Overall": 82
+        },
+        {
+          "Nome": "M. de Roon",
+          "Ruolo": "CDC, CC",
+          "Overall": 81
+        },
+        {
+          "Nome": "L. Muriel",
+          "Ruolo": "ATT",
+          "Overall": 79
+        },
+        {
+          "Nome": "P. Gollini",
+          "Ruolo": "POR",
+          "Overall": 79
+        },
+        {
+          "Nome": "A. Miranchuk",
+          "Ruolo": "COC, ATT",
+          "Overall": 79
+        },
+        {
+          "Nome": "R. Malinovskyi",
+          "Ruolo": "CC, AT",
+          "Overall": 79
+        },
+        {
+          "Nome": "R. Freuler",
+          "Ruolo": "CC",
+          "Overall": 78
+        },
+        {
+          "Nome": "H. Hateboer",
+          "Ruolo": "ED",
+          "Overall": 78
+        },
+        {
+          "Nome": "M. Caldara",
+          "Ruolo": "DC",
+          "Overall": 78
+        },
+        {
+          "Nome": "Rafael Tolói",
+          "Ruolo": "DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "M. Pašalić",
+          "Ruolo": "CC, COC",
+          "Overall": 77
+        },
+        {
+          "Nome": "C. Piccini",
+          "Ruolo": "TD",
+          "Overall": 76
+        },
+        {
+          "Nome": "B. Djimsiti",
+          "Ruolo": "DC",
+          "Overall": 76
+        },
+        {
+          "Nome": "M. Sportiello",
+          "Ruolo": "POR",
+          "Overall": 76
+        },
+        {
+          "Nome": "J. Palomino",
+          "Ruolo": "DC",
+          "Overall": 76
+        },
+        {
+          "Nome": "J. Mojica",
+          "Ruolo": "TS, ES",
+          "Overall": 75
+        },
+        {
+          "Nome": "S. Lammers",
+          "Ruolo": "ATT",
+          "Overall": 74
+        },
+        {
+          "Nome": "M. Pessina",
+          "Ruolo": "CC, AT",
+          "Overall": 74
+        },
+        {
+          "Nome": "C. Romero",
+          "Ruolo": "DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "B. Šutalo",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "N. Haas",
+          "Ruolo": "CC, CDC",
+          "Overall": 70
+        },
+        {
+          "Nome": "A. Reca",
+          "Ruolo": "ES, TS",
+          "Overall": 69
+        },
+        {
+          "Nome": "B. Radunović",
+          "Ruolo": "POR",
+          "Overall": 68
+        },
+        {
+          "Nome": "R. Bellanova",
+          "Ruolo": "TD",
+          "Overall": 68
+        },
+        {
+          "Nome": "C. Capone",
+          "Ruolo": "AS, AT",
+          "Overall": 66
+        },
+        {
+          "Nome": "M. Carnesecchi",
+          "Ruolo": "POR",
+          "Overall": 66
+        },
+        {
+          "Nome": "E. Colley",
+          "Ruolo": "ATT",
+          "Overall": 63
+        },
+        {
+          "Nome": "J. Da Riva",
+          "Ruolo": "CC",
+          "Overall": 61
+        },
+        {
+          "Nome": "F. Rossi",
+          "Ruolo": "POR",
+          "Overall": 60
+        },
+        {
+          "Nome": "D. Traore",
+          "Ruolo": "ATT",
+          "Overall": 60
+        }
+      ]
+    },
+    {
+      "id": "milan",
+      "name": "Milan",
+      "real_points": 64,
+      "squad_strength": {
+        "att_ovr": 81,
+        "mid_ovr": 78,
+        "def_ovr": 80,
+        "gk_ovr": 85
+      },
+      "players": [
+        {
+          "Nome": "G. Donnarumma",
+          "Ruolo": "POR",
+          "Overall": 85
+        },
+        {
+          "Nome": "Z. Ibrahimović",
+          "Ruolo": "ATT",
+          "Overall": 83
+        },
+        {
+          "Nome": "A. Romagnoli",
+          "Ruolo": "DC",
+          "Overall": 83
+        },
+        {
+          "Nome": "S. Kjær",
+          "Ruolo": "DC",
+          "Overall": 80
+        },
+        {
+          "Nome": "T. Hernández",
+          "Ruolo": "TS",
+          "Overall": 80
+        },
+        {
+          "Nome": "H. Çalhanoğlu",
+          "Ruolo": "AS, CC",
+          "Overall": 79
+        },
+        {
+          "Nome": "Samu Castillejo",
+          "Ruolo": "ED, ES",
+          "Overall": 79
+        },
+        {
+          "Nome": "A. Rebić",
+          "Ruolo": "ATT, COC",
+          "Overall": 79
+        },
+        {
+          "Nome": "M. Musacchio",
+          "Ruolo": "DC",
+          "Overall": 78
+        },
+        {
+          "Nome": "C. Tătărușanu",
+          "Ruolo": "POR",
+          "Overall": 78
+        },
+        {
+          "Nome": "D. Laxalt",
+          "Ruolo": "ES",
+          "Overall": 77
+        },
+        {
+          "Nome": "A. Conti",
+          "Ruolo": "TD, ED",
+          "Overall": 77
+        },
+        {
+          "Nome": "F. Kessié",
+          "Ruolo": "CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Tonali",
+          "Ruolo": "CDC, CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "D. Calabria",
+          "Ruolo": "TD",
+          "Overall": 76
+        },
+        {
+          "Nome": "Lucas Paquetá",
+          "Ruolo": "CC, COC",
+          "Overall": 76
+        },
+        {
+          "Nome": "I. Bennacer",
+          "Ruolo": "CDC, CC",
+          "Overall": 75
+        },
+        {
+          "Nome": "Brahim",
+          "Ruolo": "AS, AD",
+          "Overall": 74
+        },
+        {
+          "Nome": "Rafael Leão",
+          "Ruolo": "ATT",
+          "Overall": 74
+        },
+        {
+          "Nome": "R. Krunić",
+          "Ruolo": "CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "A. Saelemaekers",
+          "Ruolo": "AD, COC, AS",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Halilović",
+          "Ruolo": "COC, ED",
+          "Overall": 71
+        },
+        {
+          "Nome": "Léo Duarte",
+          "Ruolo": "DC, TD",
+          "Overall": 71
+        },
+        {
+          "Nome": "T. Pobega",
+          "Ruolo": "CC",
+          "Overall": 67
+        },
+        {
+          "Nome": "A. Donnarumma",
+          "Ruolo": "POR",
+          "Overall": 66
+        },
+        {
+          "Nome": "P. Kalulu",
+          "Ruolo": "TD, DC",
+          "Overall": 66
+        },
+        {
+          "Nome": "M. Gabbia",
+          "Ruolo": "DC",
+          "Overall": 63
+        },
+        {
+          "Nome": "L. Colombo",
+          "Ruolo": "ATT",
+          "Overall": 61
+        },
+        {
+          "Nome": "D. Maldini",
+          "Ruolo": "COC",
+          "Overall": 59
+        },
+        {
+          "Nome": "G. Bellodi",
+          "Ruolo": "DC",
+          "Overall": 58
+        }
+      ]
+    },
+    {
+      "id": "torino",
+      "name": "Torino",
+      "real_points": 57,
+      "squad_strength": {
+        "att_ovr": 78,
+        "mid_ovr": 77,
+        "def_ovr": 78,
+        "gk_ovr": 84
+      },
+      "players": [
+        {
+          "Nome": "S. Sirigu",
+          "Ruolo": "POR",
+          "Overall": 84
+        },
+        {
+          "Nome": "N. Nkoulou",
+          "Ruolo": "DC",
+          "Overall": 80
+        },
+        {
+          "Nome": "A. Belotti",
+          "Ruolo": "ATT",
+          "Overall": 80
+        },
+        {
+          "Nome": "A. Izzo",
+          "Ruolo": "DC",
+          "Overall": 79
+        },
+        {
+          "Nome": "C. Ansaldi",
+          "Ruolo": "ES, TS",
+          "Overall": 78
+        },
+        {
+          "Nome": "R. Rodríguez",
+          "Ruolo": "TS",
+          "Overall": 78
+        },
+        {
+          "Nome": "Iago Falqué",
+          "Ruolo": "AT, ATT, AD",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Verdi",
+          "Ruolo": "AT, COC, AS",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Zaza",
+          "Ruolo": "ATT",
+          "Overall": 77
+        },
+        {
+          "Nome": "D. Baselli",
+          "Ruolo": "CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Meïté",
+          "Ruolo": "CC, CDC",
+          "Overall": 76
+        },
+        {
+          "Nome": "Alex Berenguer",
+          "Ruolo": "AT, ATT, AS",
+          "Overall": 76
+        },
+        {
+          "Nome": "T. Rincón",
+          "Ruolo": "CC, CDC",
+          "Overall": 75
+        },
+        {
+          "Nome": "K. Linetty",
+          "Ruolo": "CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "S. Lukić",
+          "Ruolo": "CC, CDC",
+          "Overall": 74
+        },
+        {
+          "Nome": "N. Murru",
+          "Ruolo": "TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "M. Vojvoda",
+          "Ruolo": "TD, DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "K. Djidji",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "Lyanco",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "Bremer",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "A. Rosati",
+          "Ruolo": "POR",
+          "Overall": 69
+        },
+        {
+          "Nome": "S. Ujkani",
+          "Ruolo": "POR",
+          "Overall": 69
+        },
+        {
+          "Nome": "V. Milinković-Savić",
+          "Ruolo": "POR",
+          "Overall": 68
+        },
+        {
+          "Nome": "J. Segre",
+          "Ruolo": "CC",
+          "Overall": 67
+        },
+        {
+          "Nome": "S. Edera",
+          "Ruolo": "AD, AT, COC",
+          "Overall": 66
+        },
+        {
+          "Nome": "A. Zaccagno",
+          "Ruolo": "POR",
+          "Overall": 64
+        },
+        {
+          "Nome": "A. Buongiorno",
+          "Ruolo": "TS, DC",
+          "Overall": 63
+        },
+        {
+          "Nome": "A. Fiordaliso",
+          "Ruolo": "TD, TS",
+          "Overall": 62
+        },
+        {
+          "Nome": "V. Millico",
+          "Ruolo": "AS, ATT",
+          "Overall": 61
+        },
+        {
+          "Nome": "E. Ferigra",
+          "Ruolo": "DC",
+          "Overall": 59
+        },
+        {
+          "Nome": "W. Singo",
+          "Ruolo": "DC",
+          "Overall": 59
+        },
+        {
+          "Nome": "M. Adopo",
+          "Ruolo": "CC, CDC",
+          "Overall": 58
+        },
+        {
+          "Nome": "C. Celesia",
+          "Ruolo": "DC, TS",
+          "Overall": 58
+        }
+      ]
+    },
+    {
+      "id": "genoa",
+      "name": "Genoa",
+      "real_points": 50,
+      "squad_strength": {
+        "att_ovr": 76,
+        "mid_ovr": 76,
+        "def_ovr": 76,
+        "gk_ovr": 82
+      },
+      "players": [
+        {
+          "Nome": "M. Perin",
+          "Ruolo": "POR",
+          "Overall": 82
+        },
+        {
+          "Nome": "D. Criscito",
+          "Ruolo": "TS, DC, ES",
+          "Overall": 78
+        },
+        {
+          "Nome": "D. Zappacosta",
+          "Ruolo": "TD, ADA",
+          "Overall": 78
+        },
+        {
+          "Nome": "M. Badelj",
+          "Ruolo": "CDC, CC",
+          "Overall": 76
+        },
+        {
+          "Nome": "V. Behrami",
+          "Ruolo": "CDC, CC",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Masiello",
+          "Ruolo": "DC",
+          "Overall": 75
+        },
+        {
+          "Nome": "L. Schøne",
+          "Ruolo": "CC, CDC",
+          "Overall": 75
+        },
+        {
+          "Nome": "M. Pjaca",
+          "Ruolo": "AS, AD, COC",
+          "Overall": 75
+        },
+        {
+          "Nome": "C. Zapata",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "I. Radovanović",
+          "Ruolo": "CDC, CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "L. Lerager",
+          "Ruolo": "CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "M. Zajc",
+          "Ruolo": "COC, CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "G. Pandev",
+          "Ruolo": "ATT, AD",
+          "Overall": 72
+        },
+        {
+          "Nome": "S. Sturaro",
+          "Ruolo": "CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "P. Ankersen",
+          "Ruolo": "TD, ED",
+          "Overall": 72
+        },
+        {
+          "Nome": "D. Biraschi",
+          "Ruolo": "DC, TD",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Marchetti",
+          "Ruolo": "POR",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Destro",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "E. Goldaniga",
+          "Ruolo": "DC",
+          "Overall": 70
+        },
+        {
+          "Nome": "C. Spinelli",
+          "Ruolo": "ATT",
+          "Overall": 70
+        },
+        {
+          "Nome": "P. Ghiglione",
+          "Ruolo": "ED, TD",
+          "Overall": 69
+        },
+        {
+          "Nome": "L. Czyborra",
+          "Ruolo": "TS",
+          "Overall": 69
+        },
+        {
+          "Nome": "V. Parigini",
+          "Ruolo": "AS, AT",
+          "Overall": 68
+        },
+        {
+          "Nome": "F. Cassata",
+          "Ruolo": "CC",
+          "Overall": 68
+        },
+        {
+          "Nome": "M. Curado",
+          "Ruolo": "DC",
+          "Overall": 66
+        },
+        {
+          "Nome": "P. Brlek",
+          "Ruolo": "CC, COC, CDC",
+          "Overall": 66
+        },
+        {
+          "Nome": "J. Asoro",
+          "Ruolo": "ATT, ED",
+          "Overall": 66
+        },
+        {
+          "Nome": "L. Zima",
+          "Ruolo": "POR",
+          "Overall": 64
+        },
+        {
+          "Nome": "F. Jagiełło",
+          "Ruolo": "CC, CDC, COC",
+          "Overall": 64
+        },
+        {
+          "Nome": "Raul Asencio",
+          "Ruolo": "ATT",
+          "Overall": 64
+        },
+        {
+          "Nome": "F. Valietti",
+          "Ruolo": "TD",
+          "Overall": 63
+        },
+        {
+          "Nome": "F. Melegoni",
+          "Ruolo": "CC",
+          "Overall": 62
+        },
+        {
+          "Nome": "N. Rovella",
+          "Ruolo": "CDC",
+          "Overall": 58
+        }
+      ]
+    },
+    {
+      "id": "fiorentina",
+      "name": "Fiorentina",
+      "real_points": 49,
+      "squad_strength": {
+        "att_ovr": 79,
+        "mid_ovr": 79,
+        "def_ovr": 76,
+        "gk_ovr": 75
+      },
+      "players": [
+        {
+          "Nome": "F. Ribéry",
+          "Ruolo": "AT, ES, AS",
+          "Overall": 81
+        },
+        {
+          "Nome": "G. Bonaventura",
+          "Ruolo": "CC",
+          "Overall": 80
+        },
+        {
+          "Nome": "K. Boateng",
+          "Ruolo": "AT, CC",
+          "Overall": 78
+        },
+        {
+          "Nome": "G. Pezzella",
+          "Ruolo": "DC",
+          "Overall": 78
+        },
+        {
+          "Nome": "F. Chiesa",
+          "Ruolo": "AT, AD",
+          "Overall": 78
+        },
+        {
+          "Nome": "Borja Valero",
+          "Ruolo": "COC, CDC",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Amrabat",
+          "Ruolo": "CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "M. Cáceres",
+          "Ruolo": "DC, TD",
+          "Overall": 76
+        },
+        {
+          "Nome": "E. Pulgar",
+          "Ruolo": "CDC, CC",
+          "Overall": 76
+        },
+        {
+          "Nome": "R. Saponara",
+          "Ruolo": "COC, CC",
+          "Overall": 75
+        },
+        {
+          "Nome": "C. Biraghi",
+          "Ruolo": "ES, TS",
+          "Overall": 75
+        },
+        {
+          "Nome": "B. Drągowski",
+          "Ruolo": "POR",
+          "Overall": 75
+        },
+        {
+          "Nome": "C. Kouamé",
+          "Ruolo": "ATT, AT",
+          "Overall": 75
+        },
+        {
+          "Nome": "P. Cutrone",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "N. Milenković",
+          "Ruolo": "DC, TD",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Duncan",
+          "Ruolo": "CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "S. Cristóforo",
+          "Ruolo": "CDC, CC, ES",
+          "Overall": 74
+        },
+        {
+          "Nome": "V. Eysseric",
+          "Ruolo": "AS, COC, AT",
+          "Overall": 73
+        },
+        {
+          "Nome": "G. Castrovilli",
+          "Ruolo": "CC, COC",
+          "Overall": 73
+        },
+        {
+          "Nome": "P. Terracciano",
+          "Ruolo": "POR",
+          "Overall": 71
+        },
+        {
+          "Nome": "Pol Lirola",
+          "Ruolo": "ED, TD",
+          "Overall": 71
+        },
+        {
+          "Nome": "F. Ceccherini",
+          "Ruolo": "DC",
+          "Overall": 70
+        },
+        {
+          "Nome": "L. Venuti",
+          "Ruolo": "TD, TS",
+          "Overall": 70
+        },
+        {
+          "Nome": "D. Vlahović",
+          "Ruolo": "ATT",
+          "Overall": 70
+        },
+        {
+          "Nome": "Igor",
+          "Ruolo": "DC, TS",
+          "Overall": 64
+        },
+        {
+          "Nome": "Tòfol Montiel",
+          "Ruolo": "COC",
+          "Overall": 62
+        },
+        {
+          "Nome": "L. Ranieri",
+          "Ruolo": "DC, TS",
+          "Overall": 61
+        },
+        {
+          "Nome": "C. Dalle Mura",
+          "Ruolo": "DC",
+          "Overall": 60
+        },
+        {
+          "Nome": "P. Hristov",
+          "Ruolo": "DC",
+          "Overall": 59
+        },
+        {
+          "Nome": "J. Illanes",
+          "Ruolo": "DC, TD",
+          "Overall": 59
+        },
+        {
+          "Nome": "B. Duncan",
+          "Ruolo": "ATT",
+          "Overall": 59
+        },
+        {
+          "Nome": "P. Pinto",
+          "Ruolo": "DC",
+          "Overall": 59
+        },
+        {
+          "Nome": "F. Brancolini",
+          "Ruolo": "POR",
+          "Overall": 53
+        }
+      ]
+    },
+    {
+      "id": "sassuolo",
+      "name": "Sassuolo",
+      "real_points": 53,
+      "squad_strength": {
+        "att_ovr": 79,
+        "mid_ovr": 77,
+        "def_ovr": 76,
+        "gk_ovr": 81
+      },
+      "players": [
+        {
+          "Nome": "A. Consigli",
+          "Ruolo": "POR",
+          "Overall": 81
+        },
+        {
+          "Nome": "D. Berardi",
+          "Ruolo": "ED, AD",
+          "Overall": 80
+        },
+        {
+          "Nome": "F. Caputo",
+          "Ruolo": "ATT",
+          "Overall": 79
+        },
+        {
+          "Nome": "M. Locatelli",
+          "Ruolo": "CDC, CC",
+          "Overall": 78
+        },
+        {
+          "Nome": "J. Boga",
+          "Ruolo": "ES, AS",
+          "Overall": 77
+        },
+        {
+          "Nome": "Pedro Obiang",
+          "Ruolo": "CDC, CC",
+          "Overall": 76
+        },
+        {
+          "Nome": "G. Defrel",
+          "Ruolo": "ATT, AD",
+          "Overall": 76
+        },
+        {
+          "Nome": "F. Magnanelli",
+          "Ruolo": "CDC",
+          "Overall": 75
+        },
+        {
+          "Nome": "F. Đuričić",
+          "Ruolo": "COC, AS",
+          "Overall": 75
+        },
+        {
+          "Nome": "K. Ayhan",
+          "Ruolo": "DC",
+          "Overall": 75
+        },
+        {
+          "Nome": "V. Chiricheș",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "J. Toljan",
+          "Ruolo": "TD, TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "Marlon",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Ricci",
+          "Ruolo": "AD, AS",
+          "Overall": 72
+        },
+        {
+          "Nome": "G. Ferrari",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Peluso",
+          "Ruolo": "DC, TS",
+          "Overall": 71
+        },
+        {
+          "Nome": "L. Haraslín",
+          "Ruolo": "ES, ED",
+          "Overall": 71
+        },
+        {
+          "Nome": "H. Traorè",
+          "Ruolo": "COC, CC",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Müldür",
+          "Ruolo": "TD, DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "G. Pegolo",
+          "Ruolo": "POR",
+          "Overall": 70
+        },
+        {
+          "Nome": "L. Mazzitelli",
+          "Ruolo": "CC, CDC",
+          "Overall": 70
+        },
+        {
+          "Nome": "F. Romagna",
+          "Ruolo": "DC",
+          "Overall": 70
+        },
+        {
+          "Nome": "Rogério",
+          "Ruolo": "TS, ES",
+          "Overall": 70
+        },
+        {
+          "Nome": "M. Bourabia",
+          "Ruolo": "CC, CDC, COC",
+          "Overall": 69
+        },
+        {
+          "Nome": "C. Adjapong",
+          "Ruolo": "ES, ED, TD",
+          "Overall": 69
+        },
+        {
+          "Nome": "G. Kyriakopoulos",
+          "Ruolo": "TS",
+          "Overall": 69
+        },
+        {
+          "Nome": "J. Odgaard",
+          "Ruolo": "ATT",
+          "Overall": 66
+        },
+        {
+          "Nome": "G. Scamacca",
+          "Ruolo": "ATT",
+          "Overall": 65
+        },
+        {
+          "Nome": "N. Pierini",
+          "Ruolo": "AS, COC, ATT",
+          "Overall": 64
+        },
+        {
+          "Nome": "G. Raspadori",
+          "Ruolo": "ATT",
+          "Overall": 64
+        },
+        {
+          "Nome": "A. Ghion",
+          "Ruolo": "CDC",
+          "Overall": 59
+        },
+        {
+          "Nome": "S. Turati",
+          "Ruolo": "POR",
+          "Overall": 57
+        },
+        {
+          "Nome": "S. Piccinini",
+          "Ruolo": "DC",
+          "Overall": 52
+        }
+      ]
+    },
+    {
+      "id": "cagliari",
+      "name": "Cagliari",
+      "real_points": 48,
+      "squad_strength": {
+        "att_ovr": 77,
+        "mid_ovr": 76,
+        "def_ovr": 74,
+        "gk_ovr": 81
+      },
+      "players": [
+        {
+          "Nome": "A. Cragno",
+          "Ruolo": "POR",
+          "Overall": 81
+        },
+        {
+          "Nome": "João Pedro",
+          "Ruolo": "AT, COC",
+          "Overall": 79
+        },
+        {
+          "Nome": "N. Nández",
+          "Ruolo": "CC, CDC, ED",
+          "Overall": 77
+        },
+        {
+          "Nome": "G. Simeone",
+          "Ruolo": "ATT",
+          "Overall": 76
+        },
+        {
+          "Nome": "L. Pavoletti",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "G. Pereiro",
+          "Ruolo": "COC, AD",
+          "Overall": 75
+        },
+        {
+          "Nome": "M. Rog",
+          "Ruolo": "CC",
+          "Overall": 75
+        },
+        {
+          "Nome": "R. Klavan",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "R. Marin",
+          "Ruolo": "CC, CDC",
+          "Overall": 74
+        },
+        {
+          "Nome": "V. Birsa",
+          "Ruolo": "COC, AD",
+          "Overall": 73
+        },
+        {
+          "Nome": "F. Pisacane",
+          "Ruolo": "DC, TD",
+          "Overall": 73
+        },
+        {
+          "Nome": "L. Ceppitelli",
+          "Ruolo": "DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "K. Despodov",
+          "Ruolo": "ED, ATT, ES",
+          "Overall": 73
+        },
+        {
+          "Nome": "Diego Farías",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "A. Cerri",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Pajač",
+          "Ruolo": "ES, TS",
+          "Overall": 71
+        },
+        {
+          "Nome": "P. Faragò",
+          "Ruolo": "CC, ED, TD",
+          "Overall": 70
+        },
+        {
+          "Nome": "F. Bradarić",
+          "Ruolo": "CC, CDC",
+          "Overall": 69
+        },
+        {
+          "Nome": "C. Oliva",
+          "Ruolo": "CC, CDC",
+          "Overall": 69
+        },
+        {
+          "Nome": "G. Vicario",
+          "Ruolo": "POR",
+          "Overall": 68
+        },
+        {
+          "Nome": "S. Walukiewicz",
+          "Ruolo": "DC",
+          "Overall": 68
+        },
+        {
+          "Nome": "S. Aresti",
+          "Ruolo": "POR",
+          "Overall": 67
+        },
+        {
+          "Nome": "C. Lykogiannis",
+          "Ruolo": "TS, DC, ES",
+          "Overall": 67
+        },
+        {
+          "Nome": "S. Pinna",
+          "Ruolo": "TD",
+          "Overall": 65
+        },
+        {
+          "Nome": "R. Sottil",
+          "Ruolo": "AS, AD",
+          "Overall": 64
+        },
+        {
+          "Nome": "R. Ladinetti",
+          "Ruolo": "CC",
+          "Overall": 64
+        },
+        {
+          "Nome": "A. Deiola",
+          "Ruolo": "CC",
+          "Overall": 63
+        },
+        {
+          "Nome": "D. Ragatzu",
+          "Ruolo": "ATT, AS, AD",
+          "Overall": 62
+        },
+        {
+          "Nome": "F. Caligara",
+          "Ruolo": "CC, ED, ES",
+          "Overall": 62
+        },
+        {
+          "Nome": "G. Zappa",
+          "Ruolo": "TD",
+          "Overall": 61
+        },
+        {
+          "Nome": "A. Tripaldelli",
+          "Ruolo": "TS",
+          "Overall": 60
+        },
+        {
+          "Nome": "A. Carboni",
+          "Ruolo": "DC, TS",
+          "Overall": 58
+        }
+      ]
+    },
+    {
+      "id": "sampdoria",
+      "name": "Sampdoria",
+      "real_points": 43,
+      "squad_strength": {
+        "att_ovr": 77,
+        "mid_ovr": 75,
+        "def_ovr": 74,
+        "gk_ovr": 77
+      },
+      "players": [
+        {
+          "Nome": "F. Quagliarella",
+          "Ruolo": "ATT",
+          "Overall": 80
+        },
+        {
+          "Nome": "G. Ramírez",
+          "Ruolo": "COC",
+          "Overall": 77
+        },
+        {
+          "Nome": "E. Audero",
+          "Ruolo": "POR",
+          "Overall": 77
+        },
+        {
+          "Nome": "A. Ekdal",
+          "Ruolo": "CC, CDC",
+          "Overall": 75
+        },
+        {
+          "Nome": "M. Gabbiadini",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "L. Tonelli",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "V. Verre",
+          "Ruolo": "COC, AT, CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "O. Colley",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "J. Jankto",
+          "Ruolo": "ES, CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "M. Yoshida",
+          "Ruolo": "DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "M. Damsgaard",
+          "Ruolo": "AS",
+          "Overall": 73
+        },
+        {
+          "Nome": "V. Belec",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "B. Bereszyński",
+          "Ruolo": "TD",
+          "Overall": 72
+        },
+        {
+          "Nome": "Ronaldo Vieira",
+          "Ruolo": "CDC, CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Depaoli",
+          "Ruolo": "ED, TD",
+          "Overall": 71
+        },
+        {
+          "Nome": "A. Ferrari",
+          "Ruolo": "DC, TD",
+          "Overall": 70
+        },
+        {
+          "Nome": "T. Augello",
+          "Ruolo": "TS",
+          "Overall": 70
+        },
+        {
+          "Nome": "M. Thorsby",
+          "Ruolo": "CC, COC",
+          "Overall": 69
+        },
+        {
+          "Nome": "J. Chabot",
+          "Ruolo": "DC",
+          "Overall": 69
+        },
+        {
+          "Nome": "V. Regini",
+          "Ruolo": "DC, TS",
+          "Overall": 68
+        },
+        {
+          "Nome": "N. Ravaglia",
+          "Ruolo": "POR",
+          "Overall": 67
+        },
+        {
+          "Nome": "L. Capezzi",
+          "Ruolo": "CC",
+          "Overall": 67
+        },
+        {
+          "Nome": "F. Bonazzoli",
+          "Ruolo": "ATT",
+          "Overall": 67
+        },
+        {
+          "Nome": "A. La Gumina",
+          "Ruolo": "ATT",
+          "Overall": 67
+        },
+        {
+          "Nome": "M. Léris",
+          "Ruolo": "CC, ATT",
+          "Overall": 64
+        },
+        {
+          "Nome": "M. Bahlouli",
+          "Ruolo": "AS, COC",
+          "Overall": 63
+        },
+        {
+          "Nome": "A. Palumbo",
+          "Ruolo": "CC",
+          "Overall": 61
+        },
+        {
+          "Nome": "F. D'Amico",
+          "Ruolo": "AS",
+          "Overall": 61
+        },
+        {
+          "Nome": "Kaique Rocha",
+          "Ruolo": "TD",
+          "Overall": 60
+        },
+        {
+          "Nome": "K. Askildsen",
+          "Ruolo": "CC",
+          "Overall": 57
+        }
+      ]
+    },
+    {
+      "id": "udinese",
+      "name": "Udinese",
+      "real_points": 45,
+      "squad_strength": {
+        "att_ovr": 76,
+        "mid_ovr": 75,
+        "def_ovr": 74,
+        "gk_ovr": 80
+      },
+      "players": [
+        {
+          "Nome": "J. Musso",
+          "Ruolo": "POR",
+          "Overall": 80
+        },
+        {
+          "Nome": "R. De Paul",
+          "Ruolo": "CC, AT",
+          "Overall": 77
+        },
+        {
+          "Nome": "S. Okaka",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "J. Larsen",
+          "Ruolo": "ED",
+          "Overall": 75
+        },
+        {
+          "Nome": "K. Lasagna",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "S. De Maio",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "T. Arslan",
+          "Ruolo": "CDC, CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "M. Jajalo",
+          "Ruolo": "CC, CDC",
+          "Overall": 74
+        },
+        {
+          "Nome": "R. Mandragora",
+          "Ruolo": "CC, CDC",
+          "Overall": 74
+        },
+        {
+          "Nome": "I. Nestorovski",
+          "Ruolo": "ATT",
+          "Overall": 73
+        },
+        {
+          "Nome": "W. Troost-Ekong",
+          "Ruolo": "DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "T. Ouwejan",
+          "Ruolo": "TS, CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "S. Prödl",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "B. Nuytinck",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "Ł. Teodorczyk",
+          "Ruolo": "ATT",
+          "Overall": 72
+        },
+        {
+          "Nome": "S. Scuffet",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "Walace",
+          "Ruolo": "CDC, CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "Rodrigo Becão",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "M. Zeegelaar",
+          "Ruolo": "ES, TS",
+          "Overall": 71
+        },
+        {
+          "Nome": "Samir",
+          "Ruolo": "DC, TS",
+          "Overall": 71
+        },
+        {
+          "Nome": "F. Forestieri",
+          "Ruolo": "ATT, COC, AS",
+          "Overall": 70
+        },
+        {
+          "Nome": "Ryder Matos",
+          "Ruolo": "AD, ATT, AS",
+          "Overall": 70
+        },
+        {
+          "Nome": "Nicolas",
+          "Ruolo": "POR",
+          "Overall": 69
+        },
+        {
+          "Nome": "H. ter Avest",
+          "Ruolo": "ED, TD",
+          "Overall": 69
+        },
+        {
+          "Nome": "R. Bajić",
+          "Ruolo": "ATT",
+          "Overall": 69
+        },
+        {
+          "Nome": "Cristo González",
+          "Ruolo": "ATT, ES, COC",
+          "Overall": 67
+        },
+        {
+          "Nome": "N. Molina",
+          "Ruolo": "TD, ADA",
+          "Overall": 67
+        },
+        {
+          "Nome": "P. Mićin",
+          "Ruolo": "AD, ATT, AS",
+          "Overall": 65
+        },
+        {
+          "Nome": "S. Ingelsson",
+          "Ruolo": "CC, AT",
+          "Overall": 63
+        },
+        {
+          "Nome": "S. Perisan",
+          "Ruolo": "POR",
+          "Overall": 63
+        },
+        {
+          "Nome": "M. Ballarini",
+          "Ruolo": "CC, TD, ED",
+          "Overall": 59
+        },
+        {
+          "Nome": "M. Gasparini",
+          "Ruolo": "POR",
+          "Overall": 57
+        },
+        {
+          "Nome": "M. Palumbo",
+          "Ruolo": "CC",
+          "Overall": 56
+        }
+      ]
+    },
+    {
+      "id": "parma",
+      "name": "Parma",
+      "real_points": 43,
+      "squad_strength": {
+        "att_ovr": 76,
+        "mid_ovr": 75,
+        "def_ovr": 75,
+        "gk_ovr": 77
+      },
+      "players": [
+        {
+          "Nome": "Gervinho",
+          "Ruolo": "AS, AD",
+          "Overall": 78
+        },
+        {
+          "Nome": "J. Kucka",
+          "Ruolo": "CC, CDC",
+          "Overall": 77
+        },
+        {
+          "Nome": "L. Sepe",
+          "Ruolo": "POR",
+          "Overall": 77
+        },
+        {
+          "Nome": "M. Darmian",
+          "Ruolo": "TD, TS",
+          "Overall": 76
+        },
+        {
+          "Nome": "A. Cornelius",
+          "Ruolo": "ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "Hernani",
+          "Ruolo": "CDC, CC",
+          "Overall": 75
+        },
+        {
+          "Nome": "Y. Karamoh",
+          "Ruolo": "ED, AD",
+          "Overall": 75
+        },
+        {
+          "Nome": "R. Inglese",
+          "Ruolo": "ATT",
+          "Overall": 74
+        },
+        {
+          "Nome": "J. Kurtić",
+          "Ruolo": "CC, COC",
+          "Overall": 74
+        },
+        {
+          "Nome": "R. Gagliolo",
+          "Ruolo": "TS, DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "V. Laurini",
+          "Ruolo": "TD",
+          "Overall": 73
+        },
+        {
+          "Nome": "A. Grassi",
+          "Ruolo": "CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "Bruno Alves",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "G. Brugman",
+          "Ruolo": "CC, CDC",
+          "Overall": 72
+        },
+        {
+          "Nome": "Y. Baraye",
+          "Ruolo": "AD, AS",
+          "Overall": 72
+        },
+        {
+          "Nome": "G. Pezzella",
+          "Ruolo": "TS, ES",
+          "Overall": 72
+        },
+        {
+          "Nome": "S. Iacoponi",
+          "Ruolo": "DC, TD",
+          "Overall": 71
+        },
+        {
+          "Nome": "J. Dezi",
+          "Ruolo": "CC, COC",
+          "Overall": 71
+        },
+        {
+          "Nome": "L. Siligardi",
+          "Ruolo": "AD, AS",
+          "Overall": 70
+        },
+        {
+          "Nome": "S. Colombi",
+          "Ruolo": "POR",
+          "Overall": 70
+        },
+        {
+          "Nome": "M. Scozzarella",
+          "Ruolo": "CC, CDC",
+          "Overall": 69
+        },
+        {
+          "Nome": "M. Sprocati",
+          "Ruolo": "AS, AD",
+          "Overall": 68
+        },
+        {
+          "Nome": "K. Dermaku",
+          "Ruolo": "DC",
+          "Overall": 68
+        },
+        {
+          "Nome": "M. Gazzola",
+          "Ruolo": "TD",
+          "Overall": 67
+        },
+        {
+          "Nome": "A. Da Cruz",
+          "Ruolo": "AS, ATT",
+          "Overall": 66
+        },
+        {
+          "Nome": "M. Fornasier",
+          "Ruolo": "DC",
+          "Overall": 65
+        },
+        {
+          "Nome": "F. Alastra",
+          "Ruolo": "POR",
+          "Overall": 65
+        },
+        {
+          "Nome": "E. Lanini",
+          "Ruolo": "ATT",
+          "Overall": 63
+        },
+        {
+          "Nome": "A. Dini",
+          "Ruolo": "POR",
+          "Overall": 63
+        },
+        {
+          "Nome": "M. Frediani",
+          "Ruolo": "AS",
+          "Overall": 60
+        },
+        {
+          "Nome": "G. Ricci",
+          "Ruolo": "TS",
+          "Overall": 58
+        }
+      ]
+    },
+    {
+      "id": "hellas_verona",
+      "name": "Hellas Verona",
+      "real_points": 40,
+      "squad_strength": {
+        "att_ovr": 74,
+        "mid_ovr": 75,
+        "def_ovr": 74,
+        "gk_ovr": 77
+      },
+      "players": [
+        {
+          "Nome": "Miguel Veloso",
+          "Ruolo": "CC, CDC",
+          "Overall": 77
+        },
+        {
+          "Nome": "M. Silvestri",
+          "Ruolo": "POR",
+          "Overall": 77
+        },
+        {
+          "Nome": "D. Lazović",
+          "Ruolo": "ES, ED",
+          "Overall": 76
+        },
+        {
+          "Nome": "M. Zaccagni",
+          "Ruolo": "AT, ATT",
+          "Overall": 75
+        },
+        {
+          "Nome": "A. Barák",
+          "Ruolo": "CC, COC",
+          "Overall": 75
+        },
+        {
+          "Nome": "M. Faraoni",
+          "Ruolo": "ED, TD",
+          "Overall": 74
+        },
+        {
+          "Nome": "M. Benassi",
+          "Ruolo": "CC",
+          "Overall": 74
+        },
+        {
+          "Nome": "S. Di Carmine",
+          "Ruolo": "ATT",
+          "Overall": 73
+        },
+        {
+          "Nome": "E. Badu",
+          "Ruolo": "CC, CDC",
+          "Overall": 73
+        },
+        {
+          "Nome": "A. Tameze",
+          "Ruolo": "CC, CDC",
+          "Overall": 73
+        },
+        {
+          "Nome": "S. Bocchetti",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Ragusa",
+          "Ruolo": "AD, AS",
+          "Overall": 72
+        },
+        {
+          "Nome": "K. Rüegg",
+          "Ruolo": "TD, CDC, CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "K. Günter",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Stępiński",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "A. Almici",
+          "Ruolo": "TD",
+          "Overall": 70
+        },
+        {
+          "Nome": "A. Di Gaudio",
+          "Ruolo": "AS",
+          "Overall": 70
+        },
+        {
+          "Nome": "L. Vitale",
+          "Ruolo": "ES, TS",
+          "Overall": 69
+        },
+        {
+          "Nome": "K. Laribi",
+          "Ruolo": "CC, AT, COC",
+          "Overall": 69
+        },
+        {
+          "Nome": "Y. Çetin",
+          "Ruolo": "DC",
+          "Overall": 69
+        },
+        {
+          "Nome": "G. Magnani",
+          "Ruolo": "DC",
+          "Overall": 69
+        },
+        {
+          "Nome": "I. Pandur",
+          "Ruolo": "POR",
+          "Overall": 69
+        },
+        {
+          "Nome": "P. Dawidowicz",
+          "Ruolo": "DC",
+          "Overall": 68
+        },
+        {
+          "Nome": "F. Dimarco",
+          "Ruolo": "TS, ES",
+          "Overall": 67
+        },
+        {
+          "Nome": "A. Favilli",
+          "Ruolo": "ATT",
+          "Overall": 67
+        },
+        {
+          "Nome": "Alan Empereur",
+          "Ruolo": "DC, TS",
+          "Overall": 67
+        },
+        {
+          "Nome": "A. Danzi",
+          "Ruolo": "CC, CDC",
+          "Overall": 66
+        },
+        {
+          "Nome": "M. Lovato",
+          "Ruolo": "DC",
+          "Overall": 66
+        },
+        {
+          "Nome": "S. Calvano",
+          "Ruolo": "CC, CDC",
+          "Overall": 64
+        },
+        {
+          "Nome": "Lucas Felippe",
+          "Ruolo": "CC",
+          "Overall": 63
+        },
+        {
+          "Nome": "A. Berardi",
+          "Ruolo": "POR",
+          "Overall": 62
+        },
+        {
+          "Nome": "Ľ. Tupta",
+          "Ruolo": "ATT",
+          "Overall": 62
+        },
+        {
+          "Nome": "I. Ilić",
+          "Ruolo": "CC",
+          "Overall": 61
+        }
+      ]
+    },
+    {
+      "id": "bologna",
+      "name": "Bologna",
+      "real_points": 42,
+      "squad_strength": {
+        "att_ovr": 75,
+        "mid_ovr": 76,
+        "def_ovr": 75,
+        "gk_ovr": 76
+      },
+      "players": [
+        {
+          "Nome": "R. Soriano",
+          "Ruolo": "COC, CC",
+          "Overall": 77
+        },
+        {
+          "Nome": "G. Medel",
+          "Ruolo": "CDC, DC",
+          "Overall": 77
+        },
+        {
+          "Nome": "A. Poli",
+          "Ruolo": "CDC, CC",
+          "Overall": 76
+        },
+        {
+          "Nome": "Ł. Skorupski",
+          "Ruolo": "POR",
+          "Overall": 76
+        },
+        {
+          "Nome": "N. Sansone",
+          "Ruolo": "COC, AS, ATT",
+          "Overall": 76
+        },
+        {
+          "Nome": "R. Palacio",
+          "Ruolo": "ATT, COC",
+          "Overall": 75
+        },
+        {
+          "Nome": "R. Orsolini",
+          "Ruolo": "COC, AD, ED",
+          "Overall": 75
+        },
+        {
+          "Nome": "N. Domínguez",
+          "Ruolo": "CC, CDC",
+          "Overall": 75
+        },
+        {
+          "Nome": "Danilo",
+          "Ruolo": "DC",
+          "Overall": 74
+        },
+        {
+          "Nome": "L. De Silvestri",
+          "Ruolo": "ED, TD",
+          "Overall": 74
+        },
+        {
+          "Nome": "S. Denswil",
+          "Ruolo": "DC, TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "I. Mbaye",
+          "Ruolo": "TD, TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "J. Schouten",
+          "Ruolo": "CDC, CC",
+          "Overall": 73
+        },
+        {
+          "Nome": "Da Costa",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Santander",
+          "Ruolo": "ATT",
+          "Overall": 72
+        },
+        {
+          "Nome": "M. Dijks",
+          "Ruolo": "TS, ES",
+          "Overall": 72
+        },
+        {
+          "Nome": "M. Bani",
+          "Ruolo": "DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "T. Tomiyasu",
+          "Ruolo": "TD, DC",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Olsen",
+          "Ruolo": "AD, ATT, COC",
+          "Overall": 72
+        },
+        {
+          "Nome": "M. Barrow",
+          "Ruolo": "ATT",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Calabresi",
+          "Ruolo": "TD, DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "G. Donsah",
+          "Ruolo": "CC, CDC",
+          "Overall": 70
+        },
+        {
+          "Nome": "E. Vignato",
+          "Ruolo": "COC",
+          "Overall": 69
+        },
+        {
+          "Nome": "N. Paz",
+          "Ruolo": "DC, TS",
+          "Overall": 68
+        },
+        {
+          "Nome": "M. Svanberg",
+          "Ruolo": "CC, ED",
+          "Overall": 68
+        },
+        {
+          "Nome": "J. Valencia",
+          "Ruolo": "CC, COC",
+          "Overall": 67
+        },
+        {
+          "Nome": "K. Michael",
+          "Ruolo": "CC",
+          "Overall": 66
+        },
+        {
+          "Nome": "F. Brignani",
+          "Ruolo": "DC",
+          "Overall": 63
+        },
+        {
+          "Nome": "Vinicius",
+          "Ruolo": "POR",
+          "Overall": 62
+        },
+        {
+          "Nome": "M. Juwara",
+          "Ruolo": "ATT",
+          "Overall": 60
+        },
+        {
+          "Nome": "G. Cangiano",
+          "Ruolo": "AS, ATT",
+          "Overall": 59
+        },
+        {
+          "Nome": "A. Baldursson",
+          "Ruolo": "CC",
+          "Overall": 57
+        },
+        {
+          "Nome": "F. Ravaglia",
+          "Ruolo": "POR",
+          "Overall": 55
+        }
+      ]
+    },
+    {
+      "id": "benevento",
+      "name": "Benevento",
+      "real_points": 30,
+      "squad_strength": {
+        "att_ovr": 73,
+        "mid_ovr": 72,
+        "def_ovr": 73,
+        "gk_ovr": 72
+      },
+      "players": [
+        {
+          "Nome": "K. Glik",
+          "Ruolo": "DC",
+          "Overall": 75
+        },
+        {
+          "Nome": "C. Maggio",
+          "Ruolo": "TD",
+          "Overall": 74
+        },
+        {
+          "Nome": "G. Caprari",
+          "Ruolo": "AT, ATT",
+          "Overall": 74
+        },
+        {
+          "Nome": "A. Ioniță",
+          "Ruolo": "CC, COC",
+          "Overall": 73
+        },
+        {
+          "Nome": "O. Kragl",
+          "Ruolo": "ES, AT, ED",
+          "Overall": 73
+        },
+        {
+          "Nome": "G. Letizia",
+          "Ruolo": "TS",
+          "Overall": 73
+        },
+        {
+          "Nome": "P. Hetemaj",
+          "Ruolo": "CC",
+          "Overall": 72
+        },
+        {
+          "Nome": "B. Dabo",
+          "Ruolo": "CC, CDC",
+          "Overall": 72
+        },
+        {
+          "Nome": "F. Barba",
+          "Ruolo": "DC, TS",
+          "Overall": 72
+        },
+        {
+          "Nome": "L. Montipò",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "N. Viola",
+          "Ruolo": "CC, CDC",
+          "Overall": 71
+        },
+        {
+          "Nome": "P. Schiattarella",
+          "Ruolo": "CC, CDC",
+          "Overall": 71
+        },
+        {
+          "Nome": "L. Caldirola",
+          "Ruolo": "DC",
+          "Overall": 71
+        },
+        {
+          "Nome": "G. Lapadula",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Sau",
+          "Ruolo": "ATT, AT",
+          "Overall": 70
+        },
+        {
+          "Nome": "P. Iemmello",
+          "Ruolo": "ATT",
+          "Overall": 70
+        },
+        {
+          "Nome": "A. Tello",
+          "Ruolo": "CC, ES",
+          "Overall": 70
+        },
+        {
+          "Nome": "L. Antei",
+          "Ruolo": "DC, TD",
+          "Overall": 69
+        },
+        {
+          "Nome": "R. Improta",
+          "Ruolo": "ES, AS",
+          "Overall": 69
+        },
+        {
+          "Nome": "R. Insigne",
+          "Ruolo": "AT, ED, AD",
+          "Overall": 69
+        },
+        {
+          "Nome": "G. Moncini",
+          "Ruolo": "ATT",
+          "Overall": 69
+        },
+        {
+          "Nome": "M. Volta",
+          "Ruolo": "DC",
+          "Overall": 68
+        },
+        {
+          "Nome": "A. Tuia",
+          "Ruolo": "DC",
+          "Overall": 67
+        },
+        {
+          "Nome": "D. Foulon",
+          "Ruolo": "TS",
+          "Overall": 67
+        },
+        {
+          "Nome": "N. Manfredini",
+          "Ruolo": "POR",
+          "Overall": 66
+        },
+        {
+          "Nome": "L. Del Pinto",
+          "Ruolo": "CC, CDC",
+          "Overall": 63
+        },
+        {
+          "Nome": "P. Gori",
+          "Ruolo": "POR",
+          "Overall": 62
+        },
+        {
+          "Nome": "D. Vokić",
+          "Ruolo": "CDC, COC",
+          "Overall": 60
+        },
+        {
+          "Nome": "G. Di Serio",
+          "Ruolo": "ATT",
+          "Overall": 59
+        },
+        {
+          "Nome": "F. Rillo",
+          "Ruolo": "TS",
+          "Overall": 56
+        },
+        {
+          "Nome": "C. Pastina",
+          "Ruolo": "DC, TS",
+          "Overall": 54
+        },
+        {
+          "Nome": "S. Sanogo",
+          "Ruolo": "CC",
+          "Overall": 53
+        },
+        {
+          "Nome": "A. Basit",
+          "Ruolo": "CC, CDC",
+          "Overall": 52
+        }
+      ]
+    },
+    {
+      "id": "crotone",
+      "name": "Crotone",
+      "real_points": 26,
+      "squad_strength": {
+        "att_ovr": 71,
+        "mid_ovr": 71,
+        "def_ovr": 72,
+        "gk_ovr": 72
+      },
+      "players": [
+        {
+          "Nome": "L. Cigarini",
+          "Ruolo": "CC, CDC",
+          "Overall": 73
+        },
+        {
+          "Nome": "L. Magallán",
+          "Ruolo": "DC",
+          "Overall": 73
+        },
+        {
+          "Nome": "A. Cordaz",
+          "Ruolo": "POR",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Rispoli",
+          "Ruolo": "TD, ED",
+          "Overall": 72
+        },
+        {
+          "Nome": "A. Benali",
+          "Ruolo": "CC, CDC",
+          "Overall": 71
+        },
+        {
+          "Nome": "Simy",
+          "Ruolo": "ATT",
+          "Overall": 71
+        },
+        {
+          "Nome": "Eduardo Henrique",
+          "Ruolo": "CC",
+          "Overall": 71
+        },
+        {
+          "Nome": "Pedro Pereira",
+          "Ruolo": "TD, ADA, ED",
+          "Overall": 71
+        },
+        {
+          "Nome": "M. Mustacchio",
+          "Ruolo": "ED, ATT, AD",
+          "Overall": 70
+        },
+        {
+          "Nome": "A. Mazzotta",
+          "Ruolo": "ES, TS",
+          "Overall": 70
+        },
+        {
+          "Nome": "L. Marrone",
+          "Ruolo": "DC, CDC",
+          "Overall": 70
+        },
+        {
+          "Nome": "N. Spolli",
+          "Ruolo": "DC",
+          "Overall": 69
+        },
+        {
+          "Nome": "G. Crociata",
+          "Ruolo": "COC, CC, AT",
+          "Overall": 68
+        },
+        {
+          "Nome": "M. Vulic",
+          "Ruolo": "CC",
+          "Overall": 68
+        },
+        {
+          "Nome": "E. Rivière",
+          "Ruolo": "ATT",
+          "Overall": 67
+        },
+        {
+          "Nome": "D. Drăguș",
+          "Ruolo": "ATT, AS",
+          "Overall": 66
+        },
+        {
+          "Nome": "S. Molina",
+          "Ruolo": "ED, ES, CC",
+          "Overall": 65
+        },
+        {
+          "Nome": "V. Golemić",
+          "Ruolo": "DC",
+          "Overall": 65
+        },
+        {
+          "Nome": "A. Kargbo",
+          "Ruolo": "ATT",
+          "Overall": 65
+        },
+        {
+          "Nome": "Junior Messias",
+          "Ruolo": "AT, ATT",
+          "Overall": 64
+        },
+        {
+          "Nome": "A. Romero",
+          "Ruolo": "CC",
+          "Overall": 64
+        },
+        {
+          "Nome": "G. Gigliotti",
+          "Ruolo": "DC",
+          "Overall": 62
+        },
+        {
+          "Nome": "T. Gomelt",
+          "Ruolo": "CC",
+          "Overall": 62
+        },
+        {
+          "Nome": "M. Festa",
+          "Ruolo": "POR",
+          "Overall": 62
+        },
+        {
+          "Nome": "N. Zanellato",
+          "Ruolo": "CC",
+          "Overall": 61
+        },
+        {
+          "Nome": "G. Borello",
+          "Ruolo": "AD",
+          "Overall": 58
+        },
+        {
+          "Nome": "Z. Ruggiero",
+          "Ruolo": "AT, ATT",
+          "Overall": 58
+        },
+        {
+          "Nome": "G. Cuomo",
+          "Ruolo": "DC",
+          "Overall": 57
+        },
+        {
+          "Nome": "L. Rojas",
+          "Ruolo": "COC, CC",
+          "Overall": 57
+        },
+        {
+          "Nome": "L. Marković",
+          "Ruolo": "ATT",
+          "Overall": 55
+        },
+        {
+          "Nome": "A. Garattoni",
+          "Ruolo": "TD, TS",
+          "Overall": 55
+        },
+        {
+          "Nome": "J. Evan's Allan",
+          "Ruolo": "ES",
+          "Overall": 51
+        },
+        {
+          "Nome": "G. Crespi",
+          "Ruolo": "POR",
+          "Overall": 49
+        }
+      ]
+    }
+  ]
+}

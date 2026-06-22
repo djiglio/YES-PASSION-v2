@@ -1,0 +1,5258 @@
+Nome,Club,Stagione,Overall,Ruolo
+C. Tévez,Juventus,15,85,"ATT, AT"
+A. Vidal,Juventus,15,85,"CC, CDC"
+A. Pirlo,Juventus,15,84,"CC, CDC"
+D. De Rossi,Roma,15,84,CDC
+G. Chiellini,Juventus,15,84,DC
+G. Higuaín,Napoli,15,84,ATT
+A. Barzagli,Juventus,15,83,DC
+N. Vidić,Inter,15,83,DC
+Diego López,Milan,15,83,POR
+S. Handanovič,Inter,15,83,POR
+C. Marchisio,Juventus,15,83,"CC, CDC, COC"
+A. Candreva,Lazio,15,83,AD
+M. Pjanić,Roma,15,83,CC
+J. Cuadrado,Fiorentina,15,83,"ED, ES"
+P. Pogba,Juventus,15,83,"CC, COC"
+G. Buffon,Juventus,15,82,POR
+Alex,Milan,15,82,DC
+M. Gomez,Fiorentina,15,82,ATT
+R. Palacio,Inter,15,82,ATT
+Borja Valero,Fiorentina,15,82,CC
+G. Rossi,Fiorentina,15,82,ATT
+M. Hamšik,Napoli,15,82,COC
+D. Mertens,Napoli,15,82,COC
+Hernanes,Inter,15,82,"CC, COC"
+M. Klose,Lazio,15,81,ATT
+A. Cole,Roma,15,81,TS
+Fernando Torres,Milan,15,81,ATT
+N. de Jong,Milan,15,81,"CDC, CC"
+R. Montolivo,Milan,15,81,"CC, CDC"
+Llorente,Juventus,15,81,ATT
+Gervinho,Roma,15,81,"AS, AD"
+Leandro Castán,Roma,15,81,DC
+K. Strootman,Roma,15,81,CC
+F. Totti,Roma,15,80,"AT, ATT"
+A. Cassano,Parma,15,80,AT
+P. Evra,Juventus,15,80,"TS, ES"
+Raúl Albiol,Napoli,15,80,DC
+José Callejón,Napoli,15,80,"COC, ED"
+S. El Shaarawy,Milan,15,80,AS
+M. De Sanctis,Roma,15,79,POR
+A. Aquilani,Fiorentina,15,79,"CC, CDC"
+Maicon,Roma,15,79,TD
+F. Marchetti,Lazio,15,79,POR
+G. Rodríguez,Fiorentina,15,79,DC
+G. Inler,Napoli,15,79,"CDC, CC"
+F. Guarín,Inter,15,79,"CC, COC"
+R. Nainggolan,Roma,15,79,CC
+M. Cáceres,Juventus,15,79,"DC, TD"
+J. Biabiany,Parma,15,79,"AD, AS"
+L. Bonucci,Juventus,15,79,DC
+K. Honda,Milan,15,79,"COC, ED"
+K. Asamoah,Juventus,15,79,"ES, CC"
+G. Bonaventura,Milan,15,79,ES
+K. Glik,Torino,15,79,DC
+L. Insigne,Napoli,15,79,"COC, AT, AS"
+Joaquín,Fiorentina,15,78,"AD, AS"
+A. Di Natale,Udinese,15,78,ATT
+A. Mirante,Parma,15,78,POR
+J. Ménez,Milan,15,78,"AD, AS, AT"
+A. Consigli,Sassuolo,15,78,POR
+Michu,Napoli,15,78,"ATT, COC"
+G. Paletta,Parma,15,78,DC
+D. Astori,Roma,15,78,DC
+M. Fernández,Fiorentina,15,78,"COC, CC, AT"
+A. Rami,Milan,15,78,DC
+A. Poli,Milan,15,78,"CC, COC"
+Y. M'Vila,Inter,15,78,"CDC, CC"
+S. Lulić,Lazio,15,78,"ES, CC, TS"
+S. de Vrij,Lazio,15,78,DC
+Juan Jesus,Inter,15,78,DC
+S. Savić,Fiorentina,15,78,DC
+S. Keita,Roma,15,77,"CDC, CC"
+P. Mexès,Milan,15,77,DC
+S. Mauri,Lazio,15,77,"COC, ES, ED, CC"
+S. Lichtsteiner,Juventus,15,77,"ED, TD"
+H. Campagnaro,Inter,15,77,DC
+L. Cana,Lazio,15,77,DC
+G. Denis,Atalanta,15,77,ATT
+L. Biglia,Lazio,15,77,CC
+F. Quagliarella,Torino,15,77,ATT
+S. Radu,Lazio,15,77,TS
+Jonathan,Inter,15,77,ED
+E. Viviano,Sampdoria,15,77,POR
+M. Richards,Fiorentina,15,77,TD
+L. Cigarini,Atalanta,15,77,CC
+C. Zapata,Milan,15,77,DC
+P. Osvaldo,Inter,15,77,ATT
+M. Marin,Fiorentina,15,77,"COC, ES"
+A. Ranocchia,Inter,15,77,DC
+M. Parolo,Lazio,15,77,"CC, CDC"
+A. Ogbonna,Juventus,15,77,DC
+R. Pereyra,Juventus,15,77,"CC, COC, AT"
+M. Destro,Roma,15,77,ATT
+J. Iturbe,Roma,15,77,AD
+Morata,Juventus,15,77,ATT
+R. Márquez,Hellas Verona,15,76,DC
+C. Ledesma,Lazio,15,76,"CDC, CC"
+S. Muntari,Milan,15,76,"CDC, CC"
+G. Pazzini,Milan,15,76,ATT
+A. Gómez,Atalanta,15,76,ES
+C. Maggio,Napoli,15,76,"TD, ED"
+J. Vargas,Fiorentina,15,76,"ES, TS"
+J. De Guzmán,Napoli,15,76,"COC, CC"
+M. Yanga-M'Biwa,Roma,15,76,"DC, TD"
+S. Giovinco,Juventus,15,76,AT
+Henrique,Napoli,15,76,"DC, CDC, TD"
+T. Heurtaux,Udinese,15,76,"DC, TD"
+A. Ljajić,Roma,15,76,"AS, AD, AT"
+K. Manolas,Roma,15,76,DC
+G. Medel,Inter,15,76,"CDC, CC"
+Rômulo,Juventus,15,76,"CC, TD"
+Y. Nagatomo,Inter,15,76,ES
+Neto,Fiorentina,15,76,POR
+M. Perin,Genoa,15,76,POR
+M. van Ginkel,Milan,15,76,CC
+J. Iličić,Fiorentina,15,76,"AT, COC, AD"
+M. Badelj,Fiorentina,15,76,"CC, CDC"
+M. Icardi,Inter,15,76,ATT
+A. Florenzi,Roma,15,76,"AD, AS, CC"
+Jorginho,Napoli,15,76,"CDC, CC"
+M. De Sciglio,Milan,15,76,"TD, TS"
+D. Berardi,Sassuolo,15,76,"AD, ATT"
+Bruno Fernandes,Udinese,15,76,"COC, CC, AT, AS"
+N. Maksimović,Torino,15,76,"DC, ED"
+B. Keita,Lazio,15,76,"AS, AD"
+C. Abbiati,Milan,15,75,POR
+D. Pizarro,Fiorentina,15,75,"CDC, CC"
+D. Bonera,Milan,15,75,"DC, TD"
+M. Essien,Milan,15,75,CDC
+E. Moretti,Torino,15,75,DC
+M. Domizzi,Udinese,15,75,DC
+S. Pepe,Juventus,15,75,"ED, ES"
+M. Agazzi,Milan,15,75,POR
+M. Ciani,Lazio,15,75,DC
+Ederson,Lazio,15,75,"COC, CC"
+A. Nocerino,Torino,15,75,"CC, CDC"
+A. Konko,Lazio,15,75,TD
+Danilo,Udinese,15,75,DC
+D. Basta,Lazio,15,75,"TD, ED, ES, TS"
+Z. Kuzmanović,Inter,15,75,"CDC, CC"
+P. Hetemaj,Chievo Verona,15,75,"CC, COC"
+V. Birsa,Chievo Verona,15,75,"AS, AD, COC"
+A. Matri,Genoa,15,75,ATT
+Eder,Sampdoria,15,75,"AT, COC"
+F. Djordjevic,Lazio,15,75,ATT
+A. Paloschi,Chievo Verona,15,75,ATT
+M. Sau,Cagliari,15,75,"AT, ATT, AS"
+M. Britos,Napoli,15,75,DC
+M. Lestienne,Genoa,15,75,AS
+Ž. Brkić,Udinese,15,75,POR
+I. Fetfatzidis,Genoa,15,75,"AD, AS, AT"
+M. Gabbiadini,Sampdoria,15,75,"COC, AT"
+S. Taïder,Sassuolo,15,75,"CC, CDC"
+F. Ghoulam,Napoli,15,75,TS
+S. Zaza,Sassuolo,15,75,ATT
+O. Onazi,Lazio,15,75,CC
+Edenílson,Genoa,15,75,"ED, TD"
+V. Ibarbo,Cagliari,15,75,"ATT, AD"
+M. Kovačić,Inter,15,75,CC
+G. Pinzi,Udinese,15,74,"CDC, CC"
+P. Cannavaro,Sassuolo,15,74,DC
+A. Gamberini,Chievo Verona,15,74,DC
+S. Sorrentino,Palermo,15,74,POR
+J. Gillet,Torino,15,74,POR
+D. Conti,Cagliari,15,74,"CDC, CC"
+C. Bovo,Torino,15,74,DC
+M. Pinilla,Genoa,15,74,ATT
+M. Borriello,Roma,15,74,ATT
+S. Lucchini,Cesena,15,74,DC
+M. Cassani,Parma,15,74,"TD, DC"
+D. Gastaldello,Sampdoria,15,74,DC
+M. Storari,Juventus,15,74,POR
+N. Burdisso,Genoa,15,74,DC
+Rafael,Hellas Verona,15,74,POR
+A. Lucarelli,Parma,15,74,DC
+G. Stendardo,Atalanta,15,74,DC
+Amauri,Torino,15,74,ATT
+M. Pasqual,Fiorentina,15,74,"TS, ES"
+D. Padelli,Torino,15,74,POR
+C. Théréau,Udinese,15,74,ATT
+J. Carrizo,Inter,15,74,POR
+I. Abate,Milan,15,74,"TD, ED"
+L. De Silvestri,Sampdoria,15,74,"TD, ED"
+M. Andreolli,Inter,15,74,DC
+P. Kone,Udinese,15,74,"COC, CC, AT"
+J. Zúñiga,Napoli,15,74,"TS, ES"
+G. Vives,Torino,15,74,"CDC, CC"
+A. Ekdal,Cagliari,15,74,CC
+V. Torosidis,Roma,15,74,"TD, TS"
+Á. González,Lazio,15,74,"CC, ED"
+O. Karnezis,Udinese,15,74,POR
+M. Moralez,Atalanta,15,74,"AT, COC"
+D. Perotti,Genoa,15,74,"ES, ED"
+F. Roncaglia,Genoa,15,74,"DC, TD"
+M. Darmian,Torino,15,74,"ED, TD"
+L. Rossettini,Cagliari,15,74,DC
+O. El Kaddouri,Torino,15,74,"CC, COC"
+C. Carmona,Atalanta,15,74,"CC, CDC"
+M. Estigarribia,Atalanta,15,74,"ES, ED"
+Rubén Pérez,Torino,15,74,"CDC, CC"
+Rafael,Napoli,15,74,POR
+F. Bardi,Chievo Verona,15,74,POR
+Allan,Udinese,15,74,"CDC, CC"
+C. Tătăruşanu,Fiorentina,15,74,POR
+David López,Napoli,15,74,"CDC, CC"
+N. Sansone,Sassuolo,15,74,"AS, AD"
+J. Sánchez Miño,Torino,15,74,ES
+M. Niang,Milan,15,74,"AD, ATT"
+N. López,Hellas Verona,15,74,"AS, AD, AT"
+C. Carbonero,Cesena,15,74,ED
+D. Zapata,Napoli,15,74,ATT
+J. Saviola,Hellas Verona,15,73,"ATT, COC"
+M. Marchionni,Sampdoria,15,73,"CC, CDC"
+L. Toni,Hellas Verona,15,73,ATT
+A. Floro Flores,Sassuolo,15,73,"ATT, AS"
+T. Manfredini,Sassuolo,15,73,DC
+C. Zaccardo,Milan,15,73,"DC, TD"
+S. Padoin,Juventus,15,73,"ED, CC"
+A. Cossu,Cagliari,15,73,"COC, AS"
+Albert Riera,Udinese,15,73,"TS, ES, AS"
+F. Lodi,Parma,15,73,"CDC, CC"
+G. Biava,Atalanta,15,73,DC
+M. El Hamdaoui,Fiorentina,15,73,ATT
+L. Rigoni,Palermo,15,73,"CC, CDC"
+M. Obbadi,Hellas Verona,15,73,"CC, CDC"
+M. Izco,Chievo Verona,15,73,"CC, CDC"
+B. Dramé,Atalanta,15,73,"TS, ES"
+U. Emanuelson,Roma,15,73,TS
+S. Romero,Sampdoria,15,73,POR
+P. Armero,Milan,15,73,"TS, ES"
+S. Okaka Chuka,Sampdoria,15,73,ATT
+B. Janković,Hellas Verona,15,73,"AS, AD"
+W. Gargano,Napoli,15,73,"CC, CDC"
+J. Kucka,Genoa,15,73,"ES, CC, CDC"
+E. Schelotto,Chievo Verona,15,73,"ED, AD"
+N. Tomović,Fiorentina,15,73,TD
+I. Belfodil,Parma,15,73,"ATT, AS"
+L. Muriel,Udinese,15,73,ATT
+F. Acerbi,Sassuolo,15,73,DC
+Pedro Obiang,Sampdoria,15,73,"CC, CDC"
+Felipe Anderson,Lazio,15,73,"AS, COC"
+D. Baselli,Atalanta,15,73,"CC, CDC"
+Guilherme,Udinese,15,73,"CDC, CC"
+R. Botta,Chievo Verona,15,73,"COC, AT"
+L. Castellazzi,Torino,15,72,POR
+D. Dainelli,Chievo Verona,15,72,DC
+A. Bizzarri,Chievo Verona,15,72,POR
+A. Farnerud,Torino,15,72,"CC, CDC"
+M. Maccarone,Empoli,15,72,ATT
+G. Sculli,Lazio,15,72,"AS, ATT"
+R. Bianchi,Atalanta,15,72,ATT
+D. Brivio,Hellas Verona,15,72,"TS, ES"
+V. Avramov,Atalanta,15,72,POR
+E. Hallfreðsson,Hellas Verona,15,72,CC
+A. Gazzi,Torino,15,72,"CDC, CC"
+M. López,Chievo Verona,15,72,ATT
+B. Cesar,Chievo Verona,15,72,DC
+G. Marchese,Genoa,15,72,"DC, TS"
+C. Molinaro,Torino,15,72,"TS, ES"
+V. Moras,Hellas Verona,15,72,DC
+Rafael Marques,Hellas Verona,15,72,DC
+R. Palladino,Parma,15,72,"AT, AS"
+A. Coda,Udinese,15,72,DC
+A. Lazzari,Fiorentina,15,72,"CDC, CC"
+Barreto,Torino,15,72,AT
+G. Rodríguez,Hellas Verona,15,72,DC
+G. Curci,Roma,15,72,POR
+S. Floccari,Sassuolo,15,72,ATT
+S. Bamba,Palermo,15,72,DC
+L. Antonelli,Genoa,15,72,"ES, TS"
+A. Costa,Parma,15,72,"DC, TS"
+L. Christodoulopoulos,Hellas Verona,15,72,"CC, COC, AT, ES"
+J. Holebas,Roma,15,72,"TS, ES, AS"
+R. Meggiorini,Chievo Verona,15,72,ATT
+E. Berisha,Lazio,15,72,POR
+G. Sansone,Sampdoria,15,72,"COC, AT, AS"
+Iago Falqué,Genoa,15,72,ES
+N. Krstičić,Sampdoria,15,72,"CC, CDC, COC"
+A. Bertolacci,Genoa,15,72,CC
+E. Badu,Udinese,15,72,"CDC, CC"
+K. Babacar,Fiorentina,15,72,ATT
+João Pedro Galvão,Cagliari,15,72,"AS, CC"
+L. Cavanda,Lazio,15,72,TD
+K. Koulibaly,Napoli,15,72,DC
+R. Saponara,Milan,15,72,COC
+J. Kurtić,Fiorentina,15,72,"CDC, CC"
+Danilo Avelar,Cagliari,15,72,TS
+Š. Vrsaljko,Sassuolo,15,72,"ED, TD"
+C. Jorquera,Parma,15,72,COC
+G. González,Palermo,15,72,DC
+S. Widmer,Udinese,15,72,"ED, TD"
+A. Palombo,Sampdoria,15,71,CDC
+G. Pegolo,Sassuolo,15,71,POR
+F. Balzaretti,Roma,15,71,TS
+F. Brienza,Cesena,15,71,"AT, ED"
+M. Gobbi,Parma,15,71,"TS, ES"
+G. Migliaccio,Atalanta,15,71,"CC, DC, CDC"
+L. Greco,Genoa,15,71,CC
+E. Barreto,Palermo,15,71,"CC, CDC"
+M. Silvestre,Sampdoria,15,71,DC
+D. Galloppa,Parma,15,71,"CC, CDC"
+F. Pisano,Cagliari,15,71,TD
+M. Motta,Juventus,15,71,"ED, TD"
+D. Dessena,Cagliari,15,71,"CC, TD"
+M. Andújar,Napoli,15,71,POR
+Nenê,Hellas Verona,15,71,ATT
+S. De Maio,Genoa,15,71,DC
+Y. Benalouane,Atalanta,15,71,"TD, DC"
+I. Radovanovic,Chievo Verona,15,71,"CC, CDC"
+E. Muñoz,Palermo,15,71,DC
+Diego Farías,Cagliari,15,71,"AD, AS"
+M. Basha,Torino,15,71,"CC, CDC"
+T. Rincón,Genoa,15,71,"CDC, CC, ED"
+R. Krhin,Inter,15,71,"CDC, CC"
+Gabriel Silva,Udinese,15,71,"ES, TS"
+S. Makienok,Palermo,15,71,ATT
+Luna,Hellas Verona,15,71,TS
+A. Acquah,Parma,15,71,"CC, CDC"
+N. Leali,Cesena,15,71,POR
+F. Sørensen,Hellas Verona,15,71,DC
+M. Capuano,Cagliari,15,71,DC
+S. Sturaro,Genoa,15,71,"CC, CDC"
+L. Paredes,Roma,15,71,COC
+S. Uçan,Roma,15,71,"CC, COC"
+S. Scuffet,Udinese,15,71,POR
+I. Bubnjić,Udinese,15,71,DC
+Felipe,Parma,15,70,DC
+M. Brighi,Sassuolo,15,70,CC
+F. Tavano,Empoli,15,70,ATT
+C. Terzi,Palermo,15,70,DC
+G. Mesto,Napoli,15,70,"TD, ED"
+M. Santana,Genoa,15,70,ES
+B. Lobonţ,Roma,15,70,POR
+L. Antonini,Genoa,15,70,"DC, TD"
+F. Magnanelli,Sassuolo,15,70,"CDC, CC"
+D. Mesbah,Sampdoria,15,70,"TS, ES"
+N. Pozzi,Parma,15,70,ATT
+T. Guarente,Empoli,15,70,"CC, CDC"
+E. Cascione,Cesena,15,70,"CDC, CC"
+G. Bergessio,Sampdoria,15,70,ATT
+F. Peluso,Sassuolo,15,70,"TS, ES, DC"
+F. Cacciatore,Sampdoria,15,70,TD
+S. Eriksson,Cagliari,15,70,CC
+L. Ariaudo,Sassuolo,15,70,DC
+Da Costa,Sampdoria,15,70,POR
+P. Tachtsidis,Hellas Verona,15,70,"CDC, CC"
+E. Zukanović,Chievo Verona,15,70,DC
+J. Obi,Inter,15,70,CC
+R. Soriano,Sampdoria,15,70,"CC, COC"
+Dodô,Inter,15,70,"TS, ES"
+V. Regini,Sampdoria,15,70,"TS, DC"
+L. Marrone,Juventus,15,70,"CDC, DC"
+D. Lazarević,Chievo Verona,15,70,"ED, ES, AD, AS"
+L. Crisetig,Cagliari,15,70,"CDC, CC"
+R. Boakye,Atalanta,15,70,"ATT, AS"
+I. Cofie,Chievo Verona,15,70,"CC, CDC"
+S. Benedetti,Cagliari,15,70,DC
+Pedro Mendes,Parma,15,70,DC
+J. Gomez,Hellas Verona,15,70,"AS, AD"
+S. Gentiletti,Lazio,15,70,DC
+N. Bellomo,Chievo Verona,15,70,"COC, CC"
+L. Ceppitelli,Cagliari,15,70,DC
+L. Pavoletti,Sassuolo,15,70,ATT
+N. Murru,Cagliari,15,70,TS
+Bruno Peres,Torino,15,70,TD
+A. Romagnoli,Sampdoria,15,70,"DC, TS"
+P. Dybala,Palermo,15,70,AT
+A. González,Hellas Verona,15,70,"DC, TD"
+A. Agostini,Hellas Verona,15,69,TS
+S. Pellissier,Chievo Verona,15,69,ATT
+E. Braafheid,Lazio,15,69,TS
+G. Sardo,Chievo Verona,15,69,"TD, ED"
+C. Puggioni,Chievo Verona,15,69,POR
+D. Biondini,Sassuolo,15,69,"CC, CDC"
+J. Basanta,Fiorentina,15,69,DC
+P. De Ceglie,Parma,15,69,"ES, CC"
+S. Ujkani,Palermo,15,69,POR
+Pereirinha,Lazio,15,69,TD
+T. Mangani,Chievo Verona,15,69,"CC, CDC"
+D. Bassi,Empoli,15,69,POR
+N. Frey,Chievo Verona,15,69,"TD, DC, TS"
+E. Pisano,Palermo,15,69,"TD, ED"
+T. Kupisz,Chievo Verona,15,69,ED
+M. Larrondo,Torino,15,69,ATT
+Edimar,Chievo Verona,15,69,TS
+G. Marilungo,Cesena,15,69,"ATT, AS"
+Ł. Skorupski,Roma,15,69,POR
+M. D'Alessandro,Atalanta,15,69,"AD, AS"
+D. Novaretti,Lazio,15,69,DC
+M. Faraoni,Udinese,15,69,"ED, TD"
+L. Tonelli,Empoli,15,69,DC
+C. Biraghi,Chievo Verona,15,69,"TS, ES"
+I. Piris,Udinese,15,69,"TD, TS"
+L. Antei,Sassuolo,15,69,DC
+M. Vecino,Empoli,15,69,CC
+G. Pasquale,Udinese,15,68,ES
+E. Maresca,Palermo,15,68,"CC, CDC"
+G. Bellini,Atalanta,15,68,"TD, TS"
+C. Lupatelli,Fiorentina,15,68,POR
+F. Agliardi,Cesena,15,68,POR
+Rubinho,Juventus,15,68,POR
+A. Geijo,Udinese,15,68,"ATT, AT"
+P. Bianco,Sassuolo,15,68,DC
+D. Succi,Cesena,15,68,ATT
+R. Cazzola,Cesena,15,68,CC
+O. Iakovenko,Fiorentina,15,68,"ED, ES"
+A. Balzano,Cagliari,15,68,"TD, ED"
+S. Missiroli,Sassuolo,15,68,CC
+D. Capelli,Cesena,15,68,DC
+F. Della Rocca,Palermo,15,68,CC
+A. Rosi,Genoa,15,68,"ED, TD"
+N. Cherubin,Atalanta,15,68,DC
+E. Terranova,Sassuolo,15,68,DC
+G. Ngoyi,Palermo,15,68,CDC
+G. Perico,Cesena,15,68,TD
+L. Giorgi,Cesena,15,68,ED
+M. Valdifiori,Empoli,15,68,"CC, CDC"
+P. Jansson,Torino,15,68,DC
+D. D'Ambrosio,Inter,15,68,"ES, ED, TS"
+P. Wszołek,Sampdoria,15,68,"COC, ES"
+S. Longo,Cagliari,15,68,ATT
+A. Belotti,Palermo,15,68,ATT
+P. Zieliński,Empoli,15,68,"COC, AT"
+L. Đorđević,Sampdoria,15,68,"ATT, AS, AD"
+M. Benassi,Torino,15,68,CC
+F. Bernardeschi,Fiorentina,15,68,"AD, AS"
+D. Laxalt,Empoli,15,68,"CC, COC"
+D. Zappacosta,Atalanta,15,68,"ED, TD"
+F. Mussis,Genoa,15,68,CC
+João Silva,Palermo,15,68,ATT
+F. Benussi,Hellas Verona,15,67,POR
+R. Vitiello,Palermo,15,67,"TD, DC"
+A. Rosati,Napoli,15,67,POR
+N. Pulzetti,Cesena,15,67,CC
+C. Del Grosso,Atalanta,15,67,"TS, ES"
+M. Morganella,Palermo,15,67,"ED, TD"
+M. Volta,Cesena,15,67,DC
+L. Mchedlidze,Empoli,15,67,ATT
+F. Bolzoni,Palermo,15,67,"CC, CDC"
+S. Colombi,Cagliari,15,67,POR
+E. Lamanna,Genoa,15,67,POR
+L. Sepe,Empoli,15,67,POR
+M. Valoti,Hellas Verona,15,67,"COC, ED"
+A. Cragno,Cagliari,15,67,POR
+M. Pucciarelli,Empoli,15,67,COC
+R. Chibsah,Sassuolo,15,67,"CDC, CC"
+F. Vázquez,Palermo,15,67,"COC, AT"
+Jadson,Udinese,15,67,CDC
+V. Laurini,Empoli,15,67,TD
+E. Hysaj,Empoli,15,67,"TS, TD"
+D. Rugani,Empoli,15,67,DC
+D. Cataldi,Lazio,15,67,"CC, COC"
+K. Coman,Juventus,15,67,"AS, ATT"
+S. Molina,Atalanta,15,67,ED
+L. Scaloni,Atalanta,15,66,TD
+S. Aronica,Palermo,15,66,DC
+D. Croce,Empoli,15,66,CC
+G. De Feudis,Cesena,15,66,"CC, CDC"
+A. Ghezzal,Parma,15,66,"AT, AS, AD"
+M. Albertazzi,Milan,15,66,TS
+M. Pamić,Chievo Verona,15,66,TS
+F. Daprelà,Palermo,15,66,"ES, TS"
+F. Renzetti,Cesena,15,66,"TS, ES"
+S. Verdi,Empoli,15,66,COC
+A. Seculin,Chievo Verona,15,66,POR
+A. Iacobucci,Parma,15,66,POR
+S. Anđelković,Palermo,15,66,DC
+F. Seymour,Genoa,15,66,"CC, CDC"
+Mário Rui,Empoli,15,66,TS
+M. Wagué,Udinese,15,66,DC
+M. Bianchetti,Empoli,15,66,DC
+A. Longhi,Sassuolo,15,66,"TS, ES"
+J. Martínez,Torino,15,66,"ES, ED"
+F. Fedato,Sampdoria,15,66,AS
+A. Tabanelli,Cesena,15,66,"CC, COC"
+F. Barba,Empoli,15,66,DC
+A. Zapata,Udinese,15,66,COC
+V. Rosseti,Atalanta,15,66,"ATT, AS"
+G. Silva,Torino,15,66,"TS, DC"
+I. Chochev,Palermo,15,66,"CC, COC"
+D. Moro,Empoli,15,65,CC
+N. Belmonte,Udinese,15,65,DC
+F. Santacroce,Parma,15,65,"DC, TD"
+Marcos Alonso,Fiorentina,15,65,TS
+A. Mazzotta,Cesena,15,65,TS
+J. Sala,Hellas Verona,15,65,"CC, ED"
+F. Signorelli,Empoli,15,65,CC
+R. Quaison,Palermo,15,65,CC
+A. Duncan,Sampdoria,15,65,CC
+I. Mbaye,Inter,15,65,"ES, ED"
+A. Hegazy,Fiorentina,15,65,DC
+A. Izzo,Genoa,15,65,DC
+R. Aguirre,Empoli,15,65,"ATT, AT"
+W. Bressan,Cesena,15,64,POR
+A. Cordaz,Parma,15,64,POR
+R. Colombo,Napoli,15,64,POR
+C. Polito,Sassuolo,15,64,POR
+R. Perticone,Empoli,15,64,"DC, TD"
+M. Gazzola,Sassuolo,15,64,"TD, ED"
+M. Milanović,Palermo,15,64,DC
+A. Pomini,Sassuolo,15,64,POR
+A. Rispoli,Parma,15,64,TD
+M. Djuric,Cesena,15,64,ATT
+A. Rodríguez,Cesena,15,64,ATT
+G. Defrel,Cesena,15,64,"AT, AS, AD"
+H. Magnússon,Cesena,15,64,"DC, TS"
+Emerson,Palermo,15,64,TS
+M. Hallberg,Udinese,15,64,"CC, CDC, ED"
+J. Radošević,Napoli,15,64,"CDC, CC"
+T. Strakosha,Lazio,15,64,POR
+L. Rizzo,Sampdoria,15,64,"CC, ES"
+A. Sanabria,Roma,15,64,ATT
+T. Berni,Inter,15,63,POR
+S. Masiello,Torino,15,63,"ES, TS"
+T. Danilevičius,Parma,15,63,ATT
+M. Coppola,Cesena,15,63,"CC, CDC"
+Z. Laczkó,Sampdoria,15,63,TS
+M. Velardi,Parma,15,63,"ED, ADA, TD"
+Zé Eduardo,Cesena,15,63,"COC, CC"
+S. Bidaoui,Parma,15,63,"AS, AD"
+A. Ioniţă,Hellas Verona,15,63,"CDC, CC, COC"
+Miranda,Chievo Verona,15,63,POR
+L. Spinazzola,Atalanta,15,63,"ES, ED"
+L. Martinelli,Empoli,15,63,DC
+L. Krajnc,Cesena,15,63,DC
+G. Campanharo,Hellas Verona,15,63,"CC, CDC"
+Lucas Souza,Parma,15,63,"CDC, CC"
+Octávio,Fiorentina,15,63,COC
+Lucas Evangelista,Udinese,15,63,COC
+Y. Bnou-Marzuk,Juventus,15,63,ATT
+Caio Rangel,Cagliari,15,63,AD
+G. Frezzolini,Atalanta,15,62,POR
+C. Raimondi,Atalanta,15,62,"ED, TD"
+I. Zeytulaev,Torino,15,62,"AS, AD"
+A. Barusso,Torino,15,62,"CDC, CC"
+I. Martić,Hellas Verona,15,62,TD
+B. Vicente,Parma,15,62,"CDC, CC"
+J. Brillante,Fiorentina,15,62,"CC, TD, COC"
+A. Lazaar,Palermo,15,62,"ES, TS"
+L. Finazzi,Chievo Verona,15,62,"CC, CDC"
+C. Nica,Cesena,15,62,"TD, TS"
+W. Carboni,Cagliari,15,62,POR
+Carlos Blanco,Juventus,15,62,DC
+Sergio Buenacasa,Juventus,15,62,ATT
+Z. Feddal,Palermo,15,61,"DC, ES"
+I. Shekiladze,Empoli,15,61,ATT
+M. Tounkara,Lazio,15,61,ATT
+R. Serpieri,Lazio,15,61,DC
+L. Lezzerini,Fiorentina,15,61,POR
+S. Solinas,Cagliari,15,61,AT
+G. Donsah,Cagliari,15,61,CC
+R. Strasser,Genoa,15,60,"CC, CDC, DC"
+D. Jawad,Genoa,15,60,"ED, ES"
+A. De Vitis,Sampdoria,15,60,CC
+M. Alhassan,Udinese,15,60,"ES, TS"
+R. Stillo,Parma,15,60,POR
+L. Garritano,Cesena,15,60,"AT, AS"
+J. Cevallos,Juventus,15,60,COC
+A. Ampuero,Parma,15,60,"ES, CC"
+M. Sportiello,Atalanta,15,60,POR
+F. Mattiello,Juventus,15,60,ED
+D. Cinaglia,Torino,15,60,DC
+F. Bonazzoli,Inter,15,60,ATT
+N. Barella,Cagliari,15,60,CC
+M. Somma,Roma,15,60,"DC, TD"
+A. Meret,Udinese,15,60,POR
+G. Sorcan,Chievo Verona,15,60,POR
+M. Širok,Parma,15,60,TD
+M. Coda,Parma,15,59,"ATT, AT"
+G. Pollace,Lazio,15,59,TD
+M. Antic,Lazio,15,59,CC
+A. Guidiala,Inter,15,59,ATT
+A. Loi,Cagliari,15,59,COC
+A. Capello,Cagliari,15,59,"CC, AD"
+S. Ristovski,Parma,15,58,"ED, TD"
+T. Svedkauskas,Roma,15,58,POR
+L. Citti,Juventus,15,58,POR
+A. Grassi,Atalanta,15,58,CC
+J. Olausson,Atalanta,15,58,CC
+M. Suella,Cagliari,15,58,AD
+G. Sciacca,Inter,15,58,DC
+D. Lodesani,Sassuolo,15,57,AD
+E. Ceria,Juventus,15,57,ES
+F. Boni,Hellas Verona,15,57,DC
+F. Gaetano,Napoli,15,57,COC
+A. Palazzi,Inter,15,57,CDC
+O. Arzamendia,Hellas Verona,15,56,"CC, COC"
+R. Alborno,Inter,15,56,"TS, ES"
+E. Gliozzi,Sassuolo,15,56,ATT
+D. Vacondio,Sassuolo,15,56,TD
+L. Cargnino,Torino,15,56,DC
+M. Muroni,Cagliari,15,56,CC
+D. Costa,Inter,15,56,POR
+J. Petriccione,Fiorentina,15,56,CDC
+D. Sommariva,Genoa,15,56,POR
+M. Casale,Inter,15,55,ATT
+M. Bachini,Empoli,15,55,DC
+F. Di Mariano,Roma,15,55,COC
+N. Contini,Napoli,15,55,POR
+F. Liivak,Napoli,15,55,ATT
+E. Bearzotti,Hellas Verona,15,55,ATT
+M. Fornasier,Sampdoria,15,54,DC
+D. Konate,Empoli,15,54,DC
+P. Gollini,Hellas Verona,15,54,POR
+A. Atzori,Cagliari,15,54,CC
+L. Palmiero,Napoli,15,54,CC
+V. Guardiglio,Napoli,15,54,TD
+A. Romano,Napoli,15,54,CC
+R. Mandragora,Genoa,15,54,CC
+F. Pacini,Empoli,15,53,POR
+I. Donkor,Inter,15,53,TD
+S. Monni,Torino,15,53,AS
+G. Graziano,Torino,15,53,CDC
+P. Cappelluzzo,Hellas Verona,15,53,ATT
+I. Toskic,Chievo Verona,15,52,CC
+T. Velocci,Genoa,15,52,AT
+M. Saias,Cagliari,15,52,TD
+S. Luperto,Napoli,15,52,TS
+E. Rovini,Empoli,15,51,"AT, COC"
+G. Bennati,Genoa,15,51,CC
+L. Gallotti,Genoa,15,51,TS
+A. Yabrè,Cesena,15,50,CC
+E. Capradossi,Roma,15,49,DC
+A. Fulignati,Palermo,15,49,POR
+G. Moncini,Cesena,15,49,ATT
+L. Valzania,Cesena,15,48,"ED, CC"
+A. Iglio,Cesena,15,46,POR
+M. Rocca,Inter,15,46,CC
+M. Fissore,Genoa,15,44,DC
+G. Chiellini,Juventus,16,87,DC
+P. Pogba,Juventus,16,86,CC
+G. Buffon,Juventus,16,84,POR
+A. Barzagli,Juventus,16,84,DC
+G. Higuaín,Napoli,16,84,ATT
+Miranda,Inter,16,84,DC
+C. Marchisio,Juventus,16,84,"CC, CDC"
+M. Pjanić,Roma,16,84,CC
+D. De Rossi,Roma,16,83,CDC
+N. Vidić,Inter,16,83,DC
+S. Handanovič,Inter,16,83,POR
+M. Hamšik,Napoli,16,83,COC
+A. Candreva,Lazio,16,83,AD
+R. Nainggolan,Roma,16,83,CC
+S. Khedira,Juventus,16,83,"CDC, CC"
+M. Mandžukić,Juventus,16,83,ATT
+L. Bonucci,Juventus,16,83,DC
+S. Lichtsteiner,Juventus,16,82,"TD, ED"
+Diego López,Milan,16,82,POR
+L. Biglia,Lazio,16,82,"CDC, CC"
+Borja Valero,Fiorentina,16,82,CC
+Leandro Castán,Roma,16,82,DC
+D. Mertens,Napoli,16,82,"COC, AS"
+K. Glik,Torino,16,82,DC
+Alex Sandro,Juventus,16,82,TS
+K. Manolas,Roma,16,82,DC
+J. Cuadrado,Juventus,16,82,"ED, ATT, ES"
+S. de Vrij,Lazio,16,82,DC
+C. Bacca,Milan,16,82,ATT
+A. Cassano,Sampdoria,16,81,AT
+M. Klose,Lazio,16,81,ATT
+P. Evra,Juventus,16,81,"TS, ES"
+N. de Jong,Milan,16,81,"CDC, CC"
+Alex,Milan,16,81,DC
+Raúl Albiol,Napoli,16,81,DC
+J. Ménez,Milan,16,81,"AT, AS"
+E. Džeko,Roma,16,81,ATT
+S. Jovetić,Inter,16,81,"ATT, COC"
+M. Cáceres,Juventus,16,81,"DC, TD"
+M. Parolo,Lazio,16,81,"CC, CDC"
+José Callejón,Napoli,16,81,COC
+R. Pereyra,Juventus,16,81,"COC, CC"
+G. Medel,Inter,16,81,"CDC, CC"
+M. Perin,Genoa,16,81,POR
+L. Insigne,Napoli,16,81,"COC, AT"
+Allan,Napoli,16,81,"CDC, CC"
+Morata,Juventus,16,81,ATT
+F. Totti,Roma,16,80,"AT, AS"
+José Reina,Napoli,16,80,POR
+S. Mauri,Lazio,16,80,"COC, AS, CC"
+Maicon,Roma,16,80,TD
+F. Marchetti,Lazio,16,80,POR
+G. Rodríguez,Fiorentina,16,80,DC
+R. Palacio,Inter,16,80,ATT
+R. Montolivo,Milan,16,80,"CC, CDC"
+G. Rossi,Fiorentina,16,80,ATT
+J. Błaszczykowski,Fiorentina,16,80,ED
+D. Basta,Lazio,16,80,"TD, ED"
+F. Guarín,Inter,16,80,CC
+Gervinho,Roma,16,80,"AS, AD"
+F. Djordjevic,Lazio,16,80,ATT
+M. Balotelli,Milan,16,80,ATT
+Maurício,Lazio,16,80,DC
+K. Strootman,Roma,16,80,CC
+M. Salah,Roma,16,80,AD
+D. Berardi,Sassuolo,16,80,"AD, AT"
+N. Maksimović,Torino,16,80,DC
+M. De Sanctis,Roma,16,79,POR
+S. Keita,Roma,16,79,"CDC, CC"
+P. Mexès,Milan,16,79,DC
+A. Di Natale,Udinese,16,79,ATT
+F. Quagliarella,Torino,16,79,ATT
+A. Consigli,Sassuolo,16,79,POR
+S. Radu,Lazio,16,79,TS
+G. Paletta,Atalanta,16,79,DC
+Mario Suárez,Fiorentina,16,79,"CC, CDC"
+D. Astori,Fiorentina,16,79,DC
+C. Ansaldi,Genoa,16,79,TS
+Eder,Sampdoria,16,79,"AS, AT"
+Luiz Adriano,Milan,16,79,ATT
+D. Perotti,Genoa,16,79,"AS, AD"
+W. Szczęsny,Roma,16,79,POR
+K. Asamoah,Juventus,16,79,"ES, CC"
+Iago Falqué,Roma,16,79,"AD, AS"
+A. Ljajić,Inter,16,79,"AS, AD"
+Neto,Juventus,16,79,POR
+Montoya,Inter,16,79,TD
+Juan Jesus,Inter,16,79,"DC, TS"
+M. Icardi,Inter,16,79,ATT
+Felipe Anderson,Lazio,16,79,"AS, AD, COC"
+F. Vázquez,Palermo,16,79,"AT, COC"
+Bruno Peres,Torino,16,79,ADA
+E. Moretti,Torino,16,78,DC
+G. Denis,Atalanta,16,78,ATT
+Danilo,Udinese,16,78,DC
+I. Abate,Milan,16,78,TD
+E. Viviano,Sampdoria,16,78,POR
+L. Cigarini,Atalanta,16,78,CC
+C. Zapata,Milan,16,78,DC
+A. Ranocchia,Inter,16,78,DC
+O. Karnezis,Udinese,16,78,POR
+J. Biabiany,Inter,16,78,"AD, AS, ED"
+S. Lulić,Lazio,16,78,"CC, ES, AS, TS"
+T. Heurtaux,Udinese,16,78,"DC, TD"
+G. Bonaventura,Milan,16,78,"CC, AS"
+M. Destro,Bologna,16,78,ATT
+M. Gabbiadini,Napoli,16,78,"COC, AT, AD"
+J. Iličić,Fiorentina,16,78,"AT, AD"
+K. Koulibaly,Napoli,16,78,DC
+F. Ghoulam,Napoli,16,78,TS
+G. Kondogbia,Inter,16,78,"CDC, CC"
+S. Zaza,Juventus,16,78,ATT
+D. Baselli,Torino,16,78,"CC, CDC"
+P. Dybala,Juventus,16,78,ATT
+D. Rugani,Juventus,16,78,DC
+C. Abbiati,Milan,16,77,POR
+A. Gamberini,Chievo Verona,16,77,DC
+L. Toni,Hellas Verona,16,77,ATT
+S. Sorrentino,Palermo,16,77,POR
+E. Hallfreðsson,Hellas Verona,16,77,CC
+G. Pazzini,Hellas Verona,16,77,ATT
+A. Gazzi,Torino,16,77,"CDC, CC"
+I. Cissokho,Genoa,16,77,TD
+M. López,Torino,16,77,ATT
+B. Cesar,Chievo Verona,16,77,DC
+A. Mirante,Bologna,16,77,POR
+Verdú,Fiorentina,16,77,"COC, CC"
+M. Pasqual,Fiorentina,16,77,"TS, ES"
+C. Théréau,Udinese,16,77,ATT
+L. De Silvestri,Sampdoria,16,77,TD
+L. Antonelli,Milan,16,77,"TS, ES"
+M. Fernández,Fiorentina,16,77,"CC, COC"
+J. Zúñiga,Napoli,16,77,"TS, ES"
+A. Matri,Lazio,16,77,ATT
+J. De Guzmán,Napoli,16,77,"COC, CC"
+A. Cerci,Milan,16,77,"AT, AD"
+A. Poli,Milan,16,77,CC
+K. Honda,Milan,16,77,"AD, COC"
+A. Paloschi,Chievo Verona,16,77,ATT
+Henrique,Napoli,16,77,"DC, TD, CDC"
+O. El Kaddouri,Napoli,16,77,"CC, COC"
+A. Costa,Genoa,16,77,CC
+M. Valdifiori,Napoli,16,77,"CDC, CC"
+A. Bertolacci,Milan,16,77,CC
+J. Iturbe,Roma,16,77,AD
+L. Tonelli,Empoli,16,77,DC
+M. Badelj,Fiorentina,16,77,"CDC, CC"
+J. Murillo,Inter,16,77,DC
+David López,Napoli,16,77,"CDC, CC"
+S. Sturaro,Juventus,16,77,"CC, CDC"
+A. Florenzi,Roma,16,77,"TD, AD, CC"
+Diogo Figueiras,Genoa,16,77,TD
+R. Álvarez,Inter,16,77,"ED, AT"
+S. Gentiletti,Lazio,16,77,DC
+Jorginho,Napoli,16,77,"CDC, CC"
+V. Chiricheş,Napoli,16,77,"DC, TD"
+G. González,Palermo,16,77,DC
+S. Pepe,Chievo Verona,16,76,"ED, ES"
+N. Burdisso,Genoa,16,76,DC
+C. Maggio,Napoli,16,76,TD
+V. Moras,Hellas Verona,16,76,DC
+E. Barreto,Sampdoria,16,76,"CC, CDC"
+D. Padelli,Torino,16,76,POR
+Diego Capel,Genoa,16,76,"ES, ED"
+N. Spolli,Carpi,16,76,DC
+P. Hetemaj,Chievo Verona,16,76,"ES, CC"
+M. Diakité,Frosinone,16,76,DC
+V. Torosidis,Roma,16,76,"TD, TS"
+S. De Maio,Genoa,16,76,DC
+P. Mpoku,Chievo Verona,16,76,"ES, COC"
+D. Santon,Inter,16,76,"TS, TD"
+E. Giaccherini,Bologna,16,76,"ES, CC"
+Rômulo,Hellas Verona,16,76,"CC, TD"
+L. Digne,Roma,16,76,TS
+R. Morrison,Lazio,16,76,"COC, CC"
+J. Kurtić,Atalanta,16,76,"CDC, CC"
+Fernando,Sampdoria,16,76,"CDC, CC"
+Mário Rui,Empoli,16,76,TS
+A. Rüdiger,Roma,16,76,DC
+M. De Sciglio,Milan,16,76,"TS, TD"
+Alex Telles,Inter,16,76,TS
+D. Zapata,Udinese,16,76,ATT
+B. Keita,Lazio,16,76,"AS, AD, ATT"
+P. Cannavaro,Sassuolo,16,75,DC
+D. Dainelli,Chievo Verona,16,75,DC
+E. Maresca,Palermo,16,75,"CC, CDC"
+R. Márquez,Hellas Verona,16,75,DC
+A. Cole,Roma,16,75,TS
+M. Domizzi,Udinese,16,75,DC
+S. Padoin,Juventus,16,75,"TS, ED, CC"
+C. Bovo,Torino,16,75,DC
+M. Pinilla,Atalanta,16,75,ATT
+F. Brienza,Bologna,16,75,"COC, AT"
+M. Cassani,Sampdoria,16,75,"TD, DC"
+D. Croce,Empoli,16,75,CC
+D. Gastaldello,Bologna,16,75,DC
+G. Pandev,Genoa,16,75,"COC, ATT"
+L. Rigoni,Palermo,16,75,"CC, CDC"
+R. Vitiello,Palermo,16,75,"DC, TD"
+Rafael,Hellas Verona,16,75,POR
+A. Gómez,Atalanta,16,75,ES
+C. Molinaro,Torino,16,75,"ASA, ES"
+G. Stendardo,Atalanta,16,75,DC
+Amauri,Torino,16,75,ATT
+A. Nocerino,Milan,16,75,"CC, CDC"
+A. Konko,Lazio,16,75,TD
+B. Dramé,Atalanta,16,75,"TS, ES"
+S. Gakpé,Genoa,16,75,"ED, ES, ATT"
+N. Moisander,Sampdoria,16,75,DC
+P. Kone,Udinese,16,75,"COC, AT, CC"
+V. Birsa,Chievo Verona,16,75,"ED, ES"
+L. Christodoulopoulos,Sampdoria,16,75,"CC, AS"
+G. Vives,Torino,16,75,"CC, CDC"
+B. Janković,Hellas Verona,16,75,"AS, AD"
+M. Moralez,Atalanta,16,75,"AT, COC, AS"
+F. Roncaglia,Fiorentina,16,75,"DC, TD"
+Marquinho,Udinese,16,75,"ED, CC, ES"
+L. Rossettini,Bologna,16,75,DC
+P. Tachtsidis,Genoa,16,75,"CDC, CC"
+T. Rincón,Genoa,16,75,"CDC, CC, ED"
+Rafael,Napoli,16,75,POR
+Marcos Alonso,Fiorentina,16,75,"TS, ES"
+P. Jansson,Torino,16,75,DC
+N. Tomović,Fiorentina,16,75,"TD, DC"
+Ž. Brkić,Carpi,16,75,POR
+K. Babacar,Fiorentina,16,75,ATT
+S. Taïder,Bologna,16,75,"CC, CDC"
+D. D'Ambrosio,Inter,16,75,"TD, TS, ED, ES"
+F. Acerbi,Sassuolo,16,75,DC
+C. Tătăruşanu,Fiorentina,16,75,POR
+N. Sansone,Sassuolo,16,75,"AS, AD"
+S. Anđelković,Palermo,16,75,DC
+Danilo Avelar,Torino,16,75,TS
+G. Defrel,Sassuolo,16,75,"AT, ES, AD"
+O. Onazi,Lazio,16,75,CC
+Š. Vrsaljko,Sassuolo,16,75,"TD, ED"
+Edenílson,Udinese,16,75,"ED, ES, TD"
+I. Piris,Udinese,16,75,"DC, TS, TD"
+A. Romagnoli,Milan,16,75,"DC, TS"
+E. Hysaj,Napoli,16,75,"TD, TS"
+R. Kishna,Lazio,16,75,"AS, AD"
+Bruno Fernandes,Udinese,16,75,"CC, COC, AT"
+M. Lemina,Juventus,16,75,"CDC, CC, TD"
+M. Sportiello,Atalanta,16,75,POR
+M. Brozović,Inter,16,75,CC
+W. Hoedt,Lazio,16,75,DC
+A. Gilardino,Palermo,16,74,ATT
+A. Bizzarri,Chievo Verona,16,74,POR
+A. Farnerud,Torino,16,74,"CC, CDC"
+M. Borriello,Carpi,16,74,ATT
+G. Marchese,Genoa,16,74,"DC, TS"
+M. Silvestre,Sampdoria,16,74,DC
+M. Canini,Atalanta,16,74,DC
+M. Izco,Chievo Verona,16,74,"CC, CDC"
+J. Carrizo,Inter,16,74,POR
+A. Masiello,Atalanta,16,74,"DC, TD"
+M. Iturra,Udinese,16,74,"CDC, CC"
+A. Costa,Empoli,16,74,"DC, TS"
+N. Kalinić,Fiorentina,16,74,ATT
+Rafael Tolói,Atalanta,16,74,DC
+C. Carmona,Atalanta,16,74,"CC, CDC"
+R. Meggiorini,Chievo Verona,16,74,ATT
+R. Soriano,Sampdoria,16,74,"COC, CC"
+L. Muriel,Sampdoria,16,74,ATT
+R. Saponara,Empoli,16,74,COC
+A. Acquah,Torino,16,74,"CC, CDC"
+Ryder,Carpi,16,74,"AT, COC"
+Gabriel,Napoli,16,74,POR
+Suso,Milan,16,74,"ED, ES"
+J. Gomez,Hellas Verona,16,74,"AD, AS"
+M. Niang,Milan,16,74,"ATT, AD"
+J. Martínez,Torino,16,74,"AT, ATT"
+Guilherme,Udinese,16,74,"CDC, CC"
+M. Benassi,Torino,16,74,CC
+D. Zappacosta,Torino,16,74,"ED, TD"
+M. Oikonomou,Bologna,16,74,DC
+M. Maccarone,Empoli,16,73,ATT
+D. Brivio,Atalanta,16,73,TS
+M. Gobbi,Chievo Verona,16,73,"TS, ES"
+L. Greco,Hellas Verona,16,73,"CC, CDC"
+S. Floccari,Sassuolo,16,73,ATT
+I. Radovanovic,Chievo Verona,16,73,"CC, CDC"
+A. El Kaoutari,Palermo,16,73,DC
+L. Siligardi,Hellas Verona,16,73,"AD, AT"
+M. Estigarribia,Atalanta,16,73,"ED, ES"
+E. Berisha,Lazio,16,73,POR
+F. Zuculini,Bologna,16,73,"CC, ED"
+E. Zukanović,Sampdoria,16,73,"TS, DC"
+L. Sepe,Fiorentina,16,73,POR
+E. Badu,Udinese,16,73,"CC, CDC"
+A. Ioniţă,Hellas Verona,16,73,"CC, CDC"
+Dodô,Inter,16,73,"ES, TS"
+L. Crisetig,Bologna,16,73,"CC, CDC"
+I. Cofie,Carpi,16,73,CC
+J. Mbakogu,Carpi,16,73,ATT
+I. Strinić,Napoli,16,73,TS
+L. Castro,Chievo Verona,16,73,"AS, COC"
+M. Pucciarelli,Empoli,16,73,"AT, COC"
+F. Helander,Hellas Verona,16,73,DC
+D. Cataldi,Lazio,16,73,"CC, COC"
+E. Insúa,Udinese,16,73,TS
+A. Di Gaudio,Carpi,16,73,"ES, AS"
+S. Widmer,Udinese,16,73,"ED, TD"
+S. Uçan,Roma,16,73,"CC, COC"
+M. Vecino,Fiorentina,16,73,CC
+I. Bubnjić,Carpi,16,73,DC
+G. Silva,Torino,16,73,"DC, ES"
+Felipe,Udinese,16,72,DC
+L. Castellazzi,Torino,16,72,POR
+A. Floro Flores,Sassuolo,16,72,"AS, ATT"
+A. Palombo,Sampdoria,16,72,CDC
+G. Pegolo,Sassuolo,16,72,POR
+M. Santana,Genoa,16,72,"AS, ES"
+Rubinho,Juventus,16,72,POR
+D. Maietta,Bologna,16,72,DC
+B. Džemaili,Genoa,16,72,"CC, CDC"
+S. Pellissier,Chievo Verona,16,72,ATT
+E. Braafheid,Lazio,16,72,TS
+Rafael Marques,Hellas Verona,16,72,DC
+A. Lazzari,Carpi,16,72,"CDC, CC"
+F. Dionisi,Frosinone,16,72,ATT
+S. Missiroli,Sassuolo,16,72,CC
+F. Peluso,Sassuolo,16,72,"TS, DC"
+N. Frey,Chievo Verona,16,72,TD
+E. Pisano,Hellas Verona,16,72,"TD, ED, TS"
+E. Muñoz,Genoa,16,72,DC
+F. Bolzoni,Palermo,16,72,"CDC, CC"
+F. Cacciatore,Chievo Verona,16,72,"TD, TS"
+L. Ariaudo,Sassuolo,16,72,DC
+N. Krstičić,Sampdoria,16,72,"CC, CDC, COC"
+M. Jajalo,Palermo,16,72,"CC, CDC, COC"
+A. Morleo,Bologna,16,72,"TS, ES"
+J. Obi,Torino,16,72,"CC, ED"
+V. Regini,Sampdoria,16,72,"TS, DC"
+Y. Nagatomo,Inter,16,72,"ES, TS"
+L. Marrone,Carpi,16,72,"CC, CDC, DC"
+J. Sala,Hellas Verona,16,72,"CC, TD"
+Raphael Martinho,Carpi,16,72,"AS, CC"
+A. Christiansen,Chievo Verona,16,72,CC
+N. Leali,Frosinone,16,72,POR
+F. Viviani,Hellas Verona,16,72,"CC, CDC"
+O. Hiljemark,Palermo,16,72,"CC, CDC"
+M. Wagué,Udinese,16,72,DC
+S. Longo,Frosinone,16,72,ATT
+R. Quaison,Palermo,16,72,COC
+D. Lazović,Genoa,16,72,"COC, AD, AS, AT"
+A. Izzo,Genoa,16,72,DC
+J. Mauri,Milan,16,72,CC
+N. Gyömbér,Roma,16,72,DC
+G. Migliaccio,Atalanta,16,71,"CC, CDC"
+F. Benussi,Carpi,16,71,POR
+F. Magnanelli,Sassuolo,16,71,"CDC, CC"
+D. Mesbah,Sampdoria,16,71,"TS, ES"
+A. Coda,Sampdoria,16,71,DC
+S. Ujkani,Genoa,16,71,POR
+Da Costa,Bologna,16,71,POR
+Ł. Skorupski,Empoli,16,71,POR
+E. Lamanna,Genoa,16,71,POR
+S. Romagnoli,Carpi,16,71,DC
+L. Antei,Sassuolo,16,71,DC
+N. Bellomo,Chievo Verona,16,71,"CC, COC"
+L. Pavoletti,Genoa,16,71,ATT
+A. Lazaar,Palermo,16,71,"ES, TS"
+L. Paredes,Empoli,16,71,CC
+A. Belotti,Torino,16,71,ATT
+L. Lollo,Carpi,16,71,"CC, AT"
+P. Zieliński,Empoli,16,71,"COC, AT"
+F. Barba,Empoli,16,71,DC
+F. Bernardeschi,Fiorentina,16,71,AD
+N. Castillo,Frosinone,16,71,ATT
+J. Correa,Sampdoria,16,71,COC
+Lucas Evangelista,Udinese,16,71,COC
+M. Mancosu,Bologna,16,71,ATT
+R. Gagliolo,Carpi,16,71,"DC, TS"
+F. Mattiello,Chievo Verona,16,71,"TS, TD"
+A. Adnan,Udinese,16,71,TS
+M. Brighi,Bologna,16,70,CC
+B. Lobonţ,Roma,16,70,POR
+C. Puggioni,Sampdoria,16,70,POR
+D. Biondini,Sassuolo,16,70,CC
+O. Iakovenko,Fiorentina,16,70,"AS, AD"
+L. Ceccarelli,Bologna,16,70,"TD, ED"
+D. Bassi,Atalanta,16,70,POR
+N. Cherubin,Atalanta,16,70,DC
+E. Terranova,Sassuolo,16,70,DC
+L. Mchedlidze,Empoli,16,70,ATT
+R. Gucher,Frosinone,16,70,"CC, CDC"
+K. Wilczek,Carpi,16,70,ATT
+Gabriel Silva,Carpi,16,70,"ES, TS"
+Rodrigo Ely,Milan,16,70,DC
+Wallace,Carpi,16,70,TD
+A. Duncan,Sassuolo,16,70,CC
+D. Laxalt,Genoa,16,70,"CC, COC"
+E. Pulgar,Bologna,16,70,"DC, CC, CDC"
+G. Letizia,Carpi,16,70,"TS, TD"
+E. Suagher,Atalanta,16,70,DC
+I. Chochev,Palermo,16,70,"CC, COC"
+K. Lasagna,Carpi,16,70,ATT
+S. Ichazo,Torino,16,70,POR
+G. Pasquale,Udinese,16,69,ES
+G. Bellini,Atalanta,16,69,"TD, TS"
+W. Bressan,Chievo Verona,16,69,POR
+M. Zambelli,Empoli,16,69,"TD, DC, ED"
+C. Rickler Del Mare,Bologna,16,69,DC
+D. Ciofani,Frosinone,16,69,ATT
+R. Bianco,Carpi,16,69,"CC, CDC"
+K. Laribi,Sassuolo,16,69,"COC, AS, CC"
+M. D'Alessandro,Atalanta,16,69,"ED, ES"
+A. Seculin,Chievo Verona,16,69,POR
+L. Blanchard,Frosinone,16,69,DC
+A. Longhi,Sassuolo,16,69,"TS, ES"
+M. Livaja,Empoli,16,69,ATT
+E. Krafth,Bologna,16,69,TD
+M. de Roon,Atalanta,16,69,CDC
+V. Laurini,Empoli,16,69,TD
+Gilberto,Fiorentina,16,69,"TD, ED"
+L. Pasciuti,Carpi,16,69,"ES, ED"
+S. Perica,Udinese,16,69,ATT
+U. Đurđević,Palermo,16,69,ATT
+G. Donsah,Bologna,16,69,CC
+S. Milinković-Savić,Lazio,16,69,"CDC, CC"
+A. Gnoukouri,Inter,16,69,CC
+A. Frara,Frosinone,16,68,"CC, CDC, ES"
+A. Russo,Frosinone,16,68,DC
+P. Sammarco,Frosinone,16,68,"CC, CDC"
+M. Carlini,Frosinone,16,68,"AD, AS, COC"
+A. Rosi,Frosinone,16,68,"ED, TD"
+R. Acquafresca,Bologna,16,68,ATT
+M. Morganella,Palermo,16,68,"ED, TD"
+L. Gomis,Frosinone,16,68,POR
+S. Colombi,Palermo,16,68,POR
+R. Romo,Udinese,16,68,POR
+M. Ciofani,Frosinone,16,68,"TD, DC, TS"
+A. Merkel,Udinese,16,68,"CC, COC"
+P. Wszołek,Hellas Verona,16,68,"ED, TD"
+A. Trajkovski,Palermo,16,68,"ES, COC"
+M. Bianchetti,Hellas Verona,16,68,DC
+G. Brugman,Palermo,16,68,"CC, CDC"
+Patric,Lazio,16,68,"TD, CC, CDC, DC"
+Y. Chibsah,Frosinone,16,68,CC
+A. Brignoli,Sampdoria,16,68,POR
+Emerson,Roma,16,68,TS
+R. Crivello,Frosinone,16,68,TS
+A. Masina,Bologna,16,68,TS
+D. Verde,Frosinone,16,68,"AS, AD"
+F. Coppola,Hellas Verona,16,67,POR
+N. Pulzetti,Bologna,16,67,"CC, ED"
+D. Soddimo,Frosinone,16,67,"ES, COC, ED"
+M. Gazzola,Sassuolo,16,67,"TD, ED"
+M. Albertazzi,Hellas Verona,16,67,TS
+F. Daprelà,Palermo,16,67,"ES, TS"
+S. Souprayen,Hellas Verona,16,67,TS
+R. Inglese,Chievo Verona,16,67,ATT
+M. Camporese,Empoli,16,67,DC
+A. Tonev,Frosinone,16,67,"ES, COC"
+A. Struna,Palermo,16,67,TD
+M. Politano,Sassuolo,16,67,AD
+L. Rizzo,Bologna,16,67,"CC, ES"
+A. Rebić,Fiorentina,16,67,ATT
+E. Goldaniga,Palermo,16,67,DC
+G. Sardo,Chievo Verona,16,66,"TD, ED"
+M. Zappino,Frosinone,16,66,POR
+A. També,Genoa,16,66,TD
+R. Maiello,Empoli,16,66,"CC, COC"
+M. Crimi,Bologna,16,66,"CC, CDC"
+Miranda,Chievo Verona,16,66,POR
+Alejandro Rodríguez,Sampdoria,16,66,ATT
+S. Prcić,Torino,16,66,"CDC, CC, ED"
+G. Iñíguez,Carpi,16,66,CC
+R. Aguirre,Udinese,16,66,ATT
+A. Pelagotti,Empoli,16,65,POR
+A. Pomini,Sassuolo,16,65,POR
+N. Rigoni,Chievo Verona,16,65,CC
+D. Falcinelli,Sassuolo,16,65,"ATT, AS"
+A. Donnarumma,Genoa,16,65,POR
+F. Falco,Bologna,16,65,"AT, COC, AD"
+L. Paganini,Frosinone,16,65,"ED, ES, AD"
+M. Fares,Hellas Verona,16,65,AS
+R. Krunic,Empoli,16,65,COC
+D. Pavlovic,Frosinone,16,64,TS
+A. Rispoli,Palermo,16,64,"ED, TD"
+D. Martínez,Genoa,16,64,ATT
+J. Dezi,Napoli,16,64,CC
+I. Mbaye,Bologna,16,64,"ES, ED, TD"
+M. Bakić,Fiorentina,16,64,CC
+M. Fedele,Carpi,16,64,"CC, COC, CDC"
+G. Monachello,Atalanta,16,64,ATT
+Cláudio Winck,Hellas Verona,16,64,TD
+A. Camigliano,Udinese,16,64,DC
+G. Vadalá,Juventus,16,64,COC
+M. Gori,Frosinone,16,64,CC
+M. Vitale,Juventus,16,64,CC
+C. Oikonomidis,Lazio,16,64,AS
+E. Audero,Juventus,16,64,POR
+T. Berni,Inter,16,63,POR
+Ronaldo,Empoli,16,63,"CC, COC, ED"
+M. Mangiapelo,Frosinone,16,63,POR
+R. Serpieri,Lazio,16,63,DC
+L. Cargnino,Torino,16,63,DC
+A. Conti,Atalanta,16,63,"TD, ED"
+A. Meret,Udinese,16,63,POR
+L. Clemenza,Juventus,16,63,COC
+J. Báez,Fiorentina,16,63,ATT
+M. Pugliesi,Empoli,16,62,POR
+A. Berardi,Lazio,16,62,POR
+L. Bittante,Empoli,16,62,"ED, ES, TD, TS"
+L. Lezzerini,Fiorentina,16,62,POR
+S. Simic,Milan,16,62,DC
+G. Guerrieri,Lazio,16,62,POR
+F. Bonazzoli,Sampdoria,16,62,ATT
+R. Bagadur,Fiorentina,16,62,DC
+M. Krivičič,Bologna,16,62,COC
+C. Raimondi,Atalanta,16,61,"ED, TD"
+D. Bertoncini,Frosinone,16,61,DC
+D. Pape Ndiaga,Udinese,16,61,"ATT, AS, AD"
+N. Djiby,Chievo Verona,16,61,"CC, TD"
+A. Ferrari,Bologna,16,61,"DC, TD"
+E. Baldini,Inter,16,61,AS
+F. Dimarco,Inter,16,61,TS
+M. Cassini,Palermo,16,61,"AT, ATT"
+G. Parodi,Juventus,16,61,DC
+K. Dermaku,Empoli,16,61,"DC, TS"
+A. Piu,Empoli,16,61,"AT, COC"
+R. Manaj,Inter,16,61,ATT
+D. Stojanovic,Bologna,16,60,POR
+E. Capradossi,Roma,16,60,DC
+Y. Baraye,Chievo Verona,16,60,"COC, ATT"
+A. Grassi,Atalanta,16,60,CC
+S. Ignico,Torino,16,60,DC
+D. Ivan,Sampdoria,16,60,"COC, CC"
+G. Felicioli,Milan,16,60,ES
+J. Broh Tonye,Sassuolo,16,60,CC
+D. Calabria,Milan,16,60,TD
+P. Gollini,Hellas Verona,16,59,POR
+M. Pugliese,Carpi,16,59,CC
+L. Fontanesi,Sassuolo,16,59,DC
+L. Pellegrini,Sassuolo,16,59,CC
+S. Massolo,Sampdoria,16,59,POR
+B. Radunović,Atalanta,16,59,POR
+O. Ntcham,Genoa,16,58,CC
+M. Zaccagni,Hellas Verona,16,58,CC
+A. Mazzariol,Carpi,16,58,TD
+A. La Gumina,Palermo,16,58,ATT
+José Machín,Roma,16,58,CC
+Pedro Pereira,Sampdoria,16,58,TD
+E. Oneto,Sampdoria,16,58,ATT
+R. Alborno,Inter,16,57,TS
+D. Sommariva,Genoa,16,57,POR
+G. Panico,Genoa,16,57,ATT
+A. Dioussé,Empoli,16,57,CC
+A. Diawara,Bologna,16,57,CDC
+R. Pirrello,Palermo,16,57,"DC, TD"
+A. Liotti,Carpi,16,57,POR
+S. Perisan,Udinese,16,57,POR
+S. Delli Carri,Genoa,16,57,DC
+S. Pontisso,Udinese,16,56,CC
+F. Alastra,Palermo,16,56,POR
+G. Pezzella,Palermo,16,56,"TD, TS"
+L. Serinelli,Sampdoria,16,56,CC
+P. Parente,Genoa,16,56,TS
+F. Gino,Carpi,16,56,CC
+A. Fofana,Inter,16,55,ATT
+M. Sordi,Torino,16,55,POR
+S. Anočič,Roma,16,55,TS
+M. Ierardi,Genoa,16,55,TD
+F. Lombardi,Bologna,16,54,POR
+I. Toskic,Chievo Verona,16,53,CC
+S. Luperto,Napoli,16,53,TS
+E. Crescenzi,Frosinone,16,53,CC
+F. Mapelli,Inter,16,53,DC
+L. Ranelli,Frosinone,16,48,CC
+G. Buffon,Juventus,17,88,POR
+G. Chiellini,Juventus,17,88,DC
+G. Higuaín,Juventus,17,88,ATT
+S. Handanovič,Inter,17,87,POR
+L. Bonucci,Juventus,17,87,DC
+A. Barzagli,Juventus,17,86,DC
+Miranda,Inter,17,86,DC
+C. Marchisio,Juventus,17,86,"CC, CDC"
+Dani Alves,Juventus,17,85,TD
+M. Hamšik,Napoli,17,85,CC
+M. Pjanić,Juventus,17,85,CC
+P. Dybala,Juventus,17,85,"ATT, AT"
+José Reina,Napoli,17,84,POR
+J. Hart,Torino,17,84,POR
+R. Nainggolan,Roma,17,84,CC
+É. Banega,Inter,17,84,COC
+Alex Sandro,Juventus,17,84,"TS, ES"
+K. Manolas,Roma,17,84,DC
+C. Bacca,Milan,17,84,ATT
+D. De Rossi,Roma,17,83,CDC
+S. Lichtsteiner,Juventus,17,83,"TD, ED"
+G. Rodríguez,Fiorentina,17,83,DC
+Borja Valero,Fiorentina,17,83,"COC, CC, AT"
+A. Consigli,Sassuolo,17,83,POR
+D. Mertens,Napoli,17,83,AS
+M. Benatia,Juventus,17,83,DC
+S. Khedira,Juventus,17,83,"CC, CDC"
+I. Perišić,Inter,17,83,"ES, ED, COC"
+M. Mandžukić,Juventus,17,83,ATT
+G. Medel,Inter,17,83,"CDC, CC"
+M. Perin,Genoa,17,83,POR
+L. Insigne,Napoli,17,83,"AS, COC"
+João Mário,Inter,17,83,"ED, CC"
+P. Evra,Juventus,17,82,"TS, ES"
+F. Marchetti,Lazio,17,82,POR
+Raúl Albiol,Napoli,17,82,DC
+L. Biglia,Lazio,17,82,"CDC, CC"
+E. Viviano,Sampdoria,17,82,POR
+O. Karnezis,Udinese,17,82,POR
+G. Bonaventura,Milan,17,82,"ES, CC"
+J. Cuadrado,Juventus,17,82,ED
+S. de Vrij,Lazio,17,82,DC
+K. Koulibaly,Napoli,17,82,DC
+M. Icardi,Inter,17,82,ATT
+A. Florenzi,Roma,17,82,"TD, AD, CC"
+D. Berardi,Sassuolo,17,82,AD
+M. Sportiello,Atalanta,17,82,POR
+A. Mirante,Bologna,17,81,POR
+T. Vermaelen,Roma,17,81,"DC, TS"
+D. Astori,Fiorentina,17,81,DC
+A. Candreva,Inter,17,81,"AD, COC"
+S. Jovetić,Inter,17,81,"ATT, COC"
+M. Parolo,Lazio,17,81,CC
+José Callejón,Napoli,17,81,AD
+K. Honda,Milan,17,81,"ED, COC"
+K. Strootman,Roma,17,81,CC
+S. El Shaarawy,Roma,17,81,AS
+M. Gabbiadini,Napoli,17,81,"ATT, COC"
+F. Acerbi,Sassuolo,17,81,DC
+Allan,Napoli,17,81,CC
+Jorginho,Napoli,17,81,CC
+M. Salah,Roma,17,81,AD
+Bruno Peres,Roma,17,81,ADA
+N. Maksimović,Napoli,17,81,DC
+F. Totti,Roma,17,80,"AT, ATT"
+S. Sorrentino,Chievo Verona,17,80,POR
+A. Gómez,Atalanta,17,80,AS
+J. Sosa,Milan,17,80,"COC, ED"
+D. Basta,Lazio,17,80,"TD, ED"
+Castán,Torino,17,80,DC
+C. Ansaldi,Inter,17,80,"TS, ED"
+Eder,Inter,17,80,"ATT, AS"
+Hernanes,Juventus,17,80,"CC, COC, CDC"
+E. Džeko,Roma,17,80,ATT
+D. Perotti,Roma,17,80,"AT, AS"
+N. Kalinić,Fiorentina,17,80,ATT
+K. Asamoah,Juventus,17,80,"CC, ES"
+C. Immobile,Lazio,17,80,ATT
+Neto,Juventus,17,80,POR
+J. Iličić,Fiorentina,17,80,"AT, COC"
+R. Saponara,Empoli,17,80,COC
+J. Murillo,Inter,17,80,DC
+Alisson,Roma,17,80,POR
+Felipe Melo,Inter,17,79,"CDC, CC"
+Bruno Alves,Cagliari,17,79,DC
+R. Palacio,Inter,17,79,ATT
+Ş. Radu,Lazio,17,79,"TS, DC"
+Danilo,Udinese,17,79,DC
+M. Fernández,Milan,17,79,"COC, CC, AT"
+S. Kums,Udinese,17,79,"CC, CDC"
+Miguel Veloso,Genoa,17,79,"CDC, CC"
+Luiz Adriano,Milan,17,79,ATT
+W. Szczęsny,Roma,17,79,POR
+L. Tonelli,Napoli,17,79,DC
+M. Badelj,Fiorentina,17,79,"CDC, CC"
+F. Ghoulam,Napoli,17,79,TS
+Felipe Anderson,Lazio,17,79,"AS, AD, COC"
+A. Milik,Napoli,17,79,ATT
+D. Baselli,Torino,17,79,"CC, CDC"
+E. Hysaj,Napoli,17,79,"TD, TS"
+D. Rugani,Juventus,17,79,DC
+M. Brozović,Inter,17,79,"CC, COC"
+A. Gamberini,Chievo Verona,17,78,DC
+A. Cassano,Sampdoria,17,78,AT
+A. Aquilani,Pescara,17,78,CC
+M. López,Torino,17,78,ATT
+B. Cesar,Chievo Verona,17,78,DC
+F. Quagliarella,Sampdoria,17,78,ATT
+R. Montolivo,Milan,17,78,"CDC, CC"
+C. Théréau,Udinese,17,78,ATT
+G. Paletta,Milan,17,78,DC
+I. Abate,Milan,17,78,TD
+M. Andreolli,Inter,17,78,DC
+L. Antonelli,Milan,17,78,"TS, ES"
+V. Birsa,Chievo Verona,17,78,"COC, ED, ES"
+A. Matri,Sassuolo,17,78,ATT
+C. Zapata,Milan,17,78,DC
+A. Paloschi,Atalanta,17,78,ATT
+O. El Kaddouri,Napoli,17,78,"CC, COC"
+S. Lulić,Lazio,17,78,"TS, CC, ES"
+T. Heurtaux,Udinese,17,78,DC
+Iago Falqué,Torino,17,78,"AD, AS"
+A. Ljajić,Torino,17,78,"AS, COC"
+J. Kucka,Milan,17,78,"CC, CDC"
+E. Giaccherini,Napoli,17,78,"AS, CC"
+M. Destro,Bologna,17,78,ATT
+D. Praet,Sampdoria,17,78,"ED, COC, ES"
+Cristian Tello,Fiorentina,17,78,"AD, ED"
+M. Niang,Milan,17,78,"ATT, AS"
+Mário Rui,Roma,17,78,TS
+S. Gentiletti,Genoa,17,78,DC
+A. Romagnoli,Milan,17,78,DC
+F. Bernardeschi,Fiorentina,17,78,"ED, ES"
+Gabriel,Inter,17,78,"ATT, AD"
+D. Zapata,Udinese,17,78,ATT
+K. Baldé Diao,Lazio,17,78,"AS, AD, ATT"
+S. Cristóforo,Fiorentina,17,78,CDC
+E. Moretti,Torino,17,77,DC
+S. Pepe,Pescara,17,77,"ED, ES"
+D. Gastaldello,Bologna,17,77,DC
+N. Burdisso,Genoa,17,77,DC
+F. Magnanelli,Sassuolo,17,77,"CDC, CC"
+M. Zárate,Fiorentina,17,77,"ATT, AT"
+D. Padelli,Torino,17,77,POR
+L. De Silvestri,Torino,17,77,"TD, ED"
+L. Cigarini,Sampdoria,17,77,"CC, CDC"
+J. De Guzmán,Chievo Verona,17,77,"COC, CC"
+F. Fazio,Roma,17,77,DC
+V. Torosidis,Bologna,17,77,"TD, TS"
+S. De Maio,Fiorentina,17,77,DC
+F. Đorđević,Lazio,17,77,ATT
+M. Valdifiori,Torino,17,77,"CDC, CC"
+A. Bertolacci,Milan,17,77,"CC, CDC"
+Luis Alberto,Lazio,17,77,"COC, ATT, ES"
+J. Iturbe,Roma,17,77,AD
+R. Morrison,Lazio,17,77,"COC, CC"
+L. Krejčí,Bologna,17,77,"ES, AS"
+C. Tătăruşanu,Fiorentina,17,77,POR
+S. Sturaro,Juventus,17,77,"CC, CDC"
+Suso,Milan,17,77,"ED, ES"
+R. Álvarez,Sampdoria,17,77,"COC, AT"
+A. Rüdiger,Roma,17,77,DC
+L. Castro,Chievo Verona,17,77,"ED, CC"
+L. Pavoletti,Genoa,17,77,ATT
+V. Chiricheş,Napoli,17,77,"DC, TD"
+G. González,Palermo,17,77,DC
+A. Belotti,Torino,17,77,ATT
+M. Benassi,Torino,17,77,CC
+L. Vangioni,Milan,17,77,TS
+M. Lemina,Juventus,17,77,"CC, CDC"
+D. Zappacosta,Torino,17,77,"ADA, TD, ED"
+M. Vecino,Fiorentina,17,77,"CC, CDC"
+P. Cannavaro,Sassuolo,17,76,DC
+A. Bizzarri,Pescara,17,76,POR
+M. Maccarone,Empoli,17,76,ATT
+C. Bovo,Torino,17,76,DC
+M. Pinilla,Atalanta,17,76,ATT
+E. Hallfreðsson,Udinese,17,76,"CC, CDC"
+M. Storari,Cagliari,17,76,POR
+A. Konko,Atalanta,17,76,"TD, TS, ED"
+M. Izco,Chievo Verona,17,76,"CC, CDC"
+P. Hetemaj,Chievo Verona,17,76,"ES, CC"
+P. Kone,Udinese,17,76,"COC, CC, AT"
+S. Missiroli,Sassuolo,17,76,CC
+A. Costa,Empoli,17,76,"DC, TS"
+A. Ranocchia,Inter,17,76,DC
+C. Sánchez,Fiorentina,17,76,"CDC, CC"
+A. Mounier,Bologna,17,76,"AD, AS"
+J. Biabiany,Inter,17,76,"AD, AS, ED"
+A. Poli,Milan,17,76,CC
+M. Isla,Cagliari,17,76,"CDC, TD, ED"
+R. Meggiorini,Chievo Verona,17,76,ATT
+D. Santon,Inter,17,76,"TD, TS"
+Ł. Skorupski,Empoli,17,76,POR
+T. Rincón,Genoa,17,76,"CC, CDC, ED"
+F. Đuričić,Sampdoria,17,76,"COC, AS"
+N. Tomović,Fiorentina,17,76,"DC, TD"
+K. Babacar,Fiorentina,17,76,ATT
+L. Muriel,Sampdoria,17,76,ATT
+G. Kondogbia,Inter,17,76,"CC, CDC"
+Danilo Avelar,Torino,17,76,TS
+M. De Sciglio,Milan,17,76,"TS, TD"
+L. Paredes,Roma,17,76,"CDC, CC"
+A. Duncan,Sassuolo,17,76,CC
+T. Letschert,Sassuolo,17,76,DC
+P. Zieliński,Napoli,17,76,"CC, COC"
+Bruno Fernandes,Sampdoria,17,76,"CC, COC, AT"
+S. Widmer,Udinese,17,76,"ED, TD"
+M. Oikonomou,Bologna,17,76,DC
+Bastos,Lazio,17,76,"DC, CDC"
+W. Hoedt,Lazio,17,76,DC
+G. Gómez,Milan,17,76,DC
+S. Milinković-Savić,Lazio,17,76,"CC, COC, CDC"
+M. Pjaca,Juventus,17,76,AS
+G. Donnarumma,Milan,17,76,POR
+A. Peñaranda,Udinese,17,76,"ATT, ES"
+Felipe,Udinese,17,75,DC
+A. Gilardino,Empoli,17,75,ATT
+D. Dainelli,Chievo Verona,17,75,DC
+F. Lodi,Udinese,17,75,"CDC, CC"
+M. Borriello,Cagliari,17,75,ATT
+A. Gazzi,Palermo,17,75,CDC
+D. Croce,Empoli,17,75,CC
+Rafael,Cagliari,17,75,POR
+C. Molinaro,Torino,17,75,"ASA, ES"
+G. Stendardo,Atalanta,17,75,DC
+C. Maggio,Napoli,17,75,TD
+A. Diamanti,Palermo,17,75,"AT, AD"
+J. Carrizo,Inter,17,75,POR
+B. Dramé,Atalanta,17,75,"TS, ES"
+N. Spolli,Chievo Verona,17,75,DC
+P. Armero,Udinese,17,75,"TS, ES"
+G. Vives,Torino,17,75,"CDC, CC"
+S. Rajković,Palermo,17,75,DC
+L. Rossettini,Torino,17,75,"DC, TD"
+I. Radovanovic,Chievo Verona,17,75,"CC, CDC"
+Rafael Tolói,Atalanta,17,75,DC
+C. Carmona,Atalanta,17,75,"CC, CDC"
+E. Berisha,Atalanta,17,75,POR
+P. Tachtsidis,Cagliari,17,75,"CDC, CC"
+E. Zukanović,Atalanta,17,75,"DC, TS"
+E. Badu,Udinese,17,75,"CC, CDC"
+A. Ioniţă,Cagliari,17,75,"CC, COC, CDC"
+Y. Nagatomo,Inter,17,75,"TS, TD"
+S. Verdi,Bologna,17,75,"COC, AD"
+S. Taïder,Bologna,17,75,CC
+D. D'Ambrosio,Inter,17,75,TD
+Juan Jesus,Roma,17,75,"TS, DC"
+Ryder,Udinese,17,75,"ATT, AT"
+S. Anđelković,Palermo,17,75,DC
+J. Kurtić,Atalanta,17,75,"CC, CDC"
+F. Viviani,Bologna,17,75,"CC, CDC"
+Edenílson,Genoa,17,75,"ED, ES"
+L. Ocampos,Genoa,17,75,"ED, ES, AD"
+M. Pucciarelli,Empoli,17,75,"ATT, AT"
+R. Kishna,Lazio,17,75,"AS, AD, COC"
+D. Cataldi,Lazio,17,75,"CC, CDC"
+R. De Paul,Udinese,17,75,"ES, COC"
+C. Carbonero,Sampdoria,17,75,"CC, ED"
+A. Izzo,Genoa,17,75,DC
+Wallace,Lazio,17,75,DC
+Bruno Henrique,Palermo,17,75,"CDC, CC"
+G. Donsah,Bologna,17,75,CC
+A. Masina,Bologna,17,75,TS
+M. Rog,Napoli,17,75,"COC, CC"
+M. Gobbi,Chievo Verona,17,74,"TS, ES"
+G. Pandev,Genoa,17,74,"ATT, COC"
+D. Maietta,Bologna,17,74,DC
+B. Džemaili,Bologna,17,74,"CC, CDC"
+L. Rigoni,Genoa,17,74,"CC, CDC"
+S. Pellissier,Chievo Verona,17,74,ATT
+E. Barreto,Sampdoria,17,74,"CC, CDC"
+M. Silvestre,Sampdoria,17,74,DC
+A. Masiello,Atalanta,17,74,"DC, TD"
+S. Gakpé,Genoa,17,74,"ED, ATT"
+S. Floccari,Bologna,17,74,ATT
+F. Peluso,Sassuolo,17,74,"TS, DC"
+Á. González,Lazio,17,74,"CC, CDC, ED"
+F. Cacciatore,Chievo Verona,17,74,"TD, TS"
+M. Sau,Cagliari,17,74,"ATT, AT"
+G. Angella,Udinese,17,74,DC
+Diego Farías,Cagliari,17,74,"COC, ATT, AD, AS"
+L. Sepe,Napoli,17,74,POR
+L. Orbán,Genoa,17,74,"TS, DC"
+Rafael,Napoli,17,74,POR
+Dodô,Sampdoria,17,74,"ES, TS"
+M. Leitner,Lazio,17,74,"CC, COC, ED"
+I. Strinić,Napoli,17,74,TS
+A. Acquah,Torino,17,74,CC
+Gabriel,Milan,17,74,POR
+G. Defrel,Sassuolo,17,74,"ATT, ES, AT"
+M. Wagué,Udinese,17,74,DC
+F. Helander,Bologna,17,74,DC
+R. Quaison,Palermo,17,74,"COC, AT"
+G. Lapadula,Milan,17,74,ATT
+K. Linetty,Sampdoria,17,74,"CDC, COC"
+D. Lazović,Genoa,17,74,"AD, AS"
+D. Laxalt,Genoa,17,74,ES
+M. Politano,Sassuolo,17,74,AD
+S. Scuffet,Udinese,17,74,POR
+A. Diawara,Napoli,17,74,"CDC, CC"
+A. Floro Flores,Chievo Verona,17,73,"AS, ATT"
+S. Padoin,Cagliari,17,73,"TS, ED, CC"
+D. Brivio,Genoa,17,73,TS
+I. Cissokho,Genoa,17,73,TD
+R. Vitiello,Palermo,17,73,"DC, TD"
+M. Pasqual,Empoli,17,73,"ES, TS"
+R. Palladino,Crotone,17,73,"AS, AD, ATT"
+N. Frey,Chievo Verona,17,73,TD
+D. Di Gennaro,Cagliari,17,73,CC
+E. Muñoz,Genoa,17,73,DC
+N. Rigoni,Chievo Verona,17,73,"CC, CDC"
+M. Jajalo,Palermo,17,73,"CC, CDC, COC"
+J. Obi,Torino,17,73,"CC, ED"
+J. Sala,Sampdoria,17,73,"CC, TD, ED"
+L. Crisetig,Crotone,17,73,"CC, CDC"
+M. Büchel,Empoli,17,73,CC
+João Pedro,Cagliari,17,73,"COC, CC"
+Claiton,Crotone,17,73,DC
+C. Biraghi,Pescara,17,73,"TS, ES"
+G. Caprari,Pescara,17,73,"AT, ATT, COC"
+O. Hiljemark,Palermo,17,73,"CC, CDC"
+J. Lukaku,Lazio,17,73,TS
+V. Laurini,Empoli,17,73,TD
+C. Salcedo,Fiorentina,17,73,DC
+Samir,Udinese,17,73,DC
+L. Rizzo,Bologna,17,73,"CC, AD, AS"
+J. Mauri,Empoli,17,73,"CC, CDC"
+F. Melchiorri,Cagliari,17,73,ATT
+A. Adnan,Udinese,17,73,"ES, TS"
+M. Pašalić,Milan,17,73,"CDC, CC"
+H. Toledo,Fiorentina,17,73,ES
+A. Palombo,Sampdoria,17,72,"CC, CDC"
+G. Pegolo,Sassuolo,17,72,POR
+H. Campagnaro,Pescara,17,72,"DC, TD"
+G. Migliaccio,Atalanta,17,72,"CC, CDC"
+D. Mesbah,Crotone,17,72,"TS, ES"
+P. De Ceglie,Juventus,17,72,"TS, ES"
+L. Mchedlidze,Empoli,17,72,ATT
+Da Costa,Bologna,17,72,POR
+G. Marilungo,Empoli,17,72,ATT
+E. Lamanna,Genoa,17,72,POR
+V. Regini,Sampdoria,17,72,"TS, DC"
+A. Ragusa,Sassuolo,17,72,"AS, ATT"
+U. Ćosić,Empoli,17,72,DC
+I. Cofie,Genoa,17,72,"CC, CDC"
+R. Inglese,Chievo Verona,17,72,ATT
+L. Memushaj,Pescara,17,72,CC
+M. Capuano,Cagliari,17,72,DC
+A. Gomis,Bologna,17,72,POR
+J. Bahebeck,Pescara,17,72,"ATT, AS, ES"
+O. Bouy,Palermo,17,72,"CC, DC"
+A. Benali,Pescara,17,72,"COC, CC, AT"
+L. Antei,Sassuolo,17,72,DC
+L. Ceppitelli,Cagliari,17,72,DC
+M. Rohdén,Crotone,17,72,"CC, CDC"
+J. Martínez,Torino,17,72,ATT
+B. Cristante,Pescara,17,72,"CC, CDC"
+H. Aleesami,Palermo,17,72,"TS, ES"
+F. Barba,Empoli,17,72,DC
+E. Pulgar,Bologna,17,72,"CDC, CC"
+Lucas Evangelista,Udinese,17,72,COC
+S. Perica,Udinese,17,72,ATT
+N. Gyömbér,Pescara,17,72,DC
+F. Mattiello,Juventus,17,72,"TS, TD"
+E. Goldaniga,Palermo,17,72,DC
+Á. Nagy,Bologna,17,72,CDC
+P. Schick,Sampdoria,17,72,ATT
+C. Puggioni,Sampdoria,17,71,POR
+D. Biondini,Sassuolo,17,71,CC
+D. Dessena,Cagliari,17,71,"CC, TD"
+A. Rosi,Crotone,17,71,TD
+D. Bassi,Atalanta,17,71,POR
+E. Terranova,Sassuolo,17,71,DC
+A. Budimir,Sampdoria,17,71,ATT
+Thiago Cionek,Palermo,17,71,DC
+B. Salamon,Cagliari,17,71,"DC, CDC"
+H. Milić,Fiorentina,17,71,"TS, ES"
+A. Morleo,Bologna,17,71,"TS, ES"
+M. Faraoni,Udinese,17,71,"TD, ED"
+B. Martella,Crotone,17,71,"ES, TS"
+N. Dussenne,Crotone,17,71,DC
+Rodrigo Ely,Milan,17,71,DC
+N. Murru,Cagliari,17,71,TS
+B. Drągowski,Fiorentina,17,71,POR
+E. Suagher,Atalanta,17,71,DC
+A. Grassi,Atalanta,17,71,CC
+A. Conti,Atalanta,17,71,"TD, ED"
+A. Pešić,Atalanta,17,71,ATT
+L. Torreira,Sampdoria,17,71,CC
+I. Chochev,Palermo,17,71,CC
+G. Ferrari,Crotone,17,71,DC
+K. Diks,Fiorentina,17,71,TD
+L. Pellegrini,Sassuolo,17,71,CC
+S. Sensi,Sassuolo,17,71,"CDC, CC"
+B. Lobonţ,Roma,17,70,POR
+W. Bressan,Chievo Verona,17,70,POR
+M. Zambelli,Empoli,17,70,"TD, DC"
+A. Coda,Pescara,17,70,DC
+R. Acquafresca,Bologna,17,70,ATT
+M. Gazzola,Sassuolo,17,70,"TD, ED"
+G. Bellusci,Empoli,17,70,DC
+V. Fiorillo,Pescara,17,70,POR
+A. Rispoli,Palermo,17,70,"ED, TD"
+M. D'Alessandro,Atalanta,17,70,"ED, AD"
+A. Stoian,Crotone,17,70,"AS, ATT, AD"
+D. Falcinelli,Crotone,17,70,ATT
+N. Giannetti,Cagliari,17,70,"ATT, AS"
+A. Seculin,Chievo Verona,17,70,POR
+L. Spinazzola,Atalanta,17,70,"ES, TS"
+V. Verre,Pescara,17,70,CC
+L. Krajnc,Sampdoria,17,70,"DC, TS"
+M. Sampirisi,Crotone,17,70,"TD, DC"
+I. Mbaye,Bologna,17,70,"TD, ED"
+L. Capezzi,Crotone,17,70,CC
+F. Ceccherini,Crotone,17,70,"DC, TD"
+N. Ninković,Genoa,17,70,"COC, AS, ATT"
+D. Župarić,Pescara,17,70,DC
+L. Bittante,Cagliari,17,70,"TD, TS, ED"
+C. Embalo,Palermo,17,70,"ES, COC"
+A. Gnoukouri,Inter,17,70,CC
+D. Calabria,Milan,17,70,TD
+Matheus Pereira,Empoli,17,70,COC
+F. Kessié,Atalanta,17,70,"CC, ED, CDC"
+B. Cabezas,Atalanta,17,70,AS
+A. Balic,Udinese,17,70,COC
+M. Olivera,Fiorentina,17,70,"TS, ES"
+D. Pavlovic,Sampdoria,17,69,TS
+M. Trotta,Crotone,17,69,ATT
+A. Trajkovski,Palermo,17,69,"ATT, AT"
+Patric,Lazio,17,69,"TD, CC"
+E. Krafth,Bologna,17,69,TD
+Emerson,Roma,17,69,TS
+R. Insigne,Napoli,17,69,COC
+F. Di Francesco,Bologna,17,69,"AS, AT"
+G. Simeone,Genoa,17,69,"ATT, ED"
+Simy,Crotone,17,69,ATT
+F. Zampano,Pescara,17,69,"TD, TS"
+A. Ferrari,Bologna,17,69,"TD, DC"
+M. Caldara,Atalanta,17,69,DC
+I. Vargić,Lazio,17,69,POR
+Ewandro,Udinese,17,69,"ATT, ES, COC"
+R. Mandragora,Juventus,17,69,"CC, DC"
+E. Yao Guy,Inter,17,69,DC
+C. Raimondi,Atalanta,17,68,"TD, ED"
+A. Cordaz,Crotone,17,68,POR
+G. Munari,Cagliari,17,68,"CC, CDC"
+A. Pelagotti,Empoli,17,68,POR
+M. Morganella,Palermo,17,68,"ED, TD"
+M. Eramo,Sampdoria,17,68,"CC, COC"
+R. Freuler,Atalanta,17,68,"CC, CDC, COC"
+A. Ajeti,Torino,17,68,DC
+A. Tonev,Crotone,17,68,ED
+G. Brugman,Pescara,17,68,"CC, COC, CDC"
+S. Gustafson,Torino,17,68,"COC, CC"
+D. Biraschi,Genoa,17,68,"DC, TD"
+S. Fofana,Udinese,17,68,"CC, CDC"
+V. Parigini,Chievo Verona,17,68,"ATT, AD, ED, AT"
+F. Ricci,Sassuolo,17,68,"AD, AS"
+L. Boyé,Torino,17,68,ATT
+J. Minala,Lazio,17,68,"CC, COC, CDC"
+A. Tello,Empoli,17,68,"CC, TD"
+J. Jankto,Udinese,17,68,"ES, CC"
+R. Krunic,Empoli,17,68,COC
+M. Škriniar,Sampdoria,17,68,DC
+R. Maiello,Empoli,17,67,"CC, COC"
+I. Nestorovski,Palermo,17,67,"ATT, AS"
+A. Crescenzi,Pescara,17,67,"TS, ES"
+E. Gnahoré,Crotone,17,67,"CC, COC, CDC"
+M. Fornasier,Pescara,17,67,DC
+P. Iemmello,Sassuolo,17,67,ATT
+Vinícius,Lazio,17,67,"TS, ES, AS"
+M. Aramu,Torino,17,67,"AD, CC"
+A. Barreca,Torino,17,67,TS
+L. Mazzitelli,Sassuolo,17,67,CDC
+M. Locatelli,Milan,17,67,CC
+S. Bastien,Chievo Verona,17,67,COC
+R. Murić,Pescara,17,67,AD
+E. Audero,Juventus,17,67,POR
+A. Mitriţă,Pescara,17,67,AT
+Gerson,Roma,17,67,"ED, COC"
+A. Dioussé,Empoli,17,67,"CDC, CC"
+R. Manaj,Pescara,17,67,ATT
+Pedro Pereira,Sampdoria,17,67,TD
+G. Sardo,Chievo Verona,17,66,TD
+A. Pomini,Sassuolo,17,66,POR
+A. Bruno,Pescara,17,66,"CC, CDC"
+M. Pigliacelli,Pescara,17,66,POR
+R. Fiamozzi,Genoa,17,66,"TD, ED"
+A. Petagna,Atalanta,17,66,ATT
+L. Lezzerini,Fiorentina,17,66,POR
+A. Barberis,Crotone,17,66,CC
+A. Salzano,Crotone,17,66,CC
+R. Colombo,Cagliari,17,65,POR
+F. Pisacane,Cagliari,17,65,"TD, DC"
+M. Tounkara,Lazio,17,65,ATT
+O. Ntcham,Genoa,17,65,CC
+N. Barella,Cagliari,17,65,CC
+T. Berni,Inter,17,64,POR
+L. Zima,Genoa,17,64,POR
+T. Strakosha,Lazio,17,64,POR
+L. Jallow,Chievo Verona,17,64,ED
+S. Umar,Bologna,17,64,ATT
+R. Sallai,Palermo,17,64,COC
+Pol Lirola,Sassuolo,17,64,TD
+M. Pugliesi,Empoli,17,63,POR
+P. De Giorgio,Crotone,17,63,AS
+D. Boldor,Bologna,17,63,DC
+F. Dimarco,Empoli,17,63,"TS, ES"
+I. Hagi,Fiorentina,17,63,"AD, COC, ATT"
+F. Prce,Lazio,17,63,"DC, TS"
+N. Balogh,Palermo,17,63,ATT
+L. Zonta,Inter,17,63,CC
+G. Aldegani,Pescara,17,62,POR
+S. Miangue,Inter,17,62,TS
+G. Zampano,Crotone,17,62,"ED, TD"
+M. Sarr,Bologna,17,62,POR
+M. Festa,Crotone,17,62,POR
+A. Murgia,Lazio,17,62,"CC, CDC"
+A. Nura,Roma,17,62,TD
+A. Pinamonti,Inter,17,62,ATT
+S. Amuzie,Sampdoria,17,62,TS
+S. Pettinari,Pescara,17,61,ATT
+F. Veseli,Empoli,17,61,"TD, DC, TS"
+A. Tozzo,Sampdoria,17,61,POR
+R. Gagliardini,Atalanta,17,61,CC
+C. Lombardi,Lazio,17,61,"AT, AD, AS"
+G. Pezzella,Palermo,17,61,"TS, ES"
+C. Dell'Orco,Sassuolo,17,61,TS
+M. Seck,Roma,17,61,TS
+J. Posavec,Palermo,17,61,POR
+C. Adjapong,Sassuolo,17,61,"TD, ED"
+F. Damian,Chievo Verona,17,61,CC
+M. Di Gregorio,Inter,17,61,POR
+Y. Bobb,Chievo Verona,17,60,ED
+N. Fazzi,Crotone,17,60,"CC, CDC, AD"
+A. Nalini,Crotone,17,60,AD
+S. Perisan,Udinese,17,60,POR
+F. De Paoli,Chievo Verona,17,60,ED
+A. Confente,Chievo Verona,17,60,POR
+V. Cojocaru,Crotone,17,60,POR
+F. Costa,Chievo Verona,17,59,TS
+I. Radu,Inter,17,59,POR
+A. Tabacchi,Bologna,17,59,AD
+E. Ceria,Atalanta,17,58,ES
+A. Fulignati,Palermo,17,58,POR
+D. Vitturini,Pescara,17,58,"TD, DC"
+H. Miličević,Pescara,17,58,"CDC, CC"
+A. Bentivegna,Palermo,17,58,"ED, ATT"
+F. Chiesa,Fiorentina,17,58,"AD, AT"
+M. Acatullo,Pescara,17,58,"AD, ATT"
+A. Bakayoko,Inter,17,58,AD
+G. Cuomo,Crotone,17,58,DC
+M. Nicoletti,Crotone,17,57,TS
+A. Müller,Pescara,17,57,AT
+L. Zanimacchia,Genoa,17,57,AD
+A. Mancini,Pescara,17,56,"AS, AD, AT"
+I. Lasicki,Napoli,17,56,TD
+F. Del Sole,Pescara,17,56,"CC, COC, AD"
+T. Dozi,Crotone,17,56,"TD, DC"
+A. Diakhate,Fiorentina,17,56,CC
+M. Ierardi,Genoa,17,56,TD
+S. Monni,Pescara,17,55,ATT
+S. Anočič,Roma,17,55,TS
+L. Bruno,Crotone,17,54,TS
+T. Krapikas,Sampdoria,17,54,POR
+L. Marson,Palermo,17,53,POR
+C. Barillari,Crotone,17,52,CC
+D. Faccioli,Genoa,17,52,POR
+G. Satalino,Fiorentina,17,50,POR
+G. Higuaín,Juventus,18,90,ATT
+G. Buffon,Juventus,18,89,POR
+G. Chiellini,Juventus,18,89,DC
+L. Bonucci,Milan,18,88,DC
+P. Dybala,Juventus,18,88,"COC, ATT"
+S. Handanovič,Inter,18,87,POR
+M. Hamšík,Napoli,18,87,CC
+Miranda,Inter,18,86,DC
+D. Mertens,Napoli,18,86,"AT, AS, ATT"
+R. Nainggolan,Roma,18,86,"CC, COC"
+Alex Sandro,Juventus,18,86,"TS, ES"
+A. Barzagli,Juventus,18,85,DC
+B. Matuidi,Juventus,18,85,"CDC, CC"
+C. Marchisio,Juventus,18,85,"CC, CDC"
+M. Pjanić,Juventus,18,85,"CC, CDC"
+L. Insigne,Napoli,18,85,AS
+A. Gómez,Atalanta,18,84,"AT, AS, ATT"
+M. Benatia,Juventus,18,84,DC
+S. Khedira,Juventus,18,84,"CC, CDC"
+E. Džeko,Roma,18,84,ATT
+I. Perišić,Inter,18,84,"ES, COC"
+K. Strootman,Roma,18,84,"CC, CDC"
+K. Manolas,Roma,18,84,DC
+K. Koulibaly,Napoli,18,84,DC
+M. Icardi,Inter,18,84,ATT
+José Reina,Napoli,18,83,POR
+D. De Rossi,Roma,18,83,CDC
+Nani,Lazio,18,83,"AS, AD, COC, ES"
+L. Biglia,Milan,18,83,"CDC, CC"
+Borja Valero,Inter,18,83,"COC, CC, AT"
+B. Höwedes,Juventus,18,83,DC
+M. Mandžukić,Juventus,18,83,"ATT, ES"
+José Callejón,Napoli,18,83,AD
+M. Musacchio,Milan,18,83,DC
+G. Bonaventura,Milan,18,83,"CC, AS"
+M. Perin,Genoa,18,83,POR
+S. de Vrij,Lazio,18,83,DC
+A. Belotti,Torino,18,83,ATT
+João Mário,Inter,18,83,"CC, COC"
+S. Lichtsteiner,Juventus,18,82,"TD, ED"
+Raúl Albiol,Napoli,18,82,DC
+A. Consigli,Sassuolo,18,82,POR
+E. Viviano,Sampdoria,18,82,POR
+F. Fazio,Roma,18,82,DC
+W. Szczęsny,Juventus,18,82,POR
+Douglas Costa,Juventus,18,82,"ES, ED"
+C. Immobile,Lazio,18,82,ATT
+J. Cuadrado,Juventus,18,82,ED
+F. Acerbi,Sassuolo,18,82,DC
+Suso,Milan,18,82,AD
+A. Florenzi,Roma,18,82,"TD, AD, CC"
+F. Bernardeschi,Juventus,18,82,"ED, AT, ES"
+G. Donnarumma,Milan,18,82,POR
+D. Astori,Fiorentina,18,81,DC
+M. Parolo,Lazio,18,81,"CC, CDC"
+D. Perotti,Roma,18,81,"AS, AT"
+N. Kalinić,Milan,18,81,ATT
+R. Rodríguez,Milan,18,81,"TS, DC"
+Felipe Anderson,Lazio,18,81,"AD, AS, ED"
+Jorginho,Napoli,18,81,CC
+D. Berardi,Sassuolo,18,81,AD
+M. Brozović,Inter,18,81,"CC, CDC"
+F. Marchetti,Lazio,18,80,POR
+A. Mirante,Bologna,18,80,POR
+G. Paletta,Milan,18,80,DC
+D. Basta,Lazio,18,80,"TD, ED"
+A. Candreva,Inter,18,80,"ED, COC, AD"
+H. Moreno,Roma,18,80,"DC, TS"
+V. Birsa,Chievo Verona,18,80,COC
+Eder,Inter,18,80,"ATT, AS"
+Iago Falqué,Torino,18,80,"AD, AS"
+S. El Shaarawy,Roma,18,80,AS
+M. Gonalons,Roma,18,80,CDC
+Allan,Napoli,18,80,CC
+J. Iličić,Atalanta,18,80,"AT, COC"
+P. Zieliński,Napoli,18,80,CC
+D. Rugani,Juventus,18,80,DC
+Alisson,Roma,18,80,POR
+S. Milinković-Savić,Lazio,18,80,"CC, COC"
+S. Sorrentino,Chievo Verona,18,79,POR
+Ş. Radu,Lazio,18,79,"TS, DC"
+Danilo,Udinese,18,79,DC
+S. Sirigu,Torino,18,79,POR
+C. Ansaldi,Torino,18,79,TS
+Lucas Leiva,Lazio,18,79,"CDC, DC"
+A. Kolarov,Roma,18,79,"TS, DC"
+Maurício,Lazio,18,79,"DC, TD"
+A. Ljajić,Torino,18,79,"AS, COC"
+R. Saponara,Fiorentina,18,79,COC
+L. Tonelli,Napoli,18,79,DC
+F. Ghoulam,Napoli,18,79,TS
+A. Milik,Napoli,18,79,ATT
+D. Baselli,Torino,18,79,CC
+H. Çalhanoğlu,Milan,18,79,"ES, COC"
+A. Romagnoli,Milan,18,79,DC
+João Cancelo,Inter,18,79,"TD, AD, ED"
+E. Hysaj,Napoli,18,79,TD
+M. Benassi,Fiorentina,18,79,CC
+N. Maksimović,Napoli,18,79,DC
+M. Borriello,SPAL,18,78,ATT
+R. Palacio,Bologna,18,78,ATT
+F. Quagliarella,Sampdoria,18,78,ATT
+R. Montolivo,Milan,18,78,"CDC, CC"
+I. Abate,Milan,18,78,TD
+C. Zapata,Milan,18,78,DC
+Miguel Veloso,Genoa,18,78,"CDC, CC"
+K. Asamoah,Juventus,18,78,"TS, ES, CC"
+S. Lulić,Lazio,18,78,"CC, TS, ES"
+N. Nkoulou,Torino,18,78,DC
+E. Berisha,Atalanta,18,78,POR
+E. Giaccherini,Napoli,18,78,"AS, CC"
+G. Pezzella,Fiorentina,18,78,DC
+S. Verdi,Bologna,18,78,"AD, COC"
+M. Badelj,Fiorentina,18,78,"CC, CDC"
+G. Ramírez,Sampdoria,18,78,"COC, ED, ES"
+V. Eysseric,Fiorentina,18,78,"AD, AS, COC, ES"
+M. Niang,Torino,18,78,"AS, ATT"
+L. Castro,Chievo Verona,18,78,"CC, ED"
+Bruno Peres,Roma,18,78,"ED, TD"
+R. Gagliardini,Inter,18,78,"CC, CDC"
+D. Laxalt,Genoa,18,78,ES
+D. Zapata,Sampdoria,18,78,ATT
+M. Sportiello,Fiorentina,18,78,POR
+M. Vecino,Inter,18,78,"CC, CDC"
+R. Karsdorp,Roma,18,78,TD
+André Silva,Milan,18,78,ATT
+A. Gamberini,Chievo Verona,18,77,DC
+N. Burdisso,Torino,18,77,DC
+F. Magnanelli,Sassuolo,18,77,CDC
+V. Behrami,Udinese,18,77,"CDC, CC"
+C. Théréau,Fiorentina,18,77,"AS, ATT"
+A. Masiello,Atalanta,18,77,"DC, TD"
+P. Hetemaj,Chievo Verona,18,77,"CC, ES"
+Castán,Roma,18,77,DC
+M. Andreolli,Cagliari,18,77,DC
+F. Caicedo,Lazio,18,77,ATT
+M. Cáceres,Hellas Verona,18,77,"DC, TD"
+C. Sánchez,Fiorentina,18,77,"CDC, CC, DC"
+I. Radovanović,Chievo Verona,18,77,"CDC, CC"
+Rafael Tolói,Atalanta,18,77,DC
+M. Valdifiori,Torino,18,77,"CDC, CC"
+T. Rincón,Torino,18,77,"CC, CDC"
+A. Bertolacci,Genoa,18,77,"CC, CDC"
+Luis Alberto,Lazio,18,77,"COC, AS, ES"
+Juan Jesus,Roma,18,77,"DC, TS"
+L. Krejčí,Bologna,18,77,"AS, AD, ED"
+J. Veretout,Fiorentina,18,77,"CC, CDC"
+S. Sturaro,Juventus,18,77,"CC, ES"
+G. Defrel,Roma,18,77,"ATT, AD"
+Mário Rui,Napoli,18,77,TS
+S. Gentiletti,Genoa,18,77,DC
+L. Pavoletti,Cagliari,18,77,ATT
+V. Chiricheş,Napoli,18,77,DC
+J. Lukaku,Lazio,18,77,TS
+S. Widmer,Udinese,18,77,"TD, ED"
+M. Politano,Sassuolo,18,77,"AS, AD"
+Wallace,Lazio,18,77,DC
+Bastos,Lazio,18,77,DC
+Bruno Gaspar,Fiorentina,18,77,TD
+Vitor Hugo,Fiorentina,18,77,DC
+L. Pellegrini,Roma,18,77,CC
+Dalbert,Inter,18,77,"TS, ASA, ES"
+A. Diawara,Napoli,18,77,"CDC, CC"
+P. Schick,Roma,18,77,ATT
+D. Dainelli,Chievo Verona,18,76,DC
+G. Pazzini,Hellas Verona,18,76,ATT
+M. Storari,Milan,18,76,POR
+B. Cesar,Chievo Verona,18,76,DC
+M. Izco,Crotone,18,76,"CC, CDC"
+L. De Silvestri,Torino,18,76,"TD, ED"
+L. Cigarini,Cagliari,18,76,"CC, CDC"
+L. Antonelli,Milan,18,76,TS
+A. Matri,Sassuolo,18,76,ATT
+A. Ranocchia,Inter,18,76,DC
+S. De Maio,Bologna,18,76,DC
+G. van der Wiel,Cagliari,18,76,TD
+L. Rossettini,Genoa,18,76,"DC, TD"
+F. Borini,Milan,18,76,"ED, ES, ATT"
+A. Paloschi,SPAL,18,76,ATT
+R. Meggiorini,Chievo Verona,18,76,ATT
+T. Heurtaux,Hellas Verona,18,76,DC
+D. Santon,Inter,18,76,"TS, TD"
+Ł. Skorupski,Roma,18,76,POR
+M. Destro,Bologna,18,76,ATT
+N. Tomović,Chievo Verona,18,76,"DC, TD"
+K. Babacar,Fiorentina,18,76,ATT
+D. Praet,Sampdoria,18,76,"COC, CC, ED"
+J. Kurtić,Atalanta,18,76,"CC, COC, AT"
+F. Viviani,SPAL,18,76,"CC, CDC"
+L. Spinazzola,Atalanta,18,76,"ES, TS"
+M. De Sciglio,Juventus,18,76,"TS, TD"
+A. Duncan,Sassuolo,18,76,CC
+Emerson,Roma,18,76,"ASA, TS"
+G. Lapadula,Genoa,18,76,ATT
+G. Simeone,Fiorentina,18,76,"ATT, ED"
+S. Cristóforo,Fiorentina,18,76,"CDC, CC"
+M. Caldara,Atalanta,18,76,DC
+J. Jankto,Udinese,18,76,"CC, ES"
+Gil Dias,Fiorentina,18,76,"ED, ES"
+M. Pjaca,Juventus,18,76,AS
+F. Kessié,Milan,18,76,"CC, CDC"
+M. Rog,Napoli,18,76,"COC, CC"
+Felipe,SPAL,18,75,DC
+P. Cannavaro,Sassuolo,18,75,DC
+A. Bizzarri,Udinese,18,75,POR
+E. Moretti,Torino,18,75,DC
+E. Hallfreðsson,Udinese,18,75,"CC, CDC"
+L. Rigoni,Genoa,18,75,"CC, CDC"
+Rafael,Cagliari,18,75,POR
+C. Maggio,Napoli,18,75,TD
+M. Silvestre,Sampdoria,18,75,DC
+S. Floccari,SPAL,18,75,ATT
+N. Spolli,Genoa,18,75,DC
+S. Missiroli,Sassuolo,18,75,CC
+A. Cerci,Hellas Verona,18,75,AD
+A. Poli,Bologna,18,75,CC
+F. Đorđević,Lazio,18,75,ATT
+E. Zukanović,Genoa,18,75,"DC, TS"
+A. Ioniţă,Cagliari,18,75,"CC, COC, CDC"
+S. Taïder,Bologna,18,75,"CC, CDC"
+D. D'Ambrosio,Inter,18,75,TD
+João Pedro,Cagliari,18,75,"COC, CC"
+R. Inglese,Chievo Verona,18,75,ATT
+I. Strinić,Sampdoria,18,75,TS
+R. Freuler,Atalanta,18,75,CC
+R. Álvarez,Sampdoria,18,75,"COC, AT"
+A. Ciciretti,Benevento,18,75,"COC, AS, AD"
+G. González,Bologna,18,75,DC
+M. de Roon,Atalanta,18,75,"CC, CDC"
+D. Cataldi,Benevento,18,75,"CC, CDC"
+K. Linetty,Sampdoria,18,75,"CC, CDC"
+D. Lazović,Genoa,18,75,"AD, AS"
+S. Fofana,Udinese,18,75,"CC, CDC"
+G. Gómez,Milan,18,75,DC
+L. Rizzo,SPAL,18,75,"ED, CC"
+S. Scuffet,Udinese,18,75,POR
+A. Barreca,Torino,18,75,TS
+G. Donsah,Bologna,18,75,CC
+A. Conti,Milan,18,75,"ED, TD"
+L. Torreira,Sampdoria,18,75,CC
+S. Sensi,Sassuolo,18,75,"CC, CDC"
+R. Bajić,Udinese,18,75,"ATT, COC"
+F. Chiesa,Fiorentina,18,75,"ED, AT"
+G. Pandev,Genoa,18,74,"ATT, COC"
+D. Maietta,Bologna,18,74,DC
+M. López,Udinese,18,74,ATT
+E. Barreto,Sampdoria,18,74,"CC, CDC"
+D. Padelli,Inter,18,74,POR
+B. Dramé,Atalanta,18,74,"TS, ES"
+A. Costa,Benevento,18,74,DC
+F. Peluso,Sassuolo,18,74,"TS, DC"
+F. Cacciatore,Chievo Verona,18,74,"TD, TS"
+M. Sau,Cagliari,18,74,"ATT, AT"
+G. Angella,Udinese,18,74,DC
+Diego Farías,Cagliari,18,74,"AT, COC, AD, AS"
+Da Costa,Bologna,18,74,POR
+S. Armenteros,Benevento,18,74,ATT
+N. Rigoni,Chievo Verona,18,74,"CC, CDC"
+L. Sepe,Napoli,18,74,POR
+Rafael,Napoli,18,74,POR
+D. Falcinelli,Sassuolo,18,74,ATT
+Rômulo,Hellas Verona,18,74,"CC, TD"
+F. Đuričić,Sampdoria,18,74,"COC, AS"
+A. Ragusa,Sassuolo,18,74,AS
+A. Acquah,Torino,18,74,CC
+Ryder,Udinese,18,74,"ATT, AT"
+Gabriel,Milan,18,74,POR
+R. Centurión,Genoa,18,74,"AS, COC"
+T. Strakosha,Lazio,18,74,POR
+R. De Paul,Udinese,18,74,"AD, COC, ES"
+M. Oikonomou,SPAL,18,74,DC
+M. Locatelli,Milan,18,74,CDC
+G. Ferrari,Sampdoria,18,74,DC
+A. Meret,SPAL,18,74,POR
+A. Masina,Bologna,18,74,TS
+Á. Nagy,Bologna,18,74,CDC
+M. Škriniar,Inter,18,74,DC
+Pol Lirola,Sassuolo,18,74,TD
+C. Ünder,Roma,18,74,"ED, ES"
+S. Padoin,Cagliari,18,73,"TD, CC, TS"
+M. Gobbi,Chievo Verona,18,73,TS
+C. Molinaro,Torino,18,73,"TS, ES"
+S. Pellissier,Chievo Verona,18,73,ATT
+J. Zúñiga,Napoli,18,73,"TS, ES"
+V. Torosidis,Bologna,18,73,"TD, TS"
+M. Gazzola,Sassuolo,18,73,TD
+M. Antenucci,SPAL,18,73,ATT
+V. Belec,Benevento,18,73,POR
+J. Obi,Torino,18,73,CC
+Dodô,Sampdoria,18,73,"ES, TS"
+Y. Nagatomo,Inter,18,73,"TS, TD"
+J. Sala,Sampdoria,18,73,"TD, ED, CC"
+L. Crisetig,Bologna,18,73,"CC, CDC"
+M. Büchel,Hellas Verona,18,73,"CC, CDC"
+B. Bereszyński,Sampdoria,18,73,TD
+A. Cornelius,Atalanta,18,73,ATT
+A. Gomis,SPAL,18,73,POR
+G. Caprari,Sampdoria,18,73,"AT, ATT, COC"
+F. Lucioni,Benevento,18,73,DC
+M. Bianchetti,Hellas Verona,18,73,DC
+M. Pucciarelli,Chievo Verona,18,73,"ATT, AT"
+A. Lazaar,Benevento,18,73,"TS, ES"
+F. Helander,Bologna,18,73,DC
+E. Krafth,Bologna,18,73,TD
+D. Bessa,Hellas Verona,18,73,"CC, AD"
+T. Letschert,Sassuolo,18,73,DC
+V. Laurini,Fiorentina,18,73,TD
+F. Ceccherini,Crotone,18,73,DC
+E. Pulgar,Bologna,18,73,"CDC, CC"
+F. Di Francesco,Bologna,18,73,"AS, AT, AD"
+Samir,Udinese,18,73,"TS, DC"
+A. Petagna,Atalanta,18,73,ATT
+G. Letizia,Benevento,18,73,"TS, ED"
+J. Palomino,Atalanta,18,73,DC
+S. Perica,Udinese,18,73,ATT
+F. Melchiorri,Cagliari,18,73,ATT
+L. Mazzitelli,Sassuolo,18,73,"CDC, CC"
+A. Adnan,Udinese,18,73,"TS, ES"
+Alex Berenguer,Torino,18,73,"ADA, ASA, ES"
+D. Calabria,Milan,18,73,TD
+M. Lazzari,SPAL,18,73,ED
+G. Pegolo,Sassuolo,18,72,POR
+A. Cordaz,Crotone,18,72,POR
+R. Palladino,Genoa,18,72,"AS, AD, ATT"
+N. Frey,Chievo Verona,18,72,TD
+D. Di Gennaro,Lazio,18,72,CC
+S. Souprayen,Hellas Verona,18,72,TS
+E. Lamanna,Genoa,18,72,POR
+B. Nuytinck,Udinese,18,72,DC
+V. Regini,Sampdoria,18,72,"TS, DC"
+I. Cofie,Genoa,18,72,"CC, CDC"
+L. Memushaj,Benevento,18,72,CC
+C. Biraghi,Fiorentina,18,72,"TS, ES"
+M. Capuano,Cagliari,18,72,"DC, TS"
+L. Ceppitelli,Cagliari,18,72,DC
+A. Cragno,Cagliari,18,72,POR
+B. Cristante,Atalanta,18,72,"CC, CDC"
+João Schmidt,Atalanta,18,72,"CC, CDC, TS"
+B. Petković,Bologna,18,72,ATT
+M. Thiam,Juventus,18,72,"ATT, ED"
+S. Šimić,Crotone,18,72,DC
+F. Ricci,Genoa,18,72,"AD, AS"
+L. Boyé,Torino,18,72,"ATT, AS"
+T. Castagne,Atalanta,18,72,TD
+E. Goldaniga,Sassuolo,18,72,DC
+K. Lasagna,Udinese,18,72,ATT
+Lyanco,Torino,18,72,DC
+A. Ounas,Napoli,18,72,"AD, ES"
+P. Brlek,Genoa,18,72,"COC, CC, CDC"
+A. Barák,Udinese,18,72,"COC, CC, AT"
+C. Puggioni,Sampdoria,18,71,POR
+D. Dessena,Cagliari,18,71,"CC, TD"
+A. Rosi,Genoa,18,71,TD
+M. Coda,Benevento,18,71,ATT
+P. Schiattarella,SPAL,18,71,"CC, ED, TD"
+L. Cabrera,Crotone,18,71,"DC, TS"
+F. Pisacane,Cagliari,18,71,"DC, TD"
+A. Caracciolo,Hellas Verona,18,71,DC
+B. Zuculini,Hellas Verona,18,71,"CC, CDC"
+L. Antei,Benevento,18,71,DC
+V. Verre,Sampdoria,18,71,CC
+Y. Chibsah,Benevento,18,71,"CC, CDC"
+M. Rohdén,Crotone,18,71,"ED, CC"
+P. Iemmello,Benevento,18,71,ATT
+B. Drągowski,Fiorentina,18,71,POR
+J. Mauri,Milan,18,71,"CC, CDC"
+H. Hateboer,Atalanta,18,71,TD
+A. Grassi,SPAL,18,71,CC
+A. Marušić,Lazio,18,71,"TS, TD, ED"
+Y. Karamoh,Inter,18,71,"AD, ED, AS"
+L. Mora,SPAL,18,71,"CC, ES"
+K. Bonifazi,Torino,18,71,DC
+B. Lobonţ,Roma,18,70,POR
+D. Biondini,Sassuolo,18,70,CC
+N. Viola,Benevento,18,70,"CC, CDC"
+A. Taarabt,Genoa,18,70,"ES, ED, COC"
+N. Cherubin,Hellas Verona,18,70,DC
+A. Budimir,Crotone,18,70,ATT
+B. Salamon,SPAL,18,70,"DC, CDC"
+F. Zuculini,Hellas Verona,18,70,CC
+M. D'Alessandro,Benevento,18,70,"ED, AD"
+A. Stoian,Crotone,18,70,"ES, AS, AD"
+N. Giannetti,Cagliari,18,70,"ATT, AS"
+M. Faraoni,Crotone,18,70,"TD, ED"
+A. Seculin,Chievo Verona,18,70,POR
+L. Landre,Genoa,18,70,DC
+A. Galabinov,Genoa,18,70,ATT
+N. Murru,Sampdoria,18,70,TS
+M. Sampirisi,Crotone,18,70,"TD, DC"
+M. Stępiński,Chievo Verona,18,70,ATT
+A. Brignoli,Benevento,18,70,POR
+L. Capezzi,Sampdoria,18,70,CC
+P. Gollini,Atalanta,18,70,POR
+L. Garritano,Chievo Verona,18,70,"AS, AD"
+J. Vergara,Milan,18,70,DC
+I. Bubnjić,Udinese,18,70,DC
+F. Mattiello,SPAL,18,70,"TD, TS"
+L. Venuti,Benevento,18,70,TD
+R. Gosens,Atalanta,18,70,TS
+S. Bastien,Chievo Verona,18,70,"COC, CC"
+N. Barella,Cagliari,18,70,CC
+D. Verde,Hellas Verona,18,70,"AD, ATT, AT, ED"
+A. Gnoukouri,Inter,18,70,CC
+M. Olivera,Fiorentina,18,70,"TS, ES"
+N. Milenković,Fiorentina,18,70,DC
+A. Cossu,Cagliari,18,69,"AS, AT"
+D. Pavlovic,Crotone,18,69,TS
+C. Pinsoglio,Juventus,18,69,POR
+M. Silvestri,Hellas Verona,18,69,POR
+J. Stryger Larsen,Udinese,18,69,TD
+B. Martella,Crotone,18,69,"TS, ES"
+M. Trotta,Crotone,18,69,ATT
+Patric,Lazio,18,69,"TD, CC"
+I. Mbaye,Bologna,18,69,"TD, ED"
+M. Fossati,Hellas Verona,18,69,CC
+G. Iñíguez,Udinese,18,69,"CC, CDC"
+C. Lombardi,Benevento,18,69,"AS, AD"
+M. Cremonesi,SPAL,18,69,DC
+A. Barberis,Crotone,18,69,CC
+A. Ferrari,Hellas Verona,18,69,"TD, DC"
+I. Vargić,Lazio,18,69,POR
+Ewandro,Udinese,18,69,"ATT, ES, COC"
+J. Andersen,Sampdoria,18,69,DC
+S. Väisänen,SPAL,18,69,DC
+V. Milinković-Savić,Torino,18,69,POR
+G. Gaudino,Chievo Verona,18,69,"CC, CDC"
+R. Mandragora,Crotone,18,69,"CC, DC"
+C. Keita,Bologna,18,69,"TS, ASA"
+R. Bentancur,Juventus,18,69,CC
+D. Ivan,Sampdoria,18,69,"ED, CC"
+Lee Seung Woo,Hellas Verona,18,69,"AS, ATT, COC"
+C. Adjapong,Sassuolo,18,69,"TD, ED"
+R. Orsolini,Atalanta,18,69,"AD, ED"
+A. Balić,Udinese,18,69,COC
+A. Ajeti,Crotone,18,68,DC
+A. Tonev,Crotone,18,68,"AD, ED"
+M. Valoti,Hellas Verona,18,68,"CC, COC"
+Nicolas,Hellas Verona,18,68,POR
+P. Faragò,Cagliari,18,68,"CC, COC, TD"
+S. Gustafson,Torino,18,68,"CC, COC"
+D. Biraschi,Genoa,18,68,"DC, TD"
+F. Vicari,SPAL,18,68,DC
+Simy,Crotone,18,68,ATT
+F. Avenatti,Bologna,18,68,ATT
+V. Parigini,Benevento,18,68,"AS, AD, COC, ATT"
+M. Zaccagni,Hellas Verona,18,68,CC
+D. Kownacki,Sampdoria,18,68,ATT
+G. Puşcaş,Benevento,18,68,ATT
+C. Dell'Orco,Sassuolo,18,68,TS
+A. Murgia,Lazio,18,68,"CC, CDC"
+F. Migliore,Genoa,18,67,TS
+M. Albertazzi,Hellas Verona,18,67,TS
+S. Laner,Hellas Verona,18,67,CC
+O. Kragl,Crotone,18,67,"ES, CC"
+B. Djimsiti,Benevento,18,67,DC
+P. Konate,SPAL,18,67,"TS, ES"
+B. Perea,Lazio,18,67,ATT
+C. Falletti,Bologna,18,67,"COC, AD"
+M. Bani,Chievo Verona,18,67,DC
+S. Ichazo,Torino,18,67,POR
+R. Zekhnini,Fiorentina,18,67,"AS, AD"
+Gerson,Roma,18,67,CC
+S. Umar,Torino,18,67,ATT
+A. Mallé,Udinese,18,67,"ED, ES, CC"
+F. Coppola,Hellas Verona,18,66,POR
+A. Donnarumma,Milan,18,66,POR
+S. Miangue,Cagliari,18,66,TS
+L. Crecco,Lazio,18,66,"CC, ES"
+M. Fares,Hellas Verona,18,66,"ES, AS"
+C. Oikonomidis,Lazio,18,66,ES
+O. Orji,Bologna,18,66,AS
+F. Melara,Benevento,18,65,"ED, AD, ES, COC"
+E. Schiavon,SPAL,18,65,"CC, CDC"
+N. Jaadi,Udinese,18,65,"AD, AS, ES"
+M. Tounkara,Lazio,18,65,ATT
+P. Jaroszyński,Chievo Verona,18,65,TS
+D. Mangni,Atalanta,18,65,ATT
+F. Costa,SPAL,18,65,"ES, ASA"
+G. Pezzella,Udinese,18,65,"TS, ES"
+Leandrinho,Napoli,18,65,COC
+T. Rodríguez,Genoa,18,65,ED
+G. Marchegiani,SPAL,18,65,POR
+P. Cutrone,Milan,18,65,ATT
+Z. Vanheusden,Inter,18,65,DC
+T. Berni,Inter,18,64,POR
+L. Zima,Genoa,18,64,POR
+G. Di Chiara,Benevento,18,64,"TS, ES"
+E. Bearzotti,Hellas Verona,18,64,"AD, AS"
+M. Vitale,SPAL,18,64,CC
+G. Scamacca,Sassuolo,18,64,ATT
+G. Felicioli,Hellas Verona,18,64,"TS, ES"
+A. Deiola,Cagliari,18,64,CC
+F. Cassata,Sassuolo,18,64,"CC, COC"
+M. Kean,Hellas Verona,18,64,ATT
+A. Bastoni,Atalanta,18,64,DC
+L. Crosta,Cagliari,18,64,POR
+A. Gravillon,Benevento,18,64,DC
+A. Santurro,Bologna,18,63,POR
+F. Bonazzoli,SPAL,18,63,ATT
+F. Romagna,Cagliari,18,63,DC
+I. Hagi,Fiorentina,18,63,"AD, COC, ATT"
+M. Tumminello,Crotone,18,63,ATT
+F. Melegoni,Atalanta,18,63,CC
+Pedro Neto,Lazio,18,63,ATT
+D. Frattesi,Sassuolo,18,63,CC
+N. Zanellato,Milan,18,63,CC
+M. Léris,Chievo Verona,18,63,ATT
+N. Garmendia,Udinese,18,63,"COC, AS"
+Barbosa,SPAL,18,63,ATT
+A. Romero,Crotone,18,63,CC
+C. Suljic,Crotone,18,62,CC
+M. Festa,Crotone,18,62,POR
+A. Nura,Roma,18,62,TD
+G. Crociata,Crotone,18,62,"COC, AT"
+A. Pinamonti,Inter,18,62,ATT
+F. Brignani,Bologna,18,62,DC
+A. Tozzo,Sampdoria,18,61,POR
+G. Guerrieri,Lazio,18,61,POR
+M. Gatto,Chievo Verona,18,61,"AS, AD, COC"
+S. Pontisso,Udinese,18,61,"CC, CDC"
+J. Valencia,Bologna,18,61,CC
+S. Edera,Torino,18,61,AD
+Luiz Felipe,Lazio,18,61,DC
+P. Hristov,Fiorentina,18,61,DC
+M. Gabbia,Milan,18,61,DC
+E. Vignato,Chievo Verona,18,61,COC
+G. Gori,Fiorentina,18,61,ATT
+B. Mikulic,Sampdoria,18,61,DC
+N. Haas,Atalanta,18,60,"CC, CDC"
+A. Nalini,Crotone,18,60,AD
+G. Mancini,Atalanta,18,60,DC
+S. Palombi,Lazio,18,60,"ATT, AS, AD"
+F. Della Giovanna,SPAL,18,60,DC
+S. Omeonga,Genoa,18,60,"CC, CDC"
+B. Gyamfi,Benevento,18,60,"TD, DC"
+F. De Paoli,Chievo Verona,18,60,ED
+A. Confente,Chievo Verona,18,60,POR
+S. Lo Faso,Fiorentina,18,60,"AT, COC, AS"
+L. Vido,Atalanta,18,60,ATT
+A. Kotnik,Crotone,18,60,COC
+Bruno Jordão,Lazio,18,60,CC
+A. Bellemo,SPAL,18,59,CC
+L. Del Pinto,Benevento,18,59,"CDC, CC"
+M. De Luca,Torino,18,59,ATT
+A. Guarnone,Milan,18,59,POR
+F. Pavoni,Chievo Verona,18,59,POR
+G. Borello,Crotone,18,59,AD
+L. Ranieri,Fiorentina,18,59,TS
+F. Rossi,Atalanta,18,58,POR
+R. Corlu,Roma,18,58,"COC, CC"
+G. Poluzzi,SPAL,18,58,POR
+M. Meli,Fiorentina,18,58,AD
+M. Nicoletti,Crotone,18,57,TS
+G. Cuomo,Crotone,18,57,DC
+P. Bochniewicz,Udinese,18,56,DC
+S. Ingelsson,Udinese,18,56,ED
+A. Diakhate,Fiorentina,18,56,CC
+R. Piscitelli,Benevento,18,55,POR
+F. Ravaglia,Bologna,18,55,POR
+T. Krapikas,Sampdoria,18,54,POR
+L. Marson,Sassuolo,18,54,POR
+E. Brignola,Benevento,18,53,"ATT, AD"
+A. Zerbin,Napoli,18,53,AS
+D. Borsellini,Udinese,18,53,POR
+A. Viscovo,Crotone,18,51,POR
+M. Cerofolini,Fiorentina,18,48,POR
+Cristiano Ronaldo,Juventus,19,94,"ATT, AS"
+G. Chiellini,Juventus,19,89,DC
+P. Dybala,Juventus,19,89,"COC, ATT, AT"
+S. Handanovič,Inter,19,88,POR
+G. Higuaín,Milan,19,88,ATT
+L. Insigne,Napoli,19,88,AS
+M. Hamšík,Napoli,19,87,CC
+D. Mertens,Napoli,19,87,"AT, ATT"
+C. Immobile,Lazio,19,87,ATT
+K. Koulibaly,Napoli,19,87,DC
+M. Icardi,Inter,19,87,ATT
+M. Benatia,Juventus,19,86,DC
+M. Pjanić,Juventus,19,86,"CC, CDC"
+I. Perišić,Inter,19,86,ES
+L. Bonucci,Juventus,19,86,DC
+Douglas Costa,Juventus,19,86,"ES, AD, AS"
+Alex Sandro,Juventus,19,86,"TS, ES"
+Miranda,Inter,19,85,DC
+B. Matuidi,Juventus,19,85,"CDC, CC"
+R. Nainggolan,Inter,19,85,"CC, COC"
+S. Khedira,Juventus,19,85,"CC, CDC"
+E. Džeko,Roma,19,85,ATT
+K. Manolas,Roma,19,85,DC
+S. Milinković-Savić,Lazio,19,85,"CC, COC"
+M. Škriniar,Inter,19,85,DC
+A. Barzagli,Juventus,19,84,DC
+A. Gómez,Atalanta,19,84,"AT, AS, ATT"
+Raúl Albiol,Napoli,19,84,DC
+M. Mandžukić,Juventus,19,84,"ATT, AS"
+José Callejón,Napoli,19,84,AD
+W. Szczęsny,Juventus,19,84,POR
+J. Cuadrado,Juventus,19,84,"ED, AD"
+M. Perin,Juventus,19,84,POR
+S. de Vrij,Inter,19,84,DC
+Pepe Reina,Milan,19,83,POR
+D. De Rossi,Roma,19,83,CDC
+Lucas Leiva,Lazio,19,83,"CDC, DC"
+K. Strootman,Roma,19,83,"CC, CDC"
+Samu Castillejo,Milan,19,83,"ED, ES, CC"
+L. Biglia,Milan,19,82,"CDC, CC"
+A. Consigli,Sassuolo,19,82,POR
+S. Sirigu,Torino,19,82,POR
+Marcano,Roma,19,82,DC
+F. Fazio,Roma,19,82,DC
+M. Parolo,Lazio,19,82,"CDC, CC"
+A. Kolarov,Roma,19,82,"TS, DC"
+S. Nzonzi,Roma,19,82,"CDC, CC"
+G. Bonaventura,Milan,19,82,"CC, AS"
+J. Pastore,Roma,19,82,"CC, AS, AD"
+Luis Alberto,Lazio,19,82,"AT, COC, CC"
+F. Acerbi,Lazio,19,82,DC
+Allan,Napoli,19,82,CC
+Suso,Milan,19,82,"AD, AT"
+S. Zaza,Torino,19,82,ATT
+A. Florenzi,Roma,19,82,"TD, AD, CC"
+A. Belotti,Torino,19,82,ATT
+A. Romagnoli,Milan,19,82,DC
+D. Rugani,Juventus,19,82,DC
+F. Bernardeschi,Juventus,19,82,"ED, AT"
+G. Donnarumma,Milan,19,82,POR
+Borja Valero,Inter,19,81,"COC, CDC"
+D. Criscito,Genoa,19,81,"TS, DC"
+A. Candreva,Inter,19,81,ED
+K. Boateng,Sassuolo,19,81,"CC, ATT, COC, ES"
+D. Perotti,Roma,19,81,"AS, AT"
+S. El Shaarawy,Roma,19,81,"AS, AD"
+S. Verdi,Napoli,19,81,"AD, COC"
+J. Iličić,Atalanta,19,81,"AT, COC"
+F. Ghoulam,Napoli,19,81,TS
+Š. Vrsaljko,Inter,19,81,"TD, TS"
+João Cancelo,Juventus,19,81,TD
+E. Hysaj,Napoli,19,81,TD
+João Mário,Inter,19,81,"COC, AS, CC, ED"
+Fabián,Napoli,19,81,"CC, CDC, COC"
+S. Sorrentino,Chievo Verona,19,80,POR
+A. Mirante,Roma,19,80,POR
+F. Quagliarella,Sampdoria,19,80,ATT
+Ş. Radu,Lazio,19,80,"DC, TS"
+V. Birsa,Chievo Verona,19,80,"COC, AD"
+M. Musacchio,Milan,19,80,DC
+N. Nkoulou,Torino,19,80,DC
+Iago Falqué,Torino,19,80,"AD, ATT"
+A. Ljajić,Torino,19,80,"COC, AS"
+R. Rodríguez,Milan,19,80,"TS, DC"
+M. Badelj,Lazio,19,80,"CDC, CC"
+A. Milik,Napoli,19,80,ATT
+H. Çalhanoğlu,Milan,19,80,"AS, COC"
+E. Can,Juventus,19,80,"CC, CDC"
+P. Zieliński,Napoli,19,80,CC
+T. Strakosha,Lazio,19,80,POR
+K. Baldé,Inter,19,80,"ED, ATT, ES"
+M. Brozović,Inter,19,80,"CDC, COC, CC"
+M. Politano,Inter,19,80,"AS, ATT, AD"
+T. Bakayoko,Milan,19,80,"CDC, CC"
+M. Vecino,Inter,19,80,"CDC, CC"
+M. Caldara,Milan,19,80,DC
+A. Masiello,Atalanta,19,79,DC
+O. Karnezis,Napoli,19,79,POR
+K. Asamoah,Inter,19,79,"TS, ES, CC"
+G. Pezzella,Fiorentina,19,79,DC
+G. Ramírez,Sampdoria,19,79,COC
+D. Baselli,Torino,19,79,CC
+L. Martínez,Inter,19,79,ATT
+R. Montolivo,Milan,19,78,"CDC, CC"
+D. Basta,Lazio,19,78,"TD, ED"
+I. Abate,Milan,19,78,TD
+K. Mirallas,Fiorentina,19,78,"ES, AS, ATT"
+C. Ansaldi,Torino,19,78,"TS, ES"
+D. Ospina,Napoli,19,78,POR
+C. Zapata,Milan,19,78,DC
+S. De Maio,Bologna,19,78,DC
+M. Cáceres,Lazio,19,78,"DC, TD"
+Rafael Tolói,Atalanta,19,78,DC
+S. Lulić,Lazio,19,78,"ES, TS, CC"
+E. Berisha,Atalanta,19,78,POR
+R. Soriano,Torino,19,78,"ES, CC, COC"
+Juan Jesus,Roma,19,78,"DC, TS"
+R. Saponara,Sampdoria,19,78,COC
+J. Veretout,Fiorentina,19,78,"CC, CDC"
+Mário Rui,Napoli,19,78,TS
+L. Castro,Cagliari,19,78,"CC, ED"
+L. Pavoletti,Cagliari,19,78,ATT
+V. Chiricheş,Napoli,19,78,DC
+M. De Sciglio,Juventus,19,78,"TD, TS"
+B. Cristante,Roma,19,78,"CC, COC"
+D. Berardi,Sassuolo,19,78,"AD, ATT"
+R. Gagliardini,Inter,19,78,"CDC, CC"
+D. Laxalt,Milan,19,78,ES
+E. Rigoni,Atalanta,19,78,"ED, ES, AD"
+D. Zapata,Atalanta,19,78,ATT
+N. Maksimović,Napoli,19,78,DC
+M. Sportiello,Frosinone,19,78,POR
+Bastos,Lazio,19,78,DC
+G. Simeone,Fiorentina,19,78,ATT
+A. Marušić,Lazio,19,78,"ED, TD, TS"
+L. Pellegrini,Roma,19,78,CC
+F. Kessié,Milan,19,78,CC
+B. Džemaili,Bologna,19,77,"CC, COC"
+F. Marchetti,Genoa,19,77,POR
+R. Klavan,Cagliari,19,77,DC
+R. Palacio,Bologna,19,77,"ATT, AS"
+Danilo,Bologna,19,77,DC
+L. De Silvestri,Torino,19,77,"TD, ED"
+Gervinho,Parma,19,77,"AS, AD, ATT"
+P. Hetemaj,Chievo Verona,19,77,"CC, ES"
+F. Caicedo,Lazio,19,77,ATT
+A. Poli,Bologna,19,77,CC
+I. Radovanović,Chievo Verona,19,77,"CDC, DC"
+T. Rincón,Torino,19,77,"CC, CDC"
+A. Bertolacci,Milan,19,77,"CC, CDC"
+E. Giaccherini,Chievo Verona,19,77,"AS, CC"
+R. Inglese,Parma,19,77,ATT
+L. Tonelli,Sampdoria,19,77,DC
+L. Spinazzola,Juventus,19,77,"ES, TS"
+M. Niang,Torino,19,77,"AS, ATT"
+J. Lukaku,Lazio,19,77,"ES, TS"
+G. González,Bologna,19,77,DC
+M. Benassi,Fiorentina,19,77,CC
+E. Pulgar,Bologna,19,77,"CDC, CC"
+L. López,Genoa,19,77,DC
+J. Correa,Lazio,19,77,"ES, ATT, COC"
+K. Lasagna,Udinese,19,77,ATT
+D. Calabria,Milan,19,77,TD
+A. Diawara,Napoli,19,77,"CC, CDC"
+A. Lafont,Fiorentina,19,77,POR
+P. Schick,Roma,19,77,"ATT, AD"
+F. Chiesa,Fiorentina,19,77,"AD, AT"
+C. Ünder,Roma,19,77,"AD, AS"
+A. Barák,Udinese,19,77,"CC, COC"
+P. Cutrone,Milan,19,77,ATT
+S. Proto,Lazio,19,76,POR
+F. Magnanelli,Sassuolo,19,76,CDC
+M. Silvestre,Empoli,19,76,DC
+V. Behrami,Udinese,19,76,"CDC, CC"
+C. Théréau,Fiorentina,19,76,"AS, AT"
+L. Antonelli,Empoli,19,76,TS
+A. Ekdal,Sampdoria,19,76,"CC, CDC, DC"
+A. Ranocchia,Inter,19,76,DC
+L. Rossettini,Chievo Verona,19,76,DC
+F. Borini,Milan,19,76,"AS, ED"
+A. Paloschi,SPAL,19,76,ATT
+M. Antenucci,SPAL,19,76,"ATT, AT"
+Ł. Skorupski,Bologna,19,76,POR
+V. Berisha,Lazio,19,76,"ES, CC, COC"
+M. Destro,Bologna,19,76,ATT
+Rômulo,Genoa,19,76,"ED, TD, CC"
+K. Babacar,Sassuolo,19,76,ATT
+D. D'Ambrosio,Inter,19,76,"TS, TD"
+K. Malcuit,Napoli,19,76,"TD, ED"
+D. Praet,Sampdoria,19,76,"CC, COC"
+Ł. Teodorczyk,Udinese,19,76,ATT
+V. Eysseric,Fiorentina,19,76,"AS, AD"
+R. Freuler,Atalanta,19,76,CC
+F. Viviani,SPAL,19,76,"CC, CDC"
+G. Defrel,Sampdoria,19,76,"ATT, AD"
+J. Campbell,Frosinone,19,76,"AD, AS, COC"
+M. de Roon,Atalanta,19,76,"CC, CDC"
+G. Lapadula,Genoa,19,76,ATT
+R. Durmisi,Lazio,19,76,"TS, ASA"
+K. Linetty,Sampdoria,19,76,CC
+Iuri Medeiros,Genoa,19,76,"ED, AD"
+F. Di Francesco,Sassuolo,19,76,"AS, AD"
+A. Izzo,Torino,19,76,DC
+A. Halilović,Milan,19,76,"ED, COC"
+Wallace,Lazio,19,76,DC
+J. Palomino,Atalanta,19,76,DC
+G. Donsah,Bologna,19,76,CC
+R. Karsdorp,Roma,19,76,TD
+M. Pašalić,Atalanta,19,76,"CC, CDC"
+N. Barella,Cagliari,19,76,CC
+Alex Berenguer,Torino,19,76,"ES, ASA"
+J. Jankto,Sampdoria,19,76,"CC, ES"
+Vitor Hugo,Fiorentina,19,76,DC
+R. Bentancur,Juventus,19,76,CC
+Dalbert,Inter,19,76,TS
+M. Pjaca,Fiorentina,19,76,AS
+A. Ćorić,Roma,19,76,COC
+M. Lazzari,SPAL,19,76,ED
+M. Rog,Napoli,19,76,CC
+Felipe,SPAL,19,75,DC
+E. Moretti,Torino,19,75,DC
+G. Pandev,Genoa,19,75,"ATT, COC"
+Rafael,Cagliari,19,75,POR
+N. Spolli,Genoa,19,75,DC
+L. Cigarini,Cagliari,19,75,"CC, CDC"
+S. Missiroli,SPAL,19,75,CC
+M. Valdifiori,SPAL,19,75,"CDC, CC"
+F. Caputo,Empoli,19,75,ATT
+D. Santon,Roma,19,75,"TS, TD"
+Sandro,Genoa,19,75,"CDC, CC"
+E. Zukanović,Genoa,19,75,DC
+E. Badu,Udinese,19,75,"CC, CDC"
+M. Gonalons,Roma,19,75,"CDC, CC"
+N. Tomović,Chievo Verona,19,75,"DC, TD"
+L. Krejčí,Bologna,19,75,"AS, AD, ED"
+C. Ciano,Frosinone,19,75,"COC, ATT"
+C. Biraghi,Fiorentina,19,75,"TS, ES"
+A. Cornelius,Atalanta,19,75,ATT
+A. Gomis,SPAL,19,75,POR
+J. Kurtić,SPAL,19,75,"CC, COC, AT"
+S. Meïté,Torino,19,75,"CDC, CC"
+A. Cragno,Cagliari,19,75,POR
+A. Younes,Napoli,19,75,AS
+F. Helander,Bologna,19,75,DC
+R. Olsen,Roma,19,75,POR
+A. Duncan,Sassuolo,19,75,CC
+D. Machís,Udinese,19,75,"AS, ES, COC"
+D. Cataldi,Lazio,19,75,"CC, CDC"
+R. De Paul,Udinese,19,75,"AT, AD, COC"
+A. Petagna,SPAL,19,75,ATT
+Marlon Santos,Sassuolo,19,75,DC
+S. Fofana,Udinese,19,75,"CC, CDC"
+S. Cristóforo,Fiorentina,19,75,"CDC, CC"
+H. Hateboer,Atalanta,19,75,"ED, TD"
+A. Grassi,Parma,19,75,CC
+M. Locatelli,Sassuolo,19,75,CDC
+A. Conti,Milan,19,75,"ED, TD"
+G. Ferrari,Sassuolo,19,75,DC
+A. Meret,Napoli,19,75,POR
+R. Mandragora,Udinese,19,75,"CC, CDC"
+O. Colley,Sampdoria,19,75,DC
+M. Lemos,Sassuolo,19,75,DC
+Felipe Vizeu,Udinese,19,75,ATT
+J. Kluivert,Roma,19,75,"AS, AD"
+D. Padelli,Inter,19,74,POR
+S. Floccari,SPAL,19,74,ATT
+M. Andreolli,Cagliari,19,74,DC
+J. Biabiany,Parma,19,74,"AD, AS, ED"
+F. Đorđević,Chievo Verona,19,74,ATT
+R. Meggiorini,Chievo Verona,19,74,ATT
+Da Costa,Bologna,19,74,POR
+N. Rigoni,Chievo Verona,19,74,"CC, CDC"
+L. Sepe,Parma,19,74,POR
+Rafael,Sampdoria,19,74,POR
+A. Ioniţă,Cagliari,19,74,"CC, COC, CDC"
+D. Falcinelli,Bologna,19,74,ATT
+B. Nuytinck,Udinese,19,74,DC
+J. Obi,Chievo Verona,19,74,CC
+F. Bardi,Frosinone,19,74,POR
+F. Đuričić,Sassuolo,19,74,"COC, AS"
+L. Crisetig,Frosinone,19,74,"CC, CDC"
+B. Dabo,Fiorentina,19,74,"CC, CDC"
+I. Strinić,Milan,19,74,TS
+K. Djidji,Torino,19,74,"DC, TS"
+M. Wagué,Udinese,19,74,DC
+M. Pucciarelli,Chievo Verona,19,74,"ATT, AT"
+A. Ciciretti,Parma,19,74,"AD, ED, COC"
+V. Laurini,Fiorentina,19,74,TD
+D. Lazović,Genoa,19,74,"ED, AD"
+J. Musso,Udinese,19,74,POR
+A. Di Gaudio,Parma,19,74,"ES, AS"
+I. Pussetto,Udinese,19,74,"AD, COC, ED"
+E. Goldaniga,Frosinone,19,74,DC
+Á. Nagy,Bologna,19,74,CDC
+Pol Lirola,Sassuolo,19,74,"TD, ED"
+B. Cesar,Chievo Verona,19,73,DC
+E. Barreto,Sampdoria,19,73,"CC, CDC"
+M. Pasqual,Empoli,19,73,"TS, ES"
+F. Dionisi,Frosinone,19,73,ATT
+D. Ciofani,Frosinone,19,73,ATT
+M. Gazzola,Parma,19,73,TD
+F. Cacciatore,Chievo Verona,19,73,"TD, TS"
+P. Schiattarella,SPAL,19,73,"CC, ED"
+M. Sau,Cagliari,19,73,"ATT, AT"
+T. Heurtaux,Udinese,19,73,DC
+Diego Farías,Cagliari,19,73,"AT, COC, AD, AS"
+J. Stryger Larsen,Udinese,19,73,"DC, TD"
+B. Bereszyński,Sampdoria,19,73,TD
+A. Acquah,Empoli,19,73,CC
+F. Santander,Bologna,19,73,ATT
+G. Caprari,Sampdoria,19,73,"AT, ATT, COC"
+O. Hiljemark,Genoa,19,73,"CC, CDC"
+M. Trotta,Sassuolo,19,73,"ATT, AD"
+M. Stępiński,Chievo Verona,19,73,"ATT, AT"
+I. Mbaye,Bologna,19,73,"TD, TS"
+F. Barba,Chievo Verona,19,73,DC
+Samir,Udinese,19,73,"DC, TS"
+S. Simič,Milan,19,73,DC
+L. Mazzitelli,Genoa,19,73,"CC, CDC"
+A. Adnan,Atalanta,19,73,"TS, ES"
+R. Krunić,Empoli,19,73,CC
+S. Sensi,Sassuolo,19,73,"CDC, CC"
+Gerson,Fiorentina,19,73,"CC, AD"
+A. Ounas,Napoli,19,73,"AD, ES"
+Y. Karamoh,Inter,19,73,"ED, AD"
+M. Zajc,Empoli,19,73,"COC, CC"
+Luiz Felipe,Lazio,19,73,DC
+S. Lukić,Torino,19,73,"CDC, CC"
+N. Milenković,Fiorentina,19,73,"DC, TD"
+E. Hallfreðsson,Frosinone,19,72,"CC, CDC"
+D. Maietta,Empoli,19,72,DC
+C. Molinaro,Frosinone,19,72,"TS, ES"
+S. Pellissier,Chievo Verona,19,72,ATT
+J. Djourou,SPAL,19,72,DC
+P. Kone,Udinese,19,72,"COC, CC, AT, CDC"
+F. Ceravolo,Parma,19,72,ATT
+A. Matri,Sassuolo,19,72,ATT
+F. Peluso,Sassuolo,19,72,"TS, DC"
+Thiago Cionek,SPAL,19,72,DC
+G. Angella,Udinese,19,72,DC
+C. Pinsoglio,Juventus,19,72,POR
+L. Ariaudo,Frosinone,19,72,DC
+F. Pisacane,Cagliari,19,72,"DC, TD"
+V. Belec,Sampdoria,19,72,POR
+V. Regini,Sampdoria,19,72,"TS, DC"
+J. Sala,Sampdoria,19,72,TD
+M. Büchel,Empoli,19,72,"CC, CDC"
+L. Ceppitelli,Cagliari,19,72,DC
+N. Murru,Sampdoria,19,72,TS
+J. Dezi,Parma,19,72,CC
+Patric,Lazio,19,72,"TD, DC"
+D. Bessa,Genoa,19,72,CC
+L. Lollo,Empoli,19,72,"CC, AT"
+C. Nørgaard,Fiorentina,19,72,"CDC, CC"
+F. Ceccherini,Fiorentina,19,72,DC
+W. Troost-Ekong,Udinese,19,72,DC
+A. Cerri,Cagliari,19,72,ATT
+F. Vicari,SPAL,19,72,DC
+S. Uçan,Empoli,19,72,"CC, COC"
+S. Perica,Frosinone,19,72,ATT
+J. Mauri,Milan,19,72,"CC, CDC"
+S. Scuffet,Udinese,19,72,POR
+F. Mattiello,Bologna,19,72,"ES, TS"
+M. Sprocati,Parma,19,72,"AS, AD"
+K. Diks,Fiorentina,19,72,TD
+A. Murgia,Lazio,19,72,"CC, CDC"
+R. Orsolini,Bologna,19,72,"AD, ED"
+M. Kean,Juventus,19,72,ATT
+S. Padoin,Cagliari,19,71,"TD, ES, CC"
+G. Pegolo,Sassuolo,19,71,POR
+Bruno Alves,Parma,19,71,DC
+L. Siligardi,Parma,19,71,"AD, AS, ES"
+B. Salamon,Frosinone,19,71,DC
+G. Marilungo,Atalanta,19,71,ATT
+N. Brighenti,Frosinone,19,71,"DC, TD"
+M. Capuano,Frosinone,19,71,"DC, TS"
+Alejandro Rodríguez,Empoli,19,71,ATT
+L. Krajnc,Frosinone,19,71,DC
+Y. Chibsah,Frosinone,19,71,"CC, CDC"
+P. Faragò,Cagliari,19,71,"ED, CC, COC"
+B. Drągowski,Fiorentina,19,71,POR
+E. Fernandes,Fiorentina,19,71,"COC, CC, ADA"
+F. Costa,SPAL,19,71,"ES, ASA"
+T. Castagne,Atalanta,19,71,"ED, TD"
+R. Gosens,Atalanta,19,71,"ES, TS"
+J. Boga,Sassuolo,19,71,"ES, ED, ATT"
+V. Milinković-Savić,SPAL,19,71,POR
+I. Bennacer,Empoli,19,71,CC
+Lyanco,Torino,19,71,DC
+G. Pezzella,Udinese,19,71,"TS, ES"
+C. Adjapong,Sassuolo,19,71,"ES, ED, TD"
+K. Bonifazi,SPAL,19,71,DC
+C. Kouamé,Genoa,19,71,"ATT, AT"
+Bremer,Torino,19,71,DC
+M. Brighi,Empoli,19,70,"CC, CDC"
+D. Dessena,Cagliari,19,70,"CC, TD"
+L. Mchedlidze,Empoli,19,70,ATT
+M. D'Alessandro,Udinese,19,70,"ED, AD"
+A. Seculin,Chievo Verona,19,70,POR
+M. Bourabia,Sassuolo,19,70,"CC, CDC, COC"
+R. Maiello,Frosinone,19,70,"CC, CDC"
+K. Günter,Genoa,19,70,DC
+M. Dijks,Bologna,19,70,TS
+L. Capezzi,Empoli,19,70,CC
+P. Gollini,Atalanta,19,70,POR
+N. Paz,Bologna,19,70,"DC, TS"
+F. Zampano,Frosinone,19,70,"TD, ED"
+A. Ferrari,Sampdoria,19,70,"TD, DC"
+S. Luperto,Napoli,19,70,DC
+J. Minala,Lazio,19,70,"CC, COC, CDC"
+K. Piątek,Genoa,19,70,ATT
+J. Andersen,Sampdoria,19,70,DC
+M. Gori,Frosinone,19,70,"CC, CDC"
+O. Aina,Torino,19,70,"TD, TS"
+I. Provedel,Empoli,19,70,POR
+F. Romagna,Cagliari,19,70,DC
+A. Calabresi,Bologna,19,70,"DC, TD"
+G. Mancini,Atalanta,19,70,DC
+E. Rolón,Genoa,19,70,"CDC, CC, ES"
+Ronaldo Vieira,Sampdoria,19,70,"CDC, CC"
+M. Pajač,Cagliari,19,70,"ES, TS, COC"
+M. Varnier,Atalanta,19,70,DC
+A. Balić,Udinese,19,70,"CC, CDC"
+M. Olivera,Fiorentina,19,70,"TS, ES"
+E. Brignola,Sassuolo,19,70,"COC, AD, AT, ED"
+O. Okwonkwo,Bologna,19,70,"AS, COC"
+F. Bradarić,Cagliari,19,70,CDC
+V. Di Cesare,Parma,19,69,DC
+A. Rosati,Torino,19,69,POR
+M. Scozzarella,Parma,19,69,"CC, CDC"
+D. Soddimo,Frosinone,19,69,"COC, CC, ES"
+N. Frey,Chievo Verona,19,69,"TD, ED"
+F. Veseli,Empoli,19,69,"DC, TD"
+M. Valoti,SPAL,19,69,"CC, COC"
+Nicolas,Udinese,19,69,POR
+D. Biraschi,Genoa,19,69,"DC, TD"
+C. Lombardi,Lazio,19,69,"AS, ED"
+R. Gagliolo,Parma,19,69,"TS, DC"
+L. Bittante,Empoli,19,69,"TD, TS, ED"
+G. Di Lorenzo,Empoli,19,69,"TD, DC"
+D. Kownacki,Sampdoria,19,69,ATT
+L. Valzania,Atalanta,19,69,CC
+G. Gaudino,Chievo Verona,19,69,"CC, CDC"
+M. Fares,SPAL,19,69,"TS, ES, AS"
+H. ter Avest,Udinese,19,69,"TD, ADA"
+A. Favilli,Genoa,19,69,ATT
+E. Audero,Sampdoria,19,69,POR
+L. Dickmann,SPAL,19,69,"TD, ED"
+Pedro Pereira,Genoa,19,69,TD
+F. Cassata,Frosinone,19,69,CC
+L. Stulac,Parma,19,69,CDC
+Rogério,Sassuolo,19,69,"TS, ES"
+P. Sammarco,Frosinone,19,68,CC
+L. Scaglia,Parma,19,68,"TS, AD, CC, ES"
+A. Santurro,Bologna,19,68,POR
+A. Vacca,Parma,19,68,CC
+A. Sowe,Chievo Verona,19,68,ATT
+Y. Baraye,Parma,19,68,"AS, COC, ATT"
+A. Fulignati,Empoli,19,68,POR
+L. Paganini,Frosinone,19,68,"ED, AD"
+A. Gnoukouri,Inter,19,68,"CC, CDC"
+A. La Gumina,Empoli,19,68,ATT
+M. Svanberg,Bologna,19,68,"ES, ED"
+J. Valencia,Bologna,19,68,"CC, COC"
+M. Pessina,Atalanta,19,68,CC
+S. Mraz,Empoli,19,68,ATT
+I. Lakićević,Genoa,19,68,TD
+G. Munari,Parma,19,67,CC
+S. Aresti,Cagliari,19,67,POR
+A. Barillà,Parma,19,67,"CC, CDC"
+P. Frattali,Parma,19,67,POR
+A. Cinelli,Chievo Verona,19,67,"CC, CDC"
+A. Iacobucci,Frosinone,19,67,POR
+B. Djimsiti,Atalanta,19,67,DC
+Éverton Luiz,SPAL,19,67,"CDC, CC"
+G. Iñíguez,Udinese,19,67,"CC, CDC"
+R. Di Gennaro,Inter,19,67,POR
+V. Parigini,Torino,19,67,"AS, AD, COC, ATT"
+G. Moncini,SPAL,19,67,ATT
+R. Zekhnini,Fiorentina,19,67,"AS, AD"
+C. Dell'Orco,Sassuolo,19,67,"TS, DC"
+S. Edera,Torino,19,67,AD
+A. Rossi,Lazio,19,67,ATT
+I. Radu,Genoa,19,67,POR
+A. Bastoni,Parma,19,67,DC
+L. Šimić,SPAL,19,67,DC
+A. Šemper,Chievo Verona,19,67,POR
+A. Donnarumma,Milan,19,66,POR
+C. Lykogiannis,Cagliari,19,66,"TS, DC"
+S. Ingelsson,Udinese,19,66,"CC, ED"
+G. Rolando,Sampdoria,19,66,"ED, ES"
+A. Plizzari,Milan,19,66,POR
+M. Coulibaly,Udinese,19,66,CC
+S. Kiyine,Chievo Verona,19,66,"CC, ED"
+M. Barrow,Atalanta,19,66,ATT
+R. Vodišek,Genoa,19,66,POR
+Daniel Fuzato,Roma,19,66,POR
+N. Opoku,Udinese,19,66,DC
+P. Micin,Udinese,19,66,"AD, ATT, AS"
+S. Iacoponi,Parma,19,65,"DC, TD"
+P. Terracciano,Empoli,19,65,POR
+J. Untersee,Empoli,19,65,"ED, TD"
+L. Filippini,Lazio,19,65,"TS, DC"
+C. Nica,Atalanta,19,65,"TD, ED"
+M. Aramu,Torino,19,65,"ATT, AD, COC"
+M. Bani,Chievo Verona,19,65,DC
+S. Pontisso,Udinese,19,65,"CC, CDC"
+Júnior Tavares,Sampdoria,19,65,TS
+J. Rasmussen,Empoli,19,65,"DC, CDC, CC"
+A. Beghetto,Frosinone,19,65,ES
+G. Marchegiani,SPAL,19,65,POR
+F. Depaoli,Chievo Verona,19,65,"ED, CC, TD"
+N. Garmendia,Udinese,19,65,"COC, AS"
+G. Magnani,Sassuolo,19,65,DC
+L. Pellegrini,Roma,19,65,TS
+V. Damascan,Torino,19,65,ATT
+T. Berni,Inter,19,64,POR
+E. Schiavon,SPAL,19,64,"CC, CDC"
+M. Valjent,Chievo Verona,19,64,"DC, TD"
+P. Jaroszyński,Chievo Verona,19,64,TS
+M. Vitale,SPAL,19,64,CC
+F. Dimarco,Parma,19,64,"TS, ES, ASA"
+G. Scamacca,Sassuolo,19,64,ATT
+S. Ichazo,Torino,19,64,POR
+L. Callegari,Genoa,19,64,CDC
+A. Deiola,Parma,19,64,CC
+M. Marcjanik,Empoli,19,64,DC
+N. Zaniolo,Roma,19,64,COC
+W. Bianda,Roma,19,64,DC
+M. Rigione,Chievo Verona,19,63,DC
+F. Sierralta,Parma,19,63,"TD, DC"
+A. Da Cruz,Parma,19,63,"ATT, AS"
+P. Ghiglione,Frosinone,19,63,"ED, TD"
+M. Tumminello,Atalanta,19,63,ATT
+A. Reca,Atalanta,19,63,"TS, ES"
+G. Pinto,Parma,19,63,"TS, ES"
+O. Stijepović,Sampdoria,19,63,CC
+Vinícius,Napoli,19,63,ATT
+F. Colidio,Inter,19,63,ATT
+G. Manfrin,Chievo Verona,19,62,"TS, DC"
+L. Zanon,Fiorentina,19,62,"TS, ES"
+J. Odgaard,Sassuolo,19,62,"ATT, ED"
+A. Pinamonti,Frosinone,19,62,ATT
+Pedro Neto,Lazio,19,62,"ATT, AS"
+M. Léris,Chievo Verona,19,62,ATT
+H. Traorè,Empoli,19,62,"COC, CC"
+P. Beruatto,Juventus,19,62,TS
+Vinicius,Bologna,19,62,POR
+N. Belloni,Inter,19,61,"ED, AD"
+G. Guerrieri,Lazio,19,61,POR
+M. Adamonis,Lazio,19,61,POR
+L. Matarese,Frosinone,19,61,ES
+E. Vignato,Chievo Verona,19,61,COC
+F. Rossi,Atalanta,19,60,POR
+D. Voltan,Genoa,19,60,"AD, AS"
+E. Besea,Frosinone,19,60,CC
+S. Omeonga,Genoa,19,60,"CC, CDC"
+T. Costantini,SPAL,19,60,"AD, AS, AT"
+L. Polvani,Empoli,19,60,DC
+Bruno Jordão,Lazio,19,60,CC
+V. Millico,Torino,19,60,AS
+G. Corbo,Bologna,19,60,DC
+A. Bandini,Inter,19,59,"TD, ED"
+M. Brunelli,Chievo Verona,19,59,POR
+M. Meli,Fiorentina,19,58,AD
+L. Gagliano,Cagliari,19,58,ATT
+A. Varga,Sampdoria,19,57,DC
+N. Contini,Napoli,19,57,POR
+G. Poluzzi,SPAL,19,57,POR
+A. Errico,Frosinone,19,57,"AT, COC"
+W. Falcone,Sampdoria,19,56,POR
+J. Cavagna,Atalanta,19,56,CDC
+A. Diakhate,Fiorentina,19,56,CC
+A. Jakupović,Empoli,19,56,"ATT, AT, AS"
+N. Pejović,Empoli,19,56,DC
+L. Markovic,Juventus,19,56,ATT
+R. Criscuolo,Sampdoria,19,55,CC
+G. Satalino,Sassuolo,19,55,POR
+M. Leverbe,Sampdoria,19,55,DC
+M. Said,Empoli,19,55,ATT
+T. Krapikas,Sampdoria,19,54,POR
+G. Meli,Empoli,19,52,POR
+L. Benedetti,Sampdoria,19,52,CC
+D. Thiam,SPAL,19,51,POR
+G. Boccafoglia,SPAL,19,50,DC
+Cristiano Ronaldo,Juventus,20,93,"ATT, AS"
+G. Chiellini,Juventus,20,89,DC
+K. Koulibaly,Napoli,20,89,DC
+S. Handanovič,Inter,20,88,POR
+D. Godín,Inter,20,88,DC
+P. Dybala,Juventus,20,88,"COC, AD"
+D. Mertens,Napoli,20,87,"AT, ATT"
+L. Insigne,Napoli,20,87,"AT, AS, ATT"
+M. Pjanić,Juventus,20,86,"CC, CDC"
+L. Bonucci,Juventus,20,86,DC
+W. Szczęsny,Juventus,20,86,POR
+C. Immobile,Lazio,20,86,ATT
+M. Škriniar,Inter,20,86,DC
+A. Gómez,Atalanta,20,85,"COC, AT, ATT"
+G. Higuaín,Juventus,20,85,ATT
+B. Matuidi,Juventus,20,85,"CDC, CC"
+Alex Sandro,Juventus,20,85,"TS, ES"
+R. Lukaku,Inter,20,85,ATT
+K. Manolas,Napoli,20,85,DC
+Allan,Napoli,20,85,CC
+M. Icardi,Inter,20,85,ATT
+S. Milinković-Savić,Lazio,20,85,"CC, COC"
+G. Donnarumma,Milan,20,85,POR
+M. de Ligt,Juventus,20,85,DC
+S. Sirigu,Torino,20,84,POR
+Lucas Leiva,Lazio,20,84,CDC
+E. Džeko,Roma,20,84,ATT
+M. Mandžukić,Juventus,20,84,"ATT, AS"
+José Callejón,Napoli,20,84,"ED, AD"
+Douglas Costa,Juventus,20,84,"ES, AD, AS"
+S. de Vrij,Inter,20,84,DC
+Luis Alberto,Lazio,20,84,"COC, CC, AT"
+J. Iličić,Atalanta,20,84,"AT, ATT"
+G. Buffon,Juventus,20,83,POR
+F. Quagliarella,Sampdoria,20,83,ATT
+R. Nainggolan,Cagliari,20,83,"COC, CC"
+S. Khedira,Juventus,20,83,"CC, CDC"
+A. Ramsey,Juventus,20,83,"CC, COC"
+J. Cuadrado,Juventus,20,83,"ED, AD"
+F. Acerbi,Lazio,20,83,DC
+A. Milik,Napoli,20,83,ATT
+A. Rabiot,Juventus,20,83,"CC, CDC"
+A. Romagnoli,Milan,20,83,DC
+F. Bernardeschi,Juventus,20,83,"ED, COC"
+Pau López,Roma,20,83,POR
+Fabián,Napoli,20,83,"CC, CDC, COC"
+Pepe Reina,Milan,20,82,POR
+L. Biglia,Milan,20,82,"CDC, CC"
+A. Kolarov,Roma,20,82,TS
+M. Balotelli,Brescia,20,82,ATT
+G. Bonaventura,Milan,20,82,"CC, AS"
+M. Perin,Juventus,20,82,POR
+Suso,Milan,20,82,"AD, AT"
+A. Belotti,Torino,20,82,ATT
+D. Rugani,Juventus,20,82,DC
+T. Strakosha,Lazio,20,82,POR
+D. Zapata,Atalanta,20,82,ATT
+M. Politano,Inter,20,82,"ED, ATT"
+A. Consigli,Sassuolo,20,81,POR
+M. Parolo,Lazio,20,81,"CDC, CC"
+N. Nkoulou,Torino,20,81,DC
+A. Florenzi,Roma,20,81,"TD, AD, AS"
+A. Cragno,Cagliari,20,81,POR
+E. Can,Juventus,20,81,"CC, CDC"
+P. Zieliński,Napoli,20,81,"CC, ES"
+João Mário,Inter,20,81,"COC, CC"
+A. Izzo,Torino,20,81,DC
+M. Brozović,Inter,20,81,"CDC, CC"
+L. Martínez,Inter,20,81,ATT
+Ş. Radu,Lazio,20,80,DC
+D. Ospina,Napoli,20,80,POR
+F. Fazio,Roma,20,80,DC
+D. Perotti,Roma,20,80,AS
+M. Musacchio,Milan,20,80,DC
+R. Rodríguez,Milan,20,80,"TS, DC"
+S. Verdi,Napoli,20,80,"ES, AD"
+L. Muriel,Atalanta,20,80,ATT
+F. Ghoulam,Napoli,20,80,TS
+S. Zaza,Torino,20,80,ATT
+H. Çalhanoğlu,Milan,20,80,"AS, COC, CC"
+Samu Castillejo,Milan,20,80,"ED, ES, CC"
+E. Hysaj,Napoli,20,80,TD
+J. Correa,Lazio,20,80,"AT, ATT, COC"
+M. Vecino,Inter,20,80,CDC
+M. Caldara,Milan,20,80,DC
+Jony,Lazio,20,80,ES
+K. Piątek,Milan,20,80,ATT
+N. Barella,Inter,20,80,"CC, COC"
+M. Lazzari,Lazio,20,80,ED
+A. Mirante,Roma,20,79,POR
+Borja Valero,Inter,20,79,"COC, CDC"
+M. Škrtel,Atalanta,20,79,DC
+D. Criscito,Genoa,20,79,"TS, DC"
+A. Candreva,Inter,20,79,ED
+K. Boateng,Fiorentina,20,79,"AT, CC"
+K. Asamoah,Inter,20,79,TS
+S. Lulić,Lazio,20,79,ES
+Iago Falqué,Torino,20,79,"AT, AD"
+J. Pastore,Roma,20,79,"CC, AS, AD"
+G. Pezzella,Fiorentina,20,79,DC
+Danilo,Juventus,20,79,"TD, TS"
+M. Badelj,Fiorentina,20,79,"CDC, CC"
+J. Murillo,Sampdoria,20,79,DC
+L. Spinazzola,Roma,20,79,"ES, TS"
+Mário Rui,Napoli,20,79,TS
+D. Baselli,Torino,20,79,CC
+R. Bentancur,Juventus,20,79,CC
+L. Pellegrini,Roma,20,79,"CC, COC, CDC"
+André Silva,Milan,20,79,ATT
+F. Kessié,Milan,20,79,CC
+R. Malinovskyi,Atalanta,20,79,"CC, COC, CDC"
+Lucas Paquetá,Milan,20,79,"COC, CC"
+F. Chiesa,Fiorentina,20,79,"AD, AT"
+A. Masiello,Atalanta,20,78,DC
+Gervinho,Parma,20,78,"AS, AD"
+C. Ansaldi,Torino,20,78,"ES, TS"
+F. Caicedo,Lazio,20,78,"AT, ATT"
+V. Birsa,Cagliari,20,78,"COC, AD"
+C. Zapata,Genoa,20,78,DC
+M. Cáceres,Lazio,20,78,"DC, TD"
+O. Karnezis,Napoli,20,78,POR
+Rafael Tolói,Atalanta,20,78,DC
+R. Soriano,Bologna,20,78,"COC, CC, ES"
+K. Malcuit,Napoli,20,78,"TD, ED"
+G. Ramírez,Sampdoria,20,78,COC
+J. Veretout,Roma,20,78,"CC, CDC"
+R. Freuler,Atalanta,20,78,CC
+G. Defrel,Roma,20,78,"ATT, AD"
+S. Meïté,Torino,20,78,"CC, CDC"
+L. Pavoletti,Cagliari,20,78,ATT
+R. Olsen,Roma,20,78,POR
+B. Cristante,Roma,20,78,"CC, CDC, COC"
+M. de Roon,Atalanta,20,78,"CC, CDC"
+D. Berardi,Sassuolo,20,78,"AD, ATT"
+R. Gagliardini,Inter,20,78,"CDC, CC"
+R. De Paul,Udinese,20,78,"AT, CC, AS"
+D. Laxalt,Milan,20,78,ES
+E. Pulgar,Fiorentina,20,78,"CDC, CC"
+J. Musso,Udinese,20,78,POR
+N. Maksimović,Napoli,20,78,DC
+Bastos,Lazio,20,78,DC
+H. Hateboer,Atalanta,20,78,"ED, TD"
+A. Meret,Napoli,20,78,POR
+C. Ünder,Roma,20,78,"AD, ED"
+Danilo,Bologna,20,77,DC
+L. Schøne,Genoa,20,77,"CC, CDC"
+Miguel Veloso,Hellas Verona,20,77,"CC, CDC"
+S. De Maio,Udinese,20,77,DC
+A. Poli,Bologna,20,77,"CC, CDC"
+J. Kucka,Parma,20,77,"CC, CDC"
+T. Rincón,Torino,20,77,"CC, CDC"
+Rômulo,Genoa,20,77,"ED, CC, TD"
+Pedro Obiang,Sassuolo,20,77,"CDC, CC"
+R. Saponara,Genoa,20,77,COC
+L. Tonelli,Napoli,20,77,DC
+L. Castro,Cagliari,20,77,"CC, COC"
+V. Chiricheș,Napoli,20,77,DC
+A. Younes,Napoli,20,77,"ES, AS"
+M. De Sciglio,Juventus,20,77,"TD, TS"
+J. Lukaku,Lazio,20,77,"ES, TS"
+M. Benassi,Fiorentina,20,77,CC
+A. Petagna,SPAL,20,77,ATT
+M. Sportiello,Atalanta,20,77,POR
+G. Simeone,Fiorentina,20,77,ATT
+J. Palomino,Atalanta,20,77,DC
+A. Sanabria,Genoa,20,77,ATT
+M. Pašalić,Atalanta,20,77,"CC, COC"
+A. Marušić,Lazio,20,77,ED
+K. Lasagna,Udinese,20,77,ATT
+Alex Berenguer,Torino,20,77,"ES, ASA, AS"
+O. Colley,Sampdoria,20,77,DC
+E. Audero,Sampdoria,20,77,POR
+D. Calabria,Milan,20,77,TD
+S. Sensi,Inter,20,77,"CC, CDC"
+N. Nández,Cagliari,20,77,"CC, CDC, ED"
+Luiz Felipe,Lazio,20,77,DC
+A. Barák,Udinese,20,77,"CC, COC"
+S. Proto,Lazio,20,76,POR
+B. Džemaili,Bologna,20,76,"CC, CDC, COC"
+R. Klavan,Cagliari,20,76,DC
+R. Palacio,Bologna,20,76,"ATT, COC"
+D. Basta,Lazio,20,76,"TD, ED"
+S. Bocchetti,Hellas Verona,20,76,DC
+A. Ekdal,Sampdoria,20,76,"CC, CDC"
+F. Borini,Milan,20,76,"AS, ED"
+I. Radovanović,Genoa,20,76,"CDC, CC"
+E. Berisha,SPAL,20,76,POR
+Ł. Skorupski,Bologna,20,76,POR
+M. Jajalo,Udinese,20,76,"CC, CDC"
+M. Gabbiadini,Sampdoria,20,76,ATT
+João Pedro,Cagliari,20,76,"AT, COC"
+R. Inglese,Parma,20,76,ATT
+Juan Jesus,Roma,20,76,"DC, TS"
+S. Denswil,Bologna,20,76,DC
+K. Linetty,Sampdoria,20,76,CC
+P. Gollini,Atalanta,20,76,POR
+F. Di Francesco,SPAL,20,76,"AS, AD"
+Wallace,Lazio,20,76,DC
+I. Pussetto,Udinese,20,76,"ATT, AD, ED"
+M. Locatelli,Sassuolo,20,76,"CDC, CC"
+T. Castagne,Atalanta,20,76,"ES, ED, TD"
+R. Gosens,Atalanta,20,76,"ES, TS"
+R. Mandragora,Udinese,20,76,"CC, CDC"
+Dalbert,Inter,20,76,TS
+G. Mancini,Roma,20,76,DC
+T. Hernández,Milan,20,76,TS
+R. Orsolini,Bologna,20,76,"COC, AD, ED"
+P. Schick,Roma,20,76,"ATT, AT, AD"
+N. Milenković,Fiorentina,20,76,"DC, TD"
+L. Rigoni,Parma,20,75,"CC, CDC"
+Rafael,Cagliari,20,75,POR
+L. De Silvestri,Torino,20,75,"ED, TD"
+A. Ranocchia,Inter,20,75,DC
+A. Paloschi,SPAL,20,75,ATT
+F. Caputo,Sassuolo,20,75,ATT
+D. Santon,Roma,20,75,"TD, TS"
+L. Sepe,Parma,20,75,POR
+V. Berisha,Lazio,20,75,"ES, CC, COC"
+E. Badu,Hellas Verona,20,75,"CDC, CC"
+A. Ioniță,Cagliari,20,75,"CC, COC, CDC"
+M. Gonalons,Roma,20,75,"CDC, CC"
+M. Destro,Bologna,20,75,ATT
+D. D'Ambrosio,Inter,20,75,"TD, TS"
+Ł. Teodorczyk,Udinese,20,75,ATT
+F. Santander,Bologna,20,75,ATT
+C. Biraghi,Fiorentina,20,75,"TS, ES"
+N. Sansone,Bologna,20,75,"ATT, COC, AS"
+V. Eysseric,Fiorentina,20,75,"AS, AD"
+Gabriel,Lecce,20,75,POR
+A. Gomis,SPAL,20,75,POR
+J. Kurtić,SPAL,20,75,"CC, COC"
+S. Sturaro,Genoa,20,75,CC
+A. Donnarumma,Brescia,20,75,ATT
+K. Djidji,Torino,20,75,"DC, TS"
+D. Bessa,Hellas Verona,20,75,"COC, CC"
+A. Duncan,Sassuolo,20,75,CC
+V. Lazaro,Inter,20,75,"TD, ED"
+D. Cataldi,Lazio,20,75,"CC, CDC"
+W. Troost-Ekong,Udinese,20,75,DC
+S. Fofana,Udinese,20,75,"CC, CDC"
+L. Lerager,Genoa,20,75,"CC, CDC"
+S. Cristóforo,Fiorentina,20,75,"CDC, CC"
+A. Grassi,Parma,20,75,CC
+G. Tutino,Hellas Verona,20,75,"AT, AD, ATT"
+G. Donsah,Bologna,20,75,CC
+A. Conti,Milan,20,75,"ED, TD"
+O. Aina,Torino,20,75,"ES, ED, TD"
+J. Jankto,Sampdoria,20,75,"CC, ES"
+M. Pjaca,Juventus,20,75,AS
+A. Diawara,Roma,20,75,"CC, CDC"
+A. Ounas,Napoli,20,75,"ES, AD, AT"
+Y. Karamoh,Parma,20,75,"ED, AD"
+I. Radu,Genoa,20,75,POR
+C. Kouamé,Genoa,20,75,"ATT, AT"
+M. Rog,Cagliari,20,75,CC
+J. Kluivert,Roma,20,75,"AS, AD"
+S. Tonali,Brescia,20,75,"CDC, CC"
+Rafael Leão,Milan,20,75,ATT
+Felipe,SPAL,20,74,DC
+F. Magnanelli,Sassuolo,20,74,CDC
+D. Padelli,Inter,20,74,POR
+L. Cigarini,Cagliari,20,74,"CC, CDC"
+S. Missiroli,SPAL,20,74,"CC, CDC"
+J. Biabiany,Parma,20,74,"AD, AS, ED"
+M. Valdifiori,SPAL,20,74,"CDC, CC"
+M. Silvestri,Hellas Verona,20,74,POR
+Sandro,Genoa,20,74,"CDC, CC"
+J. Larsen,Udinese,20,74,"TD, DC, ED"
+F. Đuričić,Sassuolo,20,74,"COC, AS"
+K. Babacar,Sassuolo,20,74,ATT
+L. Crisetig,Bologna,20,74,"CC, CDC"
+B. Dabo,Fiorentina,20,74,"CC, CDC"
+I. Nestorovski,Udinese,20,74,ATT
+L. Krejčí,Bologna,20,74,"AS, ES"
+A. Cornelius,Parma,20,74,ATT
+F. Viviani,SPAL,20,74,"CDC, CC"
+G. Caprari,Sampdoria,20,74,"AT, ATT, COC"
+O. Hiljemark,Genoa,20,74,"CC, CDC"
+V. Verre,Hellas Verona,20,74,"COC, CC"
+A. Ciciretti,Napoli,20,74,"COC, AD"
+R. Durmisi,Lazio,20,74,"TS, ASA"
+D. Lazović,Hellas Verona,20,74,"ES, ED"
+Marlon,Sassuolo,20,74,DC
+A. Barreca,Genoa,20,74,TS
+Walace,Udinese,20,74,"CDC, CC"
+G. Ferrari,Sassuolo,20,74,DC
+I. Bennacer,Milan,20,74,"CC, CDC"
+R. Krunić,Milan,20,74,CC
+Pol Lirola,Fiorentina,20,74,"TD, ED"
+J. Zmrhal,Brescia,20,74,"ES, ED"
+S. Lukić,Torino,20,74,"CDC, CC"
+N. Zaniolo,Roma,20,74,"COC, CC, AD"
+M. Demiral,Juventus,20,74,DC
+Rodrigo Becão,Udinese,20,74,DC
+G. Pandev,Genoa,20,73,"ATT, COC"
+Bruno Alves,Parma,20,73,DC
+F. Marchetti,Genoa,20,73,POR
+E. Alfonso,Brescia,20,73,POR
+F. Peluso,Sassuolo,20,73,"DC, TS"
+L. Rossettini,Lecce,20,73,DC
+S. Di Carmine,Hellas Verona,20,73,ATT
+B. Nuytinck,Udinese,20,73,DC
+F. Pisacane,Cagliari,20,73,"DC, TD"
+B. Bereszyński,Sampdoria,20,73,TD
+I. Strinić,Milan,20,73,TS
+F. Lucioni,Lecce,20,73,DC
+L. Ceppitelli,Cagliari,20,73,DC
+G. Brugman,Parma,20,73,"CC, CDC"
+N. Murru,Sampdoria,20,73,TS
+Patric,Lazio,20,73,"DC, TD, ED"
+B. Djimsiti,Atalanta,20,73,DC
+M. Dijks,Bologna,20,73,"TS, ES"
+I. Mbaye,Bologna,20,73,"TD, TS"
+V. Laurini,Parma,20,73,TD
+G. Lapadula,Lecce,20,73,ATT
+D. Biraschi,Genoa,20,73,"DC, TD"
+B. Drągowski,Fiorentina,20,73,POR
+Samir,Udinese,20,73,"DC, TS"
+A. Di Gaudio,Hellas Verona,20,73,AS
+G. Di Lorenzo,Napoli,20,73,"ED, TD, ADA"
+E. Goldaniga,Sassuolo,20,73,DC
+S. Gümüş,Genoa,20,73,"ED, ATT"
+Hernani,Parma,20,73,"CDC, CC"
+A. Ćorić,Roma,20,73,"COC, CC"
+Lyanco,Torino,20,73,DC
+C. Romero,Genoa,20,73,"DC, TD"
+T. Tomiyasu,Bologna,20,73,"DC, CDC"
+G. Pazzini,Hellas Verona,20,72,ATT
+E. Barreto,Sampdoria,20,72,CC
+C. Théréau,Fiorentina,20,72,"AS, AT"
+S. Floccari,SPAL,20,72,ATT
+F. Ceravolo,Parma,20,72,ATT
+F. Cacciatore,Cagliari,20,72,"TD, TS"
+L. Siligardi,Parma,20,72,"AD, AS, ES"
+Thiago Cionek,SPAL,20,72,DC
+C. Pinsoglio,Juventus,20,72,POR
+Diego Farías,Lecce,20,72,"ATT, COC, AT"
+A. Rispoli,Lecce,20,72,"TD, ED"
+Da Costa,Bologna,20,72,POR
+P. Tachtsidis,Lecce,20,72,CC
+D. Falcinelli,Bologna,20,72,ATT
+A. Ragusa,Hellas Verona,20,72,"AS, AD"
+R. Matos,Udinese,20,72,"AD, ATT, AS"
+A. Cerri,Cagliari,20,72,ATT
+J. Toljan,Sassuolo,20,72,"TD, TS"
+F. Vicari,SPAL,20,72,DC
+S. Perica,Udinese,20,72,ATT
+S. Scuffet,Udinese,20,72,POR
+C. Falletti,Bologna,20,72,"COC, AD, AT"
+F. Mattiello,Cagliari,20,72,"ED, ES"
+S. Luperto,Napoli,20,72,DC
+L. Mazzitelli,Sassuolo,20,72,"CC, CDC"
+M. Bani,Bologna,20,72,DC
+J. Boga,Sassuolo,20,72,"ES, ED, ATT"
+M. Fares,SPAL,20,72,"ES, TS, AS"
+F. Ayé,Brescia,20,72,ATT
+A. Calabresi,Bologna,20,72,"DC, TD"
+A. Murgia,SPAL,20,72,"CC, CDC"
+Léo Duarte,Milan,20,72,"DC, TD"
+Ronaldo Vieira,Sampdoria,20,72,"CDC, CC"
+J. Schouten,Bologna,20,72,"CDC, CC"
+A. Bastoni,Inter,20,72,DC
+Jandrei,Genoa,20,72,POR
+S. Żurkowski,Fiorentina,20,72,CC
+A. Olsen,Bologna,20,72,"AD, ATT"
+D. Vavro,Lazio,20,72,DC
+J. El Yamiq,Genoa,20,72,DC
+E. Hallfreðsson,Udinese,20,71,"CC, CDC"
+M. Mancosu,Lecce,20,71,"COC, CC"
+D. Dessena,Brescia,20,71,"CC, CDC"
+A. Barillà,Parma,20,71,"CC, CDC"
+A. Matri,Sassuolo,20,71,ATT
+G. Angella,Udinese,20,71,DC
+B. Salamon,SPAL,20,71,DC
+L. Marrone,Hellas Verona,20,71,"DC, CDC"
+M. Faraoni,Hellas Verona,20,71,"ED, TD, CC"
+J. Sala,Sampdoria,20,71,TD
+M. Bourabia,Sassuolo,20,71,"CC, CDC, COC"
+J. Joronen,Brescia,20,71,POR
+D. Bisoli,Brescia,20,71,"CC, COC"
+P. Terracciano,Fiorentina,20,71,POR
+F. Ceccherini,Fiorentina,20,71,DC
+R. Kishna,Lazio,20,71,AS
+P. Faragò,Cagliari,20,71,"CC, ED, TD"
+M. Zaccagni,Hellas Verona,20,71,"COC, CC"
+F. Romagna,Cagliari,20,71,DC
+Matheus Pereira,Juventus,20,71,COC
+G. Pezzella,Udinese,20,71,"TS, ES"
+C. Adjapong,Sassuolo,20,71,"ES, ED, TD"
+G. Maroni,Sampdoria,20,71,"COC, AS"
+M. Pajač,Cagliari,20,71,"ES, TS, COC"
+Y. Shakhov,Lecce,20,71,"CC, CDC, COC"
+K. Bonifazi,Torino,20,71,DC
+J. Chabot,Sampdoria,20,71,DC
+Bremer,Torino,20,71,DC
+E. Elmas,Napoli,20,71,"CC, COC"
+Felipe Curcio,Brescia,20,71,TS
+A. Rrahmani,Hellas Verona,20,71,"DC, TS, TD"
+G. Pegolo,Sassuolo,20,70,POR
+D. Gastaldello,Brescia,20,70,DC
+S. Iacoponi,Parma,20,70,"TD, DC"
+L. Vitale,Hellas Verona,20,70,"ES, TS"
+S. Colombi,Parma,20,70,POR
+M. Calderoni,Lecce,20,70,TS
+L. Tremolada,Brescia,20,70,"COC, CC"
+A. La Mantia,Lecce,20,70,ATT
+B. Martella,Brescia,20,70,"TS, ES"
+K. Günter,Hellas Verona,20,70,DC
+L. Capezzi,Sampdoria,20,70,CC
+R. Gagliolo,Parma,20,70,"TS, DC"
+N. Paz,Bologna,20,70,"DC, TS"
+L. Henderson,Hellas Verona,20,70,CC
+E. Torregrossa,Brescia,20,70,ATT
+G. Moncini,SPAL,20,70,ATT
+M. Thorsby,Sampdoria,20,70,"CC, COC"
+A. Cistana,Brescia,20,70,DC
+Z. Machach,Napoli,20,70,"COC, CC, AT"
+M. Svanberg,Bologna,20,70,"CC, ED"
+C. Dell'Orco,Lecce,20,70,"DC, TS"
+R. Benzar,Lecce,20,70,TD
+F. Depaoli,Sampdoria,20,70,"TD, ED"
+A. Pinamonti,Genoa,20,70,ATT
+M. Varnier,Atalanta,20,70,DC
+E. Brignola,Sassuolo,20,70,"COC, AD, AT"
+Han Kwang Song,Cagliari,20,70,ATT
+Y. Çetin,Roma,20,70,DC
+H. Traorè,Sassuolo,20,70,"COC, CC"
+Rogério,Sassuolo,20,70,"TS, ES"
+F. Bradarić,Cagliari,20,70,"CC, CDC"
+N. Špalek,Brescia,20,70,"COC, AD"
+G. Magnani,Brescia,20,70,DC
+C. Oliva,Cagliari,20,70,CC
+A. Rosati,Torino,20,69,POR
+M. Scozzarella,Parma,20,69,"CC, CDC"
+M. Gazzola,Parma,20,69,TD
+M. Vigorito,Lecce,20,69,POR
+M. D'Alessandro,SPAL,20,69,"ES, ED, AD"
+V. Regini,Sampdoria,20,69,"TS, DC"
+A. Crescenzi,Hellas Verona,20,69,"TD, TS"
+A. Almici,Hellas Verona,20,69,"TD, ED"
+M. Valoti,SPAL,20,69,"CC, COC, ED"
+Nicolas,Udinese,20,69,POR
+R. Fiamozzi,Lecce,20,69,"TD, TS"
+P. Dawidowicz,Hellas Verona,20,69,"DC, CDC"
+S. Gustafson,Torino,20,69,CC
+A. Ferrari,Sampdoria,20,69,"TD, DC"
+L. Venuti,Fiorentina,20,69,"TD, TS"
+I. Vargić,Lazio,20,69,POR
+J. Minala,Lazio,20,69,CC
+L. Morosini,Brescia,20,69,"COC, AT"
+K. Dermaku,Parma,20,69,DC
+Lee Seung Woo,Hellas Verona,20,69,"COC, AS, AD"
+E. Ndoj,Brescia,20,69,CC
+F. Cassata,Genoa,20,69,CC
+A. Gravillon,Sassuolo,20,69,DC
+T. Augello,Sampdoria,20,69,TS
+M. Barrow,Atalanta,20,69,ATT
+L. Pellegrini,Juventus,20,69,TS
+A. Salifu,Fiorentina,20,68,CC
+S. Sabelli,Brescia,20,68,TD
+S. Beltrame,Juventus,20,68,"AS, COC, AT"
+F. Falco,Lecce,20,68,ATT
+B. Meccariello,Lecce,20,68,DC
+V. Parigini,Torino,20,68,"AS, AT"
+Y. Baraye,Parma,20,68,"AS, ATT, AD"
+L. Valzania,Atalanta,20,68,CC
+F. Bonazzoli,Sampdoria,20,68,ATT
+M. Sprocati,Parma,20,68,"AS, AD"
+S. Väisänen,SPAL,20,68,DC
+J. Petriccione,Lecce,20,68,CC
+H. ter Avest,Udinese,20,68,"TD, ADA, ED"
+A. Favilli,Genoa,20,68,ATT
+L. Dickmann,SPAL,20,68,"TD, ED"
+José Machín,Parma,20,68,CC
+B. Radunović,Hellas Verona,20,68,POR
+S. Colombatto,Cagliari,20,68,"CC, CDC"
+J. Chancellor,Brescia,20,68,DC
+J. Rasmussen,Fiorentina,20,68,"DC, CDC, CC"
+A. Balić,Udinese,20,68,"CC, CDC"
+Ž. Majer,Lecce,20,68,CC
+M. Pessina,Atalanta,20,68,CC
+S. Walukiewicz,Cagliari,20,68,DC
+N. Opoku,Udinese,20,68,DC
+K. Michael,Bologna,20,68,"CC, COC, AT"
+G. Munari,Parma,20,67,CC
+S. Aresti,Cagliari,20,67,POR
+L. Scaglia,Parma,20,67,"TS, AD, CC"
+S. Pettinari,Lecce,20,67,ATT
+E. Lancini,Brescia,20,67,DC
+L. Clemenza,Juventus,20,67,"COC, CC"
+S. Edera,Torino,20,67,AD
+G. Rolando,Sampdoria,20,67,"ED, ES, TS"
+A. Matějů,Brescia,20,67,"TD, TS"
+A. Danzi,Hellas Verona,20,67,"CC, CDC"
+K. Cissé,Hellas Verona,20,66,"ATT, AS, COC"
+A. Donnarumma,Milan,20,66,POR
+D. Del Fabro,Juventus,20,66,DC
+G. Iñíguez,Udinese,20,66,"CC, CDC"
+L. Andrenacci,Brescia,20,66,POR
+F. Dimarco,Inter,20,66,"TS, ES"
+A. Empereur,Hellas Verona,20,66,"DC, TS"
+P. Ghiglione,Genoa,20,66,"ED, TD"
+A. Reca,Atalanta,20,66,"TS, ES"
+M. Janković,SPAL,20,66,"COC, AD"
+M. Coulibaly,Udinese,20,66,CC
+M. Léris,Sampdoria,20,66,"CC, ATT"
+R. Vodišek,Genoa,20,66,POR
+Daniel Fuzato,Roma,20,66,POR
+N. Armini,Lazio,20,66,DC
+H. Rafia,Juventus,20,66,COC
+F. Cosenza,Lecce,20,65,DC
+S. Calvano,Hellas Verona,20,65,CC
+C. Lykogiannis,Cagliari,20,65,"TS, DC"
+A. Tabanelli,Lecce,20,65,"CC, COC"
+F. Jagiełło,Genoa,20,65,"CC, CDC, COC"
+G. Castrovilli,Fiorentina,20,65,"CC, COC, AD"
+S. Ichazo,Torino,20,65,POR
+S. Ingelsson,Udinese,20,65,"CC, ED"
+F. Alastra,Parma,20,65,POR
+A. Zaccagno,Torino,20,65,POR
+S. Lo Faso,Lecce,20,65,"AT, COC, AS"
+M. Antonucci,Roma,20,65,"AS, AD"
+Igor,SPAL,20,65,"DC, TS"
+P. Mićin,Udinese,20,65,"AD, ATT, AS"
+T. Berni,Inter,20,64,POR
+T. Haye,Lecce,20,64,"ED, CC, ES"
+W. Falcone,Sampdoria,20,64,POR
+N. Fazzi,Atalanta,20,64,"ES, TS"
+A. Deiola,Cagliari,20,64,CC
+A. Schetino,Fiorentina,20,64,"CDC, CC"
+R. Rivas,Inter,20,64,"ED, AD"
+L. Tupta,Hellas Verona,20,64,"ATT, AS"
+O. Stijepović,Sampdoria,20,64,AS
+J. Segre,Torino,20,64,CC
+André Anderson,Lazio,20,64,AT
+R. Sottil,Fiorentina,20,64,AS
+Ibañez,Atalanta,20,64,DC
+D. Kulusevski,Parma,20,64,CC
+R. Piccoli,Atalanta,20,64,ATT
+D. Ragatzu,Cagliari,20,63,"ATT, AS, AD"
+Costa Ferreira,Lecce,20,63,"COC, CC, ED"
+S. Perisan,Udinese,20,63,POR
+T. Rodríguez,Genoa,20,63,ED
+L. Checchin,Hellas Verona,20,63,CC
+W. Bianda,Roma,20,63,DC
+M. Nardi,Parma,20,63,POR
+M. Viviani,Brescia,20,63,"CDC, CC"
+K. Agudelo,Genoa,20,63,"CC, COC"
+K. Despodov,Cagliari,20,63,AD
+L. Agoume,Inter,20,63,CC
+A. Riccardi,Roma,20,63,"CC, COC"
+S. Esposito,Inter,20,63,ATT
+M. Bahlouli,Sampdoria,20,63,"AS, COC"
+A. Berardi,Hellas Verona,20,62,POR
+A. Boniotti,Brescia,20,62,"TD, ED"
+P. Cappelluzzo,Hellas Verona,20,62,ATT
+M. Sarr,Bologna,20,62,POR
+F. Sierralta,Udinese,20,62,"TD, DC"
+M. Seck,Roma,20,62,TS
+M. Mangraviti,Brescia,20,62,"DC, CDC"
+P. Asmah,Atalanta,20,62,"TS, ES"
+A. Di Nardo,Sampdoria,20,62,ATT
+M. Gabbia,Milan,20,62,DC
+A. Semprini,Brescia,20,62,"TD, DC, ED"
+L. Ranieri,Fiorentina,20,62,"DC, TS"
+A. Buongiorno,Torino,20,62,"TS, DC"
+A. Saraniti,Lecce,20,62,ATT
+Vinicius,Bologna,20,62,POR
+A. Schäfer,Genoa,20,62,"ES, CC"
+G. Guerrieri,Lazio,20,61,POR
+G. Sbrissa,Sassuolo,20,61,"CC, ED"
+A. Bifulco,Napoli,20,61,"ED, CC, AT"
+A. Gallo,Lecce,20,61,"TS, ES, CC"
+G. Gaetano,Napoli,20,61,"COC, ATT"
+W. Singo,Torino,20,61,DC
+F. Rossi,Atalanta,20,60,POR
+A. Romano,Napoli,20,60,CC
+P. Bargiel,Milan,20,60,COC
+Strefezza,SPAL,20,60,"AS, ES"
+T. Costantini,SPAL,20,60,"AD, AS, AT"
+M. Pompetti,Sampdoria,20,60,CC
+M. Bleve,Lecce,20,60,POR
+G. Zecca,Sassuolo,20,60,"AD, AS, ATT"
+M. Prezioso,Napoli,20,60,CC
+G. Gori,Fiorentina,20,60,ATT
+M. Cerofolini,Fiorentina,20,60,POR
+B. Adekanye,Lazio,20,60,"AD, AS"
+G. Corbo,Bologna,20,60,DC
+M. Kumbulla,Hellas Verona,20,60,DC
+M. Belkheir,Torino,20,60,"ATT, AS"
+A. Tripaldelli,Sassuolo,20,60,TS
+D. Vlahovic,Fiorentina,20,60,ATT
+V. Millico,Torino,20,59,AS
+D. Merola,Inter,20,59,"ATT, AT, AS"
+L. Fontanesi,Sassuolo,20,58,"TD, DC"
+A. Cavagnera,Milan,20,58,CDC
+S. Coly,Roma,20,58,ATT
+F. Adorni,Parma,20,58,POR
+M. Meli,Fiorentina,20,58,AD
+L. Gagliano,Cagliari,20,58,ATT
+D. Riccardi,Lecce,20,58,DC
+B. Vera,Lecce,20,58,"DC, TS"
+A. Terzic,Fiorentina,20,58,TS
+M. Albertoni,Genoa,20,57,POR
+G. Poluzzi,SPAL,20,57,POR
+R. Tsonev,Lecce,20,56,"CC, COC, ED"
+G. Ricci,Parma,20,55,TD
+R. Criscuolo,Sampdoria,20,55,CC
+A. Diakhate,Parma,20,55,CC
+M. Zennaro,Genoa,20,55,CC
+A. Vassallo,Bologna,20,54,ATT
+E. Dubickas,Lecce,20,52,"AT, ATT, AS"
+D. Thiam,SPAL,20,51,POR
+S. Mulattieri,Inter,20,51,COC
+G. Chironi,Lecce,20,49,POR
+Cristiano Ronaldo,Juventus,21,92,"ATT, AS"
+S. Handanovič,Inter,21,88,POR
+K. Koulibaly,Napoli,21,88,DC
+P. Dybala,Juventus,21,88,"AT, COC"
+G. Chiellini,Juventus,21,87,DC
+W. Szczęsny,Juventus,21,87,POR
+C. Immobile,Lazio,21,87,ATT
+A. Gómez,Atalanta,21,86,"COC, AT, ATT"
+D. Mertens,Napoli,21,85,"AT, ATT"
+D. Godín,Inter,21,85,DC
+L. Bonucci,Juventus,21,85,DC
+C. Eriksen,Inter,21,85,"COC, CC, ED"
+Alex Sandro,Juventus,21,85,"TS, ES"
+R. Lukaku,Inter,21,85,ATT
+L. Insigne,Napoli,21,85,"AS, AT"
+Luis Alberto,Lazio,21,85,"COC, CC, AT"
+S. Milinković-Savić,Lazio,21,85,"CC, CDC, COC"
+G. Donnarumma,Milan,21,85,POR
+M. Škriniar,Inter,21,85,DC
+M. de Ligt,Juventus,21,85,DC
+S. Sirigu,Torino,21,84,POR
+Lucas Leiva,Lazio,21,84,CDC
+Douglas Costa,Juventus,21,84,"ES, AD, AS"
+S. de Vrij,Inter,21,84,DC
+J. Iličić,Atalanta,21,84,"AT, ATT"
+M. Brozović,Inter,21,84,"CDC, CC"
+Arthur,Juventus,21,84,CC
+L. Martínez,Inter,21,84,ATT
+Z. Ibrahimović,Milan,21,83,ATT
+R. Nainggolan,Inter,21,83,"COC, CC, AT"
+A. Vidal,Inter,21,83,"CC, CDC, COC"
+K. Manolas,Napoli,21,83,DC
+F. Acerbi,Lazio,21,83,DC
+A. Romagnoli,Milan,21,83,DC
+T. Strakosha,Lazio,21,83,POR
+D. Zapata,Atalanta,21,83,ATT
+A. Hakimi,Inter,21,83,ED
+G. Buffon,Juventus,21,82,POR
+I. Perišić,Inter,21,82,"ES, AS"
+A. Kolarov,Inter,21,82,TS
+A. Ramsey,Juventus,21,82,"CC, COC"
+M. Perin,Genoa,21,82,POR
+R. Gosens,Atalanta,21,82,ES
+Fabián,Napoli,21,82,CC
+F. Ribéry,Fiorentina,21,81,"AT, ES, AS"
+A. Consigli,Sassuolo,21,81,POR
+S. Khedira,Juventus,21,81,"CC, CDC"
+J. Cuadrado,Juventus,21,81,"TD, ED, AD"
+A. Milik,Napoli,21,81,ATT
+A. Cragno,Cagliari,21,81,POR
+M. de Roon,Atalanta,21,81,"CDC, CC"
+A. Rabiot,Juventus,21,81,"CC, CDC"
+J. Correa,Lazio,21,81,"AT, ATT, COC"
+M. Politano,Napoli,21,81,"ED, AD, ATT"
+M. Lazzari,Lazio,21,81,ED
+F. Quagliarella,Sampdoria,21,80,ATT
+S. Kjær,Milan,21,80,DC
+A. Sánchez,Inter,21,80,"AS, ES"
+N. Nkoulou,Torino,21,80,DC
+G. Bonaventura,Fiorentina,21,80,CC
+A. Belotti,Torino,21,80,ATT
+P. Zieliński,Napoli,21,80,"CC, ES"
+D. Berardi,Sassuolo,21,80,"ED, AD"
+D. Rugani,Juventus,21,80,DC
+F. Bernardeschi,Juventus,21,80,"COC, ED"
+João Mário,Inter,21,80,"CC, COC, ES"
+J. Musso,Udinese,21,80,POR
+M. Vecino,Inter,21,80,CDC
+H. Lozano,Napoli,21,80,"AD, ATT, AS"
+N. Barella,Inter,21,80,"CC, COC"
+T. Hernández,Milan,21,80,TS
+Pepe Reina,Lazio,21,79,POR
+D. Ospina,Napoli,21,79,POR
+M. Parolo,Lazio,21,79,"CDC, CC"
+F. Caputo,Sassuolo,21,79,ATT
+L. Muriel,Atalanta,21,79,ATT
+João Pedro,Cagliari,21,79,"AT, COC"
+Danilo,Juventus,21,79,"TD, TS"
+F. Ghoulam,Napoli,21,79,TS
+Mário Rui,Napoli,21,79,TS
+H. Çalhanoğlu,Milan,21,79,"AS, CC"
+Samu Castillejo,Milan,21,79,"ED, ES"
+P. Gollini,Atalanta,21,79,POR
+A. Miranchuk,Atalanta,21,79,"COC, ATT"
+A. Izzo,Torino,21,79,DC
+A. Rebić,Milan,21,79,"ATT, COC"
+R. Bentancur,Juventus,21,79,CC
+R. Malinovskyi,Atalanta,21,79,"CC, AT"
+V. Osimhen,Napoli,21,79,ATT
+Ș. Radu,Lazio,21,78,DC
+Gervinho,Parma,21,78,"AS, AD"
+D. Criscito,Genoa,21,78,"TS, DC, ES"
+A. Candreva,Inter,21,78,ED
+C. Ansaldi,Torino,21,78,"ES, TS"
+K. Boateng,Fiorentina,21,78,"AT, CC"
+F. Caicedo,Lazio,21,78,"AT, ATT"
+M. Musacchio,Milan,21,78,DC
+S. Lulić,Lazio,21,78,ES
+R. Rodríguez,Torino,21,78,TS
+G. Pezzella,Fiorentina,21,78,DC
+K. Malcuit,Napoli,21,78,"TD, ED"
+C. Tătărușanu,Milan,21,78,POR
+R. Freuler,Atalanta,21,78,CC
+D. Demme,Napoli,21,78,"CDC, CC"
+M. De Sciglio,Juventus,21,78,"TD, TS"
+E. Hysaj,Napoli,21,78,"TD, TS"
+R. Gagliardini,Inter,21,78,"CDC, CC"
+D. Zappacosta,Genoa,21,78,"TD, ADA"
+S. Lobotka,Napoli,21,78,"CC, CDC"
+H. Hateboer,Atalanta,21,78,ED
+M. Caldara,Atalanta,21,78,DC
+M. Locatelli,Sassuolo,21,78,"CDC, CC"
+A. Meret,Napoli,21,78,POR
+S. Sensi,Inter,21,78,"CC, CDC"
+F. Chiesa,Fiorentina,21,78,"AT, AD"
+A. Young,Inter,21,77,"ES, ED, TD"
+Borja Valero,Fiorentina,21,77,"COC, CDC"
+Miguel Veloso,Hellas Verona,21,77,"CC, CDC"
+Rafael Tolói,Atalanta,21,77,DC
+Iago Falqué,Torino,21,77,"AT, ATT, AD"
+M. Silvestri,Hellas Verona,21,77,POR
+J. Kucka,Parma,21,77,"CC, CDC"
+L. Sepe,Parma,21,77,POR
+R. Soriano,Bologna,21,77,"COC, CC"
+G. Medel,Bologna,21,77,"CDC, DC"
+S. Verdi,Torino,21,77,"AT, COC, AS"
+D. D'Ambrosio,Inter,21,77,"TD, TS, DC"
+G. Ramírez,Sampdoria,21,77,COC
+S. Zaza,Torino,21,77,ATT
+D. Baselli,Torino,21,77,CC
+R. De Paul,Udinese,21,77,"CC, AT"
+D. Laxalt,Milan,21,77,ES
+N. Maksimović,Napoli,21,77,DC
+Bastos,Lazio,21,77,DC
+G. Escalante,Lazio,21,77,"CDC, CC"
+M. Pašalić,Atalanta,21,77,"CC, COC"
+A. Conti,Milan,21,77,"TD, ED"
+A. Marušić,Lazio,21,77,ED
+S. Amrabat,Fiorentina,21,77,CC
+J. Boga,Sassuolo,21,77,"ES, AS"
+E. Audero,Sampdoria,21,77,POR
+F. Kessié,Milan,21,77,CC
+N. Nández,Cagliari,21,77,"CC, CDC, ED"
+Luiz Felipe,Lazio,21,77,DC
+S. Tonali,Milan,21,77,"CDC, CC"
+D. Kulusevski,Juventus,21,77,"AD, COC"
+M. Cáceres,Fiorentina,21,76,"DC, TD"
+M. Darmian,Parma,21,76,"TD, TS"
+A. Poli,Bologna,21,76,"CDC, CC"
+K. Asamoah,Inter,21,76,"ES, TS"
+Ł. Skorupski,Bologna,21,76,POR
+Pedro Obiang,Sassuolo,21,76,"CDC, CC"
+M. Badelj,Genoa,21,76,"CDC, CC"
+N. Sansone,Bologna,21,76,"COC, AS, ATT"
+C. Piccini,Atalanta,21,76,TD
+G. Defrel,Sassuolo,21,76,"ATT, AD"
+S. Meïté,Torino,21,76,"CC, CDC"
+J. Lukaku,Lazio,21,76,"ES, TS"
+B. Djimsiti,Atalanta,21,76,DC
+D. Lazović,Hellas Verona,21,76,"ES, ED"
+E. Pulgar,Fiorentina,21,76,"CDC, CC"
+A. Petagna,Napoli,21,76,ATT
+M. Sportiello,Atalanta,21,76,POR
+G. Simeone,Cagliari,21,76,ATT
+J. Palomino,Atalanta,21,76,DC
+G. Di Lorenzo,Napoli,21,76,"TD, ED"
+V. Muriqi,Lazio,21,76,ATT
+Alex Berenguer,Torino,21,76,"AT, ATT, AS"
+D. Calabria,Milan,21,76,TD
+Lucas Paquetá,Milan,21,76,"CC, COC"
+M. Demiral,Juventus,21,76,DC
+A. Rrahmani,Napoli,21,76,DC
+S. Proto,Lazio,21,75,POR
+F. Magnanelli,Sassuolo,21,75,CDC
+R. Palacio,Bologna,21,75,"ATT, COC"
+V. Behrami,Genoa,21,75,"CDC, CC"
+Llorente,Napoli,21,75,ATT
+A. Masiello,Genoa,21,75,DC
+L. Schøne,Genoa,21,75,"CC, CDC"
+S. Okaka,Udinese,21,75,ATT
+A. Ekdal,Sampdoria,21,75,"CC, CDC"
+K. Glik,Benevento,21,75,DC
+T. Rincón,Torino,21,75,"CC, CDC"
+J. Larsen,Udinese,21,75,ED
+F. Đuričić,Sassuolo,21,75,"COC, AS"
+M. Gabbiadini,Sampdoria,21,75,ATT
+R. Saponara,Fiorentina,21,75,"COC, CC"
+C. Biraghi,Fiorentina,21,75,"ES, TS"
+A. Cornelius,Parma,21,75,ATT
+L. Pavoletti,Cagliari,21,75,ATT
+A. Younes,Napoli,21,75,"AS, ES"
+K. Ayhan,Sassuolo,21,75,DC
+J. Mojica,Atalanta,21,75,"TS, ES"
+B. Drągowski,Fiorentina,21,75,POR
+M. Zaccagni,Hellas Verona,21,75,"AT, ATT"
+K. Lasagna,Udinese,21,75,ATT
+Hernani,Parma,21,75,"CDC, CC"
+I. Bennacer,Milan,21,75,"CDC, CC"
+M. Pjaca,Genoa,21,75,"AS, AD, COC"
+G. Pereiro,Cagliari,21,75,"COC, AD"
+Y. Karamoh,Parma,21,75,"ED, AD"
+R. Orsolini,Bologna,21,75,"COC, AD, ED"
+I. Radu,Inter,21,75,POR
+C. Kouamé,Fiorentina,21,75,"ATT, AT"
+M. Rog,Cagliari,21,75,CC
+A. Barák,Hellas Verona,21,75,"CC, COC"
+A. Bastoni,Inter,21,75,DC
+P. Cutrone,Fiorentina,21,75,ATT
+N. Domínguez,Bologna,21,75,"CC, CDC"
+N. Milenković,Fiorentina,21,75,"DC, TD"
+W. McKennie,Juventus,21,75,"CC, CDC, DC"
+R. Klavan,Cagliari,21,74,DC
+C. Maggio,Benevento,21,74,TD
+Danilo,Bologna,21,74,DC
+L. De Silvestri,Bologna,21,74,"ED, TD"
+C. Zapata,Genoa,21,74,DC
+A. Ranocchia,Inter,21,74,DC
+S. De Maio,Udinese,21,74,DC
+I. Radovanović,Genoa,21,74,"CDC, CC"
+T. Arslan,Udinese,21,74,"CDC, CC"
+M. Jajalo,Udinese,21,74,"CC, CDC"
+M. Faraoni,Hellas Verona,21,74,"ED, TD"
+R. Inglese,Parma,21,74,ATT
+L. Tonelli,Sampdoria,21,74,DC
+J. Kurtić,Parma,21,74,"CC, COC"
+G. Caprari,Benevento,21,74,"AT, ATT"
+V. Verre,Sampdoria,21,74,"COC, AT, CC"
+V. Chiricheș,Sassuolo,21,74,DC
+A. Duncan,Fiorentina,21,74,CC
+M. Benassi,Hellas Verona,21,74,CC
+R. Durmisi,Lazio,21,74,"TS, ASA, ES"
+K. Linetty,Torino,21,74,CC
+R. Gagliolo,Parma,21,74,"TS, DC"
+Wallace,Lazio,21,74,DC
+S. Cristóforo,Fiorentina,21,74,"CDC, CC, ES"
+R. Mandragora,Udinese,21,74,"CC, CDC"
+O. Colley,Sampdoria,21,74,DC
+J. Jankto,Sampdoria,21,74,"ES, CC"
+A. Ounas,Napoli,21,74,"AD, AS, AT"
+Brahim,Milan,21,74,"AS, AD"
+R. Marin,Cagliari,21,74,"CC, CDC"
+S. Lammers,Atalanta,21,74,ATT
+S. Lukić,Torino,21,74,"CC, CDC"
+M. Pessina,Atalanta,21,74,"CC, AT"
+Rafael Leão,Milan,21,74,ATT
+D. Padelli,Inter,21,73,POR
+L. Cigarini,Crotone,21,73,"CC, CDC"
+V. Birsa,Cagliari,21,73,"COC, AD"
+S. Di Carmine,Hellas Verona,21,73,ATT
+M. Yoshida,Sampdoria,21,73,DC
+E. Badu,Hellas Verona,21,73,"CC, CDC"
+A. Ioniță,Benevento,21,73,"CC, COC"
+F. Pisacane,Cagliari,21,73,"DC, TD"
+I. Nestorovski,Udinese,21,73,ATT
+V. Eysseric,Fiorentina,21,73,"AS, COC, AT"
+O. Kragl,Benevento,21,73,"ES, AT, ED"
+L. Ceppitelli,Cagliari,21,73,DC
+S. Denswil,Bologna,21,73,"DC, TS"
+N. Murru,Torino,21,73,TS
+Patric,Lazio,21,73,"DC, TD, ED"
+A. Ciciretti,Napoli,21,73,"AD, COC"
+I. Mbaye,Bologna,21,73,"TD, TS"
+V. Laurini,Parma,21,73,TD
+L. Magallán,Crotone,21,73,DC
+D. Cataldi,Lazio,21,73,"CC, CDC"
+A. Tameze,Hellas Verona,21,73,"CC, CDC"
+W. Troost-Ekong,Udinese,21,73,DC
+J. Toljan,Sassuolo,21,73,"TD, TS"
+G. Letizia,Benevento,21,73,TS
+L. Lerager,Genoa,21,73,CC
+A. Grassi,Parma,21,73,CC
+G. Castrovilli,Fiorentina,21,73,"CC, COC"
+M. Vojvoda,Torino,21,73,"TD, DC"
+Dalbert,Inter,21,73,"ES, TS"
+T. Ouwejan,Udinese,21,73,"TS, CC"
+R. Krunić,Milan,21,73,CC
+C. Romero,Atalanta,21,73,DC
+M. Zajc,Genoa,21,73,"COC, CC"
+J. Schouten,Bologna,21,73,"CDC, CC"
+M. Damsgaard,Sampdoria,21,73,AS
+K. Despodov,Cagliari,21,73,"ED, ATT, ES"
+G. Pandev,Genoa,21,72,"ATT, AD"
+Bruno Alves,Parma,21,72,DC
+A. Cordaz,Crotone,21,72,POR
+S. Bocchetti,Hellas Verona,21,72,DC
+P. Hetemaj,Benevento,21,72,CC
+S. Prödl,Udinese,21,72,DC
+C. Pinsoglio,Juventus,21,72,POR
+A. Rispoli,Crotone,21,72,"TD, ED"
+Da Costa,Bologna,21,72,POR
+B. Nuytinck,Udinese,21,72,DC
+V. Belec,Sampdoria,21,72,POR
+A. Ragusa,Hellas Verona,21,72,"AD, AS"
+B. Dabo,Benevento,21,72,"CC, CDC"
+B. Bereszyński,Sampdoria,21,72,TD
+Ł. Teodorczyk,Udinese,21,72,ATT
+F. Santander,Bologna,21,72,ATT
+S. Sturaro,Genoa,21,72,CC
+K. Djidji,Torino,21,72,DC
+G. Brugman,Parma,21,72,"CC, CDC"
+M. Dijks,Bologna,21,72,"TS, ES"
+P. Ankersen,Genoa,21,72,"TD, ED"
+F. Barba,Benevento,21,72,"DC, TS"
+D. Biraschi,Genoa,21,72,"DC, TD"
+L. Montipò,Benevento,21,72,POR
+Marlon,Sassuolo,21,72,DC
+S. Scuffet,Udinese,21,72,POR
+Y. Baraye,Parma,21,72,"AD, AS"
+F. Ricci,Sassuolo,21,72,"AD, AS"
+G. Tutino,Napoli,21,72,"ATT, AS"
+Walace,Udinese,21,72,"CDC, CC"
+M. Bani,Bologna,21,72,DC
+G. Ferrari,Sassuolo,21,72,DC
+G. Pezzella,Parma,21,72,"TS, ES"
+T. Tomiyasu,Bologna,21,72,"TD, DC"
+Ronaldo Vieira,Sampdoria,21,72,"CDC, CC"
+Rodrigo Becão,Udinese,21,72,DC
+A. Olsen,Bologna,21,72,"AD, ATT, COC"
+K. Rüegg,Hellas Verona,21,72,"TD, CDC, CC"
+E. Elmas,Napoli,21,72,CC
+M. Barrow,Bologna,21,72,ATT
+A. Saelemaekers,Milan,21,72,"AD, COC, AS"
+L. Pellegrini,Juventus,21,72,TS
+F. Marchetti,Genoa,21,71,POR
+N. Viola,Benevento,21,71,"CC, CDC"
+S. Iacoponi,Parma,21,71,"DC, TD"
+F. Peluso,Sassuolo,21,71,"DC, TS"
+P. Schiattarella,Benevento,21,71,"CC, CDC"
+Diego Farías,Cagliari,21,71,ATT
+M. Zeegelaar,Udinese,21,71,"ES, TS"
+M. Destro,Genoa,21,71,ATT
+L. Caldirola,Benevento,21,71,DC
+A. Benali,Crotone,21,71,"CC, CDC"
+K. Günter,Hellas Verona,21,71,DC
+J. Akpa Akpro,Lazio,21,71,CC
+P. Terracciano,Fiorentina,21,71,POR
+J. Dezi,Parma,21,71,"CC, COC"
+M. Stępiński,Hellas Verona,21,71,ATT
+G. Lapadula,Benevento,21,71,ATT
+A. Cerri,Cagliari,21,71,ATT
+Samir,Udinese,21,71,"DC, TS"
+A. Halilović,Milan,21,71,"COC, ED"
+Simy,Crotone,21,71,ATT
+S. Luperto,Napoli,21,71,DC
+L. Haraslín,Sassuolo,21,71,"ES, ED"
+A. Calabresi,Bologna,21,71,"TD, DC"
+Eduardo Henrique,Crotone,21,71,CC
+Lyanco,Torino,21,71,DC
+Pedro Pereira,Crotone,21,71,"TD, ADA, ED"
+Léo Duarte,Milan,21,71,"DC, TD"
+M. Pajač,Cagliari,21,71,"ES, TS"
+F. Depaoli,Sampdoria,21,71,"ED, TD"
+Pol Lirola,Fiorentina,21,71,"ED, TD"
+Bremer,Torino,21,71,DC
+H. Traorè,Sassuolo,21,71,"COC, CC"
+D. Vavro,Lazio,21,71,DC
+M. Müldür,Sassuolo,21,71,"TD, DC"
+B. Šutalo,Atalanta,21,71,DC
+G. Pegolo,Sassuolo,21,70,POR
+F. Forestieri,Udinese,21,70,"ATT, COC, AS"
+M. Mustacchio,Crotone,21,70,"ED, ATT, AD"
+M. Sau,Benevento,21,70,"ATT, AT"
+L. Siligardi,Parma,21,70,"AD, AS"
+S. Colombi,Parma,21,70,POR
+A. Mazzotta,Crotone,21,70,"ES, TS"
+L. Marrone,Crotone,21,70,"DC, CDC"
+Ryder Matos,Udinese,21,70,"AD, ATT, AS"
+A. Almici,Hellas Verona,21,70,TD
+P. Iemmello,Benevento,21,70,ATT
+F. Ceccherini,Fiorentina,21,70,DC
+P. Faragò,Cagliari,21,70,"CC, ED, TD"
+A. Di Gaudio,Hellas Verona,21,70,AS
+A. Ferrari,Sampdoria,21,70,"DC, TD"
+L. Venuti,Fiorentina,21,70,"TD, TS"
+L. Mazzitelli,Sassuolo,21,70,"CC, CDC"
+G. Donsah,Bologna,21,70,"CC, CDC"
+A. Tello,Benevento,21,70,"CC, ES"
+E. Goldaniga,Genoa,21,70,DC
+N. Haas,Atalanta,21,70,"CC, CDC"
+F. Romagna,Sassuolo,21,70,DC
+C. Spinelli,Genoa,21,70,ATT
+T. Augello,Sampdoria,21,70,TS
+Rogério,Sassuolo,21,70,"TS, ES"
+D. Vlahović,Fiorentina,21,70,ATT
+A. Rosati,Torino,21,69,POR
+N. Spolli,Crotone,21,69,DC
+M. Scozzarella,Parma,21,69,"CC, CDC"
+S. Ujkani,Torino,21,69,POR
+L. Vitale,Hellas Verona,21,69,"ES, TS"
+K. Laribi,Hellas Verona,21,69,"CC, AT, COC"
+M. Bourabia,Sassuolo,21,69,"CC, CDC, COC"
+Nicolas,Udinese,21,69,POR
+L. Antei,Benevento,21,69,"DC, TD"
+R. Improta,Benevento,21,69,"ES, AS"
+R. Insigne,Benevento,21,69,"AT, ED, AD"
+G. Moncini,Benevento,21,69,ATT
+M. Thorsby,Sampdoria,21,69,"CC, COC"
+H. ter Avest,Udinese,21,69,"ED, TD"
+R. Bajić,Udinese,21,69,ATT
+P. Ghiglione,Genoa,21,69,"ED, TD"
+C. Adjapong,Sassuolo,21,69,"ES, ED, TD"
+A. Reca,Atalanta,21,69,"ES, TS"
+J. Chabot,Sampdoria,21,69,DC
+E. Vignato,Bologna,21,69,COC
+Y. Çetin,Hellas Verona,21,69,DC
+F. Bradarić,Cagliari,21,69,"CC, CDC"
+G. Magnani,Hellas Verona,21,69,DC
+L. Czyborra,Genoa,21,69,TS
+C. Oliva,Cagliari,21,69,"CC, CDC"
+G. Kyriakopoulos,Sassuolo,21,69,TS
+I. Pandur,Hellas Verona,21,69,POR
+M. Volta,Benevento,21,68,DC
+V. Regini,Sampdoria,21,68,"DC, TS"
+P. Dawidowicz,Hellas Verona,21,68,DC
+N. Paz,Bologna,21,68,"DC, TS"
+V. Parigini,Genoa,21,68,"AS, AT"
+L. Palmiero,Napoli,21,68,"CC, CDC"
+M. Sprocati,Parma,21,68,"AS, AD"
+P. Dziczek,Lazio,21,68,CDC
+V. Milinković-Savić,Torino,21,68,POR
+Z. Machach,Napoli,21,68,"COC, CC, ATT"
+M. Svanberg,Bologna,21,68,"CC, ED"
+K. Dermaku,Parma,21,68,DC
+B. Radunović,Atalanta,21,68,POR
+G. Crociata,Crotone,21,68,"COC, CC, AT"
+A. Pinamonti,Inter,21,68,ATT
+F. Cassata,Genoa,21,68,CC
+G. Vicario,Cagliari,21,68,POR
+S. Kiyine,Lazio,21,68,"CC, ES, ED"
+S. Walukiewicz,Cagliari,21,68,DC
+R. Bellanova,Atalanta,21,68,TD
+M. Vulic,Crotone,21,68,CC
+S. Aresti,Cagliari,21,67,POR
+N. Ravaglia,Sampdoria,21,67,POR
+M. Gazzola,Parma,21,67,TD
+E. Rivière,Crotone,21,67,ATT
+A. Tuia,Benevento,21,67,DC
+C. Lykogiannis,Cagliari,21,67,"TS, DC, ES"
+L. Capezzi,Sampdoria,21,67,CC
+F. Bonazzoli,Sampdoria,21,67,ATT
+Cristo González,Udinese,21,67,"ATT, ES, COC"
+F. Dimarco,Hellas Verona,21,67,"TS, ES"
+A. Favilli,Hellas Verona,21,67,ATT
+Alan Empereur,Hellas Verona,21,67,"DC, TS"
+A. La Gumina,Sampdoria,21,67,ATT
+N. Molina,Udinese,21,67,"TD, ADA"
+J. Valencia,Bologna,21,67,"CC, COC"
+E. Salcedo,Inter,21,67,"AT, ATT"
+D. Foulon,Benevento,21,67,TS
+J. Segre,Torino,21,67,CC
+T. Pobega,Milan,21,67,CC
+D. Di Gennaro,Lazio,21,66,"CC, COC"
+A. Donnarumma,Milan,21,66,POR
+N. Manfredini,Benevento,21,66,POR
+M. Curado,Genoa,21,66,DC
+A. Da Cruz,Parma,21,66,"AS, ATT"
+L. Clemenza,Juventus,21,66,"COC, CC"
+P. Brlek,Genoa,21,66,"CC, COC, CDC"
+S. Edera,Torino,21,66,"AD, AT, COC"
+J. Odgaard,Sassuolo,21,66,ATT
+J. Asoro,Genoa,21,66,"ATT, ED"
+C. Capone,Atalanta,21,66,"AS, AT"
+A. Danzi,Hellas Verona,21,66,"CC, CDC"
+K. Michael,Bologna,21,66,CC
+D. Drăguș,Crotone,21,66,"ATT, AS"
+S. Esposito,Inter,21,66,ATT
+M. Carnesecchi,Atalanta,21,66,POR
+Félix Correia,Juventus,21,66,"AD, AS"
+P. Kalulu,Milan,21,66,"TD, DC"
+M. Lovato,Hellas Verona,21,66,DC
+M. Fornasier,Parma,21,65,DC
+D. Anderson,Lazio,21,65,TD
+S. Molina,Crotone,21,65,"ED, ES, CC"
+G. Scamacca,Sassuolo,21,65,ATT
+F. Alastra,Parma,21,65,POR
+V. Golemić,Crotone,21,65,DC
+A. Kargbo,Crotone,21,65,ATT
+P. Mićin,Udinese,21,65,"AD, ATT, AS"
+N. Armini,Lazio,21,65,DC
+H. Rafia,Juventus,21,65,COC
+S. Pinna,Cagliari,21,65,TD
+D. Peeters,Juventus,21,65,CDC
+S. Calvano,Hellas Verona,21,64,"CC, CDC"
+L. Zima,Genoa,21,64,POR
+N. Contini,Napoli,21,64,POR
+F. Jagiełło,Genoa,21,64,"CC, CDC, COC"
+A. Zaccagno,Torino,21,64,POR
+Raul Asencio,Genoa,21,64,ATT
+M. Léris,Sampdoria,21,64,"CC, ATT"
+B. Adekanye,Lazio,21,64,"AD, AS"
+Junior Messias,Crotone,21,64,"AT, ATT"
+A. Romero,Crotone,21,64,CC
+Igor,Fiorentina,21,64,"DC, TS"
+N. Pierini,Sassuolo,21,64,"AS, COC, ATT"
+André Anderson,Lazio,21,64,"AT, COC"
+R. Sottil,Cagliari,21,64,"AS, AD"
+G. Raspadori,Sassuolo,21,64,ATT
+R. Ladinetti,Cagliari,21,64,CC
+G. Frabotta,Juventus,21,64,TS
+E. Lanini,Parma,21,63,ATT
+A. Deiola,Cagliari,21,63,CC
+S. Ingelsson,Udinese,21,63,"CC, AT"
+S. Perisan,Udinese,21,63,POR
+L. Del Pinto,Benevento,21,63,"CC, CDC"
+M. Gabbia,Milan,21,63,DC
+F. Brignani,Bologna,21,63,DC
+A. Dini,Parma,21,63,POR
+A. Buongiorno,Torino,21,63,"TS, DC"
+L. Agoume,Inter,21,63,CC
+F. Valietti,Genoa,21,63,TD
+M. Bahlouli,Sampdoria,21,63,"AS, COC"
+E. Colley,Atalanta,21,63,ATT
+Lucas Felippe,Hellas Verona,21,63,CC
+L. Pirola,Inter,21,63,DC
+P. Gori,Benevento,21,62,POR
+D. Ragatzu,Cagliari,21,62,"ATT, AS, AD"
+G. Gigliotti,Crotone,21,62,DC
+A. Berardi,Hellas Verona,21,62,POR
+T. Gomelt,Crotone,21,62,CC
+M. Festa,Crotone,21,62,POR
+A. Bifulco,Napoli,21,62,"AT, COC, AS"
+F. Melegoni,Genoa,21,62,CC
+L. Coccolo,Juventus,21,62,TS
+Ľ. Tupta,Hellas Verona,21,62,ATT
+F. Caligara,Cagliari,21,62,"CC, ED, ES"
+Vinicius,Bologna,21,62,POR
+A. Fiordaliso,Torino,21,62,"TD, TS"
+Tòfol Montiel,Fiorentina,21,62,COC
+H. Nicolussi Caviglia,Juventus,21,62,"CC, COC"
+A. Palumbo,Sampdoria,21,61,CC
+N. Zanellato,Crotone,21,61,CC
+L. Ranieri,Fiorentina,21,61,"DC, TS"
+V. Millico,Torino,21,61,"AS, ATT"
+G. Zappa,Cagliari,21,61,TD
+L. Colombo,Milan,21,61,ATT
+F. D'Amico,Sampdoria,21,61,AS
+J. Da Riva,Atalanta,21,61,CC
+I. Ilić,Hellas Verona,21,61,CC
+F. Rossi,Atalanta,21,60,POR
+M. Frediani,Parma,21,60,AS
+D. Vokić,Benevento,21,60,"CDC, COC"
+A. Tripaldelli,Cagliari,21,60,TS
+Kaique Rocha,Sampdoria,21,60,TD
+D. Traore,Atalanta,21,60,ATT
+M. Juwara,Bologna,21,60,ATT
+C. Dalle Mura,Fiorentina,21,60,DC
+P. Hristov,Fiorentina,21,59,DC
+J. Illanes,Fiorentina,21,59,"DC, TD"
+E. Ferigra,Torino,21,59,DC
+B. Duncan,Fiorentina,21,59,ATT
+W. Singo,Torino,21,59,DC
+P. Pinto,Fiorentina,21,59,DC
+D. Maldini,Milan,21,59,COC
+G. Di Serio,Benevento,21,59,ATT
+A. Ghion,Sassuolo,21,59,CDC
+G. Cangiano,Bologna,21,59,"AS, ATT"
+M. Ballarini,Udinese,21,59,"CC, TD, ED"
+G. Ricci,Parma,21,58,TS
+G. Borello,Crotone,21,58,AD
+G. Bellodi,Milan,21,58,DC
+Z. Ruggiero,Crotone,21,58,"AT, ATT"
+M. Adopo,Torino,21,58,"CC, CDC"
+N. Rovella,Genoa,21,58,CDC
+A. Carboni,Cagliari,21,58,"DC, TS"
+C. Celesia,Torino,21,58,"DC, TS"
+G. Cuomo,Crotone,21,57,DC
+M. Gasparini,Udinese,21,57,POR
+K. Askildsen,Sampdoria,21,57,CC
+S. Turati,Sassuolo,21,57,POR
+L. Rojas,Crotone,21,57,"COC, CC"
+A. Baldursson,Bologna,21,57,CC
+F. Rillo,Benevento,21,56,TS
+M. Palumbo,Udinese,21,56,CC
+F. Ravaglia,Bologna,21,55,POR
+L. Marković,Crotone,21,55,ATT
+A. Garattoni,Crotone,21,55,"TD, TS"
+C. Pastina,Benevento,21,54,"DC, TS"
+F. Brancolini,Fiorentina,21,53,POR
+S. Sanogo,Benevento,21,53,CC
+S. Piccinini,Sassuolo,21,52,DC
+A. Basit,Benevento,21,52,"CC, CDC"
+J. Evan's Allan,Crotone,21,51,ES
+G. Crespi,Crotone,21,49,POR
+W. Szczęsny,Juventus,22,87,POR
+C. Immobile,Lazio,22,87,ATT
+P. Dybala,Juventus,22,87,"AT, COC"
+G. Chiellini,Juventus,22,86,DC
+S. Handanovič,Inter,22,86,POR
+L. Insigne,Napoli,22,86,"AS, AT"
+K. Koulibaly,Napoli,22,86,DC
+M. Škriniar,Inter,22,86,DC
+L. Bonucci,Juventus,22,85,DC
+S. de Vrij,Inter,22,85,DC
+S. Milinković-Savić,Lazio,22,85,"CC, CDC, COC"
+L. Martínez,Inter,22,85,ATT
+M. de Ligt,Juventus,22,85,DC
+Z. Ibrahimović,Milan,22,84,ATT
+D. Mertens,Napoli,22,84,"AT, ATT, COC"
+Luis Alberto,Lazio,22,84,"COC, CC, AT"
+J. Iličić,Atalanta,22,84,"AT, ATT"
+M. Maignan,Milan,22,84,POR
+M. Brozović,Inter,22,84,"CDC, CC"
+N. Barella,Inter,22,84,CC
+F. Kessié,Milan,22,84,"CDC, CC"
+T. Hernández,Milan,22,84,TS
+S. Kjær,Milan,22,83,DC
+E. Džeko,Inter,22,83,ATT
+Alex Sandro,Juventus,22,83,"TS, ES"
+K. Manolas,Napoli,22,83,DC
+H. Mkhitaryan,Roma,22,83,"AT, ED, AD"
+J. Cuadrado,Juventus,22,83,"TD, ED"
+F. Acerbi,Lazio,22,83,DC
+Morata,Juventus,22,83,ATT
+L. Spinazzola,Roma,22,83,"ASA, TS, ES"
+D. Zapata,Atalanta,22,83,ATT
+R. Gosens,Atalanta,22,83,"ASA, TS, ES"
+Arthur,Juventus,22,83,CC
+F. Chiesa,Juventus,22,83,"AD, AS, ED"
+S. Sirigu,Genoa,22,82,POR
+Rui Patrício,Roma,22,82,POR
+C. Eriksen,Inter,22,82,"CC, COC"
+L. Muriel,Atalanta,22,82,ATT
+J. Veretout,Roma,22,82,"CDC, CC"
+H. Çalhanoğlu,Inter,22,82,"COC, ES"
+M. de Roon,Atalanta,22,82,"CDC, CC"
+A. Romagnoli,Milan,22,82,DC
+D. Berardi,Sassuolo,22,82,"AD, ED"
+A. Rebić,Milan,22,82,"ES, ATT"
+M. Locatelli,Juventus,22,82,"CDC, CC"
+Fabián,Napoli,22,82,CC
+D. Dumfries,Inter,22,82,TD
+A. Consigli,Sassuolo,22,81,POR
+Lucas Leiva,Lazio,22,81,CDC
+I. Perišić,Inter,22,81,"ES, AS, ASA"
+A. Vidal,Inter,22,81,CC
+M. Arnautović,Bologna,22,81,ATT
+Danilo,Juventus,22,81,"TD, TS, DC"
+A. Florenzi,Milan,22,81,"TD, ADA"
+A. Cragno,Cagliari,22,81,POR
+A. Belotti,Torino,22,81,ATT
+A. Rabiot,Juventus,22,81,"CC, CDC"
+P. Zieliński,Napoli,22,81,"CC, COC"
+J. Musso,Atalanta,22,81,POR
+J. Correa,Inter,22,81,"AT, ATT, COC"
+M. Politano,Napoli,22,81,"ED, AD"
+H. Hateboer,Atalanta,22,81,"ADA, TD, ED"
+H. Lozano,Napoli,22,81,"AD, AS"
+L. Pellegrini,Roma,22,81,"COC, CC, CDC"
+R. Malinovskyi,Atalanta,22,81,"AT, CC"
+M. Lazzari,Lazio,22,81,ADA
+D. Kulusevski,Juventus,22,81,"AD, AT"
+D. Godín,Cagliari,22,80,DC
+A. Sánchez,Inter,22,80,"AT, ATT"
+José Callejón,Fiorentina,22,80,"ED, AD"
+A. Ramsey,Juventus,22,80,"CC, COC, ES"
+Rafael Tolói,Atalanta,22,80,DC
+R. Pereyra,Udinese,22,80,"CC, ES, AT"
+M. Perin,Juventus,22,80,POR
+João Pedro,Cagliari,22,80,"AT, ATT, COC"
+R. Freuler,Atalanta,22,80,CC
+D. Demme,Napoli,22,80,"CDC, CC"
+T. Strakosha,Lazio,22,80,POR
+G. Di Lorenzo,Napoli,22,80,TD
+L. Torreira,Fiorentina,22,80,"CDC, CC"
+I. Bennacer,Milan,22,80,"CC, CDC"
+G. Mancini,Roma,22,80,"DC, CDC"
+S. Sensi,Inter,22,80,"CC, CDC"
+V. Osimhen,Napoli,22,80,ATT
+A. Bastoni,Inter,22,80,DC
+F. Ribéry,Salernitana,22,79,"AT, AS"
+A. Candreva,Sampdoria,22,79,"ED, ADA"
+D. Ospina,Napoli,22,79,POR
+O. Giroud,Milan,22,79,ATT
+M. Silvestri,Udinese,22,79,POR
+S. El Shaarawy,Roma,22,79,"AS, ES"
+D. D'Ambrosio,Inter,22,79,"DC, TD"
+Deulofeu,Udinese,22,79,"ES, AT"
+B. Djimsiti,Atalanta,22,79,DC
+F. Bernardeschi,Juventus,22,79,"COC, ES, ED"
+A. Izzo,Torino,22,79,DC
+D. Zappacosta,Atalanta,22,79,"ADA, ED, ES"
+T. Bakayoko,Milan,22,79,"CDC, CC"
+A. Marušić,Lazio,22,79,"ADA, ASA, DC"
+A. Meret,Napoli,22,79,POR
+F. Tomori,Milan,22,79,DC
+Odriozola,Fiorentina,22,79,TD
+M. Kean,Juventus,22,79,ATT
+T. Koopmeiners,Atalanta,22,79,"CDC, CC, DC"
+Pepe Reina,Lazio,22,78,POR
+F. Quagliarella,Sampdoria,22,78,ATT
+C. Ansaldi,Torino,22,78,"ASA, TS, ES"
+F. Caicedo,Genoa,22,78,"AT, ATT"
+Miguel Veloso,Hellas Verona,22,78,"CC, CDC"
+M. Darmian,Inter,22,78,"ADA, ASA, TD"
+A. Kolarov,Inter,22,78,"TS, DC"
+S. Nzonzi,Roma,22,78,"CDC, CC"
+F. Caputo,Sampdoria,22,78,ATT
+G. Bonaventura,Fiorentina,22,78,"CC, COC"
+Pedro,Lazio,22,78,"AT, AD"
+C. Smalling,Roma,22,78,DC
+R. Soriano,Bologna,22,78,"COC, CC"
+D. Praet,Torino,22,78,"CC, ED"
+Felipe Anderson,Lazio,22,78,"ES, COC"
+Mário Rui,Napoli,22,78,TS
+B. Cristante,Roma,22,78,"CDC, DC, CC"
+A. Miranchuk,Atalanta,22,78,"COC, ATT"
+M. Vecino,Inter,22,78,"CC, CDC"
+R. Karsdorp,Roma,22,78,"ED, TD"
+Jony,Lazio,22,78,ES
+M. Pašalić,Atalanta,22,78,"CC, COC"
+R. Bentancur,Juventus,22,78,CC
+E. Audero,Sampdoria,22,78,POR
+D. Calabria,Milan,22,78,TD
+T. Abraham,Roma,22,78,ATT
+Brahim,Milan,22,78,"COC, AS, ES"
+Luiz Felipe,Lazio,22,78,DC
+A. Barák,Hellas Verona,22,78,"AT, CC"
+N. Zaniolo,Roma,22,78,"COC, ED"
+M. Pessina,Atalanta,22,78,"COC, CC, AT"
+D. Vlahović,Fiorentina,22,78,ATT
+Ș. Radu,Lazio,22,77,DC
+M. Faraoni,Hellas Verona,22,77,"ADA, TD, ED"
+C. Tătărușanu,Milan,22,77,POR
+F. Ghoulam,Napoli,22,77,TS
+G. Defrel,Sassuolo,22,77,"COC, ATT, AS"
+Samu Castillejo,Milan,22,77,"AD, ED"
+E. Hysaj,Lazio,22,77,"TS, TD"
+D. Rugani,Juventus,22,77,DC
+R. Gagliardini,Inter,22,77,"CDC, CC"
+B. Drągowski,Fiorentina,22,77,POR
+S. Lobotka,Napoli,22,77,"CC, CDC"
+J. Palomino,Atalanta,22,77,DC
+G. Escalante,Lazio,22,77,"CDC, CC"
+M. Zaccagni,Lazio,22,77,"AT, ATT"
+J. Boga,Sassuolo,22,77,"AS, ES"
+G. Castrovilli,Fiorentina,22,77,CC
+N. Nández,Cagliari,22,77,"CC, CDC, ED"
+J. Mæhle,Atalanta,22,77,"ADA, TD, ED"
+M. Demiral,Atalanta,22,77,DC
+W. McKennie,Juventus,22,77,"CC, ED, ES"
+N. González,Fiorentina,22,77,"ATT, AS"
+S. Tonali,Milan,22,77,"CDC, CC"
+M. Damsgaard,Sampdoria,22,77,"ES, AS"
+Rafael Leão,Milan,22,77,"AS, ATT, ES"
+A. Rrahmani,Napoli,22,77,DC
+Ibañez,Roma,22,77,DC
+L. De Silvestri,Bologna,22,76,"TD, ED"
+D. Criscito,Genoa,22,76,"DC, TS, ES"
+A. Ekdal,Sampdoria,22,76,"CC, CDC"
+M. Cáceres,Cagliari,22,76,"DC, TD"
+Adrien Silva,Sampdoria,22,76,"CC, CDC"
+K. Strootman,Cagliari,22,76,"CC, CDC"
+R. Rodríguez,Torino,22,76,TS
+F. Đuričić,Sassuolo,22,76,"COC, AS"
+M. Badelj,Genoa,22,76,"CDC, CC"
+C. Biraghi,Fiorentina,22,76,"ASA, TS, ES"
+N. Sansone,Bologna,22,76,"COC, AS, ATT"
+S. Zaza,Torino,22,76,ATT
+D. Baselli,Torino,22,76,CC
+M. De Sciglio,Juventus,22,76,"TD, TS"
+R. Haps,Venezia FC,22,76,"TS, AS"
+D. Lazović,Hellas Verona,22,76,"ES, ED"
+A. Petagna,Napoli,22,76,ATT
+K. Baldé,Cagliari,22,76,"ATT, ES"
+M. Sportiello,Atalanta,22,76,POR
+M. Caldara,Venezia FC,22,76,DC
+A. Conti,Milan,22,76,"TD, ED"
+S. Amrabat,Fiorentina,22,76,"CDC, CC"
+F. Dimarco,Inter,22,76,"ASA, TS, DC"
+A. Zambo Anguissa,Napoli,22,76,"CC, CDC"
+Borja Mayoral,Roma,22,76,ATT
+L. Martínez Quarta,Fiorentina,22,76,DC
+A. Diawara,Roma,22,76,"CDC, CC"
+R. Orsolini,Bologna,22,76,"COC, AD"
+J. Brekalo,Torino,22,76,"ES, AT"
+J. Schouten,Bologna,22,76,"CDC, CC"
+N. Milenković,Fiorentina,22,76,"DC, TD"
+Bremer,Torino,22,76,DC
+M. Barrow,Bologna,22,76,"COC, ATT"
+A. Saelemaekers,Milan,22,76,"AD, ED"
+Gonzalo Villar,Roma,22,76,"CC, CDC"
+M. Viña,Roma,22,76,TS
+F. Magnanelli,Sassuolo,22,75,CDC
+F. Fazio,Roma,22,75,DC
+N. Kalinić,Hellas Verona,22,75,ATT
+E. Berisha,Torino,22,75,POR
+Diego Farías,Cagliari,22,75,"AS, AT, ATT"
+Ł. Skorupski,Bologna,22,75,POR
+J. Zoet,Spezia,22,75,POR
+A. Kokorin,Fiorentina,22,75,"ATT, AD"
+J. Larsen,Udinese,22,75,ED
+S. Verdi,Torino,22,75,"AT, COC"
+M. Gabbiadini,Sampdoria,22,75,ATT
+Pedro Obiang,Sassuolo,22,75,"CDC, CC"
+A. Soumaoro,Bologna,22,75,DC
+R. Saponara,Fiorentina,22,75,"COC, AT"
+G. Caprari,Hellas Verona,22,75,"AT, ATT"
+K. Günter,Hellas Verona,22,75,DC
+J. Akpa Akpro,Lazio,22,75,CC
+V. Verre,Sampdoria,22,75,"COC, AT, CC"
+L. Pavoletti,Cagliari,22,75,ATT
+K. Ayhan,Sassuolo,22,75,DC
+A. Tameze,Hellas Verona,22,75,"CDC, CC"
+P. Dawidowicz,Hellas Verona,22,75,DC
+E. Pulgar,Fiorentina,22,75,"CDC, CC"
+F. Di Francesco,Empoli,22,75,"AT, AS, ATT"
+N. Maksimović,Genoa,22,75,DC
+G. Simeone,Hellas Verona,22,75,ATT
+V. Muriqi,Lazio,22,75,ATT
+M. Lopez,Sassuolo,22,75,CC
+R. Mandragora,Torino,22,75,"CC, CDC"
+Hernani,Genoa,22,75,"CDC, CC"
+M. Pjaca,Torino,22,75,"AS, AD, COC"
+R. Krunić,Milan,22,75,"CC, COC"
+I. Radu,Inter,22,75,POR
+S. Lukić,Torino,22,75,"CC, CDC, COC"
+N. Domínguez,Bologna,22,75,"CC, CDC"
+C. Ekuban,Genoa,22,75,"ED, COC, ATT"
+Carles Pérez,Roma,22,75,"AD, AT"
+G. Magnani,Hellas Verona,22,75,DC
+N. Pérez,Udinese,22,75,DC
+M. Kumbulla,Roma,22,75,DC
+M. Ihattaren,Sampdoria,22,75,"COC, ED, CC"
+Matheus Henrique,Sassuolo,22,75,"CC, CDC"
+G. Pandev,Genoa,22,74,"ATT, AD"
+A. Ranocchia,Inter,22,74,DC
+I. Radovanović,Genoa,22,74,"DC, CDC, CC"
+D. Santon,Roma,22,74,"ADA, TD"
+B. Nuytinck,Udinese,22,74,DC
+M. Destro,Genoa,22,74,ATT
+G. Medel,Bologna,22,74,"CDC, DC"
+K. Malcuit,Napoli,22,74,TD
+M. Nastasić,Fiorentina,22,74,DC
+Patric,Lazio,22,74,"DC, TD, ED"
+A. Duncan,Fiorentina,22,74,"CC, CDC"
+F. Ceccherini,Hellas Verona,22,74,DC
+K. Linetty,Torino,22,74,CC
+L. Montipò,Hellas Verona,22,74,POR
+Simy,Salernitana,22,74,ATT
+I. Pussetto,Udinese,22,74,"ATT, ED"
+A. Sanabria,Torino,22,74,ATT
+O. Aina,Torino,22,74,"TD, DC"
+K. Lasagna,Hellas Verona,22,74,ATT
+I. Provedel,Spezia,22,74,POR
+D. Verde,Spezia,22,74,"AD, AS, ATT"
+O. Colley,Sampdoria,22,74,DC
+G. Scamacca,Sassuolo,22,74,ATT
+A. Ounas,Napoli,22,74,"AD, ED, COC"
+T. Henry,Venezia FC,22,74,ATT
+R. Marin,Cagliari,22,74,CC
+M. Rog,Cagliari,22,74,"CC, CDC"
+Rodrigo Becão,Udinese,22,74,DC
+Junior Messias,Milan,22,74,"COC, AT, CC"
+Z. Vanheusden,Genoa,22,74,DC
+L. Pellegrini,Juventus,22,74,TS
+A. Šemper,Genoa,22,74,POR
+T. Bašić,Lazio,22,74,"CC, CDC"
+Beto,Udinese,22,74,ATT
+G. Raspadori,Sassuolo,22,74,ATT
+D. Zima,Torino,22,74,DC
+V. Behrami,Genoa,22,73,"CDC, CC"
+D. Padelli,Udinese,22,73,POR
+A. Masiello,Genoa,22,73,DC
+S. De Maio,Udinese,22,73,DC
+T. Arslan,Udinese,22,73,"CDC, CC"
+T. Rincón,Torino,22,73,"CC, CDC"
+M. Yoshida,Sampdoria,22,73,DC
+M. Jajalo,Udinese,22,73,"CDC, CC"
+V. Belec,Salernitana,22,73,POR
+F. Bardi,Bologna,22,73,POR
+B. Bereszyński,Sampdoria,22,73,TD
+Juan Jesus,Napoli,22,73,"DC, TS"
+L. Tonelli,Empoli,22,73,DC
+L. Ceppitelli,Cagliari,22,73,DC
+V. Chiricheș,Sassuolo,22,73,DC
+J. Lukaku,Lazio,22,73,"ES, TS, ASA"
+D. Bessa,Hellas Verona,22,73,"COC, CC, AT"
+D. Cataldi,Lazio,22,73,"CC, CDC"
+J. Toljan,Sassuolo,22,73,"TD, TS"
+Samir,Udinese,22,73,"DC, TS"
+R. Gagliolo,Salernitana,22,73,"TS, DC"
+A. Grassi,Cagliari,22,73,CC
+M. Thorsby,Sampdoria,22,73,"CC, CDC"
+Walace,Udinese,22,73,"CDC, CC"
+G. Ferrari,Sassuolo,22,73,DC
+M. Vojvoda,Torino,22,73,"TD, ED"
+V. Kovalenko,Spezia,22,73,"COC, CC"
+M. Svanberg,Bologna,22,73,"CC, CDC, ED"
+G. Pereiro,Cagliari,22,73,"COC, AD"
+L. Coulibaly,Salernitana,22,73,"CDC, CC"
+K. Amian,Spezia,22,73,"DC, TD"
+N. Molina,Udinese,22,73,"ADA, ED"
+K. Bonifazi,Bologna,22,73,DC
+M. Hongla,Hellas Verona,22,73,"CC, CDC, DC"
+P. Cutrone,Empoli,22,73,ATT
+M. Nzola,Spezia,22,73,"ATT, AD"
+E. Elmas,Napoli,22,73,CC
+A. Harroui,Sassuolo,22,73,"CDC, CC, ED"
+A. Cordaz,Inter,22,72,POR
+F. Forestieri,Udinese,22,72,"COC, AT, AS"
+V. Fiorillo,Salernitana,22,72,POR
+C. Pinsoglio,Juventus,22,72,POR
+M. Zeegelaar,Udinese,22,72,"ES, TS"
+J. Obi,Salernitana,22,72,"CC, CDC, ES"
+I. Nestorovski,Udinese,22,72,ATT
+S. Sturaro,Genoa,22,72,CC
+N. Murru,Sampdoria,22,72,TS
+M. Dijks,Bologna,22,72,TS
+I. Mbaye,Bologna,22,72,"TD, TS"
+A. Touré,Genoa,22,72,"CDC, CC"
+M. Benassi,Fiorentina,22,72,"CC, AT"
+R. Durmisi,Lazio,22,72,"TS, ASA, ES"
+D. Biraschi,Genoa,22,72,"DC, TD, ED"
+M. Aramu,Venezia FC,22,72,"COC, ATT, AD"
+L. Mancuso,Empoli,22,72,"ATT, AS"
+M. Fares,Genoa,22,72,"ES, TS, AS"
+G. Pezzella,Atalanta,22,72,"TS, ES"
+F. Depaoli,Sampdoria,22,72,"ED, TD"
+F. Ballo-Touré,Milan,22,72,"TS, ES"
+A. Olsen,Bologna,22,72,"COC, AD"
+L. Štulac,Empoli,22,72,"CDC, CC"
+T. Augello,Sampdoria,22,72,TS
+B. Šutalo,Hellas Verona,22,72,DC
+I. Pandur,Hellas Verona,22,72,POR
+I. Ilić,Hellas Verona,22,72,CC
+A. Ismajli,Empoli,22,72,DC
+M. Lovato,Atalanta,22,72,DC
+S. Strandberg,Salernitana,22,71,DC
+A. Ragusa,Hellas Verona,22,71,"AD, AS"
+S. Romagnoli,Empoli,22,71,DC
+F. Santander,Bologna,22,71,ATT
+K. Djidji,Torino,22,71,DC
+P. Terracciano,Fiorentina,22,71,POR
+S. Sabelli,Genoa,22,71,"TD, ADA, ED"
+F. Forte,Venezia FC,22,71,ATT
+N. Gyömbér,Salernitana,22,71,DC
+F. Mattiello,Atalanta,22,71,"ED, ES"
+L. Venuti,Fiorentina,22,71,"ADA, TD, TS"
+L. Palmiero,Napoli,22,71,"CC, CDC"
+S. Luperto,Empoli,22,71,DC
+E. Torregrossa,Sampdoria,22,71,ATT
+E. Goldaniga,Sassuolo,22,71,DC
+M. Bani,Genoa,22,71,DC
+P. Stojanović,Empoli,22,71,"TD, ED"
+L. Haraslín,Sassuolo,22,71,"ES, ED"
+Dalbert,Cagliari,22,71,"ES, TS"
+R. Manaj,Spezia,22,71,ATT
+Ronaldo Vieira,Sampdoria,22,71,"CDC, CC"
+G. Maggiore,Spezia,22,71,CC
+A. Sigurðsson,Venezia FC,22,71,"AT, COC, ES"
+E. Shomurodov,Roma,22,71,"ATT, AS, AD"
+G. Vicario,Empoli,22,71,POR
+K. Rüegg,Hellas Verona,22,71,"ADA, TD, ED"
+E. Vignato,Bologna,22,71,COC
+Y. Çetin,Hellas Verona,22,71,DC
+H. Traorè,Sassuolo,22,71,"COC, CC"
+D. Vavro,Lazio,22,71,DC
+S. Walukiewicz,Cagliari,22,71,DC
+M. Müldür,Sassuolo,22,71,"TD, DC"
+J. Vásquez,Genoa,22,71,"DC, TS"
+M. Erlić,Spezia,22,71,DC
+G. Frabotta,Hellas Verona,22,71,"ASA, TS, ES"
+G. Pegolo,Sassuolo,22,70,POR
+F. Peluso,Sassuolo,22,70,"DC, TS"
+D. Falcinelli,Bologna,22,70,ATT
+J. Sala,Spezia,22,70,"TD, ED, TS"
+J. Dezi,Venezia FC,22,70,"CC, COC"
+R. Fiamozzi,Empoli,22,70,TD
+L. Lezzerini,Venezia FC,22,70,POR
+A. Ferrari,Sampdoria,22,70,"DC, TD"
+I. Success,Udinese,22,70,"ATT, ED, ES"
+V. Milinković-Savić,Torino,22,70,POR
+N. Haas,Empoli,22,70,"CC, CDC"
+J. Makengo,Udinese,22,70,CC
+D. Okereke,Venezia FC,22,70,"ATT, AD, AS"
+A. Reca,Spezia,22,70,"ES, TS"
+D. Johnsen,Venezia FC,22,70,AS
+J. Chabot,Sampdoria,22,70,DC
+S. Żurkowski,Empoli,22,70,CC
+E. Salcedo,Spezia,22,70,"AT, ATT"
+Rogério,Sassuolo,22,70,"TS, ES"
+R. Sottil,Fiorentina,22,70,"AS, ES, AD"
+N. Rovella,Genoa,22,70,"CC, CDC"
+F. Marchetti,Genoa,22,69,POR
+C. Molinaro,Venezia FC,22,69,"TS, ES"
+A. Rosati,Fiorentina,22,69,POR
+Ł. Teodorczyk,Udinese,22,69,ATT
+A. La Mantia,Empoli,22,69,ATT
+F. Veseli,Salernitana,22,69,"TD, DC"
+A. Schiavone,Salernitana,22,69,"CC, CDC"
+F. Bonazzoli,Salernitana,22,69,ATT
+T. Ebuehi,Venezia FC,22,69,TD
+F. Romagna,Sassuolo,22,69,DC
+P. Ghiglione,Genoa,22,69,"ED, TD"
+D. Črnigoj,Venezia FC,22,69,"ED, ES, AD"
+F. Bandinelli,Empoli,22,69,CC
+Y. Maleh,Fiorentina,22,69,CC
+N. Bajrami,Empoli,22,69,"COC, CC"
+D. Frattesi,Sassuolo,22,69,"CC, CDC"
+Igor,Fiorentina,22,69,"DC, TS"
+K. Agudelo,Spezia,22,69,"AD, COC"
+L. Binks,Bologna,22,69,DC
+C. Oliva,Cagliari,22,69,"CC, CDC"
+A. Hickey,Bologna,22,69,"TS, TD"
+T. Pobega,Torino,22,69,CC
+G. Kyriakopoulos,Sassuolo,22,69,TS
+P. Kalulu,Milan,22,69,"TD, DC"
+A. Theate,Bologna,22,69,"DC, TS"
+Kaio Jorge,Juventus,22,69,ATT
+M. Bourabia,Spezia,22,68,"CDC, CC, COC"
+M. Modolo,Venezia FC,22,68,"DC, TD"
+C. Lykogiannis,Cagliari,22,68,"TS, ASA, DC"
+P. Faragò,Cagliari,22,68,"TD, CC"
+L. Henderson,Empoli,22,68,CC
+P. Dziczek,Lazio,22,68,CDC
+S. Bastoni,Spezia,22,68,TS
+B. Radunović,Cagliari,22,68,POR
+G. Crociata,Empoli,22,68,"COC, CC, AT"
+E. Ampadu,Venezia FC,22,68,"DC, CDC, CC"
+A. Pinamonti,Empoli,22,68,ATT
+R. Marchizza,Empoli,22,68,"TS, DC"
+D. Nikolaou,Spezia,22,68,DC
+P. Pellegri,Milan,22,68,ATT
+P. Mazzocchi,Venezia FC,22,68,"TD, ED, TS"
+M. Gabbia,Milan,22,68,DC
+L. Fiordilino,Venezia FC,22,68,"CC, ED"
+S. Kiyine,Venezia FC,22,68,"CC, ES, ED"
+Daniel Fuzato,Roma,22,68,POR
+R. Bellanova,Cagliari,22,68,TD
+J. Antiste,Spezia,22,68,ATT
+A. Carboni,Cagliari,22,68,"DC, TS"
+R. Calafiori,Roma,22,68,"TS, ES"
+B. Soppy,Udinese,22,68,"TD, DC"
+N. Fagioli,Juventus,22,68,"CC, COC"
+M. Cancellieri,Hellas Verona,22,68,"AD, AT"
+N. Mäenpää,Venezia FC,22,67,POR
+S. Aresti,Cagliari,22,67,POR
+N. Ravaglia,Sampdoria,22,67,POR
+R. Aya,Salernitana,22,67,DC
+L. Capezzi,Salernitana,22,67,"CC, CDC"
+A. Vacca,Venezia FC,22,67,CC
+C. Lombardi,Lazio,22,67,ED
+E. Gyasi,Spezia,22,67,"AD, AS, ATT"
+Z. Machach,Napoli,22,67,"COC, CC, ATT"
+D. Heymans,Venezia FC,22,67,"COC, CC, AT"
+F. Cassata,Genoa,22,67,CC
+G. Busio,Venezia FC,22,67,"CC, COC, CDC"
+Salva Ferrer,Spezia,22,67,"TD, DC"
+R. Piccoli,Atalanta,22,67,ATT
+D. Schnegg,Venezia FC,22,67,TS
+S. Ricci,Empoli,22,67,"CC, CDC"
+E. Colley,Spezia,22,67,AT
+R. Drăgușin,Sampdoria,22,67,"DC, TD"
+M. Satriano,Inter,22,67,ATT
+F. Di Tacchio,Salernitana,22,66,"CC, CDC"
+G. Zigoni,Venezia FC,22,66,ATT
+M. Đurić,Salernitana,22,66,ATT
+R. Bocalon,Venezia FC,22,66,ATT
+P. Ceccaroni,Venezia FC,22,66,"DC, TS"
+S. Edera,Torino,22,66,"COC, AT"
+L. Bogdan,Salernitana,22,66,DC
+A. Plizzari,Milan,22,66,POR
+M. Coulibaly,Salernitana,22,66,CC
+N. Casale,Hellas Verona,22,66,DC
+B. Reynolds,Roma,22,66,"ADA, TD"
+R. Vodišek,Genoa,22,66,POR
+Gabriel Brazão,Inter,22,66,POR
+S. van Hooijdonk,Bologna,22,66,"ATT, AS"
+K. Michael,Bologna,22,66,CC
+F. Colidio,Inter,22,66,"ATT, COC"
+M. Svoboda,Venezia FC,22,66,"CDC, DC, CC"
+W. Singo,Torino,22,66,"ADA, TD, ED"
+M. Portanova,Genoa,22,66,"CC, COC"
+E. Darboe,Roma,22,66,CDC
+D. Peretz,Venezia FC,22,66,"CDC, CC"
+P. Jaroszyński,Salernitana,22,65,DC
+R. Pirrello,Empoli,22,65,"DC, TD"
+Léo Sena,Spezia,22,65,"CC, CDC"
+G. Kastanos,Salernitana,22,65,"COC, CC"
+A. Buongiorno,Torino,22,65,"DC, TS"
+P. Mićin,Udinese,22,65,"AD, ATT, AS"
+A. Terzić,Fiorentina,22,65,TS
+G. Zappa,Cagliari,22,65,"TD, ED"
+M. Ruggeri,Salernitana,22,65,"ES, TS"
+Y. Kallon,Genoa,22,65,"AD, AT, COC"
+W. Falcone,Sampdoria,22,64,POR
+A. Deiola,Cagliari,22,64,CC
+L. Ranieri,Salernitana,22,64,"DC, TS"
+B. Adekanye,Lazio,22,64,AD
+André Anderson,Lazio,22,64,"AT, COC, ATT"
+L. Samardžić,Udinese,22,64,"COC, CC"
+Jorge Silva,Lazio,22,64,DC
+R. Ladinetti,Cagliari,22,64,CC
+A. Cambiaso,Genoa,22,64,"ED, ES, TS"
+D. Udogie,Udinese,22,64,"TS, ES"
+W. Kechrida,Salernitana,22,64,"TD, CDC, ED"
+M. Viti,Empoli,22,64,DC
+L. Andrenacci,Genoa,22,63,POR
+M. Warming,Torino,22,63,AS
+L. Tramoni,Cagliari,22,63,ED
+T. Tessmann,Venezia FC,22,63,"CDC, CC"
+N. Zalewski,Roma,22,63,COC
+E. Vergani,Salernitana,22,63,ATT
+A. Berardi,Hellas Verona,22,62,POR
+G. Guerrieri,Salernitana,22,62,POR
+F. Melegoni,Genoa,22,62,CC
+A. Riccardi,Roma,22,62,"CC, COC"
+Tòfol Montiel,Fiorentina,22,62,COC
+A. Sher,Spezia,22,62,CC
+S. Damiani,Empoli,22,62,"CDC, CC"
+M. Adamonis,Lazio,22,61,POR
+P. Hristov,Spezia,22,61,DC
+A. Buksa,Genoa,22,61,ATT
+L. Munteanu,Fiorentina,22,61,ATT
+T. Baeten,Torino,22,61,ATT
+K. Piscopo,Empoli,22,61,"AT, ATT, COC"
+B. Bjarkason,Venezia FC,22,61,ES
+F. Parisi,Empoli,22,61,"TS, ES, CDC"
+E. Bove,Roma,22,61,CC
+F. Rossi,Atalanta,22,60,POR
+J. Furlan,Empoli,22,60,POR
+D. Ceter,Cagliari,22,60,ATT
+G. Corbo,Bologna,22,60,DC
+G. Gaetano,Napoli,22,60,"COC, CC"
+N. Zortea,Salernitana,22,60,"TD, ED"
+K. Horváth,Torino,22,60,COC
+Raúl Moro,Lazio,22,60,"AS, AT"
+F. Tripi,Roma,22,60,"DC, CDC"
+M. Pagliuca,Bologna,22,60,ATT
+G. Altare,Cagliari,22,60,DC
+F. Delli Carri,Salernitana,22,59,DC
+K. Askildsen,Sampdoria,22,59,CC
+E. Sadiku,Genoa,22,59,"CDC, CC"
+D. Maldini,Milan,22,59,COC
+G. Cangiano,Bologna,22,59,"AS, ATT"
+P. Yeboah,Hellas Verona,22,59,AT
+Bruno Bertinato,Venezia FC,22,58,POR
+B. Kone,Torino,22,58,"AS, CC"
+J. de Vries,Venezia FC,22,58,"ED, ATT"
+P. Zovko,Spezia,22,58,POR
+D. Pecile,Venezia FC,22,57,"CC, CDC"
+G. Satalino,Sassuolo,22,55,POR
+I. Karamoko,Torino,22,55,CC
+D. Zappella,Empoli,22,54,TD
+K. Urbański,Bologna,22,54,COC
+P. Boer,Roma,22,54,POR
+M. Maignan,Milan,23,87,POR
+W. Szczęsny,Juventus,23,86,POR
+C. Immobile,Lazio,23,86,ATT
+R. Lukaku,Inter,23,86,ATT
+P. Dybala,Roma,23,86,"AT, COC"
+M. Brozović,Inter,23,86,"CDC, CC"
+S. Milinković-Savić,Lazio,23,86,CC
+N. Barella,Inter,23,86,CC
+L. Martínez,Inter,23,86,ATT
+M. Škriniar,Inter,23,86,DC
+P. Pogba,Juventus,23,85,"CC, CDC, ES"
+F. Kostić,Juventus,23,85,"ES, ASA"
+T. Hernández,Milan,23,85,TS
+S. Handanovič,Inter,23,84,POR
+E. Džeko,Inter,23,84,ATT
+Á. Di María,Juventus,23,84,AD
+L. Bonucci,Juventus,23,84,DC
+S. de Vrij,Inter,23,84,DC
+H. Çalhanoğlu,Inter,23,84,CC
+D. Berardi,Sassuolo,23,84,"ED, AD"
+L. Pellegrini,Roma,23,84,"COC, CC"
+F. Tomori,Milan,23,84,DC
+F. Chiesa,Juventus,23,84,AS
+A. Bastoni,Inter,23,84,DC
+S. Tonali,Milan,23,84,"CDC, CC"
+Rafael Leão,Milan,23,84,"AS, ES"
+D. Vlahović,Juventus,23,84,ATT
+J. Cuadrado,Juventus,23,83,"TD, ED"
+Luis Alberto,Lazio,23,83,CC
+P. Zieliński,Napoli,23,83,"COC, CC"
+D. Zapata,Atalanta,23,83,ATT
+V. Osimhen,Napoli,23,83,ATT
+Bremer,Juventus,23,83,DC
+Z. Ibrahimović,Milan,23,82,ATT
+Rui Patrício,Roma,23,82,POR
+O. Giroud,Milan,23,82,ATT
+S. Kjær,Milan,23,82,DC
+M. Arnautović,Bologna,23,82,ATT
+L. Muriel,Atalanta,23,82,ATT
+F. Acerbi,Inter,23,82,DC
+L. Spinazzola,Roma,23,82,"ASA, ES"
+G. Di Lorenzo,Napoli,23,82,TD
+M. Locatelli,Juventus,23,82,"CDC, CC"
+R. Gosens,Inter,23,82,"ASA, ES"
+A. Onana,Inter,23,82,POR
+I. Bennacer,Milan,23,82,"CDC, CC"
+T. Abraham,Roma,23,82,ATT
+R. Malinovskyi,Atalanta,23,82,"AT, COC"
+D. Dumfries,Inter,23,82,"ADA, ED"
+Rafael Tolói,Atalanta,23,81,DC
+C. Smalling,Roma,23,81,DC
+H. Mkhitaryan,Inter,23,81,"COC, CC"
+J. Musso,Atalanta,23,81,POR
+M. Politano,Napoli,23,81,"AD, ED"
+S. Lobotka,Napoli,23,81,"CC, CDC"
+H. Lozano,Napoli,23,81,AD
+M. Pašalić,Atalanta,23,81,"COC, AT, CC"
+A. Zambo Anguissa,Napoli,23,81,"CDC, CC"
+G. Mancini,Roma,23,81,DC
+A. Barák,Fiorentina,23,81,"AT, CC"
+N. Zaniolo,Roma,23,81,"AT, AD, ED"
+A. Consigli,Sassuolo,23,80,POR
+A. Candreva,Salernitana,23,80,"ED, CC"
+G. Wijnaldum,Roma,23,80,"CC, CDC"
+M. Darmian,Inter,23,80,"ADA, ED"
+Alex Sandro,Juventus,23,80,TS
+Danilo,Juventus,23,80,TD
+C. Biraghi,Fiorentina,23,80,TS
+Deulofeu,Udinese,23,80,"AT, ATT"
+A. Cragno,Monza,23,80,POR
+L. Paredes,Juventus,23,80,"CDC, CC"
+B. Cristante,Roma,23,80,"CDC, CC"
+M. de Roon,Atalanta,23,80,"CDC, CC, DC"
+A. Belotti,Roma,23,80,ATT
+A. Rabiot,Juventus,23,80,"CC, ES"
+A. Romagnoli,Lazio,23,80,DC
+J. Correa,Inter,23,80,"AT, ATT"
+A. Rebić,Milan,23,80,"AS, ES, ATT"
+H. Hateboer,Atalanta,23,80,"ADA, TD, ED"
+R. Karsdorp,Roma,23,80,"ADA, ED, TD"
+D. Calabria,Milan,23,80,TD
+N. Milenković,Fiorentina,23,80,DC
+W. McKennie,Juventus,23,80,"CC, ES"
+T. Koopmeiners,Atalanta,23,80,"CC, CDC"
+N. González,Fiorentina,23,80,"AD, AS"
+A. Rrahmani,Napoli,23,80,DC
+Pedro,Lazio,23,79,"AS, AD, AT"
+M. Silvestri,Udinese,23,79,POR
+N. Matić,Roma,23,79,CDC
+M. Perin,Juventus,23,79,POR
+Felipe Anderson,Lazio,23,79,AD
+A. Florenzi,Milan,23,79,TD
+A. Milik,Juventus,23,79,ATT
+S. Umtiti,Lecce,23,79,DC
+B. Djimsiti,Atalanta,23,79,DC
+D. Zappacosta,Atalanta,23,79,"ASA, ES, ED"
+M. Zaccagni,Lazio,23,79,AS
+A. Marušić,Lazio,23,79,"TS, TD"
+L. Jović,Fiorentina,23,79,ATT
+M. Lazzari,Lazio,23,79,TD
+T. Ndombele,Napoli,23,79,"CC, CDC, COC"
+Kim Min Jae,Napoli,23,79,DC
+Luís Maximiano,Lazio,23,79,POR
+B. Dia,Salernitana,23,79,"ATT, AD"
+Ibañez,Roma,23,79,DC
+Beto,Udinese,23,79,ATT
+G. Raspadori,Napoli,23,79,"AT, COC, ES"
+F. Caputo,Sampdoria,23,78,ATT
+G. Bonaventura,Fiorentina,23,78,CC
+R. Pereyra,Udinese,23,78,"CC, COC"
+M. Faraoni,Hellas Verona,23,78,"ADA, ED"
+D. D'Ambrosio,Inter,23,78,DC
+G. Caprari,Monza,23,78,AT
+Mário Rui,Napoli,23,78,TS
+P. Gollini,Fiorentina,23,78,POR
+A. Miranchuk,Torino,23,78,"COC, AT"
+G. Simeone,Napoli,23,78,ATT
+M. Lopez,Sassuolo,23,78,"CC, CDC"
+A. Meret,Napoli,23,78,POR
+F. Dimarco,Inter,23,78,"ASA, ES, DC"
+E. Audero,Sampdoria,23,78,POR
+S. Sensi,Monza,23,78,"CC, COC"
+Brahim,Milan,23,78,COC
+J. Ikoné,Fiorentina,23,78,"AD, ED"
+M. Kean,Juventus,23,78,"ATT, AS"
+G. Vicario,Empoli,23,78,POR
+H. Traorè,Sassuolo,23,78,"ES, AS, COC"
+Junior Messias,Milan,23,78,"AD, ED"
+N. Vlašić,Torino,23,78,"ES, COC"
+E. Elmas,Napoli,23,78,"COC, CC"
+A. Saelemaekers,Milan,23,78,"AD, ED"
+C. De Ketelaere,Milan,23,78,"ATT, AS"
+P. Kalulu,Milan,23,78,"DC, TD"
+S. Sirigu,Napoli,23,77,POR
+S. El Shaarawy,Roma,23,77,"AS, ES"
+R. Soriano,Bologna,23,77,"COC, CC, AT"
+D. Demme,Napoli,23,77,"CDC, CC"
+D. Lazović,Hellas Verona,23,77,ES
+A. Tameze,Hellas Verona,23,77,"CC, CDC"
+M. Vecino,Lazio,23,77,"CC, CDC"
+J. Boga,Atalanta,23,77,"AS, AT, ES"
+G. Castrovilli,Fiorentina,23,77,CC
+R. Krunić,Milan,23,77,"CC, COC"
+A. Lookman,Atalanta,23,77,"ES, ED"
+G. Maggiore,Salernitana,23,77,"CC, CDC"
+S. Lukić,Torino,23,77,CC
+M. Demiral,Atalanta,23,77,DC
+M. Pessina,Monza,23,77,"COC, CC, AT"
+D. Frattesi,Sassuolo,23,77,"CC, CDC"
+M. Olivera,Napoli,23,77,"TS, ASA"
+M. Barrow,Bologna,23,77,"AT, ATT, AS"
+Arthur Cabral,Fiorentina,23,77,ATT
+S. Dest,Milan,23,77,"TD, ED, TS"
+F. Ribéry,Salernitana,23,76,"AT, ATT, COC"
+F. Quagliarella,Sampdoria,23,76,ATT
+L. De Silvestri,Bologna,23,76,"ADA, ED"
+Miguel Veloso,Hellas Verona,23,76,"CC, CDC"
+Ł. Skorupski,Bologna,23,76,POR
+Juan Jesus,Napoli,23,76,DC
+R. Saponara,Fiorentina,23,76,AS
+C. Tătărușanu,Milan,23,76,POR
+G. Defrel,Sassuolo,23,76,"AT, ATT"
+T. Vilhena,Salernitana,23,76,"ES, CC"
+K. Günter,Hellas Verona,23,76,DC
+P. Terracciano,Fiorentina,23,76,POR
+M. De Sciglio,Juventus,23,76,"TD, TS"
+D. Rugani,Juventus,23,76,DC
+D. Cataldi,Lazio,23,76,"CDC, CC"
+R. Gagliardini,Inter,23,76,"CDC, CC"
+D. Origi,Milan,23,76,"ATT, AS"
+F. Di Francesco,Lecce,23,76,"AS, AD"
+L. Montipò,Hellas Verona,23,76,POR
+A. Petagna,Monza,23,76,ATT
+G. Escalante,Cremonese,23,76,"CDC, CC"
+H. Winks,Sampdoria,23,76,"CC, CDC"
+S. Amrabat,Fiorentina,23,76,"CDC, CC"
+Z. Çelik,Roma,23,76,"ADA, ED, TD"
+I. Provedel,Lazio,23,76,POR
+L. Martínez Quarta,Fiorentina,23,76,DC
+T. Henry,Hellas Verona,23,76,ATT
+R. Orsolini,Bologna,23,76,"AT, AD"
+J. Mæhle,Atalanta,23,76,"ADA, ED, ES"
+N. Bajrami,Empoli,23,76,"COC, AT"
+N. Domínguez,Bologna,23,76,"CC, CDC"
+S. Żurkowski,Fiorentina,23,76,CC
+N. Casale,Lazio,23,76,DC
+Igor,Fiorentina,23,76,DC
+R. Sottil,Fiorentina,23,76,"AS, AD"
+K. Kvaratskhelia,Napoli,23,76,"AS, COC"
+T. Pobega,Milan,23,76,CC
+W. Singo,Torino,23,76,"ADA, ED"
+I. Ilić,Hellas Verona,23,76,"CC, AT"
+Ș. Radu,Lazio,23,75,DC
+A. Ekdal,Spezia,23,75,"CC, CDC"
+T. Arslan,Udinese,23,75,"CDC, CC"
+B. Nuytinck,Udinese,23,75,DC
+M. Destro,Empoli,23,75,ATT
+F. Đuričić,Sampdoria,23,75,"COC, AS"
+S. Verdi,Hellas Verona,23,75,"AT, COC"
+M. Gabbiadini,Sampdoria,23,75,ATT
+N. Sansone,Bologna,23,75,"COC, AS"
+J. Akpa Akpro,Empoli,23,75,CC
+S. Meïté,Cremonese,23,75,"CC, CDC"
+Patric,Lazio,23,75,"DC, TD"
+Pablo Marí,Monza,23,75,DC
+A. Duncan,Fiorentina,23,75,CC
+E. Hysaj,Lazio,23,75,"TS, TD"
+F. Ceccherini,Hellas Verona,23,75,DC
+V. Lazaro,Torino,23,75,"ADA, ED, TD"
+P. Dawidowicz,Hellas Verona,23,75,DC
+B. Drągowski,Spezia,23,75,POR
+M. Sportiello,Atalanta,23,75,POR
+T. Bakayoko,Milan,23,75,"CDC, CC"
+A. Sanabria,Torino,23,75,ATT
+M. Caldara,Spezia,23,75,DC
+C. Dessers,Cremonese,23,75,ATT
+K. Piątek,Salernitana,23,75,ATT
+S. Posch,Bologna,23,75,"DC, TD"
+R. Mandragora,Fiorentina,23,75,"CC, CDC"
+D. Verde,Spezia,23,75,"AD, ED, COC"
+P. Stojanović,Empoli,23,75,TD
+O. Colley,Sampdoria,23,75,DC
+M. Pjaca,Empoli,23,75,"AT, ATT"
+G. Pezzella,Lecce,23,75,"TS, ES, ASA"
+Dodô,Fiorentina,23,75,TD
+M. Di Gregorio,Monza,23,75,POR
+A. Pinamonti,Sassuolo,23,75,ATT
+Gabriel Strefezza,Lecce,23,75,AD
+M. Aebischer,Bologna,23,75,CC
+S. Birindelli,Monza,23,75,"ADA, ED, TD"
+M. Camara,Roma,23,75,"CC, CDC"
+Rodrigo Becão,Udinese,23,75,DC
+E. Shomurodov,Roma,23,75,"ATT, AT"
+P. Schuurs,Torino,23,75,DC
+Y. Adli,Milan,23,75,"CC, COC"
+N. Pérez,Udinese,23,75,DC
+T. Bašić,Lazio,23,75,"CC, CDC"
+M. Kumbulla,Roma,23,75,DC
+M. Viña,Roma,23,75,"ASA, ES, TS"
+N. Rovella,Monza,23,75,"CC, CDC"
+F. Gatti,Juventus,23,75,DC
+A. Mirante,Milan,23,74,POR
+F. Fazio,Salernitana,23,74,DC
+L. Sepe,Salernitana,23,74,POR
+R. Rodríguez,Torino,23,74,DC
+A. Soumaoro,Bologna,23,74,DC
+J. Murillo,Sampdoria,23,74,DC
+K. Linetty,Torino,23,74,"CC, AT"
+Marlon,Monza,23,74,DC
+A. Izzo,Monza,23,74,DC
+I. Pussetto,Sampdoria,23,74,"ATT, AT"
+I. Success,Udinese,23,74,ATT
+Walace,Udinese,23,74,"CDC, CC"
+O. Aina,Torino,23,74,"ASA, ES, ED"
+G. Ferrari,Sassuolo,23,74,DC
+A. Masina,Udinese,23,74,"ASA, ES, TS"
+M. Vojvoda,Torino,23,74,"ASA, ES, ED"
+K. Amian,Spezia,23,74,"ADA, ED, TD"
+Y. Karamoh,Torino,23,74,"AS, ES"
+S. Ascacíbar,Cremonese,23,74,"CDC, CC"
+I. Radu,Cremonese,23,74,POR
+Dany Mota,Monza,23,74,ATT
+J. Schouten,Bologna,23,74,"CDC, CC"
+R. Marin,Empoli,23,74,CC
+C. Kouamé,Fiorentina,23,74,ATT
+Y. Maleh,Fiorentina,23,74,CC
+M. Pongračić,Lecce,23,74,DC
+G. Magnani,Hellas Verona,23,74,DC
+A. Laurienté,Sassuolo,23,74,"ED, AD, ATT"
+N. Radonjić,Torino,23,74,"AS, AD, AT"
+N. Moro,Bologna,23,74,"CDC, CC"
+Gonzalo Villar,Sampdoria,23,74,"CC, CDC"
+M. Erlić,Sassuolo,23,74,DC
+R. Bellanova,Inter,23,74,"ADA, ED"
+M. Carnesecchi,Cremonese,23,74,POR
+S. Ricci,Torino,23,74,"CDC, CC"
+Matheus Henrique,Sassuolo,23,74,"CC, CDC"
+D. Zima,Torino,23,74,DC
+D. Udogie,Udinese,23,74,"ASA, ES"
+N. Zalewski,Roma,23,74,ES
+Éderson,Atalanta,23,74,CC
+I. Radovanović,Salernitana,23,73,"DC, CDC"
+E. Berisha,Torino,23,73,POR
+C. Pinsoglio,Juventus,23,73,POR
+G. Medel,Bologna,23,73,DC
+F. Bardi,Bologna,23,73,POR
+B. Bereszyński,Sampdoria,23,73,TD
+Pedro Obiang,Sassuolo,23,73,"CDC, CC"
+C. Gytkjær,Monza,23,73,ATT
+M. Valoti,Monza,23,73,"CC, AT"
+V. Verre,Sampdoria,23,73,"COC, ES"
+K. Ayhan,Sassuolo,23,73,DC
+C. Lykogiannis,Bologna,23,73,"ASA, ES, TS"
+J. Toljan,Sassuolo,23,73,TD
+A. Barberis,Monza,23,73,"CDC, CC"
+E. Gyasi,Spezia,23,73,"ED, ES, ATT"
+S. Luperto,Empoli,23,73,DC
+F. Bonazzoli,Salernitana,23,73,"ATT, AT"
+A. Conti,Sampdoria,23,73,TD
+J. Sambia,Salernitana,23,73,"ADA, TD, ED"
+V. Milinković-Savić,Torino,23,73,POR
+K. Lasagna,Hellas Verona,23,73,"ATT, AT"
+J. Hendry,Cremonese,23,73,DC
+L. Coulibaly,Salernitana,23,73,"CDC, CC"
+J. Makengo,Udinese,23,73,"CC, CDC"
+J. Lucumí,Bologna,23,73,DC
+F. Bandinelli,Empoli,23,73,CC
+R. Oudin,Lecce,23,73,"ES, ED"
+K. Bonifazi,Bologna,23,73,DC
+E. Ampadu,Spezia,23,73,"CDC, CC, DC"
+F. Depaoli,Hellas Verona,23,73,"TD, ED"
+L. Østigård,Napoli,23,73,DC
+M. Nzola,Spezia,23,73,ATT
+A. Harroui,Sassuolo,23,73,"CDC, CC, ED"
+J. Bijol,Udinese,23,73,"DC, CDC"
+M. Hjulmand,Lecce,23,73,"CDC, CC"
+Marcos Antonio,Lazio,23,73,"CC, CDC"
+J. Zirkzee,Bologna,23,73,"ATT, COC"
+D. Bradarić,Salernitana,23,73,"ASA, ES, TS"
+F. Daniliuc,Salernitana,23,73,"DC, TD"
+A. Vranckx,Milan,23,73,"CC, CDC"
+Carlos Augusto,Monza,23,73,"ASA, ES, DC"
+M. Lovato,Salernitana,23,73,DC
+N. Fagioli,Juventus,23,73,"CC, COC, CDC"
+M. Cancellieri,Lazio,23,73,"AD, AT"
+A. Cordaz,Inter,23,72,POR
+D. Padelli,Udinese,23,72,POR
+T. Rincón,Sampdoria,23,72,"CC, CDC"
+M. Jajalo,Udinese,23,72,"CDC, CC"
+L. Marrone,Monza,23,72,DC
+G. Donati,Monza,23,72,"DC, ADA"
+L. Caldirola,Monza,23,72,DC
+L. Tonelli,Empoli,23,72,DC
+M. Bianchetti,Cremonese,23,72,DC
+N. Murru,Sampdoria,23,72,TS
+V. Chiricheș,Cremonese,23,72,DC
+M. Benassi,Fiorentina,23,72,CC
+P. Ciurria,Monza,23,72,"AT, ATT, CC"
+A. Ferrari,Sampdoria,23,72,"DC, TD"
+L. Henderson,Empoli,23,72,"CC, COC, AT"
+A. Grassi,Empoli,23,72,"CC, CDC"
+L. Venuti,Fiorentina,23,72,TD
+C. Buonaiuto,Cremonese,23,72,"ES, COC"
+S. Lovrič,Udinese,23,72,"CC, CDC"
+K. Ehizibue,Udinese,23,72,TD
+M. Fares,Lazio,23,72,"AS, ES"
+José Machín,Monza,23,72,CC
+D. Okereke,Cremonese,23,72,"ATT, AD, AS"
+A. Reca,Spezia,23,72,"ASA, ES, TS"
+E. Bohinen,Salernitana,23,72,"CC, CDC"
+M. Castagnetti,Cremonese,23,72,"CDC, CC"
+L. Zanimacchia,Cremonese,23,72,ED
+M. Hongla,Hellas Verona,23,72,"CC, CDC"
+F. Ballo-Touré,Milan,23,72,TS
+A. Sabiri,Sampdoria,23,72,"COC, CC, ES"
+A. Hrustić,Hellas Verona,23,72,"CC, CDC, ED"
+A. Zerbin,Napoli,23,72,AS
+T. Augello,Sampdoria,23,72,TS
+E. Vignato,Bologna,23,72,COC
+Rogério,Sassuolo,23,72,TS
+L. Cacace,Empoli,23,72,"TS, ASA"
+K. Thorstvedt,Sassuolo,23,72,"COC, CC"
+J. Vásquez,Cremonese,23,72,"DC, TS"
+G. Kyriakopoulos,Sassuolo,23,72,"TS, ES, AS"
+M. Thiaw,Milan,23,72,DC
+A. Álvarez Martínez,Sassuolo,23,72,ATT
+A. Cambiaso,Bologna,23,72,"ASA, ES, ADA"
+M. Satriano,Empoli,23,72,ATT
+K. Asllani,Inter,23,72,"CDC, CC"
+F. Miretti,Juventus,23,72,"CC, CDC"
+J. Zoet,Spezia,23,71,POR
+M. D'Alessandro,Monza,23,71,"ES, ED"
+I. Nestorovski,Udinese,23,71,ATT
+K. Djidji,Torino,23,71,DC
+N. Gyömbér,Salernitana,23,71,DC
+A. Blin,Lecce,23,71,"CDC, CC, DC"
+S. Bastoni,Spezia,23,71,"CC, ES, TS"
+V. Kovalenko,Spezia,23,71,"CC, COC"
+Dalbert,Inter,23,71,"ASA, ES"
+Ronaldo Vieira,Sampdoria,23,71,"CDC, CC"
+D. Bronn,Salernitana,23,71,"DC, TD"
+S. Lammers,Empoli,23,71,ATT
+P. Mazzocchi,Salernitana,23,71,"ADA, ED, TD"
+M. Çetin,Lecce,23,71,DC
+K. Agudelo,Spezia,23,71,"AD, COC"
+M. Müldür,Sassuolo,23,71,TD
+G. Gaetano,Napoli,23,71,"COC, CC"
+A. Colpani,Monza,23,71,CC
+A. Ismajli,Empoli,23,71,DC
+F. Parisi,Empoli,23,71,TS
+Kaio Jorge,Juventus,23,71,ATT
+C. Okoli,Atalanta,23,71,DC
+J. Kiwior,Spezia,23,71,"DC, CDC"
+G. Pegolo,Sassuolo,23,70,POR
+G. Paletta,Monza,23,70,DC
+M. Đurić,Hellas Verona,23,70,ATT
+J. Sala,Spezia,23,70,"CDC, TD"
+S. Molina,Monza,23,70,"ED, ES"
+A. Ceesay,Lecce,23,70,ATT
+T. Ebuehi,Empoli,23,70,TD
+A. Micai,Salernitana,23,70,POR
+N. Haas,Empoli,23,70,CC
+J. Baez,Cremonese,23,70,"ED, ES"
+C. Pickel,Cremonese,23,70,"CDC, CC"
+D. Nikolaou,Spezia,23,70,DC
+G. Kastanos,Salernitana,23,70,"COC, CC"
+M. Gabbia,Milan,23,70,DC
+L. Ranieri,Fiorentina,23,70,"TS, DC"
+E. Ebosse,Udinese,23,70,"DC, ASA"
+K. Bistrović,Lecce,23,70,"CDC, CC"
+L. Ferguson,Bologna,23,70,"CC, CDC"
+D. Valencia,Salernitana,23,70,"ATT, AD"
+S. Walukiewicz,Empoli,23,70,DC
+M. Aké,Juventus,23,70,AS
+A. Carboni,Monza,23,70,DC
+B. Soppy,Atalanta,23,70,"ADA, ED"
+F. Afena-Gyan,Cremonese,23,70,ATT
+G. Scalvini,Atalanta,23,70,DC
+V. Fiorillo,Salernitana,23,69,POR
+W. Falcone,Lecce,23,69,POR
+F. Romagna,Sassuolo,23,69,DC
+A. Ćorić,Roma,23,69,"COC, CC"
+M. Svilar,Roma,23,69,POR
+P. Ghiglione,Cremonese,23,69,"ED, TD"
+L. Sernicola,Cremonese,23,69,"TD, TS"
+R. Marchizza,Sassuolo,23,69,TS
+P. Pellegri,Torino,23,69,ATT
+E. Botheim,Salernitana,23,69,ATT
+M. Léris,Sampdoria,23,69,"CC, ED"
+R. Piccoli,Hellas Verona,23,69,ATT
+J. Cabal,Hellas Verona,23,69,"TS, DC"
+L. Colombo,Lecce,23,69,ATT
+M. Marić,Monza,23,69,ATT
+E. Valeri,Cremonese,23,69,TS
+M. Ruggeri,Atalanta,23,69,"ASA, ES"
+D. Samek,Lecce,23,69,"CDC, CC"
+A. Zanoli,Napoli,23,69,TD
+M. Scozzarella,Monza,23,68,"CC, CDC"
+S. Ujkani,Empoli,23,68,POR
+D. Ciofani,Cremonese,23,68,ATT
+A. Tuia,Lecce,23,68,DC
+K. Dermaku,Lecce,23,68,DC
+A. Buongiorno,Torino,23,68,DC
+K. Askildsen,Lecce,23,68,CC
+M. Praszelik,Hellas Verona,23,68,"AT, COC"
+N. Zortea,Atalanta,23,68,"ADA, ED, TD"
+Félix Correia,Juventus,23,68,"AD, AS"
+J. Sosa,Bologna,23,68,"DC, TS"
+J. Antiste,Sassuolo,23,68,ATT
+L. Samardžić,Udinese,23,68,"COC, CC"
+L. Pirola,Salernitana,23,68,DC
+L. Lochoshvili,Cremonese,23,68,DC
+I. Hien,Hellas Verona,23,68,DC
+E. Darboe,Roma,23,68,CDC
+E. Bove,Roma,23,68,CC
+Y. Kallon,Hellas Verona,23,68,"ED, AD, AT"
+M. Soulé,Juventus,23,68,AD
+B. Amione,Sampdoria,23,68,DC
+N. Ravaglia,Sampdoria,23,67,POR
+M. Bourabia,Spezia,23,67,"CDC, CC"
+S. Perilli,Hellas Verona,23,67,POR
+N. Contini,Sampdoria,23,67,POR
+F. Orlando,Salernitana,23,67,"AD, ED"
+M. De Luca,Sampdoria,23,67,ATT
+P. Hristov,Spezia,23,67,DC
+E. Aiwu,Cremonese,23,67,"DC, CDC"
+F. Ranocchia,Monza,23,67,"CC, CDC"
+S. Sy,Salernitana,23,67,"ASA, ES, TS"
+E. Ceïde,Sassuolo,23,67,"ES, AS, ED"
+V. Gendrey,Lecce,23,67,TD
+Salva Ferrer,Spezia,23,67,"ADA, ED, TD"
+A. Terzić,Fiorentina,23,67,TS
+M. Juwara,Bologna,23,67,"ATT, AS"
+J. Doig,Hellas Verona,23,67,"ASA, ES, TS"
+G. Quagliata,Cremonese,23,67,TS
+L. Romero,Lazio,23,67,"AD, COC"
+G. Ferrarini,Monza,23,67,"TD, ADA"
+R. Højlund,Atalanta,23,67,ATT
+F. Baschirotto,Lecce,23,67,"TD, DC"
+D. Coppola,Hellas Verona,23,67,DC
+A. Fontanarosa,Inter,23,67,"DC, TS"
+A. Gallo,Lecce,23,66,TS
+V. Antov,Monza,23,66,DC
+F. Ebosele,Udinese,23,66,"ADA, ED"
+Ruan,Sassuolo,23,66,DC
+T. Baldanzi,Empoli,23,66,"COC, AT"
+M. Zanotti,Inter,23,66,"TD, ED, ADA"
+L. Capezzi,Salernitana,23,65,"CC, CDC"
+M. Listkowski,Lecce,23,65,"CC, AS"
+E. Holm,Spezia,23,65,"ADA, TD, ED"
+F. Tsadjout,Cremonese,23,65,"ATT, AD"
+D. Maldini,Spezia,23,65,COC
+Leandro Sanca,Spezia,23,65,AD
+Þ. Helgason,Lecce,23,65,CC
+M. Lazetić,Milan,23,65,ATT
+N. Cambiaghi,Empoli,23,65,"AS, COC"
+L. Banda,Lecce,23,65,AD
+I. Sulemana Kakari,Hellas Verona,23,65,"CDC, CC, DC"
+M. Chiesa,Hellas Verona,23,65,POR
+F. Terracciano,Hellas Verona,23,65,"ED, TD, CC"
+M. Adamonis,Lazio,23,64,POR
+S. Edera,Torino,23,64,"COC, AT, AD"
+A. Nguiamba,Spezia,23,64,"CC, CDC"
+J. Björkengren,Lecce,23,64,"CDC, CC"
+A. Russo,Sassuolo,23,64,POR
+Pablo Rodríguez,Lecce,23,64,"ATT, AS"
+B. Oddei,Sassuolo,23,64,ED
+D. Strelec,Spezia,23,64,ATT
+C. Volpato,Roma,23,64,COC
+K. De Winter,Empoli,23,64,"DC, TD"
+E. İlkhan,Torino,23,64,"CC, AD, COC"
+L. Gemello,Torino,23,64,POR
+A. Cortinovis,Hellas Verona,23,64,"CC, COC"
+C. Da Graca,Juventus,23,64,ATT
+S. Perisan,Empoli,23,63,POR
+W. Bianda,Roma,23,63,DC
+M. Bleve,Lecce,23,63,POR
+M. Garbett,Torino,23,63,"COC, CC"
+S. Muratore,Atalanta,23,63,CC
+W. Bondo,Monza,23,63,"CC, ED"
+T. Milanese,Cremonese,23,63,CC
+I. Karamoko,Sassuolo,23,63,ED
+Herculano,Empoli,23,63,ATT
+M. Ellertsson,Spezia,23,63,"ED, AD"
+D. Kasius,Bologna,23,63,"ADA, ED"
+A. Raimondo,Bologna,23,63,ATT
+A. Sorrentino,Monza,23,63,POR
+L. D'Andrea,Sassuolo,23,63,COC
+A. Berardi,Hellas Verona,23,62,POR
+M. Sarr,Cremonese,23,62,POR
+A. Sher,Spezia,23,62,CC
+F. Tripi,Roma,23,62,"DC, CDC"
+K. Zedadka,Napoli,23,62,"TS, AS"
+D. Seck,Torino,23,62,"AD, AT, AS"
+Mario Gila,Lazio,23,62,DC
+B. Bayeye,Torino,23,62,"ED, ADA"
+S. Wade,Torino,23,62,"ASA, ES, TS"
+F. Rossi,Atalanta,23,61,POR
+T. Segovia,Sampdoria,23,61,"CC, CDC"
+J. Fazzini,Empoli,23,61,CC
+W. Amey,Bologna,23,61,DC
+Joan González,Lecce,23,61,CC
+J. Persson,Lecce,23,61,ATT
+G. Garofani,Juventus,23,61,POR
+M. Cerofolini,Fiorentina,23,60,POR
+K. Urbański,Bologna,23,60,"COC, CC"
+P. Boer,Roma,23,60,POR
+M. Pagliuca,Bologna,23,60,ATT
+Gerard Yepes,Sampdoria,23,60,CC
+L. Stanga,Milan,23,60,DC
+Leonardo Buta,Udinese,23,60,"ASA, ES"
+C. Acella,Cremonese,23,60,CC
+M. Adopo,Torino,23,59,"CC, CDC, DC"
+A. Guessand,Udinese,23,59,DC
+J. Abankwah,Udinese,23,59,DC
+A. Motoc,Salernitana,23,59,DC
+M. Berisha,Lecce,23,59,CC
+M. Lemmens,Lecce,23,59,TD
+J. Kristoffersen,Salernitana,23,58,ATT
+R. Nizet,Lecce,23,58,TS
+P. Zovko,Spezia,23,58,POR
+S. Angori,Empoli,23,58,"ASA, TS"
+A. Bianco,Fiorentina,23,58,CC
+M. Ciucci,Lecce,23,57,DC
+M. Motolese,Bologna,23,57,DC
+M. Ndiaye,Cremonese,23,57,DC
+G. Saro,Cremonese,23,56,POR
+S. Trimboli,Sampdoria,23,56,CC
+N. Bagnolini,Bologna,23,55,POR
+A. Iervolino,Salernitana,23,55,CC
+J. Ryan,Sassuolo,23,54,"TD, ES"
+F. Brancolini,Lecce,23,53,POR
+E. Piana,Udinese,23,53,POR
+A. Sorrentino,Salernitana,23,53,POR
+D. Ciezkowski,Cremonese,23,51,POR
