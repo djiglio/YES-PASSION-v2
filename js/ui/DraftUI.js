@@ -7,9 +7,44 @@ export class DraftUI {
         
         this.availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
         this.formations = {
-            '4-4-2': ['POR', 'TD', 'DC', 'DC', 'TS', 'ED', 'CC', 'CC', 'ES', 'ATT', 'ATT'],
-            '4-3-3': ['POR', 'TD', 'DC', 'DC', 'TS', 'CC', 'CDC', 'CC', 'AD', 'ATT', 'AS'],
-            '3-5-2': ['POR', 'DC', 'DC', 'DC', 'ED', 'CC', 'CDC', 'CC', 'ES', 'ATT', 'ATT']
+            '4-4-2': [
+                ['POR'],
+                ['TS', 'DC', 'DC', 'TD'],
+                ['ES', 'CC', 'CC', 'ED'],
+                ['ATT', 'ATT']
+            ],
+            '4-3-3': [
+                ['POR'],
+                ['TS', 'DC', 'DC', 'TD'],
+                ['CC', 'CDC', 'CC'],
+                ['AS', 'ATT', 'AD']
+            ],
+            '3-5-2': [
+                ['POR'],
+                ['DC', 'DC', 'DC'],
+                ['ES', 'CC', 'CDC', 'CC', 'ED'],
+                ['ATT', 'ATT']
+            ],
+            '5-3-2': [
+                ['POR'],
+                ['ASA', 'DC', 'DC', 'DC', 'ADA'],
+                ['CC', 'CDC', 'CC'],
+                ['ATT', 'ATT']
+            ],
+            '4-2-3-1': [
+                ['POR'],
+                ['TS', 'DC', 'DC', 'TD'],
+                ['CDC', 'CDC'],
+                ['ES', 'COC', 'ED'],
+                ['ATT']
+            ],
+            '3-4-2-1': [
+                ['POR'],
+                ['DC', 'DC', 'DC'],
+                ['ES', 'CC', 'CC', 'ED'],
+                ['AT', 'AT'],
+                ['ATT']
+            ]
         };
 
         // Draft state
@@ -18,6 +53,7 @@ export class DraftUI {
         this.currentSeasonName = null;
         this.picksRemaining = 11;
         this.selectedPlayer = null;
+        this.blindDraft = false;
     }
 
     async init() {
@@ -27,8 +63,18 @@ export class DraftUI {
     renderFormationSelector() {
         let html = `
             <div class="draft-setup">
-                <h2>Seleziona il Modulo</h2>
-                <div class="formation-options">
+                <h2>Impostazioni Draft</h2>
+                
+                <div class="settings-panel" style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 1.1rem; font-weight: 600;">
+                        <input type="checkbox" id="blind-draft-toggle" style="width: 20px; height: 20px; accent-color: var(--accent);">
+                        Draft al buio (Nascondi Overall)
+                    </label>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Gli Overall saranno rivelati solo al completamento della squadra.</p>
+                </div>
+
+                <h3>Seleziona il Modulo</h3>
+                <div class="formation-options" style="flex-wrap: wrap;">
                     ${Object.keys(this.formations).map(f => `<button class="btn formation-btn" data-form="${f}">${f}</button>`).join('')}
                 </div>
             </div>
@@ -36,20 +82,31 @@ export class DraftUI {
         this.container.innerHTML = html;
 
         this.container.querySelectorAll('.formation-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => this.startDraft(e.target.getAttribute('data-form')));
+            btn.addEventListener('click', (e) => {
+                this.blindDraft = document.getElementById('blind-draft-toggle').checked;
+                this.startDraft(e.target.getAttribute('data-form'));
+            });
         });
     }
 
     async startDraft(formation) {
         this.state.userTeam.formation = formation;
-        const layout = this.formations[formation];
+        const layoutRows = this.formations[formation];
         
-        // Initialize empty slots
-        this.slots = layout.map((role, index) => ({
-            id: index,
-            requiredRole: role,
-            player: null
-        }));
+        // Flatten the array of rows into a single array for slots logic, but keep the row structure for rendering
+        this.slots = [];
+        this.layoutRows = layoutRows;
+        
+        let slotId = 0;
+        layoutRows.forEach(row => {
+            row.forEach(role => {
+                this.slots.push({
+                    id: slotId++,
+                    requiredRole: role,
+                    player: null
+                });
+            });
+        });
 
         this.picksRemaining = 11;
         this.renderDraftBoard();
@@ -83,50 +140,123 @@ export class DraftUI {
     }
 
     renderDraftBoard(isLoading = false) {
-        // Pitch section
-        let pitchHtml = `<div class="pitch">`;
-        this.slots.forEach(slot => {
-            const isFilled = slot.player !== null;
-            pitchHtml += `
-                <div class="slot ${isFilled ? 'filled' : ''}" data-slot-id="${slot.id}">
-                    <div class="slot-role">${slot.requiredRole}</div>
-                    ${isFilled ? `
-                        <div class="slot-name">${slot.player.Nome}</div>
-                        <div class="slot-ovr">${slot.player.Overall}</div>
-                    ` : `<div class="slot-empty">Vuoto</div>`}
-                </div>
-            `;
+        // Pitch section with rows
+        let pitchHtml = `<div class="pitch-container"><div class="pitch">`;
+        
+        // Reconstruct rows from flat slots array
+        let slotIndex = 0;
+        // The formation array is always built from the GK (row 0) to ST (row n).
+        // Since we want the attackers at the top visually, we should reverse the rows when rendering!
+        const reversedRows = [...this.layoutRows].reverse();
+        
+        // Because we reversed the rows for visual representation, we need to carefully match slot IDs.
+        // Actually, let's build the HTML by iterating backwards over the layout.
+        // First, let's map the flat slots back to rows to keep their original IDs correct.
+        const rowsWithSlots = [];
+        let tempIndex = 0;
+        this.layoutRows.forEach(rowRoles => {
+            let rowSlots = [];
+            rowRoles.forEach(() => {
+                rowSlots.push(this.slots[tempIndex++]);
+            });
+            rowsWithSlots.push(rowSlots);
         });
-        pitchHtml += `</div>`;
+
+        // Now iterate in reverse (Attackers at top, GK at bottom)
+        [...rowsWithSlots].reverse().forEach(rowSlots => {
+            pitchHtml += `<div class="pitch-row">`;
+            rowSlots.forEach(slot => {
+                const isFilled = slot.player !== null;
+                const isGold = isFilled && slot.player.Overall >= 85 && !this.blindDraft;
+                const displayOvr = isFilled ? (this.blindDraft ? '?' : slot.player.Overall) : '';
+                
+                pitchHtml += `
+                    <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}" data-slot-id="${slot.id}">
+                        ${isFilled ? `
+                            <div class="card-ovr">${displayOvr}</div>
+                            <div class="card-role">${slot.requiredRole}</div>
+                            <div class="card-img-placeholder"></div>
+                            <div class="card-name">${slot.player.Nome}</div>
+                        ` : `
+                            <div class="slot-role">${slot.requiredRole}</div>
+                        `}
+                    </div>
+                `;
+            });
+            pitchHtml += `</div>`;
+        });
+        pitchHtml += `</div></div>`;
 
         // Team selection section
         let teamHtml = '';
         if (isLoading) {
-            teamHtml = `<div class="loader">Estrazione prossima squadra...</div>`;
+            teamHtml = `<div class="loader-container"><div class="loader">Ricerca prossima squadra...</div></div>`;
         } else if (this.currentTeam) {
+            
+            // Get already drafted player names
+            const draftedNames = new Set(this.slots.filter(s => s.player !== null).map(s => s.player.Nome));
+
+            // Calculate remaining required roles
+            const remainingRoles = new Set();
+            this.slots.forEach(slot => {
+                if (slot.player === null) {
+                    remainingRoles.add(slot.requiredRole);
+                }
+            });
+
+            // Filter players that have at least one role matching remainingRoles AND are not already drafted
+            const filteredPlayers = this.currentTeam.players
+                .map((p, idx) => ({ player: p, originalIdx: idx }))
+                .filter(item => {
+                    if (draftedNames.has(item.player.Nome)) return false;
+                    const pRoles = item.player.Ruolo.split(',').map(r => r.trim());
+                    return pRoles.some(r => remainingRoles.has(r));
+                });
+            
+            // Sorting
+            if (this.blindDraft) {
+                filteredPlayers.sort((a, b) => a.player.Nome.localeCompare(b.player.Nome));
+            } else {
+                filteredPlayers.sort((a, b) => b.player.Overall - a.player.Overall);
+            }
+
             teamHtml = `
                 <div class="draft-team-info">
                     <h3>${this.currentTeam.name} <span class="season-badge">${this.currentSeasonName}</span></h3>
-                    <p>Scegli un giocatore compatibile con i tuoi slot vuoti.</p>
                 </div>
                 <div class="roster-list">
-                    ${this.currentTeam.players.map((p, idx) => `
-                        <div class="roster-player ${this.selectedPlayer === idx ? 'selected' : ''}" data-idx="${idx}">
-                            <span class="p-role">${p.Ruolo}</span>
-                            <span class="p-name">${p.Nome}</span>
-                            <span class="p-ovr">${p.Overall}</span>
+                    ${filteredPlayers.length > 0 ? filteredPlayers.map(item => {
+                        const p = item.player;
+                        const isGold = p.Overall >= 85 && !this.blindDraft;
+                        const displayOvr = this.blindDraft ? '?' : p.Overall;
+                        return `
+                        <div class="roster-player ${this.selectedPlayer && this.selectedPlayer.Nome === p.Nome ? 'selected' : ''}" data-idx="${item.originalIdx}">
+                            <div class="p-left">
+                                <span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>
+                                <span class="p-name">${p.Nome}</span>
+                            </div>
+                            <div class="p-right">
+                                <span class="p-role">${p.Ruolo}</span>
+                            </div>
                         </div>
-                    `).join('')}
+                        `;
+                    }).join('') : `
+                        <div class="no-players-msg">
+                            Nessun giocatore compatibile con i ruoli rimasti. 
+                            <button id="btn-skip-team" class="btn" style="margin-top: 1rem;">Ripesca Squadra</button>
+                        </div>
+                    `}
                 </div>
-                <button id="btn-assign" class="btn" disabled>Assegna allo Slot</button>
             `;
         }
 
         this.container.innerHTML = `
             <div class="draft-container">
                 <div class="draft-left">
-                    <h2>La Tua Formazione (${this.state.userTeam.formation})</h2>
-                    <p>Scelte rimanenti: ${this.picksRemaining}</p>
+                    <div class="draft-header-info">
+                        <h2>Scegli il tuo 11</h2>
+                        <span class="picks-badge">Scelte rimanenti: ${this.picksRemaining}</span>
+                    </div>
                     ${pitchHtml}
                 </div>
                 <div class="draft-right">
@@ -154,6 +284,14 @@ export class DraftUI {
                 this.highlightCompatibleSlots();
             });
         });
+
+        // Skip Team button logic
+        const btnSkip = this.container.querySelector('#btn-skip-team');
+        if (btnSkip) {
+            btnSkip.addEventListener('click', () => {
+                this.rollNextTeam();
+            });
+        }
 
         // Slot assignment
         const slots = this.container.querySelectorAll('.slot:not(.filled)');
@@ -201,23 +339,87 @@ export class DraftUI {
     }
 
     finishDraft() {
+        // Reveal OVRs if they were hidden
+        this.blindDraft = false;
+
         const draftedPlayers = this.slots.map(s => s.player);
         this.state.completeDraft(draftedPlayers);
         
-        this.container.innerHTML = `
-            <div class="draft-complete">
-                <h2>Draft Completato!</h2>
-                <p>La tua squadra è pronta.</p>
-                <button id="btn-to-season" class="btn">Vai alla Scelta Stagione</button>
-            </div>
-        `;
+        // Render the board one last time to show the real OVRs before transitioning
+        this.renderDraftBoard();
 
-        document.getElementById('btn-to-season').addEventListener('click', () => {
-            // Randomly select a season for the championship
-            const randomSeasonId = this.availableSeasons[Math.floor(Math.random() * this.availableSeasons.length)];
-            DataLoader.loadSeason(randomSeasonId).then(seasonData => {
-                this.state.startSeason(seasonData);
+        const stats = this.calculateTeamStats();
+
+        // Replace the right column content with the final stats
+        const rightContainer = this.container.querySelector('.draft-right');
+        if (rightContainer) {
+            rightContainer.innerHTML = `
+                <div class="draft-complete-stats" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height: 100%;">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--accent); text-transform: uppercase; text-shadow: 0 0 10px rgba(0, 230, 255, 0.5);">Squadra Completa!</h2>
+                    
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 12px; width: 100%; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">OVR Totale: <span style="color: var(--accent); font-size: 2.2rem; margin-left: 10px;">${stats.total}</span></h3>
+                        
+                        <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">ATT</span>
+                                <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.att}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">CEN</span>
+                                <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.mid}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">DIF</span>
+                                <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.def}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">POR</span>
+                                <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.gk}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="btn-to-season" class="btn" style="font-size: 1.2rem; padding: 1rem 2rem; width: 100%;">Inizia la Stagione</button>
+                </div>
+            `;
+            
+            document.getElementById('btn-to-season').addEventListener('click', () => {
+                // Randomly select a season for the championship
+                const randomSeasonId = this.availableSeasons[Math.floor(Math.random() * this.availableSeasons.length)];
+                DataLoader.loadSeason(randomSeasonId).then(seasonData => {
+                    this.state.startSeason(seasonData);
+                });
             });
+        }
+    }
+
+    calculateTeamStats() {
+        const stats = { total: 0, att: 0, mid: 0, def: 0, gk: 0 };
+        const counts = { att: 0, mid: 0, def: 0, gk: 0 };
+
+        this.slots.forEach(s => {
+            const r = s.requiredRole;
+            const ovr = s.player.Overall;
+            stats.total += ovr;
+
+            if (['ATT', 'AT', 'AD', 'AS'].includes(r)) {
+                stats.att += ovr; counts.att++;
+            } else if (['CC', 'CDC', 'COC', 'ED', 'ES'].includes(r)) {
+                stats.mid += ovr; counts.mid++;
+            } else if (['DC', 'TS', 'TD', 'ASA', 'ADA'].includes(r)) {
+                stats.def += ovr; counts.def++;
+            } else if (r === 'POR') {
+                stats.gk += ovr; counts.gk++;
+            }
         });
+
+        return {
+            total: Math.round(stats.total / 11),
+            att: counts.att > 0 ? Math.round(stats.att / counts.att) : 0,
+            mid: counts.mid > 0 ? Math.round(stats.mid / counts.mid) : 0,
+            def: counts.def > 0 ? Math.round(stats.def / counts.def) : 0,
+            gk: counts.gk > 0 ? Math.round(stats.gk / counts.gk) : 0
+        };
     }
 }

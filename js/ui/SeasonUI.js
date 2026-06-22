@@ -26,7 +26,10 @@ export class SeasonUI {
         let html = `
             <div class="season-container">
                 <div class="season-left">
-                    <h2>Classifica (Giornata ${this.state.matchday}/38)</h2>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        <h2>Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.state.matchday}/38)</span></h2>
+                        <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">Stagione: ${this.state.currentSeason.season_name}</span>
+                    </div>
                     <div class="standings-table">
                         <div class="s-row s-header">
                             <div class="s-pos">#</div>
@@ -103,7 +106,7 @@ export class SeasonUI {
 
         const currentMatches = this.state.schedule[this.state.matchday - 1];
         const matchResults = [];
-        let userResultHtml = '';
+        let userMatchResult = null;
 
         currentMatches.forEach(match => {
             const homeT = this.state.standings.find(t => t.id === match.home);
@@ -118,33 +121,106 @@ export class SeasonUI {
             });
 
             if (match.home === 'user_team' || match.away === 'user_team') {
-                userResultHtml = `
-                    <div class="user-result">
-                        <h4>Risultato Finale</h4>
-                        <div class="scoreline">${result.homeTeam} <strong>${result.homeScore} - ${result.awayScore}</strong> ${result.awayTeam}</div>
-                        <ul class="events-list">
-                            ${result.events.map(e => `<li>${e.minute}' - ${e.scorer} (${e.isHome ? result.homeTeam : result.awayTeam})</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
+                userMatchResult = result;
             }
         });
 
-        // Aggiorna lo stato
-        this.state.updateStandings(matchResults);
-        this.state.matchday++;
-
-        // Renderizza temporaneamente i risultati
+        // Setup the UI for animation
         const resultsArea = document.getElementById('match-results-area');
-        if (resultsArea && !this.isSimulatingFast) {
-            resultsArea.innerHTML = userResultHtml + `<button id="btn-next-day" class="btn" style="margin-top:1rem;">Avanti</button>`;
-            document.getElementById('btn-next-day').addEventListener('click', () => this.render());
-            
-            // Re-render standings without changing the right panel entirely
-            this.updateStandingsUIOnly();
-        } else {
-            this.render();
+        if (resultsArea) {
+            resultsArea.innerHTML = `
+                <div class="user-result" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h4 style="color: var(--accent); text-transform: uppercase; font-size: 0.9rem; margin: 0;">Risultato Live</h4>
+                        <span id="live-timer" style="background: rgba(255, 0, 0, 0.2); border: 1px solid red; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; font-family: monospace;">0'</span>
+                    </div>
+                    <div class="scoreline" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 1.5rem; font-weight: 900;">
+                        <span style="flex:1; text-align:right;">${userMatchResult.homeTeam}</span>
+                        <span id="live-score" style="background: rgba(0, 230, 255, 0.1); border: 1px solid rgba(0, 230, 255, 0.3); color: var(--accent); padding: 0.5rem 1rem; border-radius: 8px;">0 - 0</span>
+                        <span style="flex:1; text-align:left;">${userMatchResult.awayTeam}</span>
+                    </div>
+                    
+                    <div class="scorers-container" style="display: flex; justify-content: space-between; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); min-height: 80px;">
+                        <div id="live-home-scorers" style="flex: 1; text-align: right; padding-right: 1.5rem; border-right: 1px solid rgba(255,255,255,0.1);"></div>
+                        <div id="live-away-scorers" style="flex: 1; text-align: left; padding-left: 1.5rem;"></div>
+                    </div>
+                    <div id="live-controls" style="margin-top: 1rem; text-align: center;"></div>
+                </div>
+            `;
+
+            // Disabilita i bottoni durante l'animazione se non siamo in sim veloce
+            if (!this.isSimulatingFast) {
+                document.getElementById('btn-play-day').disabled = true;
+                document.getElementById('btn-sim-fast').disabled = true;
+                document.getElementById('btn-sim-all').disabled = true;
+            }
+
+            // Start animation
+            this.animateMatch(userMatchResult, matchResults);
         }
+    }
+
+    animateMatch(userResult, matchResults) {
+        let currentMinute = 0;
+        let currentHomeScore = 0;
+        let currentAwayScore = 0;
+        
+        const homeEvents = userResult.events.filter(e => e.isHome).sort((a,b) => a.minute - b.minute);
+        const awayEvents = userResult.events.filter(e => !e.isHome).sort((a,b) => a.minute - b.minute);
+
+        const timerEl = document.getElementById('live-timer');
+        const scoreEl = document.getElementById('live-score');
+        const homeScorersEl = document.getElementById('live-home-scorers');
+        const awayScorersEl = document.getElementById('live-away-scorers');
+
+        const interval = setInterval(() => {
+            currentMinute++;
+            if (timerEl) timerEl.innerText = currentMinute + "'";
+
+            // Check events for this minute
+            const hEvents = homeEvents.filter(e => e.minute === currentMinute);
+            const aEvents = awayEvents.filter(e => e.minute === currentMinute);
+
+            hEvents.forEach(e => {
+                currentHomeScore++;
+                homeScorersEl.innerHTML += `<div>${e.scorer} <strong>${e.minute}'</strong> ${e.isPenalty ? '<span style="color:var(--accent); font-weight:bold; font-size: 0.8rem;">(RIG)</span>' : ''}</div>`;
+            });
+
+            aEvents.forEach(e => {
+                currentAwayScore++;
+                awayScorersEl.innerHTML += `<div><strong>${e.minute}'</strong> ${e.isPenalty ? '<span style="color:var(--accent); font-weight:bold; font-size: 0.8rem;">(RIG)</span> ' : ''}${e.scorer}</div>`;
+            });
+
+            if (hEvents.length > 0 || aEvents.length > 0) {
+                if (scoreEl) scoreEl.innerText = `${currentHomeScore} - ${currentAwayScore}`;
+            }
+
+            if (currentMinute >= 90) {
+                clearInterval(interval);
+                if (timerEl) {
+                    timerEl.innerText = "FINALE";
+                    timerEl.style.background = "rgba(0, 230, 255, 0.2)";
+                    timerEl.style.borderColor = "var(--accent)";
+                    timerEl.style.color = "var(--accent)";
+                }
+                
+                // End of match: update standings
+                this.state.updateStandings(matchResults);
+                this.state.matchday++;
+                this.updateStandingsUIOnly();
+
+                if (!this.isSimulatingFast) {
+                    const controls = document.getElementById('live-controls');
+                    if (controls) {
+                        controls.innerHTML = `<button id="btn-next-day" class="btn">Avanti</button>`;
+                        document.getElementById('btn-next-day').addEventListener('click', () => this.render());
+                    }
+                } else {
+                    // In fast sim, wait 1.5s then proceed to next matchday
+                    this.fastSimTimeout = setTimeout(() => this.fastSimLoop(), 1500);
+                }
+            }
+        }, 30); // 30ms per minute = 2.7s for a full match
     }
 
     updateStandingsUIOnly() {
@@ -195,9 +271,7 @@ export class SeasonUI {
         }
 
         this.simulateMatchday();
-        // Wait 5 seconds (5000ms), but actually maybe 2 seconds is better so it doesn't take 3 minutes
-        // User requested 5s per matchday. Let's do 3s to be engaging but fast.
-        this.fastSimTimeout = setTimeout(() => this.fastSimLoop(), 3000);
+        // The animation inside animateMatch() handles the timeout to call fastSimLoop again
     }
 
     stopFastSim() {
@@ -228,18 +302,23 @@ export class SeasonUI {
     }
 
     renderEndSeason() {
+        const userTeam = this.state.standings.find(t => t.isUser);
+        const finalPosition = this.state.standings.findIndex(t => t.isUser) + 1;
+        
         this.container.innerHTML = `
-            <div class="end-season">
-                <h2>Stagione Conclusa!</h2>
-                <p>Hai finito il campionato con <strong>${this.state.userTeam.points}</strong> punti!</p>
-                <button class="btn" onclick="window.location.reload()">Rigioca</button>
+            <div class="end-season" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+                <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione Conclusa!</h2>
+                <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${finalPosition}° posto</strong>.</p>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
+                <button class="btn" onclick="window.location.reload()" style="font-size: 1.2rem; padding: 1rem 3rem;">Rigioca</button>
             </div>
-            <div class="standings-table" style="max-width: 600px; margin: 2rem auto;">
+            <div class="standings-table" style="width: 100%; max-width: 800px; margin: 3rem auto; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
                 <!-- Final standings here -->
             </div>
         `;
-        // Quick trick to render standings again in the end screen
+        
         const table = this.container.querySelector('.standings-table');
+        // Re-use updateStandingsUIOnly but point it to this table
         this.updateStandingsUIOnly.call({ container: this.container, state: this.state });
     }
 }

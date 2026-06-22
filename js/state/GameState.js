@@ -94,7 +94,8 @@ export class GameState {
             id: 'user_team',
             name: 'La Tua Squadra',
             isUser: true,
-            stats: this.userTeam.stats
+            stats: this.userTeam.stats,
+            players: this.userTeam.squad // map to players, mapped to squad in init standings
         };
         teams.push(userTeamObj);
 
@@ -111,7 +112,13 @@ export class GameState {
             gf: 0,
             ga: 0,
             gd: 0,
-            stats: t.stats || t.squad_strength
+            stats: t.isUser ? t.stats : {
+                att: t.squad_strength.att_ovr,
+                mid: t.squad_strength.mid_ovr,
+                def: t.squad_strength.def_ovr,
+                gk: t.squad_strength.gk_ovr
+            },
+            squad: t.players || [] // needed for MatchEngine scorers
         }));
 
         // 4. Generate Schedule (Round Robin)

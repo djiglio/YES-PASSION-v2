@@ -63,7 +63,8 @@ export class MatchEngine {
             for (let i = 0; i < goals; i++) {
                 const minute = Math.floor(Math.random() * 90) + 1;
                 let scorer = "Sconosciuto";
-                
+                let isPenalty = Math.random() < 0.1; // 10% chance for a penalty
+
                 if (teamObj.squad && teamObj.squad.length > 0) {
                     // Bias towards attackers
                     const rand = Math.random();
@@ -83,7 +84,8 @@ export class MatchEngine {
                     minute: minute,
                     team: teamObj.name,
                     scorer: scorer,
-                    isHome: isHome
+                    isHome: isHome,
+                    isPenalty: isPenalty
                 });
             }
         };
