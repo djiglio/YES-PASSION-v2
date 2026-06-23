@@ -679,6 +679,7 @@ input[type=range] {
     justify-content: space-between;
     padding: 3rem 1rem;
     border-radius: 8px;
+    pointer-events: none; /* Let clicks pass through the grass */
 }
 
 .pitch::before {
@@ -700,6 +701,7 @@ input[type=range] {
     align-items: center;
     width: 100%;
     transform-style: preserve-3d;
+    pointer-events: none;
 }
 
 .slot-wrapper {
@@ -707,9 +709,10 @@ input[type=range] {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    transform: rotateX(-50deg);
+    transform: rotateX(-50deg) translateZ(20px); /* Lift slightly off the pitch */
     transform-origin: bottom center;
     transition: transform 0.3s ease;
+    pointer-events: none;
 }
 
 .slot {
@@ -900,8 +903,8 @@ input[type=range] {
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.9rem; width: 65px; }
     .pitch-container { max-width: 100%; aspect-ratio: auto; height: 450px; margin-bottom: 20px; perspective: 800px; }
-    .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); }
-    .slot-wrapper { transform: rotateX(-45deg); gap: 2px; }
+    .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
+    .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; pointer-events: none; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
 }
