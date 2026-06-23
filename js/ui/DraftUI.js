@@ -371,11 +371,12 @@ export class DraftUI {
                 pitchHtml += `
                     <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
                         <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}">
+                            ${displayOvr ? `<span class="slot-ovr-inside">${displayOvr}</span>` : ''}
                         </div>
                         ${isFilled ? `
                             <div class="card-name-outside">
-                                ${this.budgetMode && p.Value ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}" style="margin-bottom: 2px;">${p.Value}</div>` : ''}
-                                <span>${shortName}</span>
+                                ${this.budgetMode && p.Value ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}" style="font-size: 0.7rem; padding: 1px 4px; margin-bottom: 2px;">${p.Value}</div>` : ''}
+                                <span style="font-size: 0.8rem;">${shortName}</span>
                             </div>
                         ` : `
                             <div class="slot-role">${slot.requiredRole}</div>

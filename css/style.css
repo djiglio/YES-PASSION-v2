@@ -676,8 +676,8 @@ input[type=range] {
     box-shadow: 0 30px 0 #020914, 0 40px 30px rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem 0.5rem;
+    justify-content: space-between;
+    padding: 0 0.5rem;
     border-radius: 8px;
     pointer-events: none; /* Let clicks pass through the grass */
 }
@@ -739,54 +739,40 @@ input[type=range] {
 }
 
 .slot {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     position: relative;
-    border-radius: 4px 4px 0 0;
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
-    border: none;
     z-index: 2;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.slot::before, .slot::after {
-    content: '';
-    position: absolute;
-    width: 10px; height: 14px;
-    border-radius: 4px;
-    z-index: 1;
-}
-.slot::before {
-    top: 4px; left: -6px;
-    transform: rotate(30deg);
-    box-shadow: inset -1px -2px 2px rgba(0,0,0,0.1);
-}
-.slot::after {
-    top: 4px; right: -6px;
-    transform: rotate(-30deg);
-    box-shadow: inset 1px -2px 2px rgba(0,0,0,0.1);
+    transition: transform 0.2s, filter 0.2s;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Empty slot styling - White T-Shirt */
 .slot:not(.filled) {
-    background: #ffffff;
-}
-.slot:not(.filled)::before, .slot:not(.filled)::after {
-    background: #ffffff;
+    background-image: url('../assets/images/shirt_white.png');
 }
 
 /* Filled slot styling - Red T-Shirt */
 .slot.filled {
-    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-}
-.slot.filled::before, .slot.filled::after {
-    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    background-image: url('../assets/images/shirt_red.png');
 }
 
 .slot.gold-card {
-    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    background-image: url('../assets/images/shirt_gold.png');
 }
-.slot.gold-card::before, .slot.gold-card::after {
-    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+
+.slot-ovr-inside {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    pointer-events: none;
+    margin-top: 4px;
 }
 
 .slot-role {
@@ -824,17 +810,18 @@ input[type=range] {
 }
 
 .card-name-outside {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: center;
     width: 70px;
     white-space: normal;
     word-wrap: break-word;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    margin-top: 6px;
+    margin-top: 4px;
     line-height: 1.1;
+    letter-spacing: 0.5px;
 }
 
 .p-left {
@@ -884,9 +871,9 @@ input[type=range] {
         flex-direction: column-reverse;
     }
     .card-ovr { font-size: 1rem; }
-    .card-name-outside { font-size: 0.8rem; width: 65px; margin-top: 4px; }
+    .card-name-outside { font-size: 0.8rem; width: 65px; margin-top: 2px; }
     .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; margin-top: 0.5rem; }
-    .pitch { padding: 1rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
+    .pitch { padding: 0 0.2rem; transform: rotateX(45deg); pointer-events: none; }
     .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
