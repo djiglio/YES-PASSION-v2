@@ -359,7 +359,7 @@ export class DraftUI {
             rowSlots.forEach(slot => {
                 const isFilled = slot.player !== null;
                 const isGold = isFilled && slot.player.Overall >= 85 && !this.blindDraft;
-                const displayOvr = isFilled ? (this.blindDraft ? '?' : slot.player.Overall) : '';
+                const displayOvr = isFilled ? (this.blindDraft ? '' : slot.player.Overall) : '';
                 const p = slot.player;
                 
                 pitchHtml += `
@@ -367,8 +367,8 @@ export class DraftUI {
                         <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}" data-slot-id="${slot.id}">
                             ${isFilled ? `
                                 <div class="card-top" style="display: flex; flex-direction: column; align-items: center; width: 100%; padding-top: 4px;">
-                                    <div class="card-ovr">${displayOvr}</div>
-                                    <div class="card-role" style="color: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>
+                                    ${displayOvr ? `<div class="card-ovr">${displayOvr}</div>` : ''}
+                                    ${!this.blindDraft ? `<div class="card-role" style="color: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>` : ''}
                                 </div>
                                 <div class="card-img-placeholder"></div>
                                 ${this.budgetMode ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}">${p.Value || ''}</div>` : ''}
@@ -423,7 +423,7 @@ export class DraftUI {
                         return `
                         <div class="roster-player ${this.selectedPlayer && this.selectedPlayer.Nome === p.Nome ? 'selected' : ''}" data-idx="${item.originalIdx}">
                             <div class="p-left">
-                                <span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>
+                                ${displayOvr ? `<span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>` : ''}
                                 <span class="p-name">${p.Nome}</span>
                                 ${this.budgetMode && p.Value ? `<span class="budget-tag-roster ${this.getPriceTierClass(p.ValueNum)}">${p.Value}</span>` : ''}
                             </div>
