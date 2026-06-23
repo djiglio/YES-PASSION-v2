@@ -369,8 +369,8 @@ export class DraftUI {
                 }
 
                 pitchHtml += `
-                    <div class="slot-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
-                        <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}" data-slot-id="${slot.id}">
+                    <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
+                        <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}">
                         </div>
                         ${isFilled ? `
                             <div class="card-name-outside">
@@ -514,8 +514,8 @@ export class DraftUI {
             });
         }
 
-        const slots = this.container.querySelectorAll('.slot:not(.filled)');
-        slots.forEach(s => {
+        const emptyWrappers = this.container.querySelectorAll('.empty-wrapper');
+        emptyWrappers.forEach(s => {
             s.addEventListener('click', (e) => {
                 if (!this.selectedPlayer) return;
                 const slotId = parseInt(e.currentTarget.getAttribute('data-slot-id'));
@@ -525,14 +525,14 @@ export class DraftUI {
     }
 
     highlightCompatibleSlots() {
-        const slotsElements = this.container.querySelectorAll('.slot:not(.filled)');
-        slotsElements.forEach(el => el.classList.remove('compatible'));
+        const wrappers = this.container.querySelectorAll('.empty-wrapper');
+        wrappers.forEach(el => el.classList.remove('compatible'));
 
         if (!this.selectedPlayer) return;
 
         const playerRoles = this.selectedPlayer.Ruolo.split(',').map(r => r.trim());
 
-        slotsElements.forEach(el => {
+        wrappers.forEach(el => {
             const slotId = parseInt(el.getAttribute('data-slot-id'));
             const requiredRole = this.slots[slotId].requiredRole;
             

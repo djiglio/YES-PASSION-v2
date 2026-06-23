@@ -712,20 +712,19 @@ input[type=range] {
     transform: rotateX(-50deg) translateZ(20px); /* Lift slightly off the pitch */
     transform-origin: bottom center;
     transition: transform 0.3s ease;
-    pointer-events: none;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .slot {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     position: relative;
     border-radius: 4px 4px 0 0;
     box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
     border: none;
     z-index: 2;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-    pointer-events: auto;
 }
 .slot::before, .slot::after {
     content: '';
@@ -780,11 +779,11 @@ input[type=range] {
     letter-spacing: 1px;
 }
 
-.slot:hover {
+.slot-wrapper:hover .slot {
     transform: scale(1.1);
 }
 
-.slot.compatible {
+.empty-wrapper.compatible .slot {
     border-color: var(--accent);
     box-shadow: 0 0 15px rgba(0, 230, 255, 0.5);
     animation: pulse-glow 2s infinite;
@@ -862,15 +861,11 @@ input[type=range] {
     .season-container {
         flex-direction: column-reverse;
     }
-    .slot {
-        width: 60px;
-        height: 90px;
-    }
     .card-ovr { font-size: 1rem; }
-    .card-name-outside { font-size: 0.9rem; width: 65px; }
+    .card-name-outside { font-size: 0.8rem; width: 65px; margin-top: 4px; }
     .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; }
     .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
-    .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; pointer-events: none; }
+    .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
 }
