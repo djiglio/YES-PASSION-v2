@@ -309,6 +309,12 @@ export class DraftUI {
                 this.selectedPlayer = this.currentTeam.players[el.getAttribute('data-idx')];
                 
                 this.highlightCompatibleSlots();
+
+                // Auto-scroll on mobile
+                if (window.innerWidth <= 767) {
+                    const pitch = this.container.querySelector('.pitch-container');
+                    if (pitch) pitch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             });
         });
 

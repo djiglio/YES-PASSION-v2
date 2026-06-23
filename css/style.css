@@ -511,10 +511,13 @@ body {
 }
 
 .card-name-outside {
-    font-size: 0.85rem;
-    font-weight: 800;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400; /* Bebas Neue is naturally bold */
     text-align: center;
-    width: 80px;
+    width: 85px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -562,14 +565,22 @@ body {
 }
 
 @media (max-width: 767px) {
+    .draft-container {
+        flex-direction: column;
+    }
+    .season-container {
+        flex-direction: column-reverse;
+    }
     .slot {
         width: 60px;
         height: 90px;
     }
     .card-ovr { font-size: 1rem; }
-    .card-name { font-size: 0.6rem; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 400px; }
+    .card-name-outside { font-size: 0.9rem; width: 65px; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 350px; margin-bottom: 20px; }
     .pitch { padding: 1rem 0.5rem; }
+    .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    .season-left, .season-right { min-width: 100%; }
 }
 /* Budget Mode Enhancements */
 .budget-header-wrapper {
