@@ -192,7 +192,7 @@ export class DraftUI {
                         ${isFilled ? `
                             <div class="card-ovr">${displayOvr}</div>
                             <div class="card-role" style="background: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>
-                            ${this.budgetMode ? `<div class="card-value" style="font-size: 0.8rem; font-weight: bold; background: rgba(0,0,0,0.6); padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.5rem; border: 1px solid var(--accent); color: var(--accent);">${p.Value || ''}</div>` : ''}
+                            ${this.budgetMode ? `<div class="budget-tag-pitch">${p.Value || ''}</div>` : ''}
                             <div class="card-img-placeholder"></div>
                             <div class="card-name">${slot.player.Nome}</div>
                         ` : `
@@ -245,7 +245,7 @@ export class DraftUI {
                             <div class="p-left">
                                 <span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>
                                 <span class="p-name">${p.Nome}</span>
-                                ${this.budgetMode && p.Value ? `<span style="font-size:0.75rem; color: #10b981; background: rgba(16,185,129,0.1); padding: 0.2rem 0.4rem; border-radius:4px; margin-left: 8px; font-family:monospace;">${p.Value}</span>` : ''}
+                                ${this.budgetMode && p.Value ? `<span class="budget-tag-roster">${p.Value}</span>` : ''}
                             </div>
                             <div class="p-right">
                                 <span class="p-role">${p.Ruolo}</span>
@@ -271,10 +271,12 @@ export class DraftUI {
                             <span class="picks-badge">Scelte rimanenti: ${this.picksRemaining}</span>
                         </div>
                         ${this.budgetMode ? `
-                        <div class="budget-bar-container" style="width: 100%; margin-top: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; position: relative; height: 28px;">
-                            <div class="budget-fill" style="width: ${Math.min((this.budgetSpent / this.budgetMax) * 100, 100)}%; height: 100%; background: ${this.budgetSpent > this.budgetMax ? 'red' : 'var(--accent)'}; transition: width 0.3s ease;"></div>
-                            <div class="budget-text" style="position: absolute; width: 100%; text-align: center; top: 0; line-height: 28px; font-size: 0.95rem; font-weight: bold; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
-                                Budget: €${(this.budgetSpent/1000000).toFixed(1)}M / €${(this.budgetMax/1000000).toFixed(1)}M
+                        <div class="budget-header-wrapper">
+                            <div class="budget-bar-container">
+                                <div class="budget-fill" style="width: ${Math.min((this.budgetSpent / this.budgetMax) * 100, 100)}%; background: ${this.budgetSpent > this.budgetMax ? 'var(--danger-color, #ef4444)' : 'var(--accent)'};"></div>
+                                <div class="budget-text">
+                                    BUDGET: €${(this.budgetSpent/1000000).toFixed(1)}M <span style="opacity:0.6; font-weight:normal;">/ €${(this.budgetMax/1000000).toFixed(1)}M</span>
+                                </div>
                             </div>
                         </div>
                         ` : ''}
