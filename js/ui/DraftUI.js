@@ -141,8 +141,8 @@ export class DraftUI {
 
             <div id="formation-selection" style="display: none; text-align: center; margin-top: 2rem;">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">SELEZIONA IL MODULO PER INIZIARE</h3>
-                <div class="formation-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; max-width: 600px; margin: 0 auto;">
-                    ${Object.keys(this.formations).map(f => `<button class="btn formation-btn" data-form="${f}" style="padding: 1rem; font-size: 1.4rem; font-family: 'Bebas Neue', sans-serif;">${f}</button>`).join('')}
+                <div class="formation-accordion" id="formation-accordion-container">
+                    <!-- Generato via JS -->
                 </div>
             </div>
         `;
@@ -205,18 +205,77 @@ export class DraftUI {
             formationSelection.style.display = 'block';
         });
 
-        this.container.querySelectorAll('.formation-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
+        // Genera Accordion Moduli
+        const accordionContainer = document.getElementById('formation-accordion-container');
+        let accordionHtml = '';
+        Object.keys(this.formations).forEach(f => {
+            const rows = [...this.formations[f]].reverse();
+            let pitchContent = '';
+            rows.forEach(row => {
+                pitchContent += `<div class="mini-pitch-row">`;
+                row.forEach(role => {
+                    pitchContent += `
+                        <div class="mini-player">
+                            <div class="mini-shirt"></div>
+                            <div class="mini-role">${role}</div>
+                        </div>
+                    `;
+                });
+                pitchContent += `</div>`;
+            });
+
+            accordionHtml += `
+                <div class="formation-item" data-form="${f}">
+                    <div class="formation-header">
+                        <span class="formation-name">${f}</span>
+                        <button class="btn-confirm-formation" style="display: none;">✔</button>
+                    </div>
+                    <div class="formation-body">
+                        <div class="mini-pitch">
+                            ${pitchContent}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        accordionContainer.innerHTML = accordionHtml;
+
+        // Gestione Accordion
+        const formationItems = accordionContainer.querySelectorAll('.formation-item');
+        formationItems.forEach(item => {
+            const header = item.querySelector('.formation-header');
+            const confirmBtn = item.querySelector('.btn-confirm-formation');
+            const f = item.getAttribute('data-form');
+
+            header.addEventListener('click', (e) => {
+                // Se ha cliccato il bottone di conferma, non fare toggle
+                if (e.target === confirmBtn || confirmBtn.contains(e.target)) return;
+
+                const isActive = item.classList.contains('active');
+                
+                // Chiudi tutti
+                formationItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.btn-confirm-formation').style.display = 'none';
+                });
+
+                // Se non era attivo, aprilo
+                if (!isActive) {
+                    item.classList.add('active');
+                    confirmBtn.style.display = 'flex';
+                }
+            });
+
+            confirmBtn.addEventListener('click', () => {
                 this.budgetSpent = 0;
                 
-                // Set available seasons
                 if (this.customSeason && this.customSeason !== 'all') {
                     this.availableSeasons = [parseInt(this.customSeason)];
                 } else {
                     this.availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
                 }
 
-                this.startDraft(e.target.getAttribute('data-form'));
+                this.startDraft(f);
             });
         });
     }

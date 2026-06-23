@@ -51,11 +51,11 @@ body {
 }
 
 .logo {
-    font-family: var(--font-heading);
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
-    font-weight: 900;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }
 .logo-centered {
     display: flex;
@@ -141,6 +141,168 @@ body {
 }
 input[type=range] {
     accent-color: var(--accent);
+}
+
+.formation-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formation-item {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+}
+
+.formation-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.formation-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    letter-spacing: 2px;
+}
+
+.formation-item.active .formation-header {
+    background: rgba(0, 230, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 230, 255, 0.3);
+}
+
+.formation-item.active .formation-name {
+    color: var(--accent);
+}
+
+.btn-confirm-formation {
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+    transition: transform 0.2s;
+}
+.btn-confirm-formation:hover {
+    transform: scale(1.1);
+}
+
+.formation-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background: rgba(0,0,0,0.4);
+}
+
+.formation-item.active .formation-body {
+    max-height: 600px; /* high enough to contain the pitch */
+}
+
+/* Mini pitch styling */
+.mini-pitch {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    max-height: 400px;
+    background: #0b1f3d;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    margin: 1rem auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column-reverse; /* Attackers on top, GK at bottom */
+    justify-content: space-around;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.mini-pitch::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        /* Center circle */
+        radial-gradient(circle at 50% 50%, transparent 48px, rgba(255,255,255,0.15) 50px, transparent 52px),
+        /* Halfway line */
+        linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255,255,255,0.15) 50%, transparent calc(50% + 1px));
+    pointer-events: none;
+}
+
+.mini-pitch-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+.mini-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+
+.mini-shirt {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
+}
+.mini-shirt::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -6px;
+    width: 10px;
+    height: 14px;
+    background: white;
+    border-radius: 4px;
+    transform: rotate(30deg);
+    box-shadow: inset -1px -2px 2px rgba(0,0,0,0.1);
+}
+.mini-shirt::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -6px;
+    width: 10px;
+    height: 14px;
+    background: white;
+    border-radius: 4px;
+    transform: rotate(-30deg);
+    box-shadow: inset 1px -2px 2px rgba(0,0,0,0.1);
+}
+
+.mini-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 4px;
+    text-shadow: 0 1px 2px black;
+    text-align: center;
 }
 
 .logo-passion {
