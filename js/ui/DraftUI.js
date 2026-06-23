@@ -332,7 +332,7 @@ export class DraftUI {
 
     renderDraftBoard(isLoading = false) {
         // Pitch section with rows
-        let pitchHtml = `<div class="pitch-container"><div class="pitch">`;
+        let pitchHtml = ``;
         
         // Reconstruct rows from flat slots array
         let slotIndex = 0;
@@ -355,7 +355,7 @@ export class DraftUI {
 
         // Now iterate in reverse (Attackers at top, GK at bottom)
         [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
-            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx};">`;
+            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
             rowSlots.forEach(slot => {
                 const isFilled = slot.player !== null;
                 const isGold = isFilled && slot.player.Overall >= 85 && !this.blindDraft;
@@ -385,7 +385,7 @@ export class DraftUI {
             });
             pitchHtml += `</div>`;
         });
-        pitchHtml += `</div></div>`;
+
 
         let teamHtml = '';
         if (isLoading) {
@@ -465,7 +465,12 @@ export class DraftUI {
                         </div>
                         `}
                     </div>
-                    ${pitchHtml}
+                    <div class="pitch-container" style="pointer-events: none;">
+                        <div class="pitch">
+                            <div class="pitch-lines"></div>
+                            ${pitchHtml}
+                        </div>
+                    </div>
                 </div>
                 <div class="draft-right">
                     ${teamHtml}

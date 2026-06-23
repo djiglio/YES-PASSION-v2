@@ -695,6 +695,27 @@ input[type=range] {
     margin: 5%;
 }
 
+.pitch-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+.pitch-lines::before {
+    content: '';
+    position: absolute;
+    top: 5%; left: 25%; right: 25%; height: 18%;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-top: none;
+}
+.pitch-lines::after {
+    content: '';
+    position: absolute;
+    bottom: 5%; left: 25%; right: 25%; height: 18%;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-bottom: none;
+}
+
 .pitch-row {
     display: flex;
     justify-content: space-around;
