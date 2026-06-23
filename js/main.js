@@ -29,7 +29,8 @@ class GameApp {
 
         const globalHeader = document.getElementById('global-header');
         if (globalHeader) {
-            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME') ? 'none' : 'block';
+            // Hide on INIT, HOME, and SETUP (Module selection)
+            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME' || state.phase === 'SETUP') ? 'none' : 'block';
         }
 
         switch(state.phase) {
