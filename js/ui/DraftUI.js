@@ -361,22 +361,25 @@ export class DraftUI {
                 const isGold = isFilled && slot.player.Overall >= 85 && !this.blindDraft;
                 const displayOvr = isFilled ? (this.blindDraft ? '' : slot.player.Overall) : '';
                 const p = slot.player;
-                
+                let shortName = '';
+                if (isFilled && p) {
+                    shortName = p.Nome;
+                    // Remove initial dot: "Z. Ibrahimovic" -> "Ibrahimovic", "A. Del Piero" -> "Del Piero"
+                    shortName = shortName.replace(/^[A-Z]\.\s*/i, '');
+                }
+
                 pitchHtml += `
                     <div class="slot-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
                         <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}" data-slot-id="${slot.id}">
-                            ${isFilled ? `
-                                <div class="card-top" style="display: flex; flex-direction: column; align-items: center; width: 100%; padding-top: 4px;">
-                                    ${displayOvr ? `<div class="card-ovr">${displayOvr}</div>` : ''}
-                                    ${!this.blindDraft ? `<div class="card-role" style="color: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>` : ''}
-                                </div>
-                                <div class="card-img-placeholder"></div>
-                                ${this.budgetMode ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}">${p.Value || ''}</div>` : ''}
-                            ` : `
-                                <div class="slot-role">${slot.requiredRole}</div>
-                            `}
                         </div>
-                        ${isFilled ? `<div class="card-name-outside">${slot.player.Nome}</div>` : `<div class="card-name-outside" style="opacity: 0; user-select: none;">-</div>`}
+                        ${isFilled ? `
+                            <div class="card-name-outside">
+                                ${this.budgetMode && p.Value ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}" style="margin-bottom: 2px;">${p.Value}</div>` : ''}
+                                <span>${shortName}</span>
+                            </div>
+                        ` : `
+                            <div class="slot-role">${slot.requiredRole}</div>
+                        `}
                     </div>
                 `;
             });

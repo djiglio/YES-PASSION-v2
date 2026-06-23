@@ -654,9 +654,9 @@ input[type=range] {
 
 .pitch-container {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    max-width: 700px;
-    max-height: 850px;
+    aspect-ratio: 3 / 5;
+    max-width: 800px;
+    max-height: 1000px;
     margin: 2rem auto;
     perspective: 1200px;
     transform-style: preserve-3d;
@@ -676,7 +676,7 @@ input[type=range] {
     box-shadow: 0 30px 0 #020914, 0 40px 30px rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 3rem 1rem;
     border-radius: 8px;
     pointer-events: none; /* Let clicks pass through the grass */
@@ -716,50 +716,56 @@ input[type=range] {
 }
 
 .slot {
-    width: 74px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 30px;
+    height: 30px;
     position: relative;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
+    border: none;
+    z-index: 2;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     pointer-events: auto;
 }
-
-/* Empty slot styling - T-Shirt 3D (White and Smaller) */
-.slot:not(.filled) {
-    width: 30px;
-    height: 30px;
-    background: #ffffff;
-    border-radius: 4px 4px 0 0;
-    position: relative;
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
-    border: none;
-    z-index: 2;
-}
-.slot:not(.filled)::before {
+.slot::before, .slot::after {
     content: '';
     position: absolute;
-    top: 4px; left: -6px;
     width: 10px; height: 14px;
-    background: #ffffff;
     border-radius: 4px;
+    z-index: 1;
+}
+.slot::before {
+    top: 4px; left: -6px;
     transform: rotate(30deg);
     box-shadow: inset -1px -2px 2px rgba(0,0,0,0.1);
-    z-index: 1;
 }
-.slot:not(.filled)::after {
-    content: '';
-    position: absolute;
+.slot::after {
     top: 4px; right: -6px;
-    width: 10px; height: 14px;
-    background: #ffffff;
-    border-radius: 4px;
     transform: rotate(-30deg);
     box-shadow: inset 1px -2px 2px rgba(0,0,0,0.1);
-    z-index: 1;
+}
+
+/* Empty slot styling - White T-Shirt */
+.slot:not(.filled) {
+    background: #ffffff;
+}
+.slot:not(.filled)::before, .slot:not(.filled)::after {
+    background: #ffffff;
+}
+
+/* Filled slot styling - Red T-Shirt */
+.slot.filled {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+.slot.filled::before, .slot.filled::after {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+
+.slot.gold-card {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+}
+.slot.gold-card::before, .slot.gold-card::after {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
 }
 
 .slot-role {
@@ -775,7 +781,7 @@ input[type=range] {
 }
 
 .slot:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .slot.compatible {
@@ -789,45 +795,6 @@ input[type=range] {
     50% { box-shadow: 0 0 20px rgba(0, 230, 255, 0.8); }
     100% { box-shadow: 0 0 5px rgba(0, 230, 255, 0.2); }
 }
-
-.slot.filled {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border: 1px solid #334155;
-    border-radius: 6px;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    backdrop-filter: blur(4px);
-}
-
-.slot.gold-card {
-    background: linear-gradient(135deg, #1e3a8a 0%, #00e6ff 50%, #1e3a8a 100%);
-    border-color: #00e6ff;
-    color: #fff;
-}
-
-.gold-card .card-role, .gold-card .card-ovr {
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.card-ovr {
-    font-size: 1.2rem;
-    font-weight: 900;
-    margin-top: 2px;
-}
-
-.card-role {
-    font-size: 0.7rem;
-    font-weight: 800;
-    opacity: 0.8;
-}
-
-.card-img-placeholder {
-    flex: 1;
-    width: 60%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,0.4)"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: center bottom;
 }
 
@@ -836,18 +803,17 @@ input[type=range] {
 }
 
 .card-name-outside {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 400; /* Bebas Neue is naturally bold */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
     text-align: center;
-    width: 85px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 70px;
+    white-space: normal;
+    word-wrap: break-word;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    margin-top: 6px;
+    line-height: 1.1;
 }
 
 .p-left {
@@ -902,7 +868,7 @@ input[type=range] {
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.9rem; width: 65px; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 450px; margin-bottom: 20px; perspective: 800px; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; }
     .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
     .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; pointer-events: none; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
