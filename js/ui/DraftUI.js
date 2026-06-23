@@ -350,7 +350,7 @@ export class DraftUI {
         }
 
         if (this.budgetMode) {
-            const playerCost = this.selectedPlayer.ValueNum;
+            const playerCost = this.selectedPlayer.ValueNum || 0;
             if (this.budgetSpent + playerCost > this.budgetMax) {
                 alert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M.`);
                 return;

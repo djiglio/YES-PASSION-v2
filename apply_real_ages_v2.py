@@ -129,27 +129,28 @@ def main():
                 
                 val = 0
                 if ovr >= 90:
-                    val = 60 + (ovr - 90) * 15
+                    val = 90 + (ovr - 90) * 20
                 elif ovr >= 85:
-                    val = 25 + (ovr - 85) * 7
+                    val = 45 + (ovr - 85) * 9
                 elif ovr >= 80:
-                    val = 12 + (ovr - 80) * 2.5
+                    val = 20 + (ovr - 80) * 5
                 elif ovr >= 75:
-                    val = 4 + (ovr - 75) * 1.5
+                    val = 8 + (ovr - 75) * 2.4
                 elif ovr >= 70:
-                    val = 1.5 + (ovr - 70) * 0.5
+                    val = 3.5 + (ovr - 70) * 0.9
                 elif ovr >= 65:
-                    val = 0.5 + (ovr - 65) * 0.2
+                    val = 1.0 + (ovr - 65) * 0.5
                 else:
-                    val = 0.2
+                    val = 0.5
                     
-                # Age multiplier - Reduced penalty for older players
-                if age <= 21: val *= 1.6
-                elif age <= 24: val *= 1.2
-                elif age <= 28: val *= 1.0
-                elif age <= 31: val *= 0.85
-                elif age <= 34: val *= 0.6
-                else: val *= 0.4
+                # Age multiplier - Hyper-realistic modern market
+                if age <= 19: val *= 2.2      # Wonderkids
+                elif age <= 22: val *= 1.6    # Young prospects
+                elif age <= 25: val *= 1.2    # Entering prime
+                elif age <= 28: val *= 1.0    # Prime
+                elif age <= 31: val *= 0.8    # Post-prime
+                elif age <= 34: val *= 0.5    # Veterans
+                else: val *= 0.3              # Retirement
                     
                 variance = ((len(name) % 10) / 100.0) - 0.05
                 val = val * (1 + variance)
