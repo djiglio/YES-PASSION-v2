@@ -654,28 +654,44 @@ input[type=range] {
 
 .pitch-container {
     width: 100%;
-    aspect-ratio: 9 / 16;
-    max-width: 600px;
+    aspect-ratio: 4 / 5;
+    max-width: 700px;
     max-height: 850px;
-    margin: 0 auto;
-    background-image: url('../assets/images/vertical_pitch.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
+    margin: 2rem auto;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    background: transparent;
     border: none;
     box-shadow: none;
-    overflow: hidden;
-    position: relative;
+    overflow: visible;
 }
 
 .pitch {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+    transform: rotateX(50deg);
+    transform-style: preserve-3d;
+    background: linear-gradient(180deg, #0b2247 0%, #05132b 100%);
+    border: 2px solid rgba(0, 150, 255, 0.4);
+    box-shadow: 0 30px 0 #020914, 0 40px 30px rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 1rem;
-    background: none;
+    padding: 3rem 1rem;
+    border-radius: 8px;
+}
+
+.pitch::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        radial-gradient(circle at 50% 50%, transparent 20%, rgba(255,255,255,0.1) 21%, transparent 22%),
+        linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255,255,255,0.1) 50%, transparent calc(50% + 1px)),
+        linear-gradient(to right, transparent calc(50% - 1px), rgba(255,255,255,0.1) 50%, transparent calc(50% + 1px));
+    pointer-events: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin: 5%;
 }
 
 .pitch-row {
@@ -683,6 +699,17 @@ input[type=range] {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    transform-style: preserve-3d;
+}
+
+.slot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transform: rotateX(-50deg);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
 }
 
 .slot {
@@ -697,12 +724,52 @@ input[type=range] {
     cursor: pointer;
 }
 
-/* Empty slot styling - just role acronym */
+/* Empty slot styling - T-Shirt 3D */
 .slot:not(.filled) {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to bottom, #1e3a8a, #0b1f3d);
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    box-shadow: inset -2px -2px 6px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    z-index: 2;
+}
+.slot:not(.filled)::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: -10px;
+    width: 14px; height: 20px;
+    background: linear-gradient(to bottom, #1e3a8a, #0b1f3d);
+    border-radius: 4px;
+    transform: rotate(30deg);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset -1px -2px 3px rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.slot:not(.filled)::after {
+    content: '';
+    position: absolute;
+    top: 6px; right: -10px;
+    width: 14px; height: 20px;
+    background: linear-gradient(to bottom, #1e3a8a, #0b1f3d);
+    border-radius: 4px;
+    transform: rotate(-30deg);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 1px -2px 3px rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.slot-role {
+    position: absolute;
+    bottom: -25px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    color: rgba(255,255,255,0.5);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .slot:hover {
@@ -833,8 +900,9 @@ input[type=range] {
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.9rem; width: 65px; }
-    .pitch-container { max-width: 100%; aspect-ratio: 4/5; height: auto; min-height: 400px; margin-bottom: 20px; }
-    .pitch { padding: 1rem 0.2rem; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 450px; margin-bottom: 20px; perspective: 800px; }
+    .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); }
+    .slot-wrapper { transform: rotateX(-45deg); gap: 2px; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
 }
