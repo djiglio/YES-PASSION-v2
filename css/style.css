@@ -657,7 +657,7 @@ input[type=range] {
     aspect-ratio: 3 / 5;
     max-width: 800px;
     max-height: 1000px;
-    margin: 2rem auto;
+    margin: 0.5rem auto 2rem auto;
     perspective: 1200px;
     transform-style: preserve-3d;
     background: transparent;
@@ -677,7 +677,7 @@ input[type=range] {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 3rem 1rem;
+    padding: 1rem 0.5rem;
     border-radius: 8px;
     pointer-events: none; /* Let clicks pass through the grass */
 }
@@ -702,6 +702,7 @@ input[type=range] {
     width: 100%;
     transform-style: preserve-3d;
     pointer-events: none;
+    position: relative;
 }
 
 .slot-wrapper {
@@ -863,8 +864,8 @@ input[type=range] {
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.8rem; width: 65px; margin-top: 4px; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; }
-    .pitch { padding: 3rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; margin-top: 0.5rem; }
+    .pitch { padding: 1rem 0.2rem; transform: rotateX(45deg); pointer-events: none; }
     .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }

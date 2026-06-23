@@ -354,8 +354,8 @@ export class DraftUI {
         });
 
         // Now iterate in reverse (Attackers at top, GK at bottom)
-        [...rowsWithSlots].reverse().forEach(rowSlots => {
-            pitchHtml += `<div class="pitch-row">`;
+        [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
+            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx};">`;
             rowSlots.forEach(slot => {
                 const isFilled = slot.player !== null;
                 const isGold = isFilled && slot.player.Overall >= 85 && !this.blindDraft;
