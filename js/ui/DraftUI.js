@@ -466,9 +466,11 @@ export class DraftUI {
                         </div>
                         `}
                     </div>
-                    <div class="pitch-container" style="pointer-events: none;">
-                        <div class="pitch">
+                    <div class="pitch-container" style="pointer-events: none; position: relative;">
+                        <div class="pitch-bg">
                             <div class="pitch-lines"></div>
+                        </div>
+                        <div class="pitch-players">
                             ${pitchHtml}
                         </div>
                     </div>

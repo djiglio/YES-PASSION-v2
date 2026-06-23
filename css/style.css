@@ -666,23 +666,29 @@ input[type=range] {
     overflow: visible;
 }
 
-.pitch {
+.pitch-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: rotateX(50deg);
+    transform: rotateX(40deg);
     transform-style: preserve-3d;
     background: linear-gradient(180deg, #0b2247 0%, #05132b 100%);
     border: 2px solid rgba(0, 150, 255, 0.4);
     box-shadow: 0 30px 0 #020914, 0 40px 30px rgba(0,0,0,0.8);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.pitch-players {
+    position: absolute;
+    top: 10%; left: 0; right: 0; bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem 0.5rem;
-    border-radius: 8px;
-    pointer-events: none; /* Let clicks pass through the grass */
+    padding: 0 0.5rem;
+    pointer-events: none;
 }
 
-.pitch::before {
+.pitch-bg::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -721,7 +727,6 @@ input[type=range] {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    transform-style: preserve-3d;
     pointer-events: none;
     position: relative;
 }
@@ -731,9 +736,6 @@ input[type=range] {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    transform: rotateX(-50deg) translateZ(20px); /* Lift slightly off the pitch */
-    transform-origin: bottom center;
-    transition: transform 0.3s ease;
     cursor: pointer;
     pointer-events: auto;
 }
@@ -872,9 +874,10 @@ input[type=range] {
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.8rem; width: 55px; margin-top: 2px; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 550px; margin-bottom: 20px; perspective: 800px; margin-top: 0; }
-    .pitch { padding: 1.5rem 0.2rem; transform: rotateX(40deg); pointer-events: none; }
-    .slot-wrapper { transform: rotateX(-45deg) translateZ(15px); gap: 2px; cursor: pointer; pointer-events: auto; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 500px; margin-bottom: 20px; perspective: 800px; margin-top: 0; }
+    .pitch-bg { transform: rotateX(40deg); pointer-events: none; }
+    .pitch-players { top: 5%; bottom: 5%; }
+    .slot-wrapper { gap: 2px; cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
 }
