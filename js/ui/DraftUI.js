@@ -353,9 +353,12 @@ export class DraftUI {
         }
 
         if (this.budgetMode) {
+            this.budgetSpent = parseFloat(this.budgetSpent) || 0;
+            this.budgetMax = parseFloat(this.budgetMax) || 500000000;
             const playerCost = parseFloat(this.selectedPlayer.ValueNum) || 0;
+            
             if (this.budgetSpent + playerCost > this.budgetMax) {
-                alert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M.`);
+                alert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M. (DEBUG: spent=${this.budgetSpent}, cost=${playerCost}, max=${this.budgetMax})`);
                 return;
             }
             this.budgetSpent += playerCost;
