@@ -62,7 +62,7 @@ export class DraftUI {
         this.blindDraft = false;
         
         this.budgetMode = false;
-        this.budgetMax = 150000000; // 150M default
+        this.budgetMax = 500000000; // 500M default
         this.budgetSpent = 0;
     }
 
@@ -192,7 +192,7 @@ export class DraftUI {
                         ${isFilled ? `
                             <div class="card-ovr">${displayOvr}</div>
                             <div class="card-role" style="background: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>
-                            ${this.budgetMode ? `<div class="budget-tag-pitch">${p.Value || ''}</div>` : ''}
+                            ${this.budgetMode ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}">${p.Value || ''}</div>` : ''}
                             <div class="card-img-placeholder"></div>
                             <div class="card-name">${slot.player.Nome}</div>
                         ` : `
@@ -245,7 +245,7 @@ export class DraftUI {
                             <div class="p-left">
                                 <span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>
                                 <span class="p-name">${p.Nome}</span>
-                                ${this.budgetMode && p.Value ? `<span class="budget-tag-roster">${p.Value}</span>` : ''}
+                                ${this.budgetMode && p.Value ? `<span class="budget-tag-roster ${this.getPriceTierClass(p.ValueNum)}">${p.Value}</span>` : ''}
                             </div>
                             <div class="p-right">
                                 <span class="p-role">${p.Ruolo}</span>
@@ -266,20 +266,21 @@ export class DraftUI {
             <div class="draft-container">
                 <div class="draft-left">
                     <div class="draft-header-info">
-                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                            <h2>Scegli il tuo 11</h2>
-                            <span class="picks-badge">Scelte rimanenti: ${this.picksRemaining}</span>
-                        </div>
                         ${this.budgetMode ? `
                         <div class="budget-header-wrapper">
                             <div class="budget-bar-container">
                                 <div class="budget-fill" style="width: ${Math.min((this.budgetSpent / this.budgetMax) * 100, 100)}%; background: ${this.budgetSpent > this.budgetMax ? 'var(--danger-color, #ef4444)' : 'var(--accent)'};"></div>
-                                <div class="budget-text">
-                                    BUDGET: €${(this.budgetSpent/1000000).toFixed(1)}M <span style="opacity:0.6; font-weight:normal;">/ €${(this.budgetMax/1000000).toFixed(1)}M</span>
+                                <div class="budget-text" style="display:flex; justify-content:space-between; padding: 0 15px;">
+                                    <span>BUDGET: €${(this.budgetSpent/1000000).toFixed(1)}M <span style="opacity:0.6; font-weight:normal;">/ €${(this.budgetMax/1000000).toFixed(1)}M</span></span>
+                                    <span>Scelte rimanenti: ${this.picksRemaining}</span>
                                 </div>
                             </div>
                         </div>
-                        ` : ''}
+                        ` : `
+                        <div style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 10px;">
+                            <span class="picks-badge">Scelte rimanenti: ${this.picksRemaining}</span>
+                        </div>
+                        `}
                     </div>
                     ${pitchHtml}
                 </div>
@@ -352,7 +353,7 @@ export class DraftUI {
         }
 
         if (this.budgetMode) {
-            const playerCost = this.selectedPlayer.ValueNum || 0;
+            const playerCost = parseFloat(this.selectedPlayer.ValueNum) || 0;
             if (this.budgetSpent + playerCost > this.budgetMax) {
                 alert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M.`);
                 return;
@@ -363,6 +364,13 @@ export class DraftUI {
         slot.player = this.selectedPlayer;
         this.picksRemaining--;
         this.rollNextTeam();
+    }
+
+    getPriceTierClass(valueNum) {
+        const val = parseFloat(valueNum) || 0;
+        if (val >= 50000000) return 'budget-tier-high';
+        if (val >= 15000000) return 'budget-tier-med';
+        return 'budget-tier-low';
     }
 
     finishDraft() {
