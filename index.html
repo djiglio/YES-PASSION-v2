@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+<head>\n<script>
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+        alert('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nStack: ' + (error ? error.stack : ''));
+        return false;
+    };
+    window.addEventListener('unhandledrejection', function(event) {
+        alert('Promise Error: ' + event.reason);
+    });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yes Passion - Football Manager</title>

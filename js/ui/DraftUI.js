@@ -376,6 +376,15 @@ export class DraftUI {
         return 'budget-tier-low';
     }
 
+    getRoleColor(role) {
+        const r = role.trim();
+        if (['ATT', 'AT', 'AD', 'AS'].includes(r)) return '#ef4444'; // Red for attackers
+        if (['CC', 'CDC', 'COC', 'ED', 'ES'].includes(r)) return '#10b981'; // Green for midfielders
+        if (['DC', 'TS', 'TD', 'ASA', 'ADA'].includes(r)) return '#3b82f6'; // Blue for defenders
+        if (r === 'POR') return '#eab308'; // Yellow for GK
+        return '#888';
+    }
+
     finishDraft() {
         this.blindDraft = false;
 
