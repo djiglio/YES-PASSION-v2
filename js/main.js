@@ -27,6 +27,11 @@ class GameApp {
             statusBar.textContent = `Fase Attuale: ${state.phase}`;
         }
 
+        const globalHeader = document.getElementById('global-header');
+        if (globalHeader) {
+            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME') ? 'none' : 'block';
+        }
+
         switch(state.phase) {
             case GAME_PHASES.INIT:
                 content.innerHTML = `<div class="loader">Caricamento Motore di Gioco...</div>`;

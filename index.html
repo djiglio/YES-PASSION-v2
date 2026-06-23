@@ -10,9 +10,10 @@
 </head>
 <body>
     <div id="app" class="app-container">
-
-
-        <!-- MAIN CONTENT AREA (Dynamic) -->
+        <!-- GLOBAL HEADER -->
+        <header id="global-header" style="display: none; padding: 15px 20px; position: absolute; top: 0; left: 0; z-index: 2000; width: 100%;">
+            <h1 style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; cursor: pointer; color: var(--accent); text-shadow: 0 2px 4px rgba(0,0,0,0.8); transition: transform 0.2s; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="window.location.reload()">YES PASSION</h1>
+        </header>        <!-- MAIN CONTENT AREA (Dynamic) -->
         <main id="game-content" class="game-content">
             <div class="loader">Caricamento Dati...</div>
         </main>
