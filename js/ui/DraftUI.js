@@ -192,7 +192,7 @@ export class DraftUI {
                         ${isFilled ? `
                             <div class="card-ovr">${displayOvr}</div>
                             <div class="card-role" style="background: ${this.getRoleColor(p.Ruolo.split(',')[0])}">${p.Ruolo.split(',')[0]}</div>
-                            ${!this.blindDraft ? `<div class="card-value" style="font-size: 0.8rem; font-weight: bold; background: rgba(0,0,0,0.6); padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.5rem; border: 1px solid var(--accent); color: var(--accent);">${p.Value || ''}</div>` : ''}
+                            ${this.budgetMode ? `<div class="card-value" style="font-size: 0.8rem; font-weight: bold; background: rgba(0,0,0,0.6); padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.5rem; border: 1px solid var(--accent); color: var(--accent);">${p.Value || ''}</div>` : ''}
                             <div class="card-img-placeholder"></div>
                             <div class="card-name">${slot.player.Nome}</div>
                         ` : `
@@ -245,7 +245,7 @@ export class DraftUI {
                             <div class="p-left">
                                 <span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>
                                 <span class="p-name">${p.Nome}</span>
-                                ${!this.blindDraft && p.Value ? `<span style="font-size:0.75rem; color: #10b981; background: rgba(16,185,129,0.1); padding: 0.2rem 0.4rem; border-radius:4px; margin-left: 8px; font-family:monospace;">${p.Value}</span>` : ''}
+                                ${this.budgetMode && p.Value ? `<span style="font-size:0.75rem; color: #10b981; background: rgba(16,185,129,0.1); padding: 0.2rem 0.4rem; border-radius:4px; margin-left: 8px; font-family:monospace;">${p.Value}</span>` : ''}
                             </div>
                             <div class="p-right">
                                 <span class="p-role">${p.Ruolo}</span>
