@@ -41,10 +41,13 @@ export class MatchEngine {
         
         const ratio = attackPower / defensePower;
         
-        // Base expected goals for a perfectly balanced match is ~1.3
-        // We use Math.pow to amplify the difference in strength
-        const powerAdvantage = Math.pow(ratio, 2.5);
-        let expectedGoals = 1.3 * powerAdvantage;
+        // Increase the exponent to make the strong teams dominate weak teams more consistently
+        let expectedGoals;
+        if (ratio >= 1) {
+            expectedGoals = 1.2 * Math.pow(ratio, 4); // Stronger team scores much more
+        } else {
+            expectedGoals = 1.2 * Math.pow(ratio, 5); // Weaker team scores much less
+        }
         
         // Add a bit of random match-day variance (-0.2 to +0.2 xG)
         const luckFactor = (Math.random() * 0.4) - 0.2; 
@@ -70,6 +73,19 @@ export class MatchEngine {
     static generateMatchEvents(homeGoals, awayGoals, homeTeam, awayTeam) {
         const events = [];
         
+        const pickWeightedPlayer = (candidates) => {
+            if (!candidates || candidates.length === 0) return null;
+            // Use Overall^5 to strongly favor better players for scoring/assisting
+            const totalWeight = candidates.reduce((sum, p) => sum + Math.pow(p.Overall, 5), 0);
+            let rand = Math.random() * totalWeight;
+            for (let p of candidates) {
+                const weight = Math.pow(p.Overall, 5);
+                if (rand <= weight) return p.Nome;
+                rand -= weight;
+            }
+            return candidates[0].Nome;
+        };
+
         const createGoalEvents = (goals, teamObj, isHome) => {
             for (let i = 0; i < goals; i++) {
                 const minute = Math.floor(Math.random() * 90) + 1;
@@ -86,9 +102,9 @@ export class MatchEngine {
 
                     const candidates = teamObj.squad.filter(p => p.Ruolo && p.Ruolo.includes(targetRole));
                     if (candidates.length > 0) {
-                        scorer = candidates[Math.floor(Math.random() * candidates.length)].Nome;
+                        scorer = pickWeightedPlayer(candidates);
                     } else {
-                        scorer = teamObj.squad[Math.floor(Math.random() * teamObj.squad.length)].Nome;
+                        scorer = pickWeightedPlayer(teamObj.squad);
                     }
 
                     // Generate assistman (70% chance if not penalty)
@@ -100,11 +116,11 @@ export class MatchEngine {
 
                         const assistCandidates = teamObj.squad.filter(p => p.Ruolo && p.Ruolo.includes(assistRole) && p.Nome !== scorer);
                         if (assistCandidates.length > 0) {
-                            assistman = assistCandidates[Math.floor(Math.random() * assistCandidates.length)].Nome;
+                            assistman = pickWeightedPlayer(assistCandidates);
                         } else {
                             const remaining = teamObj.squad.filter(p => p.Nome !== scorer && !p.Ruolo.includes('POR'));
                             if (remaining.length > 0) {
-                                assistman = remaining[Math.floor(Math.random() * remaining.length)].Nome;
+                                assistman = pickWeightedPlayer(remaining);
                             }
                         }
                     }
