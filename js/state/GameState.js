@@ -200,10 +200,10 @@ export class GameState {
             teamIds.splice(1, 0, teamIds.pop());
         }
 
-        // Second half of the season (reverse home/away)
+        // Second half of the season (reverse home/away AND reverse matchday order)
         let secondHalf = schedule.map(matchday => 
             matchday.map(match => ({ home: match.away, away: match.home }))
-        );
+        ).reverse();
 
         return schedule.concat(secondHalf);
     }
