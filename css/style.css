@@ -951,13 +951,13 @@ input[type=range] {
 /* Budget Mode Enhancements */
 .budget-header-wrapper {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 45px;
     padding: 2px;
     background: linear-gradient(90deg, rgba(16,185,129,0.3) 0%, rgba(0,0,0,0.9) 50%, rgba(16,185,129,0.3) 100%);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     position: sticky;
-    top: max(15px, env(safe-area-inset-top));
+    top: max(45px, env(safe-area-inset-top));
     z-index: 1000;
     backdrop-filter: blur(10px);
 }
