@@ -37,25 +37,34 @@ export class MatchEngine {
     }
 
     static calculateGoals(attackPower, defensePower) {
-        if (defensePower === 0) defensePower = 1; // Prevent division by zero
+        if (defensePower === 0) defensePower = 1;
+        
         const ratio = attackPower / defensePower;
         
-        // Base expected goals for a balanced match is around 1.2
-        let expectedGoals = Math.max(0.1, (ratio - 0.85) * 4); 
+        // Base expected goals for a perfectly balanced match is ~1.3
+        // We use Math.pow to amplify the difference in strength
+        const powerAdvantage = Math.pow(ratio, 2.5);
+        let expectedGoals = 1.3 * powerAdvantage;
         
-        // RNG Variance (-0.4 to +0.4 expected goals shift)
-        const luckFactor = (Math.random() * 0.8) - 0.4; 
+        // Add a bit of random match-day variance (-0.2 to +0.2 xG)
+        const luckFactor = (Math.random() * 0.4) - 0.2; 
         expectedGoals += luckFactor;
-
-        let actualGoals = Math.round(expectedGoals);
-        if (actualGoals < 0) actualGoals = 0;
         
-        // Rare chance of explosion
-        if (Math.random() > 0.95 && actualGoals > 0) {
-            actualGoals += Math.floor(Math.random() * 2) + 1; 
-        }
+        if (expectedGoals < 0.1) expectedGoals = 0.1;
 
-        return actualGoals;
+        // Generate goals using Poisson distribution
+        return this.getPoissonRandom(expectedGoals);
+    }
+
+    static getPoissonRandom(lambda) {
+        let L = Math.exp(-lambda);
+        let k = 0;
+        let p = 1;
+        do {
+            k++;
+            p *= Math.random();
+        } while (p > L);
+        return k - 1;
     }
 
     static generateMatchEvents(homeGoals, awayGoals, homeTeam, awayTeam) {
