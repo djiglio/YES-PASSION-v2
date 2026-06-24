@@ -11,8 +11,10 @@
 <body>
     <div id="app" class="app-container">
         <!-- GLOBAL HEADER -->
-        <header id="global-header" style="display: none; padding: 15px 20px; position: absolute; top: 0; left: 0; z-index: 2000; width: 100%;">
-            <h1 style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; cursor: pointer; color: var(--accent); text-shadow: 0 2px 4px rgba(0,0,0,0.8); transition: transform 0.2s; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="window.location.reload()">YES PASSION</h1>
+        <header id="global-header" style="display: none; padding: 15px 20px; position: absolute; top: 0; left: 0; z-index: 2000; width: 100%; pointer-events: none;">
+            <div style="margin: 0; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; cursor: pointer; color: var(--accent); transition: transform 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; pointer-events: auto; background: rgba(0,0,0,0.6); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(0, 230, 255, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="window.location.reload()">
+                <span style="font-size: 1.5rem; line-height: 1;">&larr;</span> Menu
+            </div>
         </header>        <!-- MAIN CONTENT AREA (Dynamic) -->
         <main id="game-content" class="game-content">
             <div class="loader">Caricamento Dati...</div>
