@@ -67,6 +67,8 @@ export class DraftUI {
     }
 
     async init() {
+        const globalHeader = document.getElementById('global-header');
+        if (globalHeader) globalHeader.style.display = 'none';
         this.renderFormationSelector();
     }
 
@@ -281,6 +283,9 @@ export class DraftUI {
     }
 
     async startDraft(formation) {
+        const globalHeader = document.getElementById('global-header');
+        if (globalHeader) globalHeader.style.display = 'block';
+
         this.state.userTeam.formation = formation;
         const layoutRows = this.formations[formation];
         

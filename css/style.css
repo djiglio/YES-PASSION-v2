@@ -630,6 +630,9 @@ input[type=range] {
 
 /* Mobile Draft UI tweaks */
 @media (max-width: 767px) {
+    .game-content {
+        padding: 0.5rem 2.5%;
+    }
     .draft-container {
         flex-direction: column;
     }
