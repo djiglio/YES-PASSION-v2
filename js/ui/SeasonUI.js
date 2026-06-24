@@ -104,6 +104,22 @@ export class SeasonUI {
         if (this.state.matchday > 38) return;
 
         const currentMatches = this.state.schedule[this.state.matchday - 1];
+        
+        // Aggiorna dinamicamente l'intestazione e il riquadro della partita durante la simulazione veloce
+        const dayHeader = this.container.querySelector('.season-left h2 span');
+        if (dayHeader) {
+            dayHeader.textContent = `(Giornata ${this.state.matchday}/38)`;
+        }
+
+        const userMatch = currentMatches.find(m => m.home === 'user_team' || m.away === 'user_team');
+        const matchTeamsContainer = this.container.querySelector('.match-teams');
+        if (matchTeamsContainer && userMatch) {
+            matchTeamsContainer.innerHTML = `
+                <span style="font-size: 0.9rem; color: var(--text-muted);">${userMatch.home === 'user_team' ? 'In Casa contro' : 'In Trasferta contro'}</span>
+                <span class="m-home" style="font-size: 1.8rem; color: var(--accent);">${userMatch.home === 'user_team' ? this.getTeamName(userMatch.away) : this.getTeamName(userMatch.home)}</span>
+            `;
+        }
+
         const matchResults = [];
         let userMatchResult = null;
 
@@ -136,10 +152,10 @@ export class SeasonUI {
                         <h4 style="color: var(--accent); text-transform: uppercase; font-size: 0.9rem; margin: 0;">Risultato Live</h4>
                         <span id="live-timer" style="background: rgba(255, 0, 0, 0.2); border: 1px solid red; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; font-family: monospace;">0'</span>
                     </div>
-                    <div class="scoreline" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 1.5rem; font-weight: 900;">
-                        <span style="flex:1; text-align:right;">${userMatchResult.homeTeam === 'La Tua Squadra' ? 'TU' : userMatchResult.homeTeam}</span>
-                        <span id="live-score" style="background: rgba(0, 230, 255, 0.1); border: 1px solid rgba(0, 230, 255, 0.3); color: var(--accent); padding: 0.5rem 1rem; border-radius: 8px;">0 - 0</span>
-                        <span style="flex:1; text-align:left;">${userMatchResult.awayTeam === 'La Tua Squadra' ? 'TU' : userMatchResult.awayTeam}</span>
+                    <div class="scoreline" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; font-size: 1.5rem; font-weight: 900; white-space: nowrap;">
+                        <span style="flex:1; text-align:right; overflow: hidden; text-overflow: ellipsis;">${userMatchResult.homeTeam === 'La Tua Squadra' ? 'TU' : userMatchResult.homeTeam}</span>
+                        <span id="live-score" style="background: rgba(0, 230, 255, 0.1); border: 1px solid rgba(0, 230, 255, 0.3); color: var(--accent); padding: 0.5rem 1rem; border-radius: 8px; min-width: 80px; text-align: center;">0 - 0</span>
+                        <span style="flex:1; text-align:left; overflow: hidden; text-overflow: ellipsis;">${userMatchResult.awayTeam === 'La Tua Squadra' ? 'TU' : userMatchResult.awayTeam}</span>
                     </div>
                     
                     <div class="scorers-container" style="display: flex; justify-content: space-between; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); min-height: 80px;">
