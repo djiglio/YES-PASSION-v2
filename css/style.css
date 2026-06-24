@@ -265,34 +265,10 @@ input[type=range] {
 .mini-shirt {
     width: 32px;
     height: 32px;
-    background: white;
-    border-radius: 4px 4px 0 0;
-    position: relative;
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.5);
-}
-.mini-shirt::before {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: -6px;
-    width: 10px;
-    height: 14px;
-    background: white;
-    border-radius: 4px;
-    transform: rotate(30deg);
-    box-shadow: inset -1px -2px 2px rgba(0,0,0,0.1);
-}
-.mini-shirt::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    right: -6px;
-    width: 10px;
-    height: 14px;
-    background: white;
-    border-radius: 4px;
-    transform: rotate(-30deg);
-    box-shadow: inset 1px -2px 2px rgba(0,0,0,0.1);
+    background-image: url('../assets/images/shirt_white.png');
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 .mini-role {
