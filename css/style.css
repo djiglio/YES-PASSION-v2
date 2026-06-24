@@ -684,7 +684,7 @@ input[type=range] {
 
 .pitch-players {
     position: absolute;
-    top: 25%; left: 0; right: 0; bottom: 0%;
+    top: 25%; left: 0; right: 0; bottom: 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -883,7 +883,7 @@ input[type=range] {
     .card-name-outside { font-size: 0.8rem; width: 55px; margin-top: 2px; }
     .pitch-container { max-width: 100%; aspect-ratio: auto; height: 500px; margin-bottom: 20px; perspective: 800px; margin-top: 0; }
     .pitch-bg { transform: rotateX(40deg); transform-origin: bottom center; pointer-events: none; }
-    .pitch-players { top: 25%; bottom: 0%; transform: translateZ(10px); }
+    .pitch-players { top: 25%; bottom: 4%; transform: translateZ(10px); }
     .slot-wrapper { cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
