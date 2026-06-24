@@ -75,11 +75,11 @@ export class MatchEngine {
         
         const pickWeightedPlayer = (candidates) => {
             if (!candidates || candidates.length === 0) return null;
-            // Use Overall^5 to strongly favor better players for scoring/assisting
-            const totalWeight = candidates.reduce((sum, p) => sum + Math.pow(p.Overall, 5), 0);
+            // Use Overall^3 to reasonably favor better players (prevents 50+ goal anomalies)
+            const totalWeight = candidates.reduce((sum, p) => sum + Math.pow(p.Overall, 3), 0);
             let rand = Math.random() * totalWeight;
             for (let p of candidates) {
-                const weight = Math.pow(p.Overall, 5);
+                const weight = Math.pow(p.Overall, 3);
                 if (rand <= weight) return p.Nome;
                 rand -= weight;
             }
@@ -94,11 +94,11 @@ export class MatchEngine {
                 let isPenalty = Math.random() < 0.1; // 10% chance for a penalty
 
                 if (teamObj.squad && teamObj.squad.length > 0) {
-                    // Bias towards attackers
+                    // Bias towards attackers (60%), Midfielders (25%), Defenders (15%)
                     const rand = Math.random();
                     let targetRole = 'ATT';
-                    if (rand > 0.7) targetRole = 'CC'; // Midfielders
-                    if (rand > 0.9) targetRole = 'DC'; // Defenders
+                    if (rand > 0.6) targetRole = 'CC';
+                    if (rand > 0.85) targetRole = 'DC';
 
                     const candidates = teamObj.squad.filter(p => p.Ruolo && p.Ruolo.includes(targetRole));
                     if (candidates.length > 0) {
