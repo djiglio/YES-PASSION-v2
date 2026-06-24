@@ -356,6 +356,7 @@ input[type=range] {
 /* Draft UI Styles */
 .draft-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     gap: 2rem;
     margin-top: 1rem;
@@ -375,6 +376,8 @@ input[type=range] {
     display: flex;
     flex-direction: column;
     max-height: 100%; /* allows the flex child to overflow properly */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .roster-list {
@@ -720,11 +723,11 @@ input[type=range] {
 
 .pitch-container {
     width: 100%;
-    aspect-ratio: 3 / 5;
+    aspect-ratio: auto;
+    height: 500px;
     max-width: 800px;
-    max-height: 1000px;
-    margin: -100px auto 2rem auto; /* negative top margin to eat empty space */
-    perspective: 1200px;
+    margin: -80px auto 20px auto;
+    perspective: 800px;
     transform-style: preserve-3d;
     background: transparent;
     border: none;
@@ -935,18 +938,11 @@ input[type=range] {
 }
 
 @media (max-width: 767px) {
-    .draft-container {
-        flex-direction: column;
-    }
     .season-container {
         flex-direction: column-reverse;
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.8rem; width: 55px; margin-top: 2px; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 500px; margin-bottom: 20px; perspective: 800px; margin-top: -80px; }
-    .pitch-bg { transform: rotateX(40deg); transform-origin: bottom center; pointer-events: none; }
-    .pitch-players { top: 25%; bottom: 10%; transform: translateZ(10px); }
-    .slot-wrapper { cursor: pointer; pointer-events: auto; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
     .stats-grid, .tables-grid { grid-template-columns: 1fr; padding: 0 0.5rem; }
