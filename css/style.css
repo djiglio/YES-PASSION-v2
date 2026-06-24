@@ -660,7 +660,7 @@ input[type=range] {
     aspect-ratio: 3 / 5;
     max-width: 800px;
     max-height: 1000px;
-    margin: 0 auto 2rem auto;
+    margin: -100px auto 2rem auto; /* negative top margin to eat empty space */
     perspective: 1200px;
     transform-style: preserve-3d;
     background: transparent;
@@ -699,8 +699,7 @@ input[type=range] {
     top: 0; left: 0; right: 0; bottom: 0;
     background-image: 
         radial-gradient(circle at 50% 50%, transparent 20%, rgba(255,255,255,0.1) 21%, transparent 22%),
-        linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255,255,255,0.1) 50%, transparent calc(50% + 1px)),
-        linear-gradient(to right, transparent calc(50% - 1px), rgba(255,255,255,0.1) 50%, transparent calc(50% + 1px));
+        linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255,255,255,0.1) 50%, transparent calc(50% + 1px));
     pointer-events: none;
     border: 1px solid rgba(255,255,255,0.1);
     margin: 5%;
@@ -881,7 +880,7 @@ input[type=range] {
     }
     .card-ovr { font-size: 1rem; }
     .card-name-outside { font-size: 0.8rem; width: 55px; margin-top: 2px; }
-    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 500px; margin-bottom: 20px; perspective: 800px; margin-top: 0; }
+    .pitch-container { max-width: 100%; aspect-ratio: auto; height: 500px; margin-bottom: 20px; perspective: 800px; margin-top: -80px; }
     .pitch-bg { transform: rotateX(40deg); transform-origin: bottom center; pointer-events: none; }
     .pitch-players { top: 25%; bottom: 10%; transform: translateZ(10px); }
     .slot-wrapper { cursor: pointer; pointer-events: auto; }
