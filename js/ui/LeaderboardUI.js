@@ -4,23 +4,26 @@ export class LeaderboardUI {
     constructor(app, containerElement) {
         this.app = app;
         this.container = containerElement;
+        this.uiState = 'SELECTION'; // 'SELECTION' or 'LEADERBOARD'
         this.currentMode = 'sp'; // 'sp' or 'mp'
         this.isBudget = false;
         this.sortColumn = 'avg_points';
         this.sortDesc = true;
         this.data = [];
-        this.expandedMobile = false;
+        this.columnsExpanded = false;
     }
 
     async init() {
-        this.renderLoader();
-        await this.loadData();
+        this.uiState = 'SELECTION';
+        this.columnsExpanded = false;
         this.render();
     }
 
     async loadData() {
+        this.renderLoader();
         this.data = await StatsEngine.getLeaderboard(this.currentMode === 'mp', this.isBudget);
         this.sortData();
+        this.render();
     }
 
     sortData() {
@@ -57,6 +60,49 @@ export class LeaderboardUI {
     }
 
     render() {
+        if (this.uiState === 'SELECTION') {
+            this.renderSelection();
+        } else {
+            this.renderLeaderboard();
+        }
+    }
+
+    renderSelection() {
+        this.container.innerHTML = `
+            <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 2rem; align-items: center; justify-content: center; min-height: 80vh;">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                    <h1 style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0;">CLASSIFICHE</h1>
+                    <button id="btn-back-home" class="btn btn-secondary">Torna alla Home</button>
+                </div>
+                
+                <div id="select-sp" style="width: 100%; background: rgba(0,20,50,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
+                    <h2 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">SINGLE PLAYER</h2>
+                    <p style="color: var(--text-muted); margin: 0;">Consulta le classifiche delle tue carriere solitarie</p>
+                </div>
+
+                <div id="select-mp" style="width: 100%; background: rgba(0,20,50,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
+                    <h2 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">MULTIPLAYER</h2>
+                    <p style="color: var(--text-muted); margin: 0;">Confronta i tuoi risultati con quelli degli altri manager</p>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('btn-back-home').onclick = () => this.app.startHome();
+        
+        document.getElementById('select-sp').onclick = () => {
+            this.currentMode = 'sp';
+            this.uiState = 'LEADERBOARD';
+            this.loadData();
+        };
+
+        document.getElementById('select-mp').onclick = () => {
+            this.currentMode = 'mp';
+            this.uiState = 'LEADERBOARD';
+            this.loadData();
+        };
+    }
+
+    renderLeaderboard() {
         const renderSortIcon = (col) => {
             if (this.sortColumn !== col) return '';
             return this.sortDesc ? ' ↓' : ' ↑';
@@ -68,32 +114,19 @@ export class LeaderboardUI {
         this.container.innerHTML = `
             <style>
                 .sortable-th:hover { color: var(--accent); }
-                .lb-tab { padding: 1rem 2rem; border-radius: 20px 20px 0 0; cursor: pointer; transition: all 0.3s; font-weight: bold; border: 1px solid transparent; flex: 1; text-align: center; }
-                .lb-tab.active { background: rgba(0,20,50,0.8); border-color: rgba(255,255,255,0.2); border-bottom-color: transparent; color: var(--accent); }
-                .lb-tab:not(.active) { background: rgba(0,0,0,0.5); color: var(--text-muted); }
-                
-                .sub-tab-container { display: flex; background: rgba(0,20,50,0.8); border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); }
-                .lb-sub-tab { flex: 1; text-align: center; padding: 0.8rem; cursor: pointer; font-weight: bold; border-bottom: 2px solid transparent; transition: all 0.2s; color: rgba(255,255,255,0.5); }
+                .sub-tab-container { display: flex; background: rgba(0,20,50,0.8); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px 16px 0 0; }
+                .lb-sub-tab { flex: 1; text-align: center; padding: 1rem; cursor: pointer; font-weight: bold; border-bottom: 2px solid transparent; transition: all 0.2s; color: rgba(255,255,255,0.5); }
                 .lb-sub-tab.active { color: white; border-bottom: 2px solid var(--accent); background: rgba(255,255,255,0.05); }
-
-                /* Mobile responsiveness */
-                @media (max-width: 768px) {
-                    .sec-col { display: ${this.expandedMobile ? 'table-cell' : 'none'}; }
-                    .table-wrapper { overflow-x: auto; }
-                    .lb-tab { padding: 0.8rem 0.5rem; font-size: 0.9rem; }
-                    .header-title { font-size: 1.8rem !important; }
-                }
+                .sec-col { display: ${this.columnsExpanded ? 'table-cell' : 'none'}; }
+                .table-wrapper { overflow-x: auto; }
             </style>
             
             <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                    <h1 class="header-title" style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0;">CLASSIFICA</h1>
-                    <button id="btn-back" class="btn btn-secondary">Torna alla Home</button>
-                </div>
-                
-                <div style="display: flex; gap: 0.5rem; margin-bottom: -1px; position: relative; z-index: 10;">
-                    <div id="tab-sp" class="lb-tab ${this.currentMode === 'sp' ? 'active' : ''}">SINGLE PLAYER</div>
-                    <div id="tab-mp" class="lb-tab ${this.currentMode === 'mp' ? 'active' : ''}">MULTIPLAYER</div>
+                    <div>
+                        <h1 class="header-title" style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0; text-transform: uppercase;">${this.currentMode === 'sp' ? 'SINGLE PLAYER' : 'MULTIPLAYER'}</h1>
+                    </div>
+                    <button id="btn-back-selection" class="btn btn-secondary">Torna Indietro</button>
                 </div>
 
                 <div class="sub-tab-container">
@@ -101,9 +134,9 @@ export class LeaderboardUI {
                     <div id="sub-tab-budget" class="lb-sub-tab ${this.isBudget ? 'active' : ''}">BUDGET</div>
                 </div>
                 
-                <div style="background: rgba(0,20,50,0.8); border: 1px solid rgba(255,255,255,0.2); border-top: none; padding: 1rem; display: flex; justify-content: flex-end;">
-                    <button id="btn-expand-mobile" class="btn btn-secondary" style="display: none; font-size: 0.8rem; padding: 0.5rem 1rem;">
-                        ${this.expandedMobile ? 'Riduci Colonne' : 'Espandi Colonne'}
+                <div style="background: rgba(0,20,50,0.8); border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); padding: 1rem; display: flex; justify-content: flex-end;">
+                    <button id="btn-expand-cols" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
+                        ${this.columnsExpanded ? 'Riduci Colonne' : 'Espandi Colonne'}
                     </button>
                 </div>
 
@@ -154,50 +187,33 @@ export class LeaderboardUI {
             </div>
         `;
 
-        // Check if mobile to show expand button
-        if (window.innerWidth <= 768) {
-            document.getElementById('btn-expand-mobile').style.display = 'inline-block';
-        }
-
-        this.attachEvents();
+        this.attachLeaderboardEvents();
     }
 
-    attachEvents() {
-        document.getElementById('btn-back').onclick = () => {
-            this.app.startHome();
-        };
-
-        // Main tabs
-        document.getElementById('tab-sp').onclick = async () => {
-            if (this.currentMode === 'sp') return;
-            this.currentMode = 'sp';
-            await this.init();
-        };
-
-        document.getElementById('tab-mp').onclick = async () => {
-            if (this.currentMode === 'mp') return;
-            this.currentMode = 'mp';
-            await this.init();
+    attachLeaderboardEvents() {
+        document.getElementById('btn-back-selection').onclick = () => {
+            this.uiState = 'SELECTION';
+            this.render();
         };
 
         // Sub tabs
         document.getElementById('sub-tab-classic').onclick = async () => {
             if (!this.isBudget) return;
             this.isBudget = false;
-            await this.init();
+            await this.loadData();
         };
 
         document.getElementById('sub-tab-budget').onclick = async () => {
             if (this.isBudget) return;
             this.isBudget = true;
-            await this.init();
+            await this.loadData();
         };
 
-        // Expand mobile
-        const btnExpand = document.getElementById('btn-expand-mobile');
+        // Expand columns globally
+        const btnExpand = document.getElementById('btn-expand-cols');
         if (btnExpand) {
             btnExpand.onclick = () => {
-                this.expandedMobile = !this.expandedMobile;
+                this.columnsExpanded = !this.columnsExpanded;
                 this.render(); // Re-render to apply the class state
             };
         }
