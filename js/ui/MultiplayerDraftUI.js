@@ -266,6 +266,9 @@ export class MultiplayerDraftUI {
         if (budgetPercent > 70) budgetColor = '#f59e0b';
         if (budgetPercent > 90) budgetColor = '#ef4444';
 
+        const myIndex = this.players.findIndex(p => p.user_id === this.currentUser.id);
+        const myColorClass = `player-color-${(myIndex % 4) + 1}`;
+
         let pitchHtml = '';
         let tempIndex = 0;
         const rowsWithSlots = [];
@@ -291,7 +294,7 @@ export class MultiplayerDraftUI {
 
                 pitchHtml += `
                     <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
-                        <div class="slot ${isFilled ? 'filled' : ''} ${isGold ? 'gold-card' : ''}">
+                        <div class="slot ${isFilled ? `filled ${myColorClass}` : ''} ${isGold ? 'gold-card' : ''}">
                             ${displayOvr ? `<span class="slot-ovr-inside">${displayOvr}</span>` : ''}
                         </div>
                         ${isFilled ? `
@@ -334,7 +337,7 @@ export class MultiplayerDraftUI {
             if (slot.player === null) activeRemainingRoles.add(slot.requiredRole);
         });
 
-        const playerColors = ['#3b82f6', '#10b981', '#8b5cf6', '#f97316', '#eab308'];
+        const playerColors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
         const getPlayerColor = (uid) => {
             const idx = this.players.findIndex(p => p.user_id === uid);
             return playerColors[idx % playerColors.length];
@@ -643,6 +646,9 @@ export class MultiplayerDraftUI {
         const myForm = this.draftState.formations[this.currentUser.id];
         const layoutRows = this.formations[myForm];
 
+        const myIndex = this.players.findIndex(p => p.user_id === this.currentUser.id);
+        const myColorClass = `player-color-${(myIndex % 4) + 1}`;
+
         // Group slots by row
         const rowsWithSlots = [];
         let tempIndex = 0;
@@ -669,7 +675,7 @@ export class MultiplayerDraftUI {
 
                 pitchHtml += `
                     <div class="slot-wrapper filled-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
-                        <div class="slot filled ${isGold ? 'gold-card' : ''}">
+                        <div class="slot ${isFilled ? `filled ${myColorClass}` : ''} ${isGold ? 'gold-card' : ''}">
                             <span class="slot-ovr-inside">${displayOvr}</span>
                         </div>
                         <div class="card-name-outside">

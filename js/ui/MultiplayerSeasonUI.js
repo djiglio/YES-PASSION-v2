@@ -24,7 +24,7 @@ export class MultiplayerSeasonUI {
         if (this.players) {
             this.players.sort((a, b) => (a.turn_position || 0) - (b.turn_position || 0));
             this.playerColors = {};
-            const colors = ['#00e6ff', '#ff0055', '#00ff66', '#ffcc00'];
+            const colors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
             this.players.forEach((p, idx) => {
                 this.playerColors[p.user_id] = colors[idx % colors.length];
             });

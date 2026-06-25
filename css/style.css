@@ -837,13 +837,26 @@ input[type=range] {
     background-image: url('../assets/images/shirt_white.png');
 }
 
-/* Filled slot styling - Red T-Shirt */
-.slot.filled {
+/* Filled slot styling - Default / Player 1 (Red) */
+.slot.filled,
+.slot.filled.player-color-1 {
     background-image: url('../assets/images/shirt_red.png');
 }
 
+.slot.filled.player-color-2 {
+    background-image: url('../assets/images/shirt_lightblue.png');
+}
+
+.slot.filled.player-color-3 {
+    background-image: url('../assets/images/shirt_green.png');
+}
+
+.slot.filled.player-color-4 {
+    background-image: url('../assets/images/shirt_purple.png');
+}
+
 .slot.gold-card {
-    background-image: url('../assets/images/shirt_gold.png');
+    background-image: url('../assets/images/shirt_gold.png') !important;
 }
 
 .slot-ovr-inside {
