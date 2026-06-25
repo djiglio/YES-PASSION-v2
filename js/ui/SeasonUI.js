@@ -1,4 +1,6 @@
 import { MatchEngine } from '../engine/MatchEngine.js';
+import { supabase } from '../supabase.js';
+import { StatsEngine } from '../engine/StatsEngine.js';
 
 export class SeasonUI {
     constructor(gameState, containerElement) {
@@ -59,12 +61,13 @@ export class SeasonUI {
                 <div class="season-right">
                     <div class="next-match-card">
                         <div class="sim-controls">
-                            ${!this.isSimulatingFast ? `
+                            ${this.isSimulatingFast ? `
+                                <button id="btn-stop-sim" class="btn btn-danger">Ferma Simulazione</button>
+                            ` : `
                                 <button id="btn-play-day" class="btn">Gioca Giornata</button>
                                 <button id="btn-sim-fast" class="btn btn-secondary">Simula Automatica (5s/giornata)</button>
                                 <button id="btn-sim-all" class="btn btn-danger">Simula Tutto Subito</button>
-                            ` : `
-                                <button id="btn-stop-sim" class="btn btn-danger">Ferma Simulazione</button>
+                                <button id="btn-abandon" class="btn btn-secondary" style="border:1px solid #ef4444; color:#ef4444; background:transparent;">Abbandona Stagione</button>
                             `}
                         </div>
                         
@@ -101,6 +104,20 @@ export class SeasonUI {
         if (btnSimFast) btnSimFast.addEventListener('click', () => this.startFastSim());
         if (btnSimAll) btnSimAll.addEventListener('click', () => this.simulateRemainingSeason());
         if (btnStopSim) btnStopSim.addEventListener('click', () => this.stopFastSim());
+
+        const btnAbandon = document.getElementById('btn-abandon');
+        if (btnAbandon) {
+            btnAbandon.addEventListener('click', async () => {
+                if(confirm("Sei sicuro di voler abbandonare la stagione? Questo conterà come un ritiro nelle tue statistiche e tornerai al menu principale.")) {
+                    this.stopFastSim();
+                    const { data: { session } } = await supabase.auth.getSession();
+                    if (session && session.user) {
+                        await StatsEngine.updateSeasonStats(session.user.id, false, { isAbandon: true });
+                    }
+                    window.location.reload();
+                }
+            });
+        }
     }
 
     simulateMatchday() {
@@ -325,11 +342,27 @@ export class SeasonUI {
         this.render();
     }
 
-    renderEndSeason() {
+    async renderEndSeason() {
         const userTeam = this.state.standings.find(t => t.isUser);
         const finalPosition = this.state.standings.findIndex(t => t.isUser) + 1;
         const topStats = this.state.getTopStats();
         
+        // Push stats to Supabase if logged in
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session && session.user) {
+            await StatsEngine.updateSeasonStats(session.user.id, false, {
+                isAbandon: false,
+                position: finalPosition,
+                points: userTeam.points,
+                matches: userTeam.played,
+                won: userTeam.won,
+                drawn: userTeam.drawn,
+                lost: userTeam.lost,
+                goalsScored: userTeam.goalsFor,
+                goalsConceded: userTeam.goalsAgainst
+            });
+        }
+
         let outcomeMsg = '';
         if (finalPosition === 1) outcomeMsg = '<p style="font-size: 1.5rem; color: #fbbf24; font-weight: bold; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(251,191,36,0.3);">🏆 CAMPIONE D\\'ITALIA</p>';
         else if (finalPosition <= 4) outcomeMsg = '<p style="font-size: 1.2rem; color: #60a5fa; font-weight: bold; margin-bottom: 0.5rem;">Champions League</p>';

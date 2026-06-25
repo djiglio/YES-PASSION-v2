@@ -5,6 +5,7 @@ import { AuthUI } from './ui/AuthUI.js';
 import { LobbyUI } from './ui/LobbyUI.js';
 import { MultiplayerDraftUI } from './ui/MultiplayerDraftUI.js';
 import { MultiplayerSeasonUI } from './ui/MultiplayerSeasonUI.js';
+import { LeaderboardUI } from './ui/LeaderboardUI.js';
 
 class GameApp {
     constructor() {
@@ -47,6 +48,10 @@ class GameApp {
         this.state.setPhase('MP_SEASON_INIT');
     }
 
+    startLeaderboard() {
+        this.state.setPhase('LEADERBOARD');
+    }
+
     render(state) {
         const statusBar = document.getElementById('current-phase');
         const content = document.getElementById('game-content');
@@ -58,7 +63,7 @@ class GameApp {
         const globalHeader = document.getElementById('global-header');
         if (globalHeader) {
             // Hide on INIT, HOME, and SETUP (Module selection)
-            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME' || state.phase === 'SETUP') ? 'none' : 'block';
+            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME' || state.phase === 'SETUP' || state.phase === 'LEADERBOARD') ? 'none' : 'block';
         }
 
         switch(state.phase) {
@@ -67,6 +72,12 @@ class GameApp {
                 break;
             case 'HOME':
                 this.renderHomeMenu(content);
+                break;
+            case 'LEADERBOARD':
+                if (!this.leaderboardUI) {
+                    this.leaderboardUI = new LeaderboardUI(this, content);
+                }
+                this.leaderboardUI.init();
                 break;
             case 'MP_LOBBY':
                 if (!this.lobbyUI) {
@@ -106,8 +117,9 @@ class GameApp {
             <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
                 <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 3rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
                 
-                <div style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
                     <button id="btn-edit-user" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">MODIFICA PROFILO</button>
+                    <button id="btn-leaderboard" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(251, 191, 36, 0.2); border: 1px solid #fbbf24; color: #fbbf24; transition: all 0.3s ease;">CLASSIFICHE</button>
                 </div>
 
                 <div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,20,50,0.8); backdrop-filter: blur(10px); z-index: 1000; justify-content: center; align-items: center;">
@@ -176,6 +188,13 @@ class GameApp {
                 this.startMultiplayerLobby();
             }
         };
+
+        const btnLeaderboard = document.getElementById('btn-leaderboard');
+        if (btnLeaderboard) {
+            btnLeaderboard.onclick = () => {
+                this.startLeaderboard();
+            };
+        }
         
         document.getElementById('btn-logout').onclick = () => {
             this.authUI.logout();

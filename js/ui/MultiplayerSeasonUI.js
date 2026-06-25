@@ -1,5 +1,6 @@
 import { MatchEngine } from '../engine/MatchEngine.js';
 import { DataLoader } from '../data/DataLoader.js';
+import { StatsEngine } from '../engine/StatsEngine.js';
 import { supabase } from '../supabase.js';
 
 export class MultiplayerSeasonUI {
@@ -155,6 +156,7 @@ export class MultiplayerSeasonUI {
                                     <button id="btn-stop-sim" class="btn btn-danger">Ferma Simulazione</button>
                                 `}
                             ` : `<div style="text-align:center; padding:1rem; color:var(--text-muted);">In attesa dell'Host...</div>`}
+                            <button id="btn-abandon" class="btn btn-secondary" style="border:1px solid #ef4444; color:#ef4444; background:transparent; margin-top: 1rem; width: 100%;">Abbandona Stagione</button>
                         </div>
                         
                         <div id="match-results-area" class="match-results-area"></div>
@@ -177,6 +179,23 @@ export class MultiplayerSeasonUI {
     }
 
     attachEvents() {
+        const btnAbandon = document.getElementById('btn-abandon');
+        if (btnAbandon) {
+            btnAbandon.addEventListener('click', async () => {
+                if(confirm("Sei sicuro di voler abbandonare la stagione Multiplayer? Questo conterà come un ritiro nelle tue statistiche e tornerai al menu principale.")) {
+                    if (this.isHost) {
+                        this.isSimulatingFast = false;
+                        clearTimeout(this.fastSimTimeout);
+                    }
+                    const { data: { session } } = await supabase.auth.getSession();
+                    if (session && session.user) {
+                        await StatsEngine.updateSeasonStats(session.user.id, true, { isAbandon: true });
+                    }
+                    window.location.reload();
+                }
+            });
+        }
+
         if (!this.isHost) return;
 
         const btnPlay = document.getElementById('btn-play-day');
@@ -525,6 +544,19 @@ export class MultiplayerSeasonUI {
         else if (pos === 5) outcomeMsg = '<p style="font-size: 1.2rem; color: #f97316; font-weight: bold; margin-bottom: 0.5rem;">Europa League</p>';
         else if (pos === 6) outcomeMsg = '<p style="font-size: 1.2rem; color: #10b981; font-weight: bold; margin-bottom: 0.5rem;">Conference League</p>';
         else if (pos >= 18) outcomeMsg = '<p style="font-size: 1.2rem; color: #ef4444; font-weight: bold; margin-bottom: 0.5rem;">⬇️ Retrocesso</p>';
+
+        // Push stats to Supabase
+        await StatsEngine.updateSeasonStats(this.currentUser.id, true, {
+            isAbandon: false,
+            position: pos,
+            points: userTeam.points,
+            matches: userTeam.played,
+            won: userTeam.won,
+            drawn: userTeam.drawn,
+            lost: userTeam.lost,
+            goalsScored: userTeam.goalsFor,
+            goalsConceded: userTeam.goalsAgainst
+        });
 
         if (this.isHost) {
             // Update leaderboards via edge function or direct
