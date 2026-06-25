@@ -11,6 +11,10 @@ export class LeaderboardUI {
         this.sortDesc = true;
         this.data = [];
         this.columnsExpanded = false;
+        
+        // Show global header
+        const gh = document.getElementById('global-header');
+        if (gh) gh.style.display = 'flex';
     }
 
     async init() {
@@ -59,7 +63,28 @@ export class LeaderboardUI {
         `;
     }
 
+    setupHeaderRight() {
+        const headerRight = document.getElementById('global-header-right');
+        if (!headerRight) return;
+        
+        if (this.uiState === 'SELECTION') {
+            headerRight.innerHTML = '';
+        } else {
+            headerRight.innerHTML = `
+                <div id="btn-back-selection" style="margin: 0; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
+                    Indietro <span style="font-size: 1.2rem; line-height: 1;">&rarr;</span>
+                </div>
+            `;
+            document.getElementById('btn-back-selection').onclick = () => {
+                this.uiState = 'SELECTION';
+                this.render();
+            };
+        }
+    }
+
     render() {
+        this.setupHeaderRight();
+
         if (this.uiState === 'SELECTION') {
             this.renderSelection();
         } else {
@@ -70,10 +95,7 @@ export class LeaderboardUI {
     renderSelection() {
         this.container.innerHTML = `
             <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 2rem; align-items: center; justify-content: center; min-height: 80vh;">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-                    <h1 style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0;">CLASSIFICHE</h1>
-                    <button id="btn-back-home" class="btn btn-secondary">Torna alla Home</button>
-                </div>
+                <h1 style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0;">CLASSIFICHE</h1>
                 
                 <div id="select-sp" style="width: 100%; background: rgba(0,20,50,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
                     <h2 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">SINGLE PLAYER</h2>
@@ -87,8 +109,6 @@ export class LeaderboardUI {
             </div>
         `;
 
-        document.getElementById('btn-back-home').onclick = () => this.app.startHome();
-        
         document.getElementById('select-sp').onclick = () => {
             this.currentMode = 'sp';
             this.uiState = 'LEADERBOARD';
@@ -108,7 +128,11 @@ export class LeaderboardUI {
             return this.sortDesc ? ' ↓' : ' ↑';
         };
 
+        const displayStyle = this.columnsExpanded ? '' : 'display: none;';
         const thStyle = "padding: 1rem; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); user-select: none; transition: color 0.2s; white-space: nowrap;";
+        const thStyleSec = `${thStyle} ${displayStyle}`;
+        const tdStyleSec = `padding: 1rem; ${displayStyle}`;
+
         const thHoverClass = "class='sortable-th'"; 
 
         this.container.innerHTML = `
@@ -117,17 +141,13 @@ export class LeaderboardUI {
                 .sub-tab-container { display: flex; background: rgba(0,20,50,0.8); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px 16px 0 0; }
                 .lb-sub-tab { flex: 1; text-align: center; padding: 1rem; cursor: pointer; font-weight: bold; border-bottom: 2px solid transparent; transition: all 0.2s; color: rgba(255,255,255,0.5); }
                 .lb-sub-tab.active { color: white; border-bottom: 2px solid var(--accent); background: rgba(255,255,255,0.05); }
-                .sec-col { display: ${this.columnsExpanded ? 'table-cell' : 'none'}; }
                 .table-wrapper { overflow-x: auto; }
             </style>
             
             <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                    <div>
-                        <h1 class="header-title" style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0; text-transform: uppercase;">${this.currentMode === 'sp' ? 'SINGLE PLAYER' : 'MULTIPLAYER'}</h1>
-                    </div>
-                    <button id="btn-back-selection" class="btn btn-secondary">Torna Indietro</button>
-                </div>
+                <h1 class="header-title" style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0 0 2rem 0; text-transform: uppercase; text-align: center;">
+                    ${this.currentMode === 'sp' ? 'SINGLE PLAYER' : 'MULTIPLAYER'}
+                </h1>
 
                 <div class="sub-tab-container">
                     <div id="sub-tab-classic" class="lb-sub-tab ${!this.isBudget ? 'active' : ''}">CLASSICA</div>
@@ -136,7 +156,7 @@ export class LeaderboardUI {
                 
                 <div style="background: rgba(0,20,50,0.8); border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); padding: 1rem; display: flex; justify-content: flex-end;">
                     <button id="btn-expand-cols" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
-                        ${this.columnsExpanded ? 'Riduci Colonne' : 'Espandi Colonne'}
+                        ${this.columnsExpanded ? 'Comprimi Colonne' : 'Espandi Colonne'}
                     </button>
                 </div>
 
@@ -145,19 +165,19 @@ export class LeaderboardUI {
                         <thead style="background: rgba(0,0,0,0.6); color: var(--text-muted); font-size: 0.9rem;">
                             <tr>
                                 <th ${thHoverClass} style="${thStyle}" data-col="username">Manager${renderSortIcon('username')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="team_name">Squadra${renderSortIcon('team_name')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="team_name">Squadra${renderSortIcon('team_name')}</th>
                                 <th ${thHoverClass} style="${thStyle}" data-col="avg_points">Media Punti${renderSortIcon('avg_points')}</th>
                                 <th ${thHoverClass} style="${thStyle}" data-col="scudetti_won">Scudetti 🏆${renderSortIcon('scudetti_won')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="total_points">Punti Totali${renderSortIcon('total_points')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="seasons_played">Stagioni${renderSortIcon('seasons_played')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="matches_played">Partite${renderSortIcon('matches_played')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="matches_won">V${renderSortIcon('matches_won')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="matches_drawn">N${renderSortIcon('matches_drawn')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="matches_lost">P${renderSortIcon('matches_lost')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="goals_scored">GF${renderSortIcon('goals_scored')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="goals_conceded">GS${renderSortIcon('goals_conceded')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="abandons">Abbandoni${renderSortIcon('abandons')}</th>
-                                <th ${thHoverClass} style="${thStyle}" class="sec-col" data-col="abandon_rate">Tasso Abb. %${renderSortIcon('abandon_rate')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="total_points">Punti Totali${renderSortIcon('total_points')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="seasons_played">Stagioni${renderSortIcon('seasons_played')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_played">Partite${renderSortIcon('matches_played')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_won">V${renderSortIcon('matches_won')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_drawn">N${renderSortIcon('matches_drawn')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_lost">P${renderSortIcon('matches_lost')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="goals_scored">GF${renderSortIcon('goals_scored')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="goals_conceded">GS${renderSortIcon('goals_conceded')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="abandons">Abbandoni${renderSortIcon('abandons')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="abandon_rate">Tasso Abb. %${renderSortIcon('abandon_rate')}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -166,19 +186,19 @@ export class LeaderboardUI {
                             ` : this.data.map((row, index) => `
                                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: ${index % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)'}; transition: background 0.2s;">
                                     <td style="padding: 1rem;"><strong>${row.username}</strong></td>
-                                    <td class="sec-col" style="padding: 1rem; color: #cbd5e1;">${row.team_name}</td>
+                                    <td style="${tdStyleSec}; color: #cbd5e1;">${row.team_name}</td>
                                     <td style="padding: 1rem; color: var(--accent); font-weight: bold;">${row.avg_points.toFixed(2)}</td>
                                     <td style="padding: 1rem; color: #fbbf24; font-weight: bold;">${row.scudetti_won}</td>
-                                    <td class="sec-col" style="padding: 1rem;">${row.total_points}</td>
-                                    <td class="sec-col" style="padding: 1rem;">${row.seasons_played}</td>
-                                    <td class="sec-col" style="padding: 1rem;">${row.matches_played}</td>
-                                    <td class="sec-col" style="padding: 1rem; color: #10b981;">${row.matches_won}</td>
-                                    <td class="sec-col" style="padding: 1rem; color: #60a5fa;">${row.matches_drawn}</td>
-                                    <td class="sec-col" style="padding: 1rem; color: #ef4444;">${row.matches_lost}</td>
-                                    <td class="sec-col" style="padding: 1rem;">${row.goals_scored}</td>
-                                    <td class="sec-col" style="padding: 1rem;">${row.goals_conceded}</td>
-                                    <td class="sec-col" style="padding: 1rem; color: #f59e0b;">${row.abandons}</td>
-                                    <td class="sec-col" style="padding: 1rem; color: ${row.abandon_rate > 20 ? '#ef4444' : '#cbd5e1'};">${row.abandon_rate.toFixed(1)}%</td>
+                                    <td style="${tdStyleSec}">${row.total_points}</td>
+                                    <td style="${tdStyleSec}">${row.seasons_played}</td>
+                                    <td style="${tdStyleSec}">${row.matches_played}</td>
+                                    <td style="${tdStyleSec}; color: #10b981;">${row.matches_won}</td>
+                                    <td style="${tdStyleSec}; color: #60a5fa;">${row.matches_drawn}</td>
+                                    <td style="${tdStyleSec}; color: #ef4444;">${row.matches_lost}</td>
+                                    <td style="${tdStyleSec}">${row.goals_scored}</td>
+                                    <td style="${tdStyleSec}">${row.goals_conceded}</td>
+                                    <td style="${tdStyleSec}; color: #f59e0b;">${row.abandons}</td>
+                                    <td style="${tdStyleSec}; color: ${row.abandon_rate > 20 ? '#ef4444' : '#cbd5e1'};">${row.abandon_rate.toFixed(1)}%</td>
                                 </tr>
                             `).join('')}
                         </tbody>
@@ -191,11 +211,6 @@ export class LeaderboardUI {
     }
 
     attachLeaderboardEvents() {
-        document.getElementById('btn-back-selection').onclick = () => {
-            this.uiState = 'SELECTION';
-            this.render();
-        };
-
         // Sub tabs
         document.getElementById('sub-tab-classic').onclick = async () => {
             if (!this.isBudget) return;
@@ -214,7 +229,7 @@ export class LeaderboardUI {
         if (btnExpand) {
             btnExpand.onclick = () => {
                 this.columnsExpanded = !this.columnsExpanded;
-                this.render(); // Re-render to apply the class state
+                this.render(); // Re-render to apply the style display block/none
             };
         }
 
@@ -226,5 +241,11 @@ export class LeaderboardUI {
                 if (col) this.handleSort(col);
             });
         });
+    }
+
+    cleanup() {
+        // Clear right header when leaving leaderboard fully
+        const headerRight = document.getElementById('global-header-right');
+        if (headerRight) headerRight.innerHTML = '';
     }
 }
