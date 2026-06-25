@@ -336,7 +336,8 @@ export class SeasonUI {
         // Push stats to Supabase if logged in
         const { data: { session } } = await supabase.auth.getSession();
         if (session && session.user) {
-            await StatsEngine.updateSeasonStats(session.user.id, false, {
+            const isBudget = this.state.gameMode === 'budget';
+            await StatsEngine.updateSeasonStats(session.user.id, false, isBudget, {
                 isAbandon: false,
                 position: finalPosition,
                 points: userTeam.points,
@@ -344,8 +345,8 @@ export class SeasonUI {
                 won: userTeam.won,
                 drawn: userTeam.drawn,
                 lost: userTeam.lost,
-                goalsScored: userTeam.goalsFor,
-                goalsConceded: userTeam.goalsAgainst
+                goalsScored: userTeam.gf,
+                goalsConceded: userTeam.ga
             });
         }
 

@@ -529,7 +529,8 @@ export class MultiplayerSeasonUI {
         else if (pos >= 18) outcomeMsg = '<p style="font-size: 1.2rem; color: #ef4444; font-weight: bold; margin-bottom: 0.5rem;">⬇️ Retrocesso</p>';
 
         // Push stats to Supabase
-        await StatsEngine.updateSeasonStats(this.currentUser.id, true, {
+        const isBudget = this.lobby && this.lobby.settings && this.lobby.settings.isBudget ? true : false;
+        await StatsEngine.updateSeasonStats(this.currentUser.id, true, isBudget, {
             isAbandon: false,
             position: pos,
             points: userTeam.points,
@@ -537,8 +538,8 @@ export class MultiplayerSeasonUI {
             won: userTeam.won,
             drawn: userTeam.drawn,
             lost: userTeam.lost,
-            goalsScored: userTeam.goalsFor,
-            goalsConceded: userTeam.goalsAgainst
+            goalsScored: userTeam.gf,
+            goalsConceded: userTeam.ga
         });
 
         if (this.isHost) {
