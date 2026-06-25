@@ -93,7 +93,7 @@ export class GameState {
         // 2. Add user team
         const userTeamObj = {
             id: 'user_team',
-            name: 'La Tua Squadra',
+            name: this.teamName || 'La Tua Squadra',
             isUser: true,
             stats: this.userTeam.stats,
             players: this.userTeam.squad // map to players, mapped to squad in init standings

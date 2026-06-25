@@ -577,7 +577,7 @@ export class MultiplayerSeasonUI {
             
             <div class="stats-grid">
                 <div class="stats-card user-stats-card">
-                    <h3 class="stats-card-title">La Tua Squadra</h3>
+                    <h3 class="stats-card-title">${userTeam.name}</h3>
                     <div class="stat-item">
                         <span class="stat-label">Miglior Marcatore</span><br>
                         <strong class="stat-value">${topStats.userStats.topScorer.name}</strong> <span class="stat-highlight">(${topStats.userStats.topScorer.goals} Gol)</span>

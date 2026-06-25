@@ -26,6 +26,8 @@ export class MatchEngine {
         const events = this.generateMatchEvents(homeGoals, awayGoals, homeTeam, awayTeam);
 
         return {
+            homeId: homeTeam.id,
+            awayId: awayTeam.id,
             homeTeam: homeTeam.name,
             awayTeam: awayTeam.name,
             homeScore: homeGoals,
