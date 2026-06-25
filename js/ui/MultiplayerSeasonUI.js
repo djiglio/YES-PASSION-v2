@@ -495,7 +495,7 @@ export class MultiplayerSeasonUI {
         const mvp = [...players].sort((a, b) => b.mvpScore - a.mvpScore || b.goals - a.goals)[0];
 
         // User stats
-        const userPlayers = players.filter(p => p.isUser);
+        const userPlayers = players.filter(p => p.teamId === this.currentUser.id);
         const userTopScorer = [...userPlayers].sort((a, b) => b.goals - a.goals)[0] || { name: '-', goals: 0 };
         const userTopAssist = [...userPlayers].sort((a, b) => b.assists - a.assists)[0] || { name: '-', assists: 0 };
         const userCleanSheets = userPlayers.length > 0 ? Math.max(...userPlayers.map(p => p.cleanSheets)) : 0;
