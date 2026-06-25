@@ -129,7 +129,7 @@ export class MultiplayerSeasonUI {
                             <div class="s-stat">DR</div>
                         </div>
                         ${this.seasonState.standings.map((t, idx) => `
-                        <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}" style="${t.isUser ? `border-left: 4px solid ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'};` : ''}">
+                        <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}">
                                 <div class="s-pos">${idx + 1}</div>
                                 <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
                                 <div class="s-pts">${t.points}</div>
@@ -566,7 +566,7 @@ export class MultiplayerSeasonUI {
                 </div>
             `;
             rowsHtml += this.seasonState.standings.map((t, idx) => `
-                <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}" style="${t.isUser ? `border-left: 4px solid ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'};` : ''}">
+                <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}">
                     <div class="s-pos">${idx + 1}</div>
                     <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
                     <div class="s-pts">${t.points}</div>
