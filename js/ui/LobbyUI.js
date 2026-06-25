@@ -1,4 +1,5 @@
 import { supabase } from '../supabase.js';
+import { StatsEngine } from '../engine/StatsEngine.js';
 
 export class LobbyUI {
     constructor(app, contentDiv) {
@@ -472,11 +473,19 @@ export class LobbyUI {
         }
     }
 
-    startDraftingPhase() {
+    async startDraftingPhase() {
         if (this.realtimeChannel) {
             supabase.removeChannel(this.realtimeChannel);
         }
         
+        try {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                const isBudget = this.lobby.settings ? this.lobby.settings.isBudget : false;
+                await StatsEngine.markSeasonStart(user.id, true, isBudget);
+            }
+        } catch(e) { console.error(e); }
+
         // Tell GameApp to transition to Multiplayer Draft Phase
         this.app.startMultiplayerDraft(this.lobby, this.players, this.teamName);
     }

@@ -1,4 +1,6 @@
 import { DataLoader } from '../data/DataLoader.js';
+import { StatsEngine } from '../engine/StatsEngine.js';
+import { supabase } from '../supabase.js';
 
 export class DraftUI {
     constructor(gameState, containerElement) {
@@ -285,6 +287,13 @@ export class DraftUI {
     async startDraft(formation) {
         const globalHeader = document.getElementById('global-header');
         if (globalHeader) globalHeader.style.display = 'block';
+
+        try {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                await StatsEngine.markSeasonStart(user.id, false, this.budgetMode);
+            }
+        } catch(e) { console.error(e); }
 
         this.state.userTeam.formation = formation;
         const layoutRows = this.formations[formation];

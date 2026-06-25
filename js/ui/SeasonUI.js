@@ -108,12 +108,8 @@ export class SeasonUI {
         const btnAbandon = document.getElementById('btn-abandon');
         if (btnAbandon) {
             btnAbandon.addEventListener('click', async () => {
-                if(confirm("Sei sicuro di voler abbandonare la stagione? Questo conterà come un ritiro nelle tue statistiche e tornerai al menu principale.")) {
+                if(confirm("Sei sicuro di voler abbandonare la stagione? La penalità di abbandono è già stata registrata, tornando al menu confermerai il ritiro.")) {
                     this.stopFastSim();
-                    const { data: { session } } = await supabase.auth.getSession();
-                    if (session && session.user) {
-                        await StatsEngine.updateSeasonStats(session.user.id, false, { isAbandon: true });
-                    }
                     window.location.reload();
                 }
             });
