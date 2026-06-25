@@ -106,11 +106,33 @@ export class MatchEngine {
                         'DC': ['DC', 'TS', 'TD', 'ASA', 'ADA']
                     };
 
-                    const candidates = teamObj.squad.filter(p => {
+                    let finalAllowedRoles = roleGroups[targetRole];
+                    
+                    if (targetRole === 'ATT') {
+                        const subRand = Math.random();
+                        if (subRand <= 0.65) finalAllowedRoles = ['ATT'];
+                        else finalAllowedRoles = ['AT', 'AS', 'AD'];
+                    } else if (targetRole === 'CC') {
+                        const subRand = Math.random();
+                        if (subRand <= 0.60) finalAllowedRoles = ['COC'];
+                        else if (subRand <= 0.90) finalAllowedRoles = ['CC', 'ES', 'ED'];
+                        else finalAllowedRoles = ['CDC'];
+                    }
+
+                    let candidates = teamObj.squad.filter(p => {
                         if (!p.Ruolo) return false;
                         const pRoles = p.Ruolo.split(',').map(r => r.trim());
-                        return pRoles.some(r => roleGroups[targetRole].includes(r));
+                        return pRoles.some(r => finalAllowedRoles.includes(r));
                     });
+
+                    // Fallback to broader role group if no specific sub-role is available
+                    if (candidates.length === 0) {
+                        candidates = teamObj.squad.filter(p => {
+                            if (!p.Ruolo) return false;
+                            const pRoles = p.Ruolo.split(',').map(r => r.trim());
+                            return pRoles.some(r => roleGroups[targetRole].includes(r));
+                        });
+                    }
 
                     if (candidates.length > 0) {
                         scorer = pickWeightedPlayer(candidates);
