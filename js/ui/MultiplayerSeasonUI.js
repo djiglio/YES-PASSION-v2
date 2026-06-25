@@ -519,6 +519,13 @@ export class MultiplayerSeasonUI {
         const userTeam = this.seasonState.standings.find(t => t.id === this.currentUser.id);
         const topStats = this.getTopStats();
 
+        let outcomeMsg = '';
+        if (pos === 1) outcomeMsg = '<p style="font-size: 1.5rem; color: #fbbf24; font-weight: bold; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(251,191,36,0.3);">🏆 CAMPIONE D\\'ITALIA</p>';
+        else if (pos <= 4) outcomeMsg = '<p style="font-size: 1.2rem; color: #60a5fa; font-weight: bold; margin-bottom: 0.5rem;">⭐ Qualificato in Champions League</p>';
+        else if (pos === 5) outcomeMsg = '<p style="font-size: 1.2rem; color: #f97316; font-weight: bold; margin-bottom: 0.5rem;">⚽ Qualificato in Europa League</p>';
+        else if (pos === 6) outcomeMsg = '<p style="font-size: 1.2rem; color: #10b981; font-weight: bold; margin-bottom: 0.5rem;">🟢 Qualificato in Conference League</p>';
+        else if (pos >= 18) outcomeMsg = '<p style="font-size: 1.2rem; color: #ef4444; font-weight: bold; margin-bottom: 0.5rem;">⬇️ Retrocesso</p>';
+
         if (this.isHost) {
             // Update leaderboards via edge function or direct
             try {
@@ -531,6 +538,7 @@ export class MultiplayerSeasonUI {
             <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
                 <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione Multiplayer Conclusa!</h2>
                 <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${pos}° posto</strong>.</p>
+                ${outcomeMsg}
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
                 <button id="btn-back-menu" class="btn" style="font-size: 1.2rem; padding: 1rem 3rem;">Torna al Menu Principale</button>
             </div>
