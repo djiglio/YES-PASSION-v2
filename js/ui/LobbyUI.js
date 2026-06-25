@@ -202,7 +202,7 @@ export class LobbyUI {
     async fetchPlayers() {
         const { data, error } = await supabase
             .from('lobby_players')
-            .select('user_id, profiles(username)')
+            .select('user_id, profiles(username, team_name)')
             .eq('lobby_id', this.lobby.id);
             
         if (!error) {

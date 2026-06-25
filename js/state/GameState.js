@@ -172,7 +172,7 @@ export class GameState {
 
             teams.push({
                 id: p.user_id,
-                name: p.team_name,
+                name: p.profiles ? p.profiles.team_name : 'Team ' + p.user_id.substring(0,4),
                 isUser: true,
                 stats: stats,
                 players: squad

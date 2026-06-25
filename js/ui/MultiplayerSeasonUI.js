@@ -199,7 +199,17 @@ export class MultiplayerSeasonUI {
             const homeT = this.seasonState.standings.find(t => t.id === m.home);
             const awayT = this.seasonState.standings.find(t => t.id === m.away);
             const result = MatchEngine.simulateMatch(homeT, awayT);
-            matchResults.push(result);
+            matchResults.push({
+                homeId: m.home,
+                awayId: m.away,
+                homeScore: result.homeScore,
+                awayScore: result.awayScore,
+                homeCleanSheet: result.homeCleanSheet,
+                awayCleanSheet: result.awayCleanSheet,
+                events: result.events,
+                homeTeam: result.homeTeam,
+                awayTeam: result.awayTeam
+            });
         });
 
         // Apply results to a clone of the state
@@ -391,7 +401,18 @@ export class MultiplayerSeasonUI {
             matches.forEach(m => {
                 const homeT = nextState.standings.find(t => t.id === m.home);
                 const awayT = nextState.standings.find(t => t.id === m.away);
-                matchResults.push(MatchEngine.simulateMatch(homeT, awayT));
+                const result = MatchEngine.simulateMatch(homeT, awayT);
+                matchResults.push({
+                    homeId: m.home,
+                    awayId: m.away,
+                    homeScore: result.homeScore,
+                    awayScore: result.awayScore,
+                    homeCleanSheet: result.homeCleanSheet,
+                    awayCleanSheet: result.awayCleanSheet,
+                    events: result.events,
+                    homeTeam: result.homeTeam,
+                    awayTeam: result.awayTeam
+                });
             });
 
             this.updateStateStandings(nextState, matchResults);
