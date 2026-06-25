@@ -7,7 +7,7 @@ import { MultiplayerDraftUI } from './ui/MultiplayerDraftUI.js';
 import { MultiplayerSeasonUI } from './ui/MultiplayerSeasonUI.js';
 import { LeaderboardUI } from './ui/LeaderboardUI.js';
 
-window.showAlert = function(message, title = "YES PASSION dice") {
+window.showAlert = function(message) {
     let modal = document.getElementById('custom-alert-modal');
     if (!modal) {
         modal = document.createElement('div');
@@ -16,22 +16,18 @@ window.showAlert = function(message, title = "YES PASSION dice") {
         
         const content = document.createElement('div');
         content.className = 'cl-card';
-        content.style.cssText = 'background: linear-gradient(145deg, rgba(20,30,50,0.9), rgba(10,15,30,0.9)); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 2rem; border-radius: 16px; width: 90%; max-width: 450px; color: white; display: flex; flex-direction: column; gap: 1.5rem;';
-        
-        const titleEl = document.createElement('h3');
-        titleEl.id = 'custom-alert-title';
-        titleEl.style.cssText = 'margin: 0; font-size: 1.2rem; font-weight: 600; color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;';
+        content.style.cssText = 'background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 2.5rem 2rem; border-radius: 16px; width: 90%; max-width: 450px; color: white; display: flex; flex-direction: column; gap: 1.8rem; text-align: center;';
         
         const msgEl = document.createElement('p');
         msgEl.id = 'custom-alert-message';
-        msgEl.style.cssText = 'margin: 0; font-size: 1rem; color: #cbd5e1; line-height: 1.5;';
+        msgEl.style.cssText = 'margin: 0; font-size: 1.1rem; color: #f3f4f6; line-height: 1.6;';
         
         const btnContainer = document.createElement('div');
-        btnContainer.style.cssText = 'display: flex; justify-content: flex-end; margin-top: 0.5rem;';
+        btnContainer.style.cssText = 'display: flex; justify-content: center; margin-top: 0.5rem;';
         
         const btnOk = document.createElement('button');
-        btnOk.textContent = 'Ok';
-        btnOk.style.cssText = 'padding: 0.5rem 2rem; font-weight: 600; border-radius: 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: white; cursor: pointer; transition: all 0.2s ease;';
+        btnOk.textContent = 'OK';
+        btnOk.style.cssText = 'padding: 0.8rem 3rem; font-size: 1.1rem; font-weight: 600; letter-spacing: 1px; border-radius: 30px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: white; cursor: pointer; transition: all 0.2s ease;';
         btnOk.onmouseover = () => btnOk.style.background = 'rgba(255, 255, 255, 0.2)';
         btnOk.onmouseout = () => btnOk.style.background = 'rgba(255, 255, 255, 0.1)';
         
@@ -40,14 +36,12 @@ window.showAlert = function(message, title = "YES PASSION dice") {
         };
         
         btnContainer.appendChild(btnOk);
-        content.appendChild(titleEl);
         content.appendChild(msgEl);
         content.appendChild(btnContainer);
         modal.appendChild(content);
         document.body.appendChild(modal);
     }
     
-    document.getElementById('custom-alert-title').textContent = title;
     document.getElementById('custom-alert-message').textContent = message;
     modal.style.display = 'flex';
 };
