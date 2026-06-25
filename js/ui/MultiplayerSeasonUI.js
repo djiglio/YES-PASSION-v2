@@ -394,6 +394,12 @@ export class MultiplayerSeasonUI {
                     } else {
                         this.fastSimTimeout = setTimeout(() => this.fastSimLoop(), 1000);
                     }
+                } else {
+                    if (this.seasonState.isFinished || this.seasonState.matchday > 38) {
+                        setTimeout(() => {
+                            this.renderEndSeason();
+                        }, 2500);
+                    }
                 }
             }
         }, 30);
@@ -598,9 +604,11 @@ export class MultiplayerSeasonUI {
                     <div class="s-pos">#</div>
                     <div class="s-team">Squadra</div>
                     <div class="s-pts">PT</div>
+                    <div class="s-stat">G</div>
                     <div class="s-stat">V</div>
                     <div class="s-stat">N</div>
                     <div class="s-stat">P</div>
+                    <div class="s-stat">DR</div>
                 </div>
             `;
             rowsHtml += this.seasonState.standings.map((t, idx) => `
@@ -608,9 +616,11 @@ export class MultiplayerSeasonUI {
                     <div class="s-pos">${idx + 1}</div>
                     <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
                     <div class="s-pts">${t.points}</div>
+                    <div class="s-stat">${t.played}</div>
                     <div class="s-stat">${t.won}</div>
                     <div class="s-stat">${t.drawn}</div>
                     <div class="s-stat">${t.lost}</div>
+                    <div class="s-stat">${t.gd}</div>
                 </div>
             `).join('');
             table.innerHTML = rowsHtml;
