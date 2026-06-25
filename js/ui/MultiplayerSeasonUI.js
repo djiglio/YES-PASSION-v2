@@ -9,7 +9,7 @@ export class MultiplayerSeasonUI {
         
         this.lobby = this.state.mpLobby;
         this.players = this.state.mpPlayers;
-        this.currentUser = this.app.authUI.profile;
+        this.currentUser = this.app.authUI.currentUser;
         this.isHost = this.lobby.host_id === this.currentUser.id;
         
         this.seasonState = this.lobby.season_state || null;
