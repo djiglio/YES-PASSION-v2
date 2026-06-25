@@ -119,12 +119,12 @@ class GameApp {
                                 <input type="text" id="input-username" value="${this.authUI.profile?.username || ''}" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
                             </div>
                             <div>
-                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nome Squadra (Es: F.C. Edoardo)</label>
+                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nome Squadra (Es: FC Dream Team)</label>
                                 <input type="text" id="input-teamname" value="${this.authUI.profile?.team_name || ''}" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
                             </div>
                             <div>
-                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nuova Password (Opzionale)</label>
-                                <input type="password" id="input-password" placeholder="Lascia vuoto per non modificare" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; margin-bottom: 0.5rem;">
+                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Cambio Password (Opzionale)</label>
+                                <input type="password" id="input-password" placeholder="Nuova password" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; margin-bottom: 0.5rem;">
                                 <input type="password" id="input-password-confirm" placeholder="Conferma nuova password" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
                             </div>
                             <div style="display: flex; gap: 1rem; margin-top: 1rem;">
