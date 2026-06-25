@@ -471,8 +471,8 @@ export class MultiplayerSeasonUI {
         if (this.realtimeChannel) supabase.removeChannel(this.realtimeChannel);
 
         const pos = this.seasonState.standings.findIndex(t => t.id === this.currentUser.id) + 1;
-        const totalPoints = this.seasonState.standings.find(t => t.id === this.currentUser.id).points;
-        const myTeam = this.seasonState.standings.find(t => t.id === this.currentUser.id);
+        const userTeam = this.seasonState.standings.find(t => t.id === this.currentUser.id);
+        const topStats = this.getTopStats();
 
         if (this.isHost) {
             // Update leaderboards via edge function or direct
@@ -482,15 +482,6 @@ export class MultiplayerSeasonUI {
             } catch(e) {}
         }
 
-        let html = `
-            <div class="end-season-container" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 3rem;">
-                <h1 style="color: var(--accent); font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(0, 230, 255, 0.5);">STAGIONE CONCLUSA</h1>
-                <h2>Hai terminato in ${pos}ª Posizione con ${totalPoints} Punti.</h2>
-                
-                <div style="display: flex; gap: 2rem; justify-content: center; margin: 2rem 0;">
-                    <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                        <h3>Statistiche Squadra</h3>
-                        <p>Vittorie: ${myTeam.won}</p>
         this.container.innerHTML = `
             <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
                 <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione Multiplayer Conclusa!</h2>
