@@ -1,5 +1,6 @@
 import { MatchEngine } from '../engine/MatchEngine.js';
 import { DataLoader } from '../data/DataLoader.js';
+import { supabase } from '../supabase.js';
 
 export class MultiplayerSeasonUI {
     constructor(app, containerElement) {
