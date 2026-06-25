@@ -592,6 +592,7 @@ export class MultiplayerDraftUI {
         if (this.timerInterval) clearInterval(this.timerInterval);
         if (this.realtimeChannel) supabase.removeChannel(this.realtimeChannel);
         
+        this.app.state.mpLobby.draft_state = this.draftState;
         this.app.startMultiplayerSeason();
     }
 }

@@ -188,7 +188,7 @@ export class LobbyUI {
                 'postgres_changes',
                 { event: 'UPDATE', schema: 'public', table: 'lobbies' },
                 (payload) => {
-                    this.lobby = payload.new;
+                    this.lobby = { ...this.lobby, ...payload.new };
                     if (this.lobby.status === 'drafting') {
                         this.startDraftingPhase();
                     } else {

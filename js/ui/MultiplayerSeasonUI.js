@@ -35,23 +35,31 @@ export class MultiplayerSeasonUI {
     }
 
     async generateAndPushSeason() {
-        // Load the season data
-        const seasonId = this.lobby.draft_state.currentSeasonId;
-        const rawData = await DataLoader.loadSeason(seasonId);
-        
-        // Use GameState to generate the initial season state
-        const initialState = this.state.initMultiplayerSeason(rawData, this.lobby.draft_state, this.players);
-        
-        // Push to supabase
-        const { data, error } = await supabase.from('lobbies')
-            .update({ season_state: initialState })
-            .eq('id', this.lobby.id)
-            .select()
-            .single();
+        try {
+            // Load the season data
+            const seasonId = this.lobby.draft_state.currentSeasonId;
+            const rawData = await DataLoader.loadSeason(seasonId);
             
-        if (!error && data) {
-            this.seasonState = data.season_state;
-            this.render();
+            // Use GameState to generate the initial season state
+            const initialState = this.state.initMultiplayerSeason(rawData, this.lobby.draft_state, this.players);
+            
+            // Push to supabase
+            const { data, error } = await supabase.from('lobbies')
+                .update({ season_state: initialState })
+                .eq('id', this.lobby.id)
+                .select()
+                .single();
+                
+            if (error) {
+                alert("Supabase Error: " + error.message);
+                console.error(error);
+            } else if (data) {
+                this.seasonState = data.season_state;
+                this.render();
+            }
+        } catch (err) {
+            alert("Errore generazione calendario: " + err.message);
+            console.error(err);
         }
     }
 
