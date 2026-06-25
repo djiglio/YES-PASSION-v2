@@ -80,35 +80,111 @@ export class AuthUI {
         return null; // Success
     }
 
+    async register(email, password) {
+        const { data, error } = await supabase.auth.signUp({
+            email: email,
+            password: password,
+        });
+
+        if (error) {
+            throw error;
+        }
+
+        // Supabase returns a user object. If email confirmation is enabled, 
+        // the user's identities array might be empty if the user already exists 
+        // or they will need to check their email.
+        if (data && data.user && data.user.identities && data.user.identities.length === 0) {
+            throw new Error('UserAlreadyExists');
+        }
+
+        return data;
+    }
+
     render() {
+        this.isRegisterMode = this.isRegisterMode || false;
+
         this.container.innerHTML = `
             <div class="auth-container" style="max-width: 400px; margin: 5rem auto; padding: 2rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
                 <h1 style="color: var(--accent); margin-bottom: 0.5rem; font-family: 'Bebas Neue', sans-serif; font-size: 3rem;">YES PASSION</h1>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">Accedi per giocare in Multiplayer</p>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                    ${this.isRegisterMode ? 'Crea un nuovo account per giocare' : 'Accedi per giocare in Multiplayer'}
+                </p>
                 
-                <form id="login-form" style="display: flex; flex-direction: column; gap: 1rem;">
+                <form id="auth-form" style="display: flex; flex-direction: column; gap: 1rem;">
                     <input type="email" id="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
                     <input type="password" id="password" placeholder="Password" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
-                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Entra nel Gioco</button>
-                    <div id="login-error" style="color: #ef4444; font-size: 0.9rem; margin-top: 0.5rem;"></div>
+                    
+                    ${this.isRegisterMode ? `
+                        <input type="password" id="password-confirm" placeholder="Conferma Password" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
+                    ` : ''}
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+                        ${this.isRegisterMode ? 'Registrati' : 'Entra nel Gioco'}
+                    </button>
+                    
+                    <div id="auth-error" style="color: #ef4444; font-size: 0.9rem; margin-top: 0.5rem;"></div>
+                    <div id="auth-success" style="color: #10b981; font-size: 0.9rem; margin-top: 0.5rem;"></div>
                 </form>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-muted);">
+                    ${this.isRegisterMode ? 'Hai già un account?' : 'Non hai un account?'} 
+                    <a href="#" id="toggle-auth-mode" style="color: var(--accent); text-decoration: none; font-weight: bold;">
+                        ${this.isRegisterMode ? 'Accedi' : 'Registrati'}
+                    </a>
+                </div>
             </div>
         `;
 
-        const form = document.getElementById('login-form');
+        document.getElementById('toggle-auth-mode').addEventListener('click', (e) => {
+            e.preventDefault();
+            this.isRegisterMode = !this.isRegisterMode;
+            this.render();
+        });
+
+        const form = document.getElementById('auth-form');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const email = document.getElementById('email').value;
+            const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
-            const errorDiv = document.getElementById('login-error');
+            const errorDiv = document.getElementById('auth-error');
+            const successDiv = document.getElementById('auth-success');
             
-            try {
-                errorDiv.textContent = 'Accesso in corso...';
-                await this.login(email, password);
-                // Go to Main Menu
-                this.app.startHome();
-            } catch (error) {
-                errorDiv.textContent = 'Errore: Credenziali non valide.';
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+
+            if (this.isRegisterMode) {
+                const passwordConfirm = document.getElementById('password-confirm').value;
+                if (password !== passwordConfirm) {
+                    errorDiv.textContent = 'Le password non coincidono.';
+                    return;
+                }
+                
+                try {
+                    errorDiv.textContent = 'Creazione account in corso...';
+                    await this.register(email, password);
+                    errorDiv.textContent = '';
+                    successDiv.textContent = 'Registrazione completata! Controlla la tua email per confermare l\'account.';
+                    
+                    // Reset fields
+                    document.getElementById('email').value = '';
+                    document.getElementById('password').value = '';
+                    document.getElementById('password-confirm').value = '';
+                } catch (error) {
+                    if (error.message === 'UserAlreadyExists' || error.status === 422) {
+                        errorDiv.textContent = 'Errore: Questa email è già registrata.';
+                    } else {
+                        errorDiv.textContent = 'Errore durante la registrazione: ' + error.message;
+                    }
+                }
+            } else {
+                try {
+                    errorDiv.textContent = 'Accesso in corso...';
+                    await this.login(email, password);
+                    // Go to Main Menu
+                    this.app.startHome();
+                } catch (error) {
+                    errorDiv.textContent = 'Errore: Credenziali non valide o email non confermata.';
+                }
             }
         });
     }
