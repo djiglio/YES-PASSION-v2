@@ -100,11 +100,22 @@ export class MatchEngine {
                     if (rand > 0.6) targetRole = 'CC';
                     if (rand > 0.85) targetRole = 'DC';
 
-                    const candidates = teamObj.squad.filter(p => p.Ruolo && p.Ruolo.includes(targetRole));
+                    const roleGroups = {
+                        'ATT': ['ATT', 'AT', 'AD', 'AS'],
+                        'CC': ['CC', 'CDC', 'COC', 'ED', 'ES'],
+                        'DC': ['DC', 'TS', 'TD', 'ASA', 'ADA']
+                    };
+
+                    const candidates = teamObj.squad.filter(p => {
+                        if (!p.Ruolo) return false;
+                        const pRoles = p.Ruolo.split(',').map(r => r.trim());
+                        return pRoles.some(r => roleGroups[targetRole].includes(r));
+                    });
+
                     if (candidates.length > 0) {
                         scorer = pickWeightedPlayer(candidates);
                     } else {
-                        scorer = pickWeightedPlayer(teamObj.squad);
+                        scorer = pickWeightedPlayer(teamObj.squad.filter(p => !p.Ruolo.includes('POR')));
                     }
 
                     // Generate assistman (70% chance if not penalty)
@@ -114,7 +125,12 @@ export class MatchEngine {
                         if (assistRand > 0.6) assistRole = 'ATT'; // Attackers
                         if (assistRand > 0.85) assistRole = 'DC'; // Defenders / Fullbacks
 
-                        const assistCandidates = teamObj.squad.filter(p => p.Ruolo && p.Ruolo.includes(assistRole) && p.Nome !== scorer);
+                        const assistCandidates = teamObj.squad.filter(p => {
+                            if (!p.Ruolo || p.Nome === scorer) return false;
+                            const pRoles = p.Ruolo.split(',').map(r => r.trim());
+                            return pRoles.some(r => roleGroups[assistRole].includes(r));
+                        });
+
                         if (assistCandidates.length > 0) {
                             assistman = pickWeightedPlayer(assistCandidates);
                         } else {

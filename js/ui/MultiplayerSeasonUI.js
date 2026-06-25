@@ -573,7 +573,7 @@ export class MultiplayerSeasonUI {
                     <h3 class="table-title">Capocannoniere (Top 10)</h3>
                     <div class="stats-list">
                         ${topStats.topScorers.map((p, idx) => `
-                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}">
+                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}" style="${p.isUser ? `border-left-color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'};` : ''}">
                                 <div><span class="rank-num">${idx + 1}.</span> <strong>${p.name}</strong> <span class="team-name" style="${p.isUser ? `color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'}; font-weight: bold;` : ''}">(${p.team})</span></div>
                                 <strong class="stat-highlight">${p.goals}</strong>
                             </div>
@@ -585,7 +585,7 @@ export class MultiplayerSeasonUI {
                     <h3 class="table-title">Miglior Assistman (Top 10)</h3>
                     <div class="stats-list">
                         ${topStats.topAssists.map((p, idx) => `
-                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}">
+                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}" style="${p.isUser ? `border-left-color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'};` : ''}">
                                 <div><span class="rank-num">${idx + 1}.</span> <strong>${p.name}</strong> <span class="team-name" style="${p.isUser ? `color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'}; font-weight: bold;` : ''}">(${p.team})</span></div>
                                 <strong class="stat-highlight">${p.assists}</strong>
                             </div>
