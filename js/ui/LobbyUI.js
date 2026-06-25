@@ -58,6 +58,44 @@ export class LobbyUI {
                                 <span style="font-size: 0.7rem; padding: 3px 6px; border-radius: 4px; background: rgba(255,255,255,0.2); color: white;">AMICHEVOLE</span>
                             </div>
                         </div>
+
+                        <div id="custom-settings-panel" style="display: none; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Impostazioni Custom</h4>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <label style="font-size: 0.9rem;">Mostra Overall Giocatori</label>
+                                <input type="checkbox" id="lobby-custom-show-ovr" style="width: 20px; height: 20px;">
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <label style="font-size: 0.9rem;">Abilita Limite Budget</label>
+                                <input type="checkbox" id="lobby-custom-budget" style="width: 20px; height: 20px;">
+                            </div>
+                            
+                            <div id="lobby-custom-budget-slider-container" style="display: none; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                    <span>Budget Massimo</span>
+                                    <span id="lobby-custom-budget-val" style="font-weight: bold; color: white;">200M</span>
+                                </div>
+                                <input type="range" id="lobby-custom-budget-slider" min="100" max="500" step="10" value="200" style="width: 100%;">
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                                <label style="font-size: 0.9rem;">Stagione</label>
+                                <select id="lobby-custom-season" class="input-field" style="max-width: 150px; padding: 0.4rem; font-size: 0.9rem;">
+                                    <option value="all">Tutte</option>
+                                    <option value="15">2014-15</option>
+                                    <option value="16">2015-16</option>
+                                    <option value="17">2016-17</option>
+                                    <option value="18">2017-18</option>
+                                    <option value="19">2018-19</option>
+                                    <option value="20">2019-20</option>
+                                    <option value="21">2020-21</option>
+                                    <option value="22">2021-22</option>
+                                    <option value="23">2022-23</option>
+                                </select>
+                            </div>
+                        </div>
                         <button id="btn-create" class="btn btn-primary" style="width: 100%;">Crea Stanza</button>
                     </div>
 
@@ -73,6 +111,12 @@ export class LobbyUI {
         `;
 
         const modeOptions = this.container.querySelectorAll('.mode-option');
+        const customPanel = document.getElementById('custom-settings-panel');
+        const customBudgetCheck = document.getElementById('lobby-custom-budget');
+        const customBudgetSliderContainer = document.getElementById('lobby-custom-budget-slider-container');
+        const customBudgetSlider = document.getElementById('lobby-custom-budget-slider');
+        const customBudgetVal = document.getElementById('lobby-custom-budget-val');
+
         modeOptions.forEach(opt => {
             opt.addEventListener('click', () => {
                 modeOptions.forEach(o => {
@@ -83,7 +127,21 @@ export class LobbyUI {
                 opt.classList.add('selected');
                 opt.style.borderColor = 'var(--accent)';
                 opt.style.background = 'rgba(59,130,246, 0.15)';
+                
+                if (opt.getAttribute('data-value') === 'custom') {
+                    customPanel.style.display = 'flex';
+                } else {
+                    customPanel.style.display = 'none';
+                }
             });
+        });
+
+        customBudgetCheck.addEventListener('change', (e) => {
+            customBudgetSliderContainer.style.display = e.target.checked ? 'flex' : 'none';
+        });
+        
+        customBudgetSlider.addEventListener('input', (e) => {
+            customBudgetVal.textContent = e.target.value + 'M';
         });
 
         document.getElementById('btn-create').onclick = async () => await this.createLobby();
@@ -106,9 +164,19 @@ export class LobbyUI {
 
         document.getElementById('btn-create').textContent = "Creazione...";
 
+        let draft_state = { formations: {} };
+        if (mode === 'custom') {
+            draft_state.customSettings = {
+                isBlind: !document.getElementById('lobby-custom-show-ovr').checked,
+                isBudget: document.getElementById('lobby-custom-budget').checked,
+                budgetMax: parseInt(document.getElementById('lobby-custom-budget-slider').value) * 1000000,
+                customSeason: document.getElementById('lobby-custom-season').value
+            };
+        }
+
         const { data, error } = await supabase
             .from('lobbies')
-            .insert([{ code, host_id: user.id, mode, draft_state: { formations: {} } }])
+            .insert([{ code, host_id: user.id, mode, draft_state }])
             .select()
             .single();
 

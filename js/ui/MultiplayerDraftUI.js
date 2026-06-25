@@ -79,8 +79,13 @@ export class MultiplayerDraftUI {
     }
 
     async initializeDraftState() {
-        const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
-        const seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
+        let seasonId;
+        if (this.draftState.customSettings && this.draftState.customSettings.customSeason && this.draftState.customSettings.customSeason !== 'all') {
+            seasonId = parseInt(this.draftState.customSettings.customSeason);
+        } else {
+            const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
+            seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
+        }
         
         await this.loadSeasonData(seasonId);
 
@@ -226,8 +231,15 @@ export class MultiplayerDraftUI {
             nextUser = this.players[nextTurnIndex];
         }
 
-        const isBudget = this.lobby.mode === 'budget';
-        const isBlind = this.lobby.mode === 'classica' || this.lobby.mode === 'budget';
+        let isBudget = this.lobby.mode === 'budget';
+        let isBlind = this.lobby.mode === 'classica' || this.lobby.mode === 'budget';
+        let budgetMax = 200000000;
+
+        if (this.lobby.mode === 'custom' && this.draftState && this.draftState.customSettings) {
+            isBlind = this.draftState.customSettings.isBlind;
+            isBudget = this.draftState.customSettings.isBudget;
+            budgetMax = this.draftState.customSettings.budgetMax;
+        }
 
         const draftedByMap = {};
         Object.keys(this.draftState.rosters).forEach(uid => {
@@ -249,7 +261,7 @@ export class MultiplayerDraftUI {
                 }
             });
         }
-        const budgetPercent = Math.min((mySpent / 200000000) * 100, 100);
+        const budgetPercent = Math.min((mySpent / budgetMax) * 100, 100);
         let budgetColor = '#10b981';
         if (budgetPercent > 70) budgetColor = '#f59e0b';
         if (budgetPercent > 90) budgetColor = '#ef4444';
@@ -405,7 +417,7 @@ export class MultiplayerDraftUI {
                         </div>
                         <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.9rem;">
                             <span style="color: white;">Spesi: <b>€${(mySpent/1000000).toFixed(1)}M</b></span>
-                            <span style="color: ${budgetPercent > 90 ? '#ef4444' : 'white'};">Rimanenti: <b>€${((200000000 - mySpent)/1000000).toFixed(1)}M</b> / €200M</span>
+                            <span style="color: ${budgetPercent > 90 ? '#ef4444' : 'white'};">Rimanenti: <b>€${((budgetMax - mySpent)/1000000).toFixed(1)}M</b> / €${(budgetMax/1000000).toFixed(0)}M</span>
                         </div>
                     </div>` : ''}
                     <div class="pitch-container" style="position: relative;">
@@ -497,12 +509,20 @@ export class MultiplayerDraftUI {
             return;
         }
 
-        if (this.lobby.mode === 'budget') {
+        let isBudget = this.lobby.mode === 'budget';
+        let budgetMax = 200000000;
+        
+        if (this.lobby.mode === 'custom' && this.draftState && this.draftState.customSettings) {
+            isBudget = this.draftState.customSettings.isBudget;
+            budgetMax = this.draftState.customSettings.budgetMax;
+        }
+
+        if (isBudget) {
             let spent = 0;
             myRoster.forEach(s => { if (s.player) spent += (parseFloat(s.player.ValueNum) || 0) });
             const cost = parseFloat(this.selectedPlayer.ValueNum) || 0;
-            if (spent + cost > 200000000) {
-                alert(`Fondi insufficienti per acquistare ${this.selectedPlayer.Nome}. Sforeresti i 200M.`);
+            if (spent + cost > budgetMax) {
+                alert(`Fondi insufficienti per acquistare ${this.selectedPlayer.Nome}. Sforeresti il limite di ${(budgetMax/1000000).toFixed(0)}M.`);
                 return;
             }
         }
