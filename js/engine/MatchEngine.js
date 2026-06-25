@@ -96,21 +96,21 @@ export class MatchEngine {
                 let isPenalty = Math.random() < 0.1; // 10% chance for a penalty
 
                 if (teamObj.squad && teamObj.squad.length > 0) {
+                    const roleGroups = {
+                        'ATT': ['ATT', 'AT', 'AD', 'AS'],
+                        'CC': ['CC', 'CDC', 'COC', 'ED', 'ES'],
+                        'DC': ['DC', 'TS', 'TD', 'ASA', 'ADA']
+                    };
+
                     if (isPenalty) {
                         // Penalty taker is usually the best player (heavy weighting by OVR)
-                        scorer = pickWeightedPlayer(teamObj.squad.filter(p => !p.Ruolo.includes('POR')));
+                        scorer = pickWeightedPlayer(teamObj.squad.filter(p => p.Ruolo && !p.Ruolo.includes('POR')));
                     } else {
                         // Bias towards attackers (50%), Midfielders (35%), Defenders (15%)
                         const rand = Math.random();
                         let targetRole = 'ATT';
                         if (rand > 0.50) targetRole = 'CC';
                         if (rand > 0.85) targetRole = 'DC';
-
-                        const roleGroups = {
-                            'ATT': ['ATT', 'AT', 'AD', 'AS'],
-                            'CC': ['CC', 'CDC', 'COC', 'ED', 'ES'],
-                            'DC': ['DC', 'TS', 'TD', 'ASA', 'ADA']
-                        };
 
                         let finalAllowedRoles = roleGroups[targetRole];
                         
@@ -143,7 +143,7 @@ export class MatchEngine {
                         if (candidates.length > 0) {
                             scorer = pickWeightedPlayer(candidates);
                         } else {
-                            scorer = pickWeightedPlayer(teamObj.squad.filter(p => !p.Ruolo.includes('POR')));
+                            scorer = pickWeightedPlayer(teamObj.squad.filter(p => p.Ruolo && !p.Ruolo.includes('POR')));
                         }
                     }
 
@@ -163,7 +163,7 @@ export class MatchEngine {
                         if (assistCandidates.length > 0) {
                             assistman = pickWeightedPlayer(assistCandidates);
                         } else {
-                            const remaining = teamObj.squad.filter(p => p.Nome !== scorer && !p.Ruolo.includes('POR'));
+                            const remaining = teamObj.squad.filter(p => p.Nome !== scorer && p.Ruolo && !p.Ruolo.includes('POR'));
                             if (remaining.length > 0) {
                                 assistman = pickWeightedPlayer(remaining);
                             }
