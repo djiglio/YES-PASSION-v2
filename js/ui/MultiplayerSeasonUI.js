@@ -114,7 +114,7 @@ export class MultiplayerSeasonUI {
             <div class="season-container">
                 <div class="season-left">
                     <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h2>Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.seasonState.matchday}/38)</span></h2>
+                        <h2>Classifica <span id="season-matchday-counter" style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.seasonState.matchday}/38)</span></h2>
                         <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">Stagione: ${this.seasonState.seasonInfo.name}</span>
                     </div>
                     <div class="standings-table">
@@ -299,6 +299,11 @@ export class MultiplayerSeasonUI {
         let userMatchResult = matchResults.find(m => m.homeId === this.currentUser.id || m.awayId === this.currentUser.id);
         if (!userMatchResult) userMatchResult = matchResults[0];
 
+        const counterEl = document.getElementById('season-matchday-counter');
+        if (counterEl) {
+            counterEl.textContent = `(Giornata ${this.seasonState.matchday - 1}/38)`;
+        }
+
         resultsArea.innerHTML = `
             <div class="user-result" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -341,7 +346,9 @@ export class MultiplayerSeasonUI {
         const homeScorersEl = document.getElementById('live-home-scorers');
         const awayScorersEl = document.getElementById('live-away-scorers');
 
-        const interval = setInterval(async () => {
+        if (this.liveInterval) clearInterval(this.liveInterval);
+
+        this.liveInterval = setInterval(async () => {
             currentMinute++;
             if (timerEl) timerEl.innerText = currentMinute + "'";
 
@@ -363,7 +370,8 @@ export class MultiplayerSeasonUI {
             }
 
             if (currentMinute >= 90) {
-                clearInterval(interval);
+                clearInterval(this.liveInterval);
+                this.liveInterval = null;
                 if (timerEl) {
                     timerEl.innerText = "FINALE";
                     timerEl.style.background = "rgba(0, 230, 255, 0.2)";
