@@ -156,7 +156,6 @@ export class MultiplayerSeasonUI {
                                     <button id="btn-stop-sim" class="btn btn-danger">Ferma Simulazione</button>
                                 `}
                             ` : `<div style="text-align:center; padding:1rem; color:var(--text-muted);">In attesa dell'Host...</div>`}
-                            <button id="btn-abandon" class="btn btn-secondary" style="border:1px solid #ef4444; color:#ef4444; background:transparent; margin-top: 1rem; width: 100%;">Abbandona Stagione</button>
                         </div>
                         
                         <div id="match-results-area" class="match-results-area"></div>
@@ -179,18 +178,6 @@ export class MultiplayerSeasonUI {
     }
 
     attachEvents() {
-        const btnAbandon = document.getElementById('btn-abandon');
-        if (btnAbandon) {
-            btnAbandon.addEventListener('click', async () => {
-                if(confirm("Sei sicuro di voler abbandonare la stagione Multiplayer? La penalità di abbandono è già stata registrata, tornando al menu confermerai il ritiro.")) {
-                    if (this.isHost) {
-                        this.isSimulatingFast = false;
-                        clearTimeout(this.fastSimTimeout);
-                    }
-                    window.location.reload();
-                }
-            });
-        }
 
         if (!this.isHost) return;
 

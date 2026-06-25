@@ -67,7 +67,6 @@ export class SeasonUI {
                                 <button id="btn-play-day" class="btn">Gioca Giornata</button>
                                 <button id="btn-sim-fast" class="btn btn-secondary">Simula Automatica (5s/giornata)</button>
                                 <button id="btn-sim-all" class="btn btn-danger">Simula Tutto Subito</button>
-                                <button id="btn-abandon" class="btn btn-secondary" style="border:1px solid #ef4444; color:#ef4444; background:transparent;">Abbandona Stagione</button>
                             `}
                         </div>
                         
@@ -105,15 +104,6 @@ export class SeasonUI {
         if (btnSimAll) btnSimAll.addEventListener('click', () => this.simulateRemainingSeason());
         if (btnStopSim) btnStopSim.addEventListener('click', () => this.stopFastSim());
 
-        const btnAbandon = document.getElementById('btn-abandon');
-        if (btnAbandon) {
-            btnAbandon.addEventListener('click', async () => {
-                if(confirm("Sei sicuro di voler abbandonare la stagione? La penalità di abbandono è già stata registrata, tornando al menu confermerai il ritiro.")) {
-                    this.stopFastSim();
-                    window.location.reload();
-                }
-            });
-        }
     }
 
     simulateMatchday() {
