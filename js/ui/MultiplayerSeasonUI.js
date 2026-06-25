@@ -254,22 +254,23 @@ export class MultiplayerSeasonUI {
             if (res.events) {
                 res.events.forEach(e => {
                     const isUserTeam = e.isHome ? homeT.isUser : awayT.isUser;
+                    const teamId = e.isHome ? res.homeId : res.awayId;
                     if (e.scorer && e.scorer !== "Sconosciuto") {
                         const key = `${e.scorer}_${e.team}`;
-                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.scorer, team: e.team, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
+                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.scorer, team: e.team, teamId: teamId, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
                         state.playerStats[key].goals++;
                     }
                     if (e.assistman) {
                         const key = `${e.assistman}_${e.team}`;
-                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.assistman, team: e.team, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
+                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.assistman, team: e.team, teamId: teamId, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
                         state.playerStats[key].assists++;
                     }
                 });
             }
 
             const updateCleanSheets = (teamObj) => {
-                if (!teamObj.players) return; // In MP we use .players instead of .squad
-                teamObj.players.forEach(p => {
+                if (!teamObj.squad) return;
+                teamObj.squad.forEach(p => {
                     if (p.Ruolo && (p.Ruolo.includes('POR') || p.Ruolo.includes('DC') || p.Ruolo.includes('TS') || p.Ruolo.includes('TD'))) {
                         const key = `${p.Nome}_${teamObj.name}`;
                         if (!state.playerStats[key]) state.playerStats[key] = { name: p.Nome, team: teamObj.name, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: teamObj.isUser };
