@@ -117,9 +117,9 @@ class GameApp {
             <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
                 <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 3rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
                 
-                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
-                    <button id="btn-edit-user" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">MODIFICA PROFILO</button>
-                    <button id="btn-leaderboard" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(251, 191, 36, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(251, 191, 36, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: #fbbf24;">CLASSIFICHE</button>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; margin-bottom: 3rem;">
+                    <button id="btn-edit-user" class="btn btn-secondary" style="width: 220px; padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">MODIFICA PROFILO</button>
+                    <button id="btn-leaderboard" class="btn btn-primary" style="width: 220px; padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">CLASSIFICHE</button>
                 </div>
 
                 <div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,20,50,0.8); backdrop-filter: blur(10px); z-index: 1000; justify-content: center; align-items: center;">
@@ -153,12 +153,12 @@ class GameApp {
                 <div class="setup-modes" style="max-width: 800px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
                     
                     <button id="btn-sp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease;">
-                        <span style="color: #f3f4f6; font-weight: 800; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 0 10px rgba(243,244,246,0.5);">SINGLE PLAYER</span>
+                        <span style="color: #f3f4f6; font-weight: 500; font-size: 1.8rem; letter-spacing: 2px; text-shadow: 0 0 15px rgba(243,244,246,0.2);">SINGLE PLAYER</span>
                         <span style="color: #cbd5e1; font-size: 1rem;">Gioca da solo e competi nelle Leaderboard Globali.</span>
                     </button>
                     
                     <button id="btn-mp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease;">
-                        <span style="color: #e5e7eb; font-weight: 800; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 0 10px rgba(229,231,235,0.5);">MULTIPLAYER DRAFT</span>
+                        <span style="color: #e5e7eb; font-weight: 500; font-size: 1.8rem; letter-spacing: 2px; text-shadow: 0 0 15px rgba(229,231,235,0.2);">MULTIPLAYER</span>
                         <span style="color: #cbd5e1; font-size: 1rem;">Crea o unisciti a una lobby con i tuoi amici (Fino a 4 giocatori).</span>
                     </button>
                     
