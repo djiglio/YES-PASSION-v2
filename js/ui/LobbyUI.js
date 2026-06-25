@@ -256,7 +256,10 @@ export class LobbyUI {
             </div>
 
             <div id="formation-selection" style="text-align: center; margin-top: 2rem;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">SELEZIONA IL TUO MODULO</h3>
+                <h3 id="formation-title" style="font-size: 1.5rem; margin-bottom: 1.5rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; transition: color 0.2s;">
+                    <span id="formation-title-text">SELEZIONA IL TUO MODULO</span>
+                    <span id="formation-toggle-icon" style="display: none; font-size: 1rem; color: var(--accent);">▼</span>
+                </h3>
                 <div class="formation-accordion" id="formation-accordion-container">
                     ${accordionHtml}
                 </div>
@@ -274,6 +277,22 @@ export class LobbyUI {
 
         const accordionContainer = document.getElementById('formation-accordion-container');
         const formationItems = accordionContainer.querySelectorAll('.formation-item');
+        const formationTitle = document.getElementById('formation-title');
+        const formationTitleText = document.getElementById('formation-title-text');
+        const formationToggleIcon = document.getElementById('formation-toggle-icon');
+
+        formationTitle.addEventListener('click', () => {
+            if (formationToggleIcon.style.display !== 'none') {
+                if (accordionContainer.style.display === 'none') {
+                    accordionContainer.style.display = 'block';
+                    formationToggleIcon.textContent = '▲';
+                } else {
+                    accordionContainer.style.display = 'none';
+                    formationToggleIcon.textContent = '▼';
+                }
+            }
+        });
+
         formationItems.forEach(item => {
             const header = item.querySelector('.formation-header');
             const confirmBtn = item.querySelector('.btn-confirm-formation');
@@ -295,9 +314,13 @@ export class LobbyUI {
             confirmBtn.addEventListener('click', async (e) => {
                 e.stopPropagation();
                 
-                // Visual feedback: collapse accordion
+                // Visual feedback: collapse accordion and update title
                 item.classList.remove('active');
                 confirmBtn.style.display = 'none';
+                accordionContainer.style.display = 'none';
+                formationTitleText.textContent = `MODULO SCELTO: ${f}`;
+                formationToggleIcon.style.display = 'inline-block';
+                formationToggleIcon.textContent = '▼';
 
                 const draftState = this.lobby.draft_state || {};
                 const currentFormations = draftState.formations || {};
