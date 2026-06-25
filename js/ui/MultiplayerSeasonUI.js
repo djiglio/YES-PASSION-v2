@@ -115,7 +115,7 @@ export class MultiplayerSeasonUI {
                 <div class="season-left">
                     <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
                         <h2>Classifica <span id="season-matchday-counter" style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.seasonState.matchday}/38)</span></h2>
-                        <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">Stagione: ${this.seasonState.seasonInfo.name}</span>
+                        <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">${this.seasonState.seasonInfo.name}</span>
                     </div>
                     <div class="standings-table">
                         <div class="s-row s-header">
