@@ -21,6 +21,15 @@ export class MultiplayerSeasonUI {
     }
 
     async init() {
+        if (this.players) {
+            this.players.sort((a, b) => (a.turn_position || 0) - (b.turn_position || 0));
+            this.playerColors = {};
+            const colors = ['#00e6ff', '#ff0055', '#00ff66', '#ffcc00'];
+            this.players.forEach((p, idx) => {
+                this.playerColors[p.user_id] = colors[idx % colors.length];
+            });
+        }
+
         if (!this.seasonState) {
             this.container.innerHTML = `<div class="loader">Attesa generazione calendario dall'Host...</div>`;
             if (this.isHost) {
@@ -120,9 +129,9 @@ export class MultiplayerSeasonUI {
                             <div class="s-stat">DR</div>
                         </div>
                         ${this.seasonState.standings.map((t, idx) => `
-                        <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}">
+                        <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}" style="${t.isUser ? `border-left: 4px solid ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'};` : ''}">
                                 <div class="s-pos">${idx + 1}</div>
-                                <div class="s-team">${t.name}</div>
+                                <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
                                 <div class="s-pts">${t.points}</div>
                                 <div class="s-stat">${t.played}</div>
                                 <div class="s-stat">${t.won}</div>
@@ -239,6 +248,38 @@ export class MultiplayerSeasonUI {
             if (res.homeScore > res.awayScore) { homeT.won++; homeT.points += 3; awayT.lost++; } 
             else if (res.homeScore < res.awayScore) { awayT.won++; awayT.points += 3; homeT.lost++; } 
             else { homeT.drawn++; awayT.drawn++; homeT.points += 1; awayT.points += 1; }
+            
+            // --- Update Player Stats ---
+            if (!state.playerStats) state.playerStats = {};
+            if (res.events) {
+                res.events.forEach(e => {
+                    const isUserTeam = e.isHome ? homeT.isUser : awayT.isUser;
+                    if (e.scorer && e.scorer !== "Sconosciuto") {
+                        const key = `${e.scorer}_${e.team}`;
+                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.scorer, team: e.team, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
+                        state.playerStats[key].goals++;
+                    }
+                    if (e.assistman) {
+                        const key = `${e.assistman}_${e.team}`;
+                        if (!state.playerStats[key]) state.playerStats[key] = { name: e.assistman, team: e.team, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: isUserTeam };
+                        state.playerStats[key].assists++;
+                    }
+                });
+            }
+
+            const updateCleanSheets = (teamObj) => {
+                if (!teamObj.players) return; // In MP we use .players instead of .squad
+                teamObj.players.forEach(p => {
+                    if (p.Ruolo && (p.Ruolo.includes('POR') || p.Ruolo.includes('DC') || p.Ruolo.includes('TS') || p.Ruolo.includes('TD'))) {
+                        const key = `${p.Nome}_${teamObj.name}`;
+                        if (!state.playerStats[key]) state.playerStats[key] = { name: p.Nome, team: teamObj.name, teamId: teamObj.id, goals: 0, assists: 0, cleanSheets: 0, isUser: teamObj.isUser };
+                        state.playerStats[key].cleanSheets++;
+                    }
+                });
+            };
+
+            if (res.homeCleanSheet) updateCleanSheets(homeT);
+            if (res.awayCleanSheet) updateCleanSheets(awayT);
         });
 
         // Sort standings
@@ -365,9 +406,9 @@ export class MultiplayerSeasonUI {
                 <div class="s-stat">DR</div>
             </div>
             ${this.seasonState.standings.map((t, idx) => `
-            <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}">
+            <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}" style="${t.isUser ? `border-left: 4px solid ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'};` : ''}">
                     <div class="s-pos">${idx + 1}</div>
-                    <div class="s-team">${t.name}</div>
+                    <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
                     <div class="s-pts">${t.points}</div>
                     <div class="s-stat">${t.played}</div>
                     <div class="s-stat">${t.won}</div>
@@ -450,30 +491,101 @@ export class MultiplayerSeasonUI {
                     <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
                         <h3>Statistiche Squadra</h3>
                         <p>Vittorie: ${myTeam.won}</p>
-                        <p>Pareggi: ${myTeam.drawn}</p>
-                        <p>Sconfitte: ${myTeam.lost}</p>
-                        <p>Gol Fatti: ${myTeam.gf}</p>
-                        <p>Gol Subiti: ${myTeam.ga}</p>
+        this.container.innerHTML = `
+            <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
+                <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione Multiplayer Conclusa!</h2>
+                <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${pos}° posto</strong>.</p>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
+                <button id="btn-back-menu" class="btn" style="font-size: 1.2rem; padding: 1rem 3rem;">Torna al Menu Principale</button>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stats-card user-stats-card">
+                    <h3 class="stats-card-title">La Tua Squadra</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Miglior Marcatore</span><br>
+                        <strong class="stat-value">${topStats.userStats.topScorer.name}</strong> <span class="stat-highlight">(${topStats.userStats.topScorer.goals} Gol)</span>
                     </div>
-                    
-                    <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); flex: 1;">
-                        <h3>Classifica Finale</h3>
-                        <div style="max-height: 200px; overflow-y: auto; text-align: left;">
-                            ${this.seasonState.standings.slice(0,5).map((t, i) => `
-                                <div style="display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); ${t.isUser ? 'color: var(--accent); font-weight: bold;' : ''}">
-                                    <span>${i+1}. ${t.name}</span>
-                                    <span>${t.points} pt</span>
-                                </div>
-                            `).join('')}
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Miglior Assistman</span><br>
+                        <strong class="stat-value">${topStats.userStats.topAssist.name}</strong> <span class="stat-highlight">(${topStats.userStats.topAssist.assists} Assist)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Clean Sheets (Portiere/Difesa)</span><br>
+                        <strong class="stat-value">${topStats.userStats.cleanSheets}</strong>
                     </div>
                 </div>
 
-                <button id="btn-back-menu" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Torna al Menu Principale</button>
+                <div class="stats-card mvp-card">
+                    <h3 class="mvp-title">Miglior Giocatore (MVP)</h3>
+                    <div class="mvp-icon">🏆</div>
+                    <strong class="mvp-name">${topStats.mvp ? topStats.mvp.name : '-'}</strong>
+                    <span class="mvp-team">${topStats.mvp ? topStats.mvp.team : '-'}</span>
+                    <div class="mvp-stats">
+                        <strong>${topStats.mvp ? topStats.mvp.goals : 0}</strong> Gol | <strong>${topStats.mvp ? topStats.mvp.assists : 0}</strong> Assist
+                    </div>
+                </div>
             </div>
-        `;
 
-        this.container.innerHTML = html;
+            <div class="tables-grid">
+                <div class="stats-table-wrapper">
+                    <h3 class="table-title">Classifica Finale</h3>
+                    <div class="standings-table inner-table" style="overflow-x: auto;"></div>
+                </div>
+
+                <div class="stats-table-wrapper">
+                    <h3 class="table-title">Capocannoniere (Top 10)</h3>
+                    <div class="stats-list">
+                        ${topStats.topScorers.map((p, idx) => `
+                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}">
+                                <div><span class="rank-num">${idx + 1}.</span> <strong>${p.name}</strong> <span class="team-name" style="${p.isUser ? `color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'}; font-weight: bold;` : ''}">(${p.team})</span></div>
+                                <strong class="stat-highlight">${p.goals}</strong>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="stats-table-wrapper">
+                    <h3 class="table-title">Miglior Assistman (Top 10)</h3>
+                    <div class="stats-list">
+                        ${topStats.topAssists.map((p, idx) => `
+                            <div class="stats-list-item ${p.isUser ? 'is-user' : ''}">
+                                <div><span class="rank-num">${idx + 1}.</span> <strong>${p.name}</strong> <span class="team-name" style="${p.isUser ? `color: ${this.playerColors ? this.playerColors[p.teamId] : 'var(--accent)'}; font-weight: bold;` : ''}">(${p.team})</span></div>
+                                <strong class="stat-highlight">${p.assists}</strong>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        `;
+        
+        // Render Final Standings Table
+        const table = this.container.querySelector('.inner-table');
+        if (table) {
+            let rowsHtml = `
+                <div class="s-row s-header">
+                    <div class="s-pos">#</div>
+                    <div class="s-team">Squadra</div>
+                    <div class="s-pts">PT</div>
+                    <div class="s-stat">V</div>
+                    <div class="s-stat">N</div>
+                    <div class="s-stat">P</div>
+                </div>
+            `;
+            rowsHtml += this.seasonState.standings.map((t, idx) => `
+                <div class="s-row ${t.id === this.currentUser.id ? 's-user' : ''} ${t.isUser ? 's-human' : ''} ${this.getZoneClass(idx)}" style="${t.isUser ? `border-left: 4px solid ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'};` : ''}">
+                    <div class="s-pos">${idx + 1}</div>
+                    <div class="s-team" style="${t.isUser ? `color: ${this.playerColors ? this.playerColors[t.id] : 'var(--accent)'}; font-weight: bold;` : ''}">${t.name}</div>
+                    <div class="s-pts">${t.points}</div>
+                    <div class="s-stat">${t.won}</div>
+                    <div class="s-stat">${t.drawn}</div>
+                    <div class="s-stat">${t.lost}</div>
+                </div>
+            `).join('');
+            table.innerHTML = rowsHtml;
+        }
+
         document.getElementById('btn-back-menu').addEventListener('click', () => {
             this.app.startHome();
         });
