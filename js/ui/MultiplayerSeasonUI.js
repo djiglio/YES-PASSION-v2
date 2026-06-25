@@ -521,9 +521,9 @@ export class MultiplayerSeasonUI {
 
         let outcomeMsg = '';
         if (pos === 1) outcomeMsg = '<p style="font-size: 1.5rem; color: #fbbf24; font-weight: bold; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(251,191,36,0.3);">🏆 CAMPIONE D\\'ITALIA</p>';
-        else if (pos <= 4) outcomeMsg = '<p style="font-size: 1.2rem; color: #60a5fa; font-weight: bold; margin-bottom: 0.5rem;">⭐ Qualificato in Champions League</p>';
-        else if (pos === 5) outcomeMsg = '<p style="font-size: 1.2rem; color: #f97316; font-weight: bold; margin-bottom: 0.5rem;">⚽ Qualificato in Europa League</p>';
-        else if (pos === 6) outcomeMsg = '<p style="font-size: 1.2rem; color: #10b981; font-weight: bold; margin-bottom: 0.5rem;">🟢 Qualificato in Conference League</p>';
+        else if (pos <= 4) outcomeMsg = '<p style="font-size: 1.2rem; color: #60a5fa; font-weight: bold; margin-bottom: 0.5rem;">⭐ Champions League</p>';
+        else if (pos === 5) outcomeMsg = '<p style="font-size: 1.2rem; color: #f97316; font-weight: bold; margin-bottom: 0.5rem;">⚽ Europa League</p>';
+        else if (pos === 6) outcomeMsg = '<p style="font-size: 1.2rem; color: #10b981; font-weight: bold; margin-bottom: 0.5rem;">🟢 Conference League</p>';
         else if (pos >= 18) outcomeMsg = '<p style="font-size: 1.2rem; color: #ef4444; font-weight: bold; margin-bottom: 0.5rem;">⬇️ Retrocesso</p>';
 
         if (this.isHost) {
