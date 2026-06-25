@@ -144,7 +144,7 @@ export class MultiplayerDraftUI {
                     }
 
                     if (this.draftState.current_pick_number >= this.players.length * 11 && this.isHost && payload.new.status !== 'simulating') {
-                        await supabase.from('lobbies').update({ status: 'simulating', draft_state: this.draftState }).eq('id', this.lobby.id);
+                        // We no longer automatically transition. The host must click 'Avvia Stagione' from the summary screen.
                     }
 
                     if (payload.new.status === 'simulating') {
@@ -212,7 +212,7 @@ export class MultiplayerDraftUI {
 
         const round = Math.floor(this.draftState.current_pick_number / this.players.length);
         if (round >= 11) {
-            this.container.innerHTML = `<div style="text-align:center; padding:3rem;"><h2>Draft Completato!</h2><p>In attesa della simulazione server...</p></div>`;
+            this.renderSummary();
             return;
         }
 
@@ -585,6 +585,140 @@ export class MultiplayerDraftUI {
         if (slotToFill) {
             slotToFill.player = selectedP;
             await this.advanceTurn();
+        }
+    }
+
+    calculateTeamStats() {
+        const stats = { total: 0, att: 0, mid: 0, def: 0, gk: 0 };
+        const counts = { att: 0, mid: 0, def: 0, gk: 0 };
+        const myRoster = this.draftState.rosters[this.currentUser.id];
+
+        myRoster.forEach(s => {
+            const r = s.requiredRole;
+            const ovr = s.player ? s.player.Overall : 0;
+            stats.total += ovr;
+
+            if (['ATT', 'AT', 'AD', 'AS'].includes(r)) {
+                stats.att += ovr; counts.att++;
+            } else if (['CC', 'CDC', 'COC', 'ED', 'ES'].includes(r)) {
+                stats.mid += ovr; counts.mid++;
+            } else if (['DC', 'TS', 'TD', 'ASA', 'ADA'].includes(r)) {
+                stats.def += ovr; counts.def++;
+            } else if (r === 'POR') {
+                stats.gk += ovr; counts.gk++;
+            }
+        });
+
+        return {
+            total: Math.round(stats.total / 11),
+            att: counts.att > 0 ? Math.round(stats.att / counts.att) : 0,
+            mid: counts.mid > 0 ? Math.round(stats.mid / counts.mid) : 0,
+            def: counts.def > 0 ? Math.round(stats.def / counts.def) : 0,
+            gk: counts.gk > 0 ? Math.round(stats.gk / counts.gk) : 0
+        };
+    }
+
+    renderSummary() {
+        const myRoster = this.draftState.rosters[this.currentUser.id];
+        const myForm = this.draftState.formations[this.currentUser.id];
+        const layoutRows = this.formations[myForm];
+
+        // Group slots by row
+        const rowsWithSlots = [];
+        let tempIndex = 0;
+        layoutRows.forEach(rowRoles => {
+            let rowSlots = [];
+            rowRoles.forEach(() => {
+                rowSlots.push(myRoster[tempIndex++]);
+            });
+            rowsWithSlots.push(rowSlots);
+        });
+
+        let pitchHtml = '';
+        [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
+            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
+            rowSlots.forEach(slot => {
+                const p = slot.player;
+                const isFilled = p !== null;
+                const isGold = isFilled && p.Overall >= 85;
+                const displayOvr = isFilled ? p.Overall : '';
+                let shortName = '';
+                if (isFilled) {
+                    shortName = p.Nome.replace(/^[A-Z]\.\s*/i, '');
+                }
+
+                pitchHtml += `
+                    <div class="slot-wrapper filled-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
+                        <div class="slot filled ${isGold ? 'gold-card' : ''}">
+                            <span class="slot-ovr-inside">${displayOvr}</span>
+                        </div>
+                        <div class="card-name-outside">
+                            <span style="font-size: 0.8rem;">${shortName}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            pitchHtml += `</div>`;
+        });
+
+        const stats = this.calculateTeamStats();
+
+        this.container.innerHTML = `
+            <div class="draft-container">
+                <div class="draft-left">
+                    <div class="pitch-container" style="pointer-events: none; position: relative; margin-top: 2rem;">
+                        <div class="pitch-bg">
+                            <div class="pitch-lines"></div>
+                        </div>
+                        <div class="pitch-players">
+                            ${pitchHtml}
+                        </div>
+                    </div>
+                </div>
+                <div class="draft-right">
+                    <div class="draft-complete-stats" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height: 100%;">
+                        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--accent); text-transform: uppercase; text-shadow: 0 0 10px rgba(0, 230, 255, 0.5);">Squadra Completa!</h2>
+                        
+                        <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 12px; width: 100%; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">OVR Totale: <span style="color: var(--accent); font-size: 2.2rem; margin-left: 10px;">${stats.total}</span></h3>
+                            
+                            <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">ATT</span>
+                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.att}</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">CEN</span>
+                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.mid}</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">DIF</span>
+                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.def}</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">POR</span>
+                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.gk}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ${this.isHost ? `
+                            <button id="btn-to-season" class="btn" style="font-size: 1.2rem; padding: 1rem 2rem; width: 100%;">Avvia Stagione</button>
+                        ` : `
+                            <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem; font-weight: bold;">In attesa che l'Host avvii il campionato...</p>
+                        `}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        if (this.isHost) {
+            document.getElementById('btn-to-season').addEventListener('click', async () => {
+                const btn = document.getElementById('btn-to-season');
+                btn.disabled = true;
+                btn.textContent = "Avvio in corso...";
+                await supabase.from('lobbies').update({ status: 'simulating', draft_state: this.draftState }).eq('id', this.lobby.id);
+            });
         }
     }
 
