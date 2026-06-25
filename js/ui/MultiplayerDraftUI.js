@@ -508,7 +508,7 @@ export class MultiplayerDraftUI {
         const playerRoles = this.selectedPlayer.Ruolo.split(',').map(r => r.trim());
 
         if (!playerRoles.includes(slot.requiredRole)) {
-            alert(`Azione non consentita! ${this.selectedPlayer.Nome} è un ${this.selectedPlayer.Ruolo}, non può giocare come ${slot.requiredRole}.`);
+            window.showAlert(`Azione non consentita! ${this.selectedPlayer.Nome} è un ${this.selectedPlayer.Ruolo}, non può giocare come ${slot.requiredRole}.`);
             return;
         }
 
@@ -525,7 +525,7 @@ export class MultiplayerDraftUI {
             myRoster.forEach(s => { if (s.player) spent += (parseFloat(s.player.ValueNum) || 0) });
             const cost = parseFloat(this.selectedPlayer.ValueNum) || 0;
             if (spent + cost > budgetMax) {
-                alert(`Fondi insufficienti per acquistare ${this.selectedPlayer.Nome}. Sforeresti il limite di ${(budgetMax/1000000).toFixed(0)}M.`);
+                window.showAlert(`Fondi insufficienti per acquistare ${this.selectedPlayer.Nome}. Sforeresti il limite di ${(budgetMax/1000000).toFixed(0)}M.`);
                 return;
             }
         }

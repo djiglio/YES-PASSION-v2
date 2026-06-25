@@ -330,7 +330,7 @@ export class DraftUI {
         const seasonData = await DataLoader.loadSeason(randomSeasonId);
         
         if (!seasonData) {
-            alert("Errore nel caricamento dei dati.");
+            window.showAlert("Errore nel caricamento dei dati.");
             return;
         }
 
@@ -581,7 +581,7 @@ export class DraftUI {
         const playerRoles = this.selectedPlayer.Ruolo.split(',').map(r => r.trim());
 
         if (!playerRoles.includes(slot.requiredRole)) {
-            alert(`Azione non consentita! ${this.selectedPlayer.Nome} è un ${this.selectedPlayer.Ruolo}, non può giocare come ${slot.requiredRole}. Scegli uno slot compatibile o un altro giocatore.`);
+            window.showAlert(`Azione non consentita! ${this.selectedPlayer.Nome} è un ${this.selectedPlayer.Ruolo}, non può giocare come ${slot.requiredRole}. Scegli uno slot compatibile o un altro giocatore.`);
             return;
         }
 
@@ -591,7 +591,7 @@ export class DraftUI {
             const playerCost = parseFloat(this.selectedPlayer.ValueNum) || 0;
             
             if (this.budgetSpent + playerCost > this.budgetMax) {
-                alert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M. (DEBUG: spent=${this.budgetSpent}, cost=${playerCost}, max=${this.budgetMax})`);
+                window.showAlert(`Fondi insufficienti! Acquistando ${this.selectedPlayer.Nome} sforeresti il budget di €${((this.budgetSpent + playerCost - this.budgetMax)/1000000).toFixed(1)}M. (DEBUG: spent=${this.budgetSpent}, cost=${playerCost}, max=${this.budgetMax})`);
                 return;
             }
             this.budgetSpent += playerCost;

@@ -161,7 +161,7 @@ export class LobbyUI {
         
         // Ensure user is authenticated
         const user = this.app.authUI.currentUser;
-        if (!user) return alert("Devi essere loggato.");
+        if (!user) return window.showAlert("Devi essere loggato.");
 
         document.getElementById('btn-create').textContent = "Creazione...";
 
@@ -182,7 +182,7 @@ export class LobbyUI {
             .single();
 
         if (error) {
-            alert("Errore nella creazione della lobby.");
+            window.showAlert("Errore nella creazione della lobby.");
             return;
         }
 
@@ -192,10 +192,10 @@ export class LobbyUI {
     }
 
     async joinLobby(code) {
-        if (code.length !== 4) return alert("Il codice deve essere di 4 caratteri.");
+        if (code.length !== 4) return window.showAlert("Il codice deve essere di 4 caratteri.");
         
         const user = this.app.authUI.currentUser;
-        if (!user) return alert("Devi essere loggato.");
+        if (!user) return window.showAlert("Devi essere loggato.");
 
         document.getElementById('btn-join').textContent = "Connessione...";
 
@@ -207,7 +207,7 @@ export class LobbyUI {
             .single();
 
         if (lobbyError || !lobbyData) {
-            alert("Lobby non trovata o già in gioco.");
+            window.showAlert("Lobby non trovata o già in gioco.");
             document.getElementById('btn-join').textContent = "Unisciti";
             return;
         }
@@ -221,7 +221,7 @@ export class LobbyUI {
             .eq('lobby_id', this.lobby.id);
             
         if (count >= 4) {
-            alert("Lobby piena!");
+            window.showAlert("Lobby piena!");
             document.getElementById('btn-join').textContent = "Unisciti";
             return;
         }
@@ -416,13 +416,13 @@ export class LobbyUI {
                         .update({ status: 'drafting' })
                         .eq('id', this.lobby.id);
                     if (error) {
-                        alert("Errore nell'avvio del draft: " + error.message);
+                        window.showAlert("Errore nell'avvio del draft: " + error.message);
                         console.error(error);
                         btn.disabled = false;
                         btn.textContent = "AVVIA IL DRAFT";
                     }
                 } catch(e) {
-                    alert("Eccezione: " + e.message);
+                    window.showAlert("Eccezione: " + e.message);
                     btn.disabled = false;
                     btn.textContent = "AVVIA IL DRAFT";
                 }

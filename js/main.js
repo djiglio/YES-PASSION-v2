@@ -7,6 +7,51 @@ import { MultiplayerDraftUI } from './ui/MultiplayerDraftUI.js';
 import { MultiplayerSeasonUI } from './ui/MultiplayerSeasonUI.js';
 import { LeaderboardUI } from './ui/LeaderboardUI.js';
 
+window.showAlert = function(message, title = "YES PASSION dice") {
+    let modal = document.getElementById('custom-alert-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'custom-alert-modal';
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,20,50,0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 9999; display: flex; justify-content: center; align-items: center;';
+        
+        const content = document.createElement('div');
+        content.className = 'cl-card';
+        content.style.cssText = 'background: linear-gradient(145deg, rgba(20,30,50,0.9), rgba(10,15,30,0.9)); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 2rem; border-radius: 16px; width: 90%; max-width: 450px; color: white; display: flex; flex-direction: column; gap: 1.5rem;';
+        
+        const titleEl = document.createElement('h3');
+        titleEl.id = 'custom-alert-title';
+        titleEl.style.cssText = 'margin: 0; font-size: 1.2rem; font-weight: 600; color: #f3f4f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;';
+        
+        const msgEl = document.createElement('p');
+        msgEl.id = 'custom-alert-message';
+        msgEl.style.cssText = 'margin: 0; font-size: 1rem; color: #cbd5e1; line-height: 1.5;';
+        
+        const btnContainer = document.createElement('div');
+        btnContainer.style.cssText = 'display: flex; justify-content: flex-end; margin-top: 0.5rem;';
+        
+        const btnOk = document.createElement('button');
+        btnOk.textContent = 'Ok';
+        btnOk.style.cssText = 'padding: 0.5rem 2rem; font-weight: 600; border-radius: 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: white; cursor: pointer; transition: all 0.2s ease;';
+        btnOk.onmouseover = () => btnOk.style.background = 'rgba(255, 255, 255, 0.2)';
+        btnOk.onmouseout = () => btnOk.style.background = 'rgba(255, 255, 255, 0.1)';
+        
+        btnOk.onclick = () => {
+            modal.style.display = 'none';
+        };
+        
+        btnContainer.appendChild(btnOk);
+        content.appendChild(titleEl);
+        content.appendChild(msgEl);
+        content.appendChild(btnContainer);
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+    }
+    
+    document.getElementById('custom-alert-title').textContent = title;
+    document.getElementById('custom-alert-message').textContent = message;
+    modal.style.display = 'flex';
+};
+
 class GameApp {
     constructor() {
         this.state = new GameState();
@@ -169,7 +214,7 @@ class GameApp {
 
         const requireTeamName = () => {
             if (!this.authUI.profile?.team_name) {
-                alert("Per giocare devi prima impostare il Nome della tua Squadra!");
+                window.showAlert("Per giocare devi prima impostare il Nome della tua Squadra!");
                 document.getElementById('profile-modal').style.display = 'flex';
                 return false;
             }

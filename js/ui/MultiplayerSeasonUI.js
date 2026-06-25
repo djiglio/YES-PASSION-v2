@@ -61,14 +61,14 @@ export class MultiplayerSeasonUI {
                 .single();
                 
             if (error) {
-                alert("Supabase Error: " + error.message);
+                window.showAlert("Supabase Error: " + error.message);
                 console.error(error);
             } else if (data) {
                 this.seasonState = data.season_state;
                 this.render();
             }
         } catch (err) {
-            alert("Errore generazione calendario: " + err.message);
+            window.showAlert("Errore generazione calendario: " + err.message);
             console.error(err);
         }
     }
