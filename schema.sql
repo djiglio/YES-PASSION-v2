@@ -57,6 +57,7 @@ CREATE TABLE public.lobbies (
   host_id uuid references public.profiles(id) not null,
   mode text not null check (mode in ('classica', 'budget', 'custom')),
   status text not null default 'waiting' check (status in ('waiting', 'drafting', 'simulating', 'finished')),
+  season_state jsonb default null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 

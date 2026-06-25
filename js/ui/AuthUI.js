@@ -21,7 +21,7 @@ export class AuthUI {
         this.currentUser = user;
         const { data, error } = await supabase
             .from('profiles')
-            .select('username')
+            .select('username, team_name')
             .eq('id', user.id)
             .single();
         
@@ -51,16 +51,33 @@ export class AuthUI {
         this.render();
     }
 
-    async updateUsername(newUsername) {
-        const { error } = await supabase
-            .from('profiles')
-            .update({ username: newUsername })
-            .eq('id', this.currentUser.id);
-        
-        if (!error) {
-            this.profile.username = newUsername;
+    async updateProfile(newUsername, newTeamName, newPassword) {
+        // Update DB
+        if (newUsername || newTeamName) {
+            const updates = {};
+            if (newUsername) updates.username = newUsername;
+            if (newTeamName) updates.team_name = newTeamName;
+
+            const { error } = await supabase
+                .from('profiles')
+                .update(updates)
+                .eq('id', this.currentUser.id);
+            
+            if (!error) {
+                if (newUsername) this.profile.username = newUsername;
+                if (newTeamName) this.profile.team_name = newTeamName;
+            } else {
+                return error;
+            }
         }
-        return error;
+
+        // Update Password
+        if (newPassword) {
+            const { error: pwdError } = await supabase.auth.updateUser({ password: newPassword });
+            if (pwdError) return pwdError;
+        }
+
+        return null; // Success
     }
 
     render() {

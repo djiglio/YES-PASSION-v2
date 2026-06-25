@@ -1,0 +1,55 @@
+/* CHAMPIONS LEAGUE THEME */
+body {
+    background-color: #020612 !important;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Base Starball glow overlay (opzionale per scurire leggermente l'immagine se necessario) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 5, 20, 0.4);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.cl-stars-container {
+    display: none;
+}
+
+.cl-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 0 25px rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.5) !important;
+}
+
+.setup-title {
+    background: linear-gradient(to bottom, #ffffff, #a0aec0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none !important;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+    background: #020612;
+}
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}

@@ -132,6 +132,93 @@ export class GameState {
         this.setPhase(GAME_PHASES.SEASON_INIT);
     }
 
+    initMultiplayerSeason(seasonData, draftState, mpPlayers) {
+        // Similar to startSeason, but returns the season_state instead of mutating local state.
+        // It prepares the season object that the Host will upload to Supabase.
+        
+        let teams = [...seasonData.teams];
+        teams.sort((a, b) => a.real_points - b.real_points);
+        
+        // Remove the worst N teams to make room for N human players
+        const numHumans = mpPlayers.length;
+        teams.splice(0, numHumans);
+
+        // Add human teams
+        mpPlayers.forEach(p => {
+            const roster = draftState.rosters[p.user_id];
+            const squad = roster.filter(s => s.player).map(s => s.player);
+            
+            // Calculate stats for this squad (re-using calculateUserTeamStats logic)
+            let attSum = 0, attCount = 0;
+            let midSum = 0, midCount = 0;
+            let defSum = 0, defCount = 0;
+            let gkSum = 0, gkCount = 0;
+            
+            squad.forEach(player => {
+                const role = player.Ruolo;
+                const ovr = parseInt(player.Overall, 10);
+                if (role.includes('POR')) { gkSum += ovr; gkCount++; }
+                else if (['DC', 'TS', 'TD', 'ASA', 'ADA'].some(r => role.includes(r))) { defSum += ovr; defCount++; }
+                else if (['CDC', 'CC', 'COC', 'ES', 'ED'].some(r => role.includes(r))) { midSum += ovr; midCount++; }
+                else { attSum += ovr; attCount++; }
+            });
+            
+            const stats = {
+                att: attCount > 0 ? Math.round(attSum / attCount) : 0,
+                mid: midCount > 0 ? Math.round(midSum / midCount) : 0,
+                def: defCount > 0 ? Math.round(defSum / defCount) : 0,
+                gk: gkCount > 0 ? Math.round(gkSum / gkCount) : 0
+            };
+
+            teams.push({
+                id: p.user_id,
+                name: p.team_name,
+                isUser: true,
+                stats: stats,
+                players: squad
+            });
+        });
+
+        // Initialize Standings
+        let standings = teams.map(t => {
+            let squadToUse = t.isUser ? (t.players || []) : this.generateCPUSquad(t.players);
+            return {
+                id: t.id,
+                name: t.name,
+                isUser: t.isUser || false,
+                points: 0,
+                played: 0,
+                won: 0,
+                drawn: 0,
+                lost: 0,
+                gf: 0,
+                ga: 0,
+                gd: 0,
+                stats: t.isUser ? t.stats : {
+                    att: t.squad_strength.att_ovr,
+                    mid: t.squad_strength.mid_ovr,
+                    def: t.squad_strength.def_ovr,
+                    gk: t.squad_strength.gk_ovr
+                },
+                squad: squadToUse,
+                fullRoster: t.isUser ? null : t.players
+            };
+        });
+
+        // Generate Schedule (Round Robin)
+        let schedule = this.generateRoundRobin(teams);
+
+        return {
+            matchday: 1,
+            seasonInfo: { name: seasonData.season_name, id: seasonData.id },
+            standings: standings,
+            schedule: schedule,
+            playerStats: {},
+            lastMatchResults: null,
+            isFinished: false
+        };
+    }
+
     generateCPUSquad(teamPlayers) {
         if (!teamPlayers || teamPlayers.length === 0) return [];
 

@@ -6,6 +6,7 @@
     <title>Yes Passion - Football Manager</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cl_styles.css">
     
     <!-- Supabase JS Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -13,6 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="video-background">
+        <video id="bg-video" src="assets/bg_video.mp4" autoplay loop muted playsinline disablePictureInPicture></video>
+    </div>
+    
+    <div class="cl-stars-container">
+        <div class="starball"></div>
+    </div>
     <div id="app" class="app-container">
         <!-- GLOBAL HEADER -->
         <header id="global-header" style="display: none; padding: 15px 20px; position: absolute; top: 0; left: 0; z-index: 2000; width: 100%; pointer-events: none;">
@@ -32,5 +40,13 @@
 
     <!-- ENTRY POINT -->
     <script type="module" src="js/main.js?v=2"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bgVideo = document.getElementById('bg-video');
+            if (bgVideo) {
+                bgVideo.playbackRate = 0.5;
+            }
+        });
+    </script>
 </body>
 </html>

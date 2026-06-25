@@ -3,6 +3,8 @@ import { DraftUI } from './ui/DraftUI.js';
 import { SeasonUI } from './ui/SeasonUI.js';
 import { AuthUI } from './ui/AuthUI.js';
 import { LobbyUI } from './ui/LobbyUI.js';
+import { MultiplayerDraftUI } from './ui/MultiplayerDraftUI.js';
+import { MultiplayerSeasonUI } from './ui/MultiplayerSeasonUI.js';
 
 class GameApp {
     constructor() {
@@ -41,6 +43,10 @@ class GameApp {
         this.state.setPhase('MP_DRAFT');
     }
 
+    startMultiplayerSeason() {
+        this.state.setPhase('MP_SEASON_INIT');
+    }
+
     render(state) {
         const statusBar = document.getElementById('current-phase');
         const content = document.getElementById('game-content');
@@ -69,8 +75,16 @@ class GameApp {
                 this.lobbyUI.init();
                 break;
             case 'MP_DRAFT':
-                content.innerHTML = `<div class="loader">Caricamento Draft Multiplayer...</div>`;
-                // TODO: Instantiate MultiplayerDraftUI
+                if (!this.mpDraftUI) {
+                    this.mpDraftUI = new MultiplayerDraftUI(this, content);
+                    this.mpDraftUI.init();
+                }
+                break;
+            case 'MP_SEASON_INIT':
+                if (!this.mpSeasonUI) {
+                    this.mpSeasonUI = new MultiplayerSeasonUI(this, content);
+                    this.mpSeasonUI.init();
+                }
                 break;
             case GAME_PHASES.DRAFT:
                 if (!this.draftUI) {
@@ -89,59 +103,123 @@ class GameApp {
 
     renderHomeMenu(content) {
         content.innerHTML = `
-            <div class="setup-container">
-                <h1 class="setup-title" style="margin-bottom: 0.2rem;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
+            <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+                <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 3rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
                 
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <button id="btn-edit-user" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Modifica Nome</button>
-                    <div id="edit-user-box" style="display: none; margin-top: 0.5rem; gap: 0.5rem; justify-content: center;">
-                        <input type="text" id="input-username" value="${this.authUI.profile?.username || ''}" style="padding: 0.3rem; border-radius: 4px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.5); color: white;">
-                        <button id="btn-save-user" class="btn btn-primary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Salva</button>
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <button id="btn-edit-user" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">MODIFICA PROFILO</button>
+                </div>
+
+                <div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,20,50,0.8); backdrop-filter: blur(10px); z-index: 1000; justify-content: center; align-items: center;">
+                    <div style="background: linear-gradient(145deg, #0a192f, #020c1b); border: 1px solid rgba(255,255,255,0.2); padding: 2rem; border-radius: 16px; width: 90%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <h2 style="color: white; margin-bottom: 1.5rem; text-align: center;">MODIFICA PROFILO</h2>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div>
+                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nome Utente</label>
+                                <input type="text" id="input-username" value="${this.authUI.profile?.username || ''}" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
+                            </div>
+                            <div>
+                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nome Squadra (Es: F.C. Edoardo)</label>
+                                <input type="text" id="input-teamname" value="${this.authUI.profile?.team_name || ''}" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
+                            </div>
+                            <div>
+                                <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Nuova Password (Opzionale)</label>
+                                <input type="password" id="input-password" placeholder="Lascia vuoto per non modificare" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; margin-bottom: 0.5rem;">
+                                <input type="password" id="input-password-confirm" placeholder="Conferma nuova password" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
+                            </div>
+                            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                                <button id="btn-save-profile" class="btn btn-primary" style="flex: 1;">Salva</button>
+                                <button id="btn-close-modal" class="btn btn-secondary" style="flex: 1;">Annulla</button>
+                            </div>
+                            <div id="profile-error" style="color: #ef4444; font-size: 0.9rem; margin-top: 0.5rem; text-align: center;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Seleziona una modalità di gioco</p>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">Seleziona una modalità di gioco</p>
                 
-                <div class="setup-modes" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+                <div class="setup-modes" style="max-width: 800px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
                     
-                    <button id="btn-sp" class="mode-card" style="width: 100%; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; background: var(--card-bg); cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 0.5rem; transition: border-color 0.2s;">
-                        <span style="color: var(--accent); font-weight: 800; font-size: 1.2rem;">SINGLE PLAYER</span>
-                        <span style="color: #cbd5e1; font-size: 0.9rem;">Gioca da solo e competi nelle Leaderboard Globali.</span>
+                    <button id="btn-sp" class="cl-card" style="width: 100%; border: 1px solid rgba(255,255,255,0.2); padding: 2rem; border-radius: 16px; background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(0,0,0,0.6)); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <span style="color: #10b981; font-weight: 800; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 0 10px rgba(16,185,129,0.5);">SINGLE PLAYER</span>
+                        <span style="color: #cbd5e1; font-size: 1rem;">Gioca da solo e competi nelle Leaderboard Globali.</span>
                     </button>
                     
-                    <button id="btn-mp" class="mode-card" style="width: 100%; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; background: var(--card-bg); cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 0.5rem; transition: border-color 0.2s;">
-                        <span style="color: #FFD700; font-weight: 800; font-size: 1.2rem;">MULTIPLAYER DRAFT</span>
-                        <span style="color: #cbd5e1; font-size: 0.9rem;">Crea o unisciti a una lobby con i tuoi amici (Fino a 4 giocatori).</span>
+                    <button id="btn-mp" class="cl-card" style="width: 100%; border: 1px solid rgba(255,255,255,0.2); padding: 2rem; border-radius: 16px; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(0,0,0,0.6)); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <span style="color: #3b82f6; font-weight: 800; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 0 10px rgba(59,130,246,0.5);">MULTIPLAYER DRAFT</span>
+                        <span style="color: #cbd5e1; font-size: 1rem;">Crea o unisciti a una lobby con i tuoi amici (Fino a 4 giocatori).</span>
                     </button>
                     
-                    <button id="btn-logout" class="btn btn-secondary" style="margin-top: 1rem; margin-left: auto; margin-right: auto; display: block;">Esci dall'Account</button>
+                    <button id="btn-logout" class="btn btn-secondary" style="margin-top: 2rem; width: 200px; margin-left: auto; margin-right: auto; display: block; border-radius: 20px;">Esci dall'Account</button>
                 </div>
             </div>
         `;
 
+        const requireTeamName = () => {
+            if (!this.authUI.profile?.team_name) {
+                alert("Per giocare devi prima impostare il Nome della tua Squadra!");
+                document.getElementById('profile-modal').style.display = 'flex';
+                return false;
+            }
+            return true;
+        };
+
         document.getElementById('btn-sp').onclick = () => {
-            this.state.setPhase(GAME_PHASES.DRAFT);
+            if (requireTeamName()) {
+                this.state.teamName = this.authUI.profile.team_name;
+                this.state.setPhase(GAME_PHASES.DRAFT);
+            }
         };
         
         document.getElementById('btn-mp').onclick = () => {
-            this.startMultiplayerLobby();
+            if (requireTeamName()) {
+                this.startMultiplayerLobby();
+            }
         };
         
         document.getElementById('btn-logout').onclick = () => {
             this.authUI.logout();
         };
 
-        const editBox = document.getElementById('edit-user-box');
+        const modal = document.getElementById('profile-modal');
         document.getElementById('btn-edit-user').onclick = () => {
-            editBox.style.display = 'flex';
+            modal.style.display = 'flex';
+        };
+        document.getElementById('btn-close-modal').onclick = () => {
+            modal.style.display = 'none';
         };
 
-        document.getElementById('btn-save-user').onclick = async () => {
-            const newName = document.getElementById('input-username').value;
-            if (newName && newName.trim().length > 0) {
-                await this.authUI.updateUsername(newName.trim());
-                document.getElementById('display-username').textContent = newName.trim().toUpperCase();
-                editBox.style.display = 'none';
+        document.getElementById('btn-save-profile').onclick = async () => {
+            const btn = document.getElementById('btn-save-profile');
+            const errorDiv = document.getElementById('profile-error');
+            const newName = document.getElementById('input-username').value.trim();
+            const newTeam = document.getElementById('input-teamname').value.trim();
+            const newPwd = document.getElementById('input-password').value;
+            const confirmPwd = document.getElementById('input-password-confirm').value;
+
+            if (!newName || !newTeam) {
+                errorDiv.textContent = "Nome Utente e Nome Squadra sono obbligatori.";
+                return;
+            }
+
+            if (newPwd !== "" && newPwd !== confirmPwd) {
+                errorDiv.textContent = "Le password non coincidono!";
+                return;
+            }
+
+            btn.textContent = "Salvataggio...";
+            errorDiv.textContent = "";
+
+            const err = await this.authUI.updateProfile(newName, newTeam, newPwd);
+            if (err) {
+                errorDiv.textContent = err.message || "Errore nel salvataggio.";
+                btn.textContent = "Salva";
+            } else {
+                document.getElementById('display-username').textContent = newName.toUpperCase();
+                document.getElementById('input-password').value = "";
+                document.getElementById('input-password-confirm').value = "";
+                modal.style.display = 'none';
+                btn.textContent = "Salva";
             }
         };
     }
