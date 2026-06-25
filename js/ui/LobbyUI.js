@@ -337,10 +337,26 @@ export class LobbyUI {
 
         if (this.isHost) {
             document.getElementById('btn-start-game').onclick = async () => {
-                await supabase
-                    .from('lobbies')
-                    .update({ status: 'drafting' })
-                    .eq('id', this.lobby.id);
+                const btn = document.getElementById('btn-start-game');
+                btn.disabled = true;
+                btn.textContent = "AVVIO IN CORSO...";
+
+                try {
+                    const { error } = await supabase
+                        .from('lobbies')
+                        .update({ status: 'drafting' })
+                        .eq('id', this.lobby.id);
+                    if (error) {
+                        alert("Errore nell'avvio del draft: " + error.message);
+                        console.error(error);
+                        btn.disabled = false;
+                        btn.textContent = "AVVIA IL DRAFT";
+                    }
+                } catch(e) {
+                    alert("Eccezione: " + e.message);
+                    btn.disabled = false;
+                    btn.textContent = "AVVIA IL DRAFT";
+                }
             };
         }
         
