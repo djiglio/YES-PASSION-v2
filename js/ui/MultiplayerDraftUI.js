@@ -565,6 +565,7 @@ export class MultiplayerDraftUI {
         
         this.draftState.currentSeasonId = seasonId;
         this.draftState.currentTeam = randomTeam.name;
+        this.draftState.deadline = Date.now() + 32000;
         await this.loadSeasonData(seasonId);
         await this.saveDraftState();
     }
