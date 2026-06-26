@@ -274,35 +274,40 @@ input[type=range] {
 
 .penalty-area {
     position: absolute;
-    left: 25%;
-    width: 50%;
+    left: 20%;
+    width: 60%;
     border: 1px solid rgba(255,255,255,0.15);
 }
-.penalty-area.top { top: 0; height: 15%; border-top: none; }
-.penalty-area.bottom { bottom: 0; height: 15%; border-bottom: none; }
+.penalty-area.top { top: 0; height: 16%; border-top: none; }
+.penalty-area.bottom { bottom: 0; height: 16%; border-bottom: none; }
 
 .penalty-area::before {
     content: '';
     position: absolute;
-    left: 30%; width: 40%;
+    left: 27.5%; width: 45%;
     border: 1px solid rgba(255,255,255,0.15);
 }
-.penalty-area.top::before { top: 0; height: 40%; border-top: none; }
-.penalty-area.bottom::before { bottom: 0; height: 40%; border-bottom: none; }
+.penalty-area.top::before { top: 0; height: 35%; border-top: none; }
+.penalty-area.bottom::before { bottom: 0; height: 35%; border-bottom: none; }
 
-.penalty-area::after {
-    content: '';
+.penalty-arc {
     position: absolute;
-    left: 35%; width: 30%; aspect-ratio: 1;
+    left: 40%; width: 20%; aspect-ratio: 1;
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 50%;
 }
-.penalty-area.top::after { bottom: -15%; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
-.penalty-area.bottom::after { top: -15%; clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); }
+.penalty-arc.top {
+    top: 5%;
+    clip-path: inset(55% 0 0 0);
+}
+.penalty-arc.bottom {
+    bottom: 5%;
+    clip-path: inset(0 0 55% 0);
+}
 
 .mini-pitch-players {
     position: absolute;
-    top: 28%; left: 0; right: 0; bottom: 5%;
+    top: 35%; left: 0; right: 0; bottom: 12%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

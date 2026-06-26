@@ -306,7 +306,17 @@ export class LobbyUI {
                     </div>
                     <div class="formation-body">
                         <div class="mini-pitch">
-                            ${pitchContent}
+                            <div class="mini-pitch-bg">
+                                <div class="mini-pitch-lines">
+                                    <div class="penalty-arc top"></div>
+                                    <div class="penalty-area top"></div>
+                                    <div class="penalty-arc bottom"></div>
+                                    <div class="penalty-area bottom"></div>
+                                </div>
+                            </div>
+                            <div class="mini-pitch-players">
+                                ${pitchContent}
+                            </div>
                         </div>
                     </div>
                 </div>
