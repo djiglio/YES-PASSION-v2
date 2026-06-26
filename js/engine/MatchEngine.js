@@ -142,9 +142,9 @@ export class MatchEngine {
         // Increase the exponent to make the strong teams dominate weak teams more consistently
         let expectedGoals;
         if (ratio >= 1) {
-            expectedGoals = 1.2 * Math.pow(ratio, 4); // Stronger team scores much more
+            expectedGoals = 5.4 * Math.pow(ratio, 4); // Stronger team scores much more
         } else {
-            expectedGoals = 1.2 * Math.pow(ratio, 5); // Weaker team scores much less
+            expectedGoals = 5.4 * Math.pow(ratio, 5); // Weaker team scores much less
         }
         
         // Add a bit of random match-day variance (-0.2 to +0.2 xG)
