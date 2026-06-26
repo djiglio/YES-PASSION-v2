@@ -120,7 +120,6 @@ export class GameState {
 
         // 3. Initialize Standings
         this.standings = teams.map(t => {
-            let squadToUse = t.isUser ? (t.players || []) : this.generateCPUSquad(t.players);
             return {
                 id: t.id,
                 name: t.name,
@@ -139,7 +138,7 @@ export class GameState {
                     def: t.squad_strength.def_ovr,
                     gk: t.squad_strength.gk_ovr
                 },
-                squad: squadToUse,
+                squad: t.isUser ? (t.players || []) : [],
                 fullRoster: t.isUser ? null : t.players
             };
         });
@@ -199,7 +198,6 @@ export class GameState {
 
         // Initialize Standings
         let standings = teams.map(t => {
-            let squadToUse = t.isUser ? (t.players || []) : this.generateCPUSquad(t.players);
             return {
                 id: t.id,
                 name: t.name,
@@ -218,7 +216,7 @@ export class GameState {
                     def: t.squad_strength.def_ovr,
                     gk: t.squad_strength.gk_ovr
                 },
-                squad: squadToUse,
+                squad: t.isUser ? (t.players || []) : [],
                 fullRoster: t.isUser ? null : t.players
             };
         });
@@ -235,51 +233,6 @@ export class GameState {
             lastMatchResults: null,
             isFinished: false
         };
-    }
-
-    generateCPUSquad(teamPlayers) {
-        if (!teamPlayers || teamPlayers.length === 0) return [];
-
-        const formations = [
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CC', 'CC', 'ES', 'ED', 'ATT', 'ATT'], // 4-4-2
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CC', 'CC', 'AS', 'AD', 'ATT'], // 4-3-3
-            ['POR', 'DC', 'DC', 'DC', 'CC', 'CC', 'ES', 'ED', 'COC', 'ATT', 'ATT'], // 3-5-2
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CDC', 'COC', 'AS', 'AD', 'ATT'] // 4-2-3-1
-        ];
-        const chosenFormation = formations[Math.floor(Math.random() * formations.length)];
-        
-        let squad = [];
-        let availablePlayers = [...teamPlayers];
-        
-        chosenFormation.forEach(role => {
-            let bestIdx = -1;
-            let bestOvr = -1;
-            
-            for (let i = 0; i < availablePlayers.length; i++) {
-                const p = availablePlayers[i];
-                if (p.Ruolo && p.Ruolo.includes(role) && p.Overall > bestOvr) {
-                    bestOvr = p.Overall;
-                    bestIdx = i;
-                }
-            }
-            
-            if (bestIdx === -1) {
-                for (let i = 0; i < availablePlayers.length; i++) {
-                    const p = availablePlayers[i];
-                    if (p.Overall > bestOvr) {
-                        bestOvr = p.Overall;
-                        bestIdx = i;
-                    }
-                }
-            }
-            
-            if (bestIdx !== -1) {
-                squad.push(availablePlayers[bestIdx]);
-                availablePlayers.splice(bestIdx, 1);
-            }
-        });
-        
-        return squad;
     }
 
     generateRoundRobin(teams) {

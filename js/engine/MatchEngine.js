@@ -1,22 +1,113 @@
 export class MatchEngine {
+    static generateCPUSquad(teamPlayers) {
+        if (!teamPlayers || teamPlayers.length === 0) return [];
+
+        const formations = [
+            ['POR', 'DC', 'DC', 'TS', 'TD', 'CC', 'CC', 'ES', 'ED', 'ATT', 'ATT'], // 4-4-2
+            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CC', 'CC', 'AS', 'AD', 'ATT'], // 4-3-3
+            ['POR', 'DC', 'DC', 'DC', 'CC', 'CC', 'ES', 'ED', 'COC', 'ATT', 'ATT'], // 3-5-2
+            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CDC', 'COC', 'AS', 'AD', 'ATT'] // 4-2-3-1
+        ];
+        const chosenFormation = formations[Math.floor(Math.random() * formations.length)];
+        
+        let squad = [];
+        let availablePlayers = [...teamPlayers];
+        
+        chosenFormation.forEach(role => {
+            let bestIdx = -1;
+            let bestOvr = -1;
+            
+            for (let i = 0; i < availablePlayers.length; i++) {
+                const p = availablePlayers[i];
+                if (p.Ruolo && p.Ruolo.includes(role) && p.Overall > bestOvr) {
+                    bestOvr = p.Overall;
+                    bestIdx = i;
+                }
+            }
+            
+            if (bestIdx === -1) {
+                bestOvr = -1;
+                for (let i = 0; i < availablePlayers.length; i++) {
+                    const p = availablePlayers[i];
+                    if (p.Overall > bestOvr) {
+                        bestOvr = p.Overall;
+                        bestIdx = i;
+                    }
+                }
+            }
+
+            if (bestIdx !== -1) {
+                squad.push(availablePlayers[bestIdx]);
+                availablePlayers.splice(bestIdx, 1);
+            }
+        });
+        
+        return squad;
+    }
+
+    static calculateTeamPowers(squad) {
+        let attSum = 0, attCount = 0;
+        let midSum = 0, midCount = 0;
+        let defSum = 0, defCount = 0;
+        let gkSum = 0, gkCount = 0;
+
+        squad.forEach(player => {
+            const role = player.Ruolo || '';
+            const ovr = parseInt(player.Overall, 10) || 50;
+            
+            if (role.includes('POR')) { gkSum += ovr; gkCount++; }
+            else if (['DC', 'TS', 'TD', 'ASA', 'ADA'].some(r => role.includes(r))) { defSum += ovr; defCount++; }
+            else if (['CDC', 'CC', 'COC', 'ES', 'ED'].some(r => role.includes(r))) { midSum += ovr; midCount++; }
+            else { attSum += ovr; attCount++; }
+        });
+
+        const calcPower = (sum, count) => {
+            if (count === 0) return 0;
+            const avg = sum / count;
+            return (avg * 0.6) + (sum * 0.4);
+        };
+
+        return {
+            att: calcPower(attSum, attCount),
+            mid: calcPower(midSum, midCount),
+            def: calcPower(defSum, defCount),
+            gk: calcPower(gkSum, gkCount)
+        };
+    }
+
     /**
      * Simulates a match between two teams
      * @param {Object} homeTeam 
      * @param {Object} awayTeam 
      */
     static simulateMatch(homeTeam, awayTeam) {
+        let homeSquad = homeTeam.squad || [];
+        if (!homeTeam.isUser && homeTeam.fullRoster && homeTeam.fullRoster.length > 0) {
+            homeSquad = this.generateCPUSquad(homeTeam.fullRoster);
+            homeTeam.squad = homeSquad; 
+        }
+
+        let awaySquad = awayTeam.squad || [];
+        if (!awayTeam.isUser && awayTeam.fullRoster && awayTeam.fullRoster.length > 0) {
+            awaySquad = this.generateCPUSquad(awayTeam.fullRoster);
+            awayTeam.squad = awaySquad;
+        }
+
+        const homePowers = this.calculateTeamPowers(homeSquad);
+        const awayPowers = this.calculateTeamPowers(awaySquad);
+
         const homeAdvantage = 1.05; 
 
         // Weighting midfield control
-        const homeMidControl = homeTeam.stats.mid * homeAdvantage;
-        const awayMidControl = awayTeam.stats.mid;
+        const homeMidControl = homePowers.mid * homeAdvantage;
+        const awayMidControl = awayPowers.mid;
         
         // Attack vs Defense Power
-        const homeAttackPower = (homeTeam.stats.att * 0.7 + homeMidControl * 0.3) * homeAdvantage;
-        const awayDefensePower = (awayTeam.stats.def * 0.8 + awayTeam.stats.gk * 0.2);
+        const homeAttackPower = (homePowers.att * 0.7 + homeMidControl * 0.3) * homeAdvantage;
+        const awayDefensePower = (awayPowers.def * 0.8 + awayPowers.gk * 0.2);
 
-        const awayAttackPower = (awayTeam.stats.att * 0.7 + awayMidControl * 0.3);
-        const homeDefensePower = (homeTeam.stats.def * 0.8 + homeTeam.stats.gk * 0.2) * homeAdvantage;
+        const awayAttackPower = (awayPowers.att * 0.7 + awayMidControl * 0.3);
+        const homeDefensePower = (homePowers.def * 0.8 + homePowers.gk * 0.2) * homeAdvantage;
 
         // Calculate goals
         let homeGoals = this.calculateGoals(homeAttackPower, awayDefensePower);

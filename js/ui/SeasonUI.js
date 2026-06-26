@@ -146,13 +146,6 @@ export class SeasonUI {
             const homeT = this.state.standings.find(t => t.id === match.home);
             const awayT = this.state.standings.find(t => t.id === match.away);
 
-            if (!homeT.isUser && homeT.fullRoster) {
-                homeT.squad = this.state.generateCPUSquad(homeT.fullRoster);
-            }
-            if (!awayT.isUser && awayT.fullRoster) {
-                awayT.squad = this.state.generateCPUSquad(awayT.fullRoster);
-            }
-
             const result = MatchEngine.simulateMatch(homeT, awayT);
             matchResults.push({
                 homeId: match.home,
