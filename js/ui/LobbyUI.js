@@ -148,19 +148,13 @@ export class LobbyUI {
     }
 
     handleBack() {
-        // Are we in formation selection?
-        if (document.getElementById('formation-selection')) {
-            // go back to waiting room
-            this.renderWaitingRoom();
-            return true;
-        }
         // Are we in waiting room?
         if (this.lobby) {
             if (this.realtimeChannel) {
                 supabase.removeChannel(this.realtimeChannel);
                 this.realtimeChannel = null;
             }
-            // Remove user from lobby in db? We can just do a best-effort delete
+            // Remove user from lobby in db
             const user = this.app.authUI.currentUser;
             if (user) {
                 supabase.from('lobby_players').delete().eq('lobby_id', this.lobby.id).eq('user_id', user.id).then();
@@ -324,7 +318,6 @@ export class LobbyUI {
                 <div class="formation-item" data-form="${f}">
                     <div class="formation-header">
                         <span class="formation-name">${f}</span>
-                        <button class="btn-confirm-formation" style="display: none;">✔</button>
                     </div>
                     <div class="formation-body">
                         <div class="mini-pitch">
@@ -396,43 +389,32 @@ export class LobbyUI {
 
         formationItems.forEach(item => {
             const header = item.querySelector('.formation-header');
-            const confirmBtn = item.querySelector('.btn-confirm-formation');
             const f = item.getAttribute('data-form');
-
-            header.addEventListener('click', (e) => {
-                if (e.target === confirmBtn || confirmBtn.contains(e.target)) return;
+            header.addEventListener('click', async (e) => {
                 const isActive = item.classList.contains('active');
-                formationItems.forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.btn-confirm-formation').style.display = 'none';
-                });
+                
                 if (!isActive) {
+                    formationItems.forEach(i => i.classList.remove('active'));
                     item.classList.add('active');
-                    confirmBtn.style.display = 'flex';
+                } else {
+                    // Confirm selection
+                    item.classList.remove('active');
+                    accordionContainer.style.display = 'none';
+                    formationTitleText.textContent = `MODULO SCELTO: ${f}`;
+                    formationToggleIcon.style.display = 'inline-block';
+                    formationToggleIcon.textContent = '▼';
+
+                    const draftState = this.lobby.draft_state || {};
+                    const currentFormations = draftState.formations || {};
+                    currentFormations[this.app.authUI.currentUser.id] = f;
+                    
+                    await supabase.from('lobbies').update({ 
+                        draft_state: {
+                            ...draftState,
+                            formations: currentFormations
+                        }
+                    }).eq('id', this.lobby.id);
                 }
-            });
-
-            confirmBtn.addEventListener('click', async (e) => {
-                e.stopPropagation();
-                
-                // Visual feedback: collapse accordion and update title
-                item.classList.remove('active');
-                confirmBtn.style.display = 'none';
-                accordionContainer.style.display = 'none';
-                formationTitleText.textContent = `MODULO SCELTO: ${f}`;
-                formationToggleIcon.style.display = 'inline-block';
-                formationToggleIcon.textContent = '▼';
-
-                const draftState = this.lobby.draft_state || {};
-                const currentFormations = draftState.formations || {};
-                currentFormations[this.app.authUI.currentUser.id] = f;
-                
-                await supabase.from('lobbies').update({ 
-                    draft_state: {
-                        ...draftState,
-                        formations: currentFormations
-                    }
-                }).eq('id', this.lobby.id);
             });
         });
 
