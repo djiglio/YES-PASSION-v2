@@ -310,9 +310,10 @@ export class MultiplayerDraftUI {
         let carouselHtml = `<div class="pitches-carousel" id="pitches-carousel" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
             <style>.pitches-carousel::-webkit-scrollbar { display: none; }</style>`;
         
-        this.players.forEach((player) => {
+        this.players.forEach((player, pIdx) => {
             const isCurrentUserPitch = player.user_id === this.currentUser.id;
             const playerColor = getPlayerColor(player.user_id);
+            const playerColorClass = `player-color-${(pIdx % 4) + 1}`;
             const teamName = player.profiles.team_name || 'Squadra';
             const roster = this.draftState.rosters[player.user_id];
             const form = this.draftState.formations[player.user_id];
@@ -343,7 +344,7 @@ export class MultiplayerDraftUI {
 
                     singlePitchHtml += `
                         <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" data-owner-id="${player.user_id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative; ${!isCurrentUserPitch ? 'pointer-events: none;' : ''}">
-                            <div class="slot ${isFilled ? `filled` : ''} ${isGold ? 'gold-card' : ''}" style="${isFilled ? `border-color: ${playerColor};` : ''}">
+                            <div class="slot ${isFilled ? `filled ${playerColorClass}` : ''} ${isGold ? 'gold-card' : ''}" style="${isFilled ? `border-color: ${playerColor};` : ''}">
                                 ${displayOvr ? `<span class="slot-ovr-inside">${displayOvr}</span>` : ''}
                             </div>
                             ${isFilled ? `
@@ -378,6 +379,12 @@ export class MultiplayerDraftUI {
         });
         
         carouselHtml += `</div>`;
+
+        let dotsHtml = `<div class="carousel-dots" style="display: flex; justify-content: center; gap: 8px; margin-top: -5px; margin-bottom: 15px;">`;
+        this.players.forEach((player, pIdx) => {
+            dotsHtml += `<div class="carousel-dot" data-index="${pIdx}" style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); background: transparent; cursor: pointer; transition: all 0.3s ease;"></div>`;
+        });
+        dotsHtml += `</div>`;
 
         let teamPlayers = this.playersData.filter(p => p.Squadra === this.draftState.currentTeam);
         
@@ -486,6 +493,7 @@ export class MultiplayerDraftUI {
                     </div>` : ''}
                     
                     ${carouselHtml}
+                    ${dotsHtml}
 
                 </div>
                 <div class="draft-right">
@@ -502,6 +510,33 @@ export class MultiplayerDraftUI {
         if (isMyTurn) {
             this.attachDraftEvents(teamPlayers);
         }
+
+        setTimeout(() => {
+            const carousel = this.container.querySelector('#pitches-carousel');
+            const dots = this.container.querySelectorAll('.carousel-dot');
+            if (carousel && dots.length > 0) {
+                const updateDots = () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const width = carousel.offsetWidth || 1;
+                    const index = Math.round(scrollLeft / width);
+                    dots.forEach((dot, i) => {
+                        dot.style.background = i === index ? 'rgba(255,255,255,0.9)' : 'transparent';
+                        dot.style.transform = i === index ? 'scale(1.2)' : 'scale(1)';
+                    });
+                };
+
+                carousel.addEventListener('scroll', updateDots);
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => {
+                        const width = carousel.offsetWidth;
+                        carousel.scrollTo({ left: i * width, behavior: 'smooth' });
+                    });
+                });
+                
+                updateDots();
+            }
+        }, 50);
     }
 
     attachDraftEvents(teamPlayers) {
