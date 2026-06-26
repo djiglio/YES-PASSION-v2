@@ -177,6 +177,14 @@ class GameApp {
     }
 
     renderHomeMenu(content) {
+        // Clear all cached UIs to ensure fresh render when navigating back
+        this.draftUI = null;
+        this.lobbyUI = null;
+        this.mpDraftUI = null;
+        this.mpSeasonUI = null;
+        this.seasonUI = null;
+        this.leaderboardUI = null;
+
         content.innerHTML = `
             <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
                 <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 3rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>

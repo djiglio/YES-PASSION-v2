@@ -36,11 +36,11 @@
     </div>
     <div id="app" class="app-container">
         <!-- GLOBAL HEADER -->
-        <header id="global-header" style="display: none; padding: 5px 20px; width: 100%; background: rgba(0, 0, 0, 0.4); border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 2000; flex-direction: row; justify-content: space-between; align-items: center;">
-            <div id="global-back-btn" style="margin: 0; font-weight: 600; font-size: 0.9rem; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-                <span style="font-size: 1.2rem; line-height: 1;">&larr;</span> Indietro
+        <header id="global-header" style="display: none; position: absolute; top: 0; left: 0; padding: 20px 20px; width: 100%; background: transparent; border: none; z-index: 2000; flex-direction: row; justify-content: space-between; align-items: center; pointer-events: none;">
+            <div id="global-back-btn" style="margin: 0; font-weight: 600; font-size: 1rem; cursor: pointer; color: rgba(255,255,255,0.8); transition: color 0.2s; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem; pointer-events: auto;">
+                <span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Indietro
             </div>
-            <div id="global-header-right" style="display: flex; align-items: center;"></div>
+            <div id="global-header-right" style="display: flex; align-items: center; pointer-events: auto;"></div>
         </header>        <!-- MAIN CONTENT AREA (Dynamic) -->
         <main id="game-content" class="game-content">
             <div class="loader">Caricamento Dati...</div>
