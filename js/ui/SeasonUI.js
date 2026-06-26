@@ -86,6 +86,14 @@ export class SeasonUI {
             return true;
         }
         if (this.state.phase === 'SEASON_INIT') {
+            if (this.state.isFinished || this.state.matchday > this.state.schedule.length) {
+                const globalBackBtn = document.getElementById('global-back-btn');
+                if (globalBackBtn) {
+                    globalBackBtn.innerHTML = '<span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Indietro';
+                }
+                this.app.state.setPhase('HOME');
+                return true;
+            }
             window.showAlert("Non puoi tornare indietro durante il campionato!");
             return true;
         }
@@ -341,6 +349,11 @@ export class SeasonUI {
     }
 
     async renderEndSeason() {
+        const globalBackBtn = document.getElementById('global-back-btn');
+        if (globalBackBtn) {
+            globalBackBtn.innerHTML = '<span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Menu';
+        }
+
         const userTeam = this.state.standings.find(t => t.isUser);
         const finalPosition = this.state.standings.findIndex(t => t.isUser) + 1;
         const topStats = this.state.getTopStats();

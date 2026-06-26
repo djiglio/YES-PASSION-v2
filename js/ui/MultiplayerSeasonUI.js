@@ -517,6 +517,11 @@ export class MultiplayerSeasonUI {
     async renderEndSeason() {
         if (this.realtimeChannel) supabase.removeChannel(this.realtimeChannel);
 
+        const globalBackBtn = document.getElementById('global-back-btn');
+        if (globalBackBtn) {
+            globalBackBtn.innerHTML = '<span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Menu';
+        }
+
         const pos = this.seasonState.standings.findIndex(t => t.id === this.currentUser.id) + 1;
         const userTeam = this.seasonState.standings.find(t => t.id === this.currentUser.id);
         const topStats = this.getTopStats();
@@ -713,8 +718,14 @@ export class MultiplayerSeasonUI {
     }
 
     handleBack() {
-        if (!this.seasonState || this.seasonState.isFinished) {
-            return false; // let it go back
+        if (!this.seasonState) return false;
+        if (this.seasonState.isFinished || this.seasonState.matchday > this.seasonState.schedule.length) {
+            const globalBackBtn = document.getElementById('global-back-btn');
+            if (globalBackBtn) {
+                globalBackBtn.innerHTML = '<span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Indietro';
+            }
+            this.app.state.setPhase('HOME');
+            return true;
         }
         window.showAlert("Non puoi tornare indietro durante il campionato!");
         return true; // intercept
