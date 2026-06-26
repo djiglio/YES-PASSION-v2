@@ -561,8 +561,8 @@ export class MultiplayerSeasonUI {
         let rosterHtml = `
             <div style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h3 class="table-title" style="margin-bottom: 1rem; text-align: center;">La Tua Rosa</h3>
-                <div class="stats-table-wrapper">
-                    <table class="roster-table" style="width: 100%; text-align: center; border-collapse: collapse;">
+                <div class="stats-table-wrapper" style="overflow-x: auto;">
+                    <table class="roster-table" style="width: 100%; text-align: center; border-collapse: collapse; min-width: 400px;">
                         <thead>
                             <tr>
                                 <th style="padding: 0.8rem 1.2rem;">Ruolo</th>
@@ -587,12 +587,13 @@ export class MultiplayerSeasonUI {
                 valueHtml = `<td style="color: #10b981; font-weight: bold; padding: 0.8rem 1.2rem;">€${player.Value}</td>`;
             }
             
-            const ovrColor = player.Overall > 85 ? 'gold' : 'white';
+            const ovrColor = player.Overall >= 85 ? 'gold' : 'white';
+            const shortName = player.Nome.replace(/^[A-Z]\.\s+/, '');
             
             rosterHtml += `
                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <td style="font-weight: bold; color: var(--accent); padding: 0.8rem 1.2rem;">${player.DeployedRole || player.Ruolo}</td>
-                    <td style="font-weight: bold; color: white; text-align: left; padding: 0.8rem 1.2rem;">${player.Nome}</td>
+                    <td style="font-weight: bold; color: white; text-align: left; padding: 0.8rem 1.2rem; white-space: nowrap;">${shortName}</td>
                     <td style="font-weight: bold; color: ${ovrColor}; font-size: 1rem; padding: 0.8rem 1.2rem;">${player.Overall}</td>
                     <td style="color: #cbd5e1; padding: 0.8rem 1.2rem;">${stats.goals}</td>
                     <td style="color: #cbd5e1; padding: 0.8rem 1.2rem;">${stats.assists}</td>
