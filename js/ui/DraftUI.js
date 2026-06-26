@@ -634,7 +634,10 @@ export class DraftUI {
     finishDraft() {
         this.blindDraft = false;
 
-        const draftedPlayers = this.slots.map(s => s.player);
+        const draftedPlayers = this.slots.map(s => {
+            if (s.player) s.player.DeployedRole = s.requiredRole;
+            return s.player;
+        });
         this.state.completeDraft(draftedPlayers);
         
         this.renderDraftBoard();

@@ -359,8 +359,8 @@ export class SeasonUI {
 
         const roleOrder = { 'POR': 1, 'DC': 2, 'TD': 3, 'TS': 4, 'CDC': 5, 'CC': 6, 'ED': 7, 'ES': 8, 'COC': 9, 'AT': 10, 'ATT': 11, 'AD': 12, 'AS': 13 };
         let sortedSquad = [...this.state.userTeam.squad].filter(p => p).sort((a, b) => {
-            const roleA = a.Ruolo.split(',')[0].trim();
-            const roleB = b.Ruolo.split(',')[0].trim();
+            const roleA = (a.DeployedRole || a.Ruolo).split(',')[0].trim();
+            const roleB = (b.DeployedRole || b.Ruolo).split(',')[0].trim();
             return (roleOrder[roleA] || 99) - (roleOrder[roleB] || 99);
         });
 
@@ -371,12 +371,12 @@ export class SeasonUI {
                     <table class="standings-table inner-table" style="width: 100%; text-align: center; border-collapse: collapse;">
                         <thead>
                             <tr>
-                                <th>Ruolo</th>
-                                <th style="text-align: left;">Nome</th>
-                                <th>OVR</th>
-                                <th>Gol</th>
-                                <th>Assist</th>
-                                ${isBudget ? '<th>Valore</th>' : ''}
+                                <th style="padding: 0.5rem;">Ruolo</th>
+                                <th style="text-align: left; padding: 0.5rem;">Nome</th>
+                                <th style="padding: 0.5rem;">OVR</th>
+                                <th style="padding: 0.5rem;">Gol</th>
+                                <th style="padding: 0.5rem;">Assist</th>
+                                ${isBudget ? '<th style="padding: 0.5rem;">Valore</th>' : ''}
                             </tr>
                         </thead>
                         <tbody>
@@ -394,12 +394,12 @@ export class SeasonUI {
             }
             
             rosterHtml += `
-                <tr>
-                    <td style="font-weight: bold; color: var(--accent);">${player.Ruolo}</td>
-                    <td style="font-weight: bold; color: white; text-align: left;">${player.Nome}</td>
-                    <td><span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; font-size: 0.9rem;">${player.Overall}</span></td>
-                    <td style="color: #cbd5e1;">${stats.goals}</td>
-                    <td style="color: #cbd5e1;">${stats.assists}</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="font-weight: bold; color: var(--accent); padding: 0.5rem;">${player.DeployedRole || player.Ruolo}</td>
+                    <td style="font-weight: bold; color: white; text-align: left; padding: 0.5rem;">${player.Nome}</td>
+                    <td style="font-weight: bold; color: gold; font-size: 0.9rem; padding: 0.5rem;">${player.Overall}</td>
+                    <td style="color: #cbd5e1; padding: 0.5rem;">${stats.goals}</td>
+                    <td style="color: #cbd5e1; padding: 0.5rem;">${stats.assists}</td>
                     ${valueHtml}
                 </tr>
             `;
