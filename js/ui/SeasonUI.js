@@ -512,25 +512,27 @@ export class SeasonUI {
         const table = this.container.querySelector('.end-season-grid .inner-table');
         if (table) {
             let rowsHtml = `
-                <div class="s-row s-header">
+                <div class="s-row s-header" style="grid-template-columns: 25px 1fr 30px 25px 25px 25px 30px 45px;">
                     <div class="s-pos">#</div>
                     <div class="s-team">Squadra</div>
                     <div class="s-pts">PT</div>
-                    <div class="s-stat">DR</div>
                     <div class="s-stat">V</div>
                     <div class="s-stat">N</div>
                     <div class="s-stat">P</div>
+                    <div class="s-stat">DR</div>
+                    <div class="s-stat">R/R</div>
                 </div>
             `;
             rowsHtml += this.state.standings.map((t, idx) => `
-                <div class="s-row ${t.isUser ? 's-user' : ''} ${this.getZoneClass(idx)}">
+                <div class="s-row ${t.isUser ? 's-user' : ''} ${this.getZoneClass(idx)}" style="grid-template-columns: 25px 1fr 30px 25px 25px 25px 30px 45px;">
                     <div class="s-pos">${idx + 1}</div>
                     <div class="s-team">${t.name}</div>
                     <div class="s-pts">${t.points}</div>
-                    <div class="s-stat">${t.gd}</div>
                     <div class="s-stat">${t.won}</div>
                     <div class="s-stat">${t.drawn}</div>
                     <div class="s-stat">${t.lost}</div>
+                    <div class="s-stat">${t.gd}</div>
+                    <div class="s-stat" style="font-size: 0.8rem;">${t.gf}/${t.ga}</div>
                 </div>
             `).join('');
             table.innerHTML = rowsHtml;
