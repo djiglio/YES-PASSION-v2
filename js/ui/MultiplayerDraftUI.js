@@ -504,6 +504,11 @@ export class MultiplayerDraftUI {
             </div>
         `;
 
+        const newCarousel = this.container.querySelector('#pitches-carousel');
+        if (newCarousel && this.savedScrollLeft !== undefined) {
+            newCarousel.scrollLeft = this.savedScrollLeft;
+        }
+
         if (isMyTurn) {
             this.attachDraftEvents(teamPlayers);
         }
@@ -519,8 +524,6 @@ export class MultiplayerDraftUI {
                         carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
                         this.savedScrollLeft = scrollLeft;
                     }
-                } else if (this.savedScrollLeft !== undefined) {
-                    carousel.scrollLeft = this.savedScrollLeft;
                 }
 
                 const updateDots = () => {
@@ -751,10 +754,10 @@ export class MultiplayerDraftUI {
         }
     }
 
-    calculateTeamStats() {
+    calculateTeamStats(userId = this.currentUser.id) {
         const stats = { total: 0, att: 0, mid: 0, def: 0, gk: 0 };
         const counts = { att: 0, mid: 0, def: 0, gk: 0 };
-        const myRoster = this.draftState.rosters[this.currentUser.id];
+        const myRoster = this.draftState.rosters[userId];
 
         myRoster.forEach(s => {
             const r = s.requiredRole;
@@ -861,7 +864,8 @@ export class MultiplayerDraftUI {
         });
         dotsHtml += `</div>`;
 
-        const stats = this.calculateTeamStats();
+        const playerStatsArray = this.players.map(p => this.calculateTeamStats(p.user_id));
+        const initialStats = this.calculateTeamStats();
 
         this.container.innerHTML = `
             <div class="draft-container">
@@ -871,27 +875,26 @@ export class MultiplayerDraftUI {
                 </div>
                 <div class="draft-right">
                     <div class="draft-complete-stats" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height: 100%;">
-                        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--accent); text-transform: uppercase; text-shadow: 0 0 10px rgba(0, 230, 255, 0.5);">Squadra Completa!</h2>
                         
                         <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 12px; width: 100%; margin-bottom: 2rem; border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">OVR Totale: <span style="color: var(--accent); font-size: 2.2rem; margin-left: 10px;">${stats.total}</span></h3>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">OVR Totale: <span id="summary-ovr-tot" style="color: var(--accent); font-size: 2.2rem; margin-left: 10px;">${initialStats.total}</span></h3>
                             
                             <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
                                 <div style="display: flex; flex-direction: column;">
                                     <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">ATT</span>
-                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.att}</span>
+                                    <span id="summary-ovr-att" style="font-size: 1.5rem; font-weight: 900; color: #fff;">${initialStats.att}</span>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                     <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">CEN</span>
-                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.mid}</span>
+                                    <span id="summary-ovr-cen" style="font-size: 1.5rem; font-weight: 900; color: #fff;">${initialStats.mid}</span>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                     <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">DIF</span>
-                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.def}</span>
+                                    <span id="summary-ovr-dif" style="font-size: 1.5rem; font-weight: 900; color: #fff;">${initialStats.def}</span>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                     <span style="color: var(--text-muted); font-weight: 800; font-size: 1rem;">POR</span>
-                                    <span style="font-size: 1.5rem; font-weight: 900; color: #fff;">${stats.gk}</span>
+                                    <span id="summary-ovr-por" style="font-size: 1.5rem; font-weight: 900; color: #fff;">${initialStats.gk}</span>
                                 </div>
                             </div>
                         </div>
@@ -927,6 +930,18 @@ export class MultiplayerDraftUI {
                         dot.style.background = i === index ? 'rgba(255,255,255,0.9)' : 'transparent';
                         dot.style.transform = i === index ? 'scale(1.2)' : 'scale(1)';
                     });
+                    
+                    const activeStats = playerStatsArray[index] || playerStatsArray[0];
+                    const elTot = document.getElementById('summary-ovr-tot');
+                    const elAtt = document.getElementById('summary-ovr-att');
+                    const elCen = document.getElementById('summary-ovr-cen');
+                    const elDif = document.getElementById('summary-ovr-dif');
+                    const elPor = document.getElementById('summary-ovr-por');
+                    if (elTot) elTot.textContent = activeStats.total;
+                    if (elAtt) elAtt.textContent = activeStats.att;
+                    if (elCen) elCen.textContent = activeStats.mid;
+                    if (elDif) elDif.textContent = activeStats.def;
+                    if (elPor) elPor.textContent = activeStats.gk;
                 };
 
                 carousel.addEventListener('scroll', updateDots);
