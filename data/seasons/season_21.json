@@ -4899,6 +4899,384 @@
                     "Age": 25
                 }
             ]
+        },
+        {
+            "id": "roma",
+            "name": "Roma",
+            "real_points": 62,
+            "squad_strength": {
+                "att_ovr": 82,
+                "mid_ovr": 80,
+                "def_ovr": 79,
+                "gk_ovr": 80
+            },
+            "players": [
+                {
+                    "Nome": "E. Dzeko",
+                    "Ruolo": "ATT",
+                    "Overall": 83,
+                    "Value": "€18.0M",
+                    "ValueNum": 18000000.0,
+                    "Age": 34
+                },
+                {
+                    "Nome": "H. Mkhitaryan",
+                    "Ruolo": "COC, AS",
+                    "Overall": 80,
+                    "Value": "€15.0M",
+                    "ValueNum": 15000000.0,
+                    "Age": 31
+                },
+                {
+                    "Nome": "L. Pellegrini",
+                    "Ruolo": "CC, COC",
+                    "Overall": 79,
+                    "Value": "€18.0M",
+                    "ValueNum": 18000000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "N. Zaniolo",
+                    "Ruolo": "AT, ED",
+                    "Overall": 76,
+                    "Value": "€13.0M",
+                    "ValueNum": 13000000.0,
+                    "Age": 21
+                },
+                {
+                    "Nome": "C. Smalling",
+                    "Ruolo": "DC",
+                    "Overall": 79,
+                    "Value": "€12.0M",
+                    "ValueNum": 12000000.0,
+                    "Age": 30
+                },
+                {
+                    "Nome": "G. Mancini",
+                    "Ruolo": "DC",
+                    "Overall": 78,
+                    "Value": "€12.0M",
+                    "ValueNum": 12000000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "Pau Lopez",
+                    "Ruolo": "POR",
+                    "Overall": 80,
+                    "Value": "€15.0M",
+                    "ValueNum": 15000000.0,
+                    "Age": 25
+                },
+                {
+                    "Nome": "J. Veretout",
+                    "Ruolo": "CC, CDC",
+                    "Overall": 79,
+                    "Value": "€14.0M",
+                    "ValueNum": 14000000.0,
+                    "Age": 27
+                },
+                {
+                    "Nome": "L. Spinazzola",
+                    "Ruolo": "ES, TS",
+                    "Overall": 78,
+                    "Value": "€11.0M",
+                    "ValueNum": 11000000.0,
+                    "Age": 27
+                },
+                {
+                    "Nome": "B. Cristante",
+                    "Ruolo": "CC, CDC",
+                    "Overall": 78,
+                    "Value": "€11.0M",
+                    "ValueNum": 11000000.0,
+                    "Age": 25
+                },
+                {
+                    "Nome": "Pedro",
+                    "Ruolo": "AD, AS",
+                    "Overall": 80,
+                    "Value": "€12.0M",
+                    "ValueNum": 12000000.0,
+                    "Age": 33
+                },
+                {
+                    "Nome": "B. Mayoral",
+                    "Ruolo": "ATT",
+                    "Overall": 76,
+                    "Value": "€9.0M",
+                    "ValueNum": 9000000.0,
+                    "Age": 23
+                },
+                {
+                    "Nome": "R. Ibanez",
+                    "Ruolo": "DC",
+                    "Overall": 74,
+                    "Value": "€6.0M",
+                    "ValueNum": 6000000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "R. Karsdorp",
+                    "Ruolo": "TD, ED",
+                    "Overall": 75,
+                    "Value": "€6.0M",
+                    "ValueNum": 6000000.0,
+                    "Age": 25
+                },
+                {
+                    "Nome": "G. Villar",
+                    "Ruolo": "CC",
+                    "Overall": 73,
+                    "Value": "€5.0M",
+                    "ValueNum": 5000000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "A. Mirante",
+                    "Ruolo": "POR",
+                    "Overall": 76,
+                    "Value": "€2.0M",
+                    "ValueNum": 2000000.0,
+                    "Age": 37
+                },
+                {
+                    "Nome": "A. Diawara",
+                    "Ruolo": "CDC, CC",
+                    "Overall": 75,
+                    "Value": "€7.0M",
+                    "ValueNum": 7000000.0,
+                    "Age": 23
+                },
+                {
+                    "Nome": "M. Kumbulla",
+                    "Ruolo": "DC",
+                    "Overall": 75,
+                    "Value": "€7.5M",
+                    "ValueNum": 7500000.0,
+                    "Age": 20
+                },
+                {
+                    "Nome": "S. El Shaarawy",
+                    "Ruolo": "AS, ATT",
+                    "Overall": 79,
+                    "Value": "€14.0M",
+                    "ValueNum": 14000000.0,
+                    "Age": 28
+                },
+                {
+                    "Nome": "B. Peres",
+                    "Ruolo": "TD, ED",
+                    "Overall": 75,
+                    "Value": "€6.0M",
+                    "ValueNum": 6000000.0,
+                    "Age": 30
+                },
+                {
+                    "Nome": "C. Perez",
+                    "Ruolo": "AD, ED",
+                    "Overall": 75,
+                    "Value": "€7.5M",
+                    "ValueNum": 7500000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "D. Santon",
+                    "Ruolo": "TD, TS",
+                    "Overall": 74,
+                    "Value": "€4.0M",
+                    "ValueNum": 4000000.0,
+                    "Age": 29
+                },
+                {
+                    "Nome": "F. Fazio",
+                    "Ruolo": "DC",
+                    "Overall": 76,
+                    "Value": "€4.5M",
+                    "ValueNum": 4500000.0,
+                    "Age": 33
+                }
+            ]
+        },
+        {
+            "id": "spezia",
+            "name": "Spezia",
+            "real_points": 39,
+            "squad_strength": {
+                "att_ovr": 72,
+                "mid_ovr": 71,
+                "def_ovr": 70,
+                "gk_ovr": 74
+            },
+            "players": [
+                {
+                    "Nome": "M. Nzola",
+                    "Ruolo": "ATT",
+                    "Overall": 70,
+                    "Value": "€2.0M",
+                    "ValueNum": 2000000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "G. Maggiore",
+                    "Ruolo": "CC, COC",
+                    "Overall": 71,
+                    "Value": "€3.0M",
+                    "ValueNum": 3000000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "E. Gyasi",
+                    "Ruolo": "AS, AD",
+                    "Overall": 71,
+                    "Value": "€2.5M",
+                    "ValueNum": 2500000.0,
+                    "Age": 26
+                },
+                {
+                    "Nome": "I. Provedel",
+                    "Ruolo": "POR",
+                    "Overall": 71,
+                    "Value": "€2.0M",
+                    "ValueNum": 2000000.0,
+                    "Age": 26
+                },
+                {
+                    "Nome": "T. Pobega",
+                    "Ruolo": "CC",
+                    "Overall": 68,
+                    "Value": "€1.5M",
+                    "ValueNum": 1500000.0,
+                    "Age": 21
+                },
+                {
+                    "Nome": "M. Ricci",
+                    "Ruolo": "CDC, CC",
+                    "Overall": 72,
+                    "Value": "€2.8M",
+                    "ValueNum": 2800000.0,
+                    "Age": 26
+                },
+                {
+                    "Nome": "M. Erlic",
+                    "Ruolo": "DC",
+                    "Overall": 70,
+                    "Value": "€2.2M",
+                    "ValueNum": 2200000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "S. Bastoni",
+                    "Ruolo": "TS, ES",
+                    "Overall": 69,
+                    "Value": "€1.8M",
+                    "ValueNum": 1800000.0,
+                    "Age": 23
+                },
+                {
+                    "Nome": "C. Terzi",
+                    "Ruolo": "DC",
+                    "Overall": 71,
+                    "Value": "€0.8M",
+                    "ValueNum": 800000.0,
+                    "Age": 36
+                },
+                {
+                    "Nome": "J. Zoet",
+                    "Ruolo": "POR",
+                    "Overall": 74,
+                    "Value": "€3.5M",
+                    "ValueNum": 3500000.0,
+                    "Age": 29
+                },
+                {
+                    "Nome": "J. Chabot",
+                    "Ruolo": "DC",
+                    "Overall": 71,
+                    "Value": "€2.4M",
+                    "ValueNum": 2400000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "S. Ferrer",
+                    "Ruolo": "TD",
+                    "Overall": 69,
+                    "Value": "€1.6M",
+                    "ValueNum": 1600000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "K. Agudelo",
+                    "Ruolo": "COC, AD",
+                    "Overall": 70,
+                    "Value": "€2.4M",
+                    "ValueNum": 2400000.0,
+                    "Age": 21
+                },
+                {
+                    "Nome": "D. Verde",
+                    "Ruolo": "AD, AS",
+                    "Overall": 72,
+                    "Value": "€3.1M",
+                    "ValueNum": 3100000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "D. Farias",
+                    "Ruolo": "ATT, AS",
+                    "Overall": 74,
+                    "Value": "€4.0M",
+                    "ValueNum": 4000000.0,
+                    "Age": 30
+                },
+                {
+                    "Nome": "N. Estevez",
+                    "Ruolo": "CC, CDC",
+                    "Overall": 71,
+                    "Value": "€2.5M",
+                    "ValueNum": 2500000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "R. Marchizza",
+                    "Ruolo": "TS, DC",
+                    "Overall": 68,
+                    "Value": "€1.3M",
+                    "ValueNum": 1300000.0,
+                    "Age": 22
+                },
+                {
+                    "Nome": "L. Agoume",
+                    "Ruolo": "CC, CDC",
+                    "Overall": 66,
+                    "Value": "€1.1M",
+                    "ValueNum": 1100000.0,
+                    "Age": 18
+                },
+                {
+                    "Nome": "R. Piccoli",
+                    "Ruolo": "ATT",
+                    "Overall": 64,
+                    "Value": "€0.9M",
+                    "ValueNum": 900000.0,
+                    "Age": 19
+                },
+                {
+                    "Nome": "A. Ismajli",
+                    "Ruolo": "DC",
+                    "Overall": 69,
+                    "Value": "€1.4M",
+                    "ValueNum": 1400000.0,
+                    "Age": 24
+                },
+                {
+                    "Nome": "A. Galabinov",
+                    "Ruolo": "ATT",
+                    "Overall": 71,
+                    "Value": "€1.8M",
+                    "ValueNum": 1800000.0,
+                    "Age": 31
+                }
+            ]
         }
     ]
 }
