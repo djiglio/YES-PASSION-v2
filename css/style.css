@@ -152,22 +152,22 @@ input[type=range] {
 }
 
 .formation-item {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .formation-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 1.5rem;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.05);
-    transition: background 0.2s;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 72%;
+    margin: 0 auto;
+    transition: all 0.2s;
 }
 
 .formation-header:hover {
@@ -198,7 +198,9 @@ input[type=range] {
     animation: metallicShimmer 3s linear infinite;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px 8px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.8);
 }
 
@@ -212,7 +214,7 @@ input[type=range] {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
-    background: rgba(0,0,0,0.4);
+    background: transparent;
 }
 
 .formation-item.active .formation-body {
@@ -222,29 +224,87 @@ input[type=range] {
 /* Mini pitch styling */
 .mini-pitch {
     position: relative;
-    width: 100%;
-    aspect-ratio: 4/5;
-    max-height: 400px;
-    background: #0b1f3d;
-    border: 1px solid rgba(0, 150, 255, 0.3);
-    margin: 1rem auto;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column; /* Attackers on top, GK at bottom */
-    justify-content: space-around;
-    padding: 10px 0;
-    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    aspect-ratio: auto;
+    height: 350px;
+    perspective: 800px;
+    transform-style: preserve-3d;
 }
 
-.mini-pitch::before {
-    content: '';
+.mini-pitch-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
-        /* Center circle */
-        radial-gradient(circle at 50% 50%, transparent 48px, rgba(255,255,255,0.15) 50px, transparent 52px),
-        /* Halfway line */
-        linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255,255,255,0.15) 50%, transparent calc(50% + 1px));
+    transform: rotateX(40deg);
+    transform-origin: bottom center;
+    transform-style: preserve-3d;
+    background: linear-gradient(180deg, #0b2247 0%, #05132b 100%);
+    border: 2px solid rgba(0, 150, 255, 0.4);
+    box-shadow: 0 10px 0 #020914, 0 15px 15px rgba(0,0,0,0.8);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.mini-pitch-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.mini-pitch-lines::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%; aspect-ratio: 1;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+}
+
+.mini-pitch-lines::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+}
+
+.penalty-area {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.penalty-area.top { top: 0; height: 15%; border-top: none; }
+.penalty-area.bottom { bottom: 0; height: 15%; border-bottom: none; }
+
+.penalty-area::before {
+    content: '';
+    position: absolute;
+    left: 30%; width: 40%;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.penalty-area.top::before { top: 0; height: 40%; border-top: none; }
+.penalty-area.bottom::before { bottom: 0; height: 40%; border-bottom: none; }
+
+.penalty-area::after {
+    content: '';
+    position: absolute;
+    left: 35%; width: 30%; aspect-ratio: 1;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+}
+.penalty-area.top::after { bottom: -15%; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
+.penalty-area.bottom::after { top: -15%; clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); }
+
+.mini-pitch-players {
+    position: absolute;
+    top: 5%; left: 0; right: 0; bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateZ(10px);
     pointer-events: none;
 }
 
