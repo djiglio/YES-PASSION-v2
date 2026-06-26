@@ -168,6 +168,8 @@ input[type=range] {
     width: 72%;
     margin: 0 auto;
     transition: all 0.2s;
+    position: relative;
+    z-index: 10;
 }
 
 .formation-header:hover {
@@ -224,10 +226,10 @@ input[type=range] {
 /* Mini pitch styling */
 .mini-pitch {
     position: relative;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    margin: -115px auto 10px auto;
     aspect-ratio: auto;
-    height: 350px;
+    height: 450px;
     perspective: 800px;
     transform-style: preserve-3d;
 }
@@ -235,7 +237,7 @@ input[type=range] {
 .mini-pitch-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: rotateX(40deg);
+    transform: rotateX(42deg);
     transform-origin: bottom center;
     transform-style: preserve-3d;
     background: linear-gradient(180deg, #0b2247 0%, #05132b 100%);
@@ -300,11 +302,11 @@ input[type=range] {
 
 .mini-pitch-players {
     position: absolute;
-    top: 5%; left: 0; right: 0; bottom: 5%;
+    top: 28%; left: 0; right: 0; bottom: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: translateZ(10px);
+    transform: translateZ(20px);
     pointer-events: none;
 }
 
