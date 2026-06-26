@@ -552,9 +552,12 @@ export class MultiplayerSeasonUI {
 
         const roleOrder = { 'POR': 1, 'TD': 2, 'DC': 3, 'TS': 4, 'CDC': 5, 'ED': 6, 'CC': 7, 'ES': 8, 'COC': 9, 'AD': 10, 'AT': 11, 'AS': 12, 'ATT': 13 };
         const myRoster = this.lobby.draft_state.rosters[this.currentUser.id] || [];
-        let sortedSquad = myRoster.filter(s => s.player).map(s => s.player).sort((a, b) => {
-            const roleA = (a.DeployedRole || a.Ruolo).split(',')[0].trim();
-            const roleB = (b.DeployedRole || b.Ruolo).split(',')[0].trim();
+        let sortedSquad = myRoster.filter(s => s.player).map(s => {
+            s.player.requiredRole = s.requiredRole;
+            return s.player;
+        }).sort((a, b) => {
+            const roleA = a.requiredRole || (a.DeployedRole || a.Ruolo).split(',')[0].trim();
+            const roleB = b.requiredRole || (b.DeployedRole || b.Ruolo).split(',')[0].trim();
             return (roleOrder[roleA] || 99) - (roleOrder[roleB] || 99);
         });
 
@@ -592,7 +595,7 @@ export class MultiplayerSeasonUI {
             
             rosterHtml += `
                 <tr>
-                    <td style="font-weight: bold; color: var(--accent);">${player.DeployedRole || player.Ruolo}</td>
+                    <td style="font-weight: bold; color: var(--accent);">${player.requiredRole || player.DeployedRole || player.Ruolo}</td>
                     <td style="font-weight: bold; color: white; text-align: left; white-space: nowrap;">${shortName}</td>
                     <td style="font-weight: bold; color: ${ovrColor};">${player.Overall}</td>
                     <td style="color: #cbd5e1;">${stats.goals}</td>

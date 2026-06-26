@@ -222,6 +222,11 @@ export class MultiplayerDraftUI {
     render() {
         if (this.app.state.phase !== 'MP_DRAFT') return;
         
+        const existingCarousel = document.getElementById('pitches-carousel');
+        if (existingCarousel) {
+            this.savedScrollLeft = existingCarousel.scrollLeft;
+        }
+
         if (!this.draftState || !this.draftState.initialized) {
             this.container.innerHTML = `
                 <div style="text-align:center; padding: 3rem;">
@@ -242,21 +247,13 @@ export class MultiplayerDraftUI {
         const activeUser = this.players[turnIndex];
         const isMyTurn = activeUser.user_id === this.currentUser.id;
 
+        let shouldSnapToMe = false;
         if (this.lastPickNumber !== this.draftState.current_pick_number) {
             this.lastPickNumber = this.draftState.current_pick_number;
             if (isMyTurn) {
                 if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
                 this.showTurnBanner();
-                setTimeout(() => {
-                    const myPitch = document.getElementById(`pitch-wrapper-${this.currentUser.id}`);
-                    if (myPitch) {
-                        const carousel = document.getElementById('pitches-carousel');
-                        if (carousel) {
-                            const scrollLeft = myPitch.offsetLeft - carousel.offsetLeft;
-                            carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-                        }
-                    }
-                }, 100);
+                shouldSnapToMe = true;
             }
         }
         
@@ -515,6 +512,17 @@ export class MultiplayerDraftUI {
             const carousel = this.container.querySelector('#pitches-carousel');
             const dots = this.container.querySelectorAll('.carousel-dot');
             if (carousel && dots.length > 0) {
+                if (shouldSnapToMe) {
+                    const myPitch = document.getElementById(`pitch-wrapper-${this.currentUser.id}`);
+                    if (myPitch) {
+                        const scrollLeft = myPitch.offsetLeft - carousel.offsetLeft;
+                        carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                        this.savedScrollLeft = scrollLeft;
+                    }
+                } else if (this.savedScrollLeft !== undefined) {
+                    carousel.scrollLeft = this.savedScrollLeft;
+                }
+
                 const updateDots = () => {
                     const scrollLeft = carousel.scrollLeft;
                     const width = carousel.offsetWidth || 1;
