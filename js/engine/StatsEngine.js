@@ -85,9 +85,15 @@ export class StatsEngine {
         const totalSeasons = getVal('seasons_played'); // do not read from updates, since we didn't update it here
         const abandons = updates[`${prefix}abandons`];
         const totalPoints = updates[`${prefix}total_points`];
+        const completedSeasons = totalSeasons - abandons;
+
+        if (completedSeasons > 0) {
+            updates[`${prefix}avg_points`] = parseFloat((totalPoints / completedSeasons).toFixed(2));
+        } else {
+            updates[`${prefix}avg_points`] = 0;
+        }
 
         if (totalSeasons > 0) {
-            updates[`${prefix}avg_points`] = parseFloat((totalPoints / totalSeasons).toFixed(2));
             updates[`${prefix}abandon_rate`] = parseFloat(((abandons / totalSeasons) * 100).toFixed(2));
         }
 

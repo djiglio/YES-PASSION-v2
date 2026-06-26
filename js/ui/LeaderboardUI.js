@@ -25,7 +25,15 @@ export class LeaderboardUI {
 
     async loadData() {
         this.renderLoader();
-        this.data = await StatsEngine.getLeaderboard(this.currentMode === 'mp', this.isBudget);
+        const rawData = await StatsEngine.getLeaderboard(this.currentMode === 'mp', this.isBudget);
+        this.data = rawData.map(row => {
+            const completed_seasons = Math.max(0, row.seasons_played - row.abandons);
+            return {
+                ...row,
+                completed_seasons,
+                avg_points: completed_seasons > 0 ? (row.total_points / completed_seasons) : 0
+            };
+        });
         this.sortData();
         this.render();
     }
@@ -154,39 +162,33 @@ export class LeaderboardUI {
                         <thead style="background: rgba(0,0,0,0.6); color: var(--text-muted); font-size: 0.9rem;">
                             <tr>
                                 <th ${thHoverClass} style="${thStyle}" data-col="username">Manager${renderSortIcon('username')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="team_name">Squadra${renderSortIcon('team_name')}</th>
                                 <th ${thHoverClass} style="${thStyle}" data-col="avg_points">Media Punti${renderSortIcon('avg_points')}</th>
-                                <th ${thHoverClass} style="${thStyle}" data-col="scudetti_won">Scudetti 🏆${renderSortIcon('scudetti_won')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="total_points">Punti Totali${renderSortIcon('total_points')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="seasons_played">Stagioni${renderSortIcon('seasons_played')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_played">Partite${renderSortIcon('matches_played')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_won">V${renderSortIcon('matches_won')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_drawn">N${renderSortIcon('matches_drawn')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="matches_lost">P${renderSortIcon('matches_lost')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="goals_scored">GF${renderSortIcon('goals_scored')}</th>
-                                <th ${thHoverClass} style="${thStyleSec}" data-col="goals_conceded">GS${renderSortIcon('goals_conceded')}</th>
+                                <th ${thHoverClass} style="${thStyle}" data-col="completed_seasons">Stagioni${renderSortIcon('completed_seasons')}</th>
+                                
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="scudetti_won">Scudetti 🏆${renderSortIcon('scudetti_won')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="champions_qualifications">CHA${renderSortIcon('champions_qualifications')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="europa_qualifications">EUR${renderSortIcon('europa_qualifications')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="conference_qualifications">CON${renderSortIcon('conference_qualifications')}</th>
+                                <th ${thHoverClass} style="${thStyleSec}" data-col="relegations">RET${renderSortIcon('relegations')}</th>
                                 <th ${thHoverClass} style="${thStyleSec}" data-col="abandons">Abbandoni${renderSortIcon('abandons')}</th>
                                 <th ${thHoverClass} style="${thStyleSec}" data-col="abandon_rate">Tasso Abb. %${renderSortIcon('abandon_rate')}</th>
                             </tr>
                         </thead>
                         <tbody>
                             ${this.data.length === 0 ? `
-                                <tr><td colspan="14" style="text-align:center; padding: 2rem; color:var(--text-muted);">Nessun dato disponibile. Gioca una stagione!</td></tr>
+                                <tr><td colspan="10" style="text-align:center; padding: 2rem; color:var(--text-muted);">Nessun dato disponibile. Gioca una stagione!</td></tr>
                             ` : this.data.map((row, index) => `
                                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: ${index % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)'}; transition: background 0.2s;">
                                     <td style="padding: 1rem;"><strong>${row.username}</strong></td>
-                                    <td style="${tdStyleSec}; color: #cbd5e1;">${row.team_name}</td>
                                     <td style="padding: 1rem; color: var(--accent); font-weight: bold;">${row.avg_points.toFixed(2)}</td>
-                                    <td style="padding: 1rem; color: #fbbf24; font-weight: bold;">${row.scudetti_won}</td>
-                                    <td style="${tdStyleSec}">${row.total_points}</td>
-                                    <td style="${tdStyleSec}">${row.seasons_played}</td>
-                                    <td style="${tdStyleSec}">${row.matches_played}</td>
-                                    <td style="${tdStyleSec}; color: #10b981;">${row.matches_won}</td>
-                                    <td style="${tdStyleSec}; color: #60a5fa;">${row.matches_drawn}</td>
-                                    <td style="${tdStyleSec}; color: #ef4444;">${row.matches_lost}</td>
-                                    <td style="${tdStyleSec}">${row.goals_scored}</td>
-                                    <td style="${tdStyleSec}">${row.goals_conceded}</td>
-                                    <td style="${tdStyleSec}; color: #f59e0b;">${row.abandons}</td>
+                                    <td style="padding: 1rem;">${row.completed_seasons}</td>
+                                    
+                                    <td style="${tdStyleSec}; color: #fbbf24; font-weight: bold;">${row.scudetti_won}</td>
+                                    <td style="${tdStyleSec}; color: #10b981;">${row.champions_qualifications}</td>
+                                    <td style="${tdStyleSec}; color: #f59e0b;">${row.europa_qualifications}</td>
+                                    <td style="${tdStyleSec}; color: #14b8a6;">${row.conference_qualifications}</td>
+                                    <td style="${tdStyleSec}; color: #ef4444;">${row.relegations}</td>
+                                    <td style="${tdStyleSec}; color: #f97316;">${row.abandons}</td>
                                     <td style="${tdStyleSec}; color: ${row.abandon_rate > 20 ? '#ef4444' : '#cbd5e1'};">${row.abandon_rate.toFixed(1)}%</td>
                                 </tr>
                             `).join('')}
