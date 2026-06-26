@@ -100,7 +100,7 @@ export class MultiplayerSeasonUI {
     render() {
         if (!this.seasonState) return;
 
-        if (this.seasonState.isFinished || this.seasonState.matchday > 38) {
+        if (this.seasonState.isFinished || this.seasonState.matchday > this.seasonState.schedule.length) {
             this.renderEndSeason();
             return;
         }
@@ -115,7 +115,7 @@ export class MultiplayerSeasonUI {
             <div class="season-container">
                 <div class="season-left">
                     <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h2>Classifica <span id="season-matchday-counter" style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.seasonState.matchday}/38)</span></h2>
+                        <h2>Classifica <span id="season-matchday-counter" style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.seasonState.matchday}/${this.seasonState.schedule.length})</span></h2>
                         <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">${this.seasonState.seasonInfo.name}</span>
                     </div>
                     <div class="standings-table">
@@ -201,7 +201,7 @@ export class MultiplayerSeasonUI {
     }
 
     async simulateMatchday() {
-        if (this.seasonState.matchday > 38) return;
+        if (this.seasonState.matchday > this.seasonState.schedule.length) return;
 
         const matches = this.seasonState.schedule[this.seasonState.matchday - 1];
         let matchResults = [];
@@ -229,7 +229,7 @@ export class MultiplayerSeasonUI {
         nextState.matchday++;
         nextState.lastMatchResults = matchResults;
         
-        if (nextState.matchday > 38) {
+        if (nextState.matchday > this.seasonState.schedule.length) {
             nextState.isFinished = true;
         }
 
@@ -303,7 +303,7 @@ export class MultiplayerSeasonUI {
 
         const counterEl = document.getElementById('season-matchday-counter');
         if (counterEl) {
-            counterEl.textContent = `(Giornata ${this.seasonState.matchday - 1}/38)`;
+            counterEl.textContent = `(Giornata ${this.seasonState.matchday - 1}/${this.seasonState.schedule.length})`;
         }
 
         resultsArea.innerHTML = `
@@ -397,7 +397,7 @@ export class MultiplayerSeasonUI {
                         this.fastSimTimeout = setTimeout(() => this.fastSimLoop(), 1000);
                     }
                 } else {
-                    if (this.seasonState.isFinished || this.seasonState.matchday > 38) {
+                    if (this.seasonState.isFinished || this.seasonState.matchday > this.seasonState.schedule.length) {
                         setTimeout(() => {
                             this.renderEndSeason();
                         }, 2500);
@@ -439,7 +439,7 @@ export class MultiplayerSeasonUI {
     }
 
     async fastSimLoop() {
-        if (!this.isSimulatingFast || this.seasonState.matchday > 38) {
+        if (!this.isSimulatingFast || this.seasonState.matchday > this.seasonState.schedule.length) {
             this.isSimulatingFast = false;
             this.render();
             return;
@@ -452,7 +452,7 @@ export class MultiplayerSeasonUI {
         
         let nextState = JSON.parse(JSON.stringify(this.seasonState));
 
-        while (nextState.matchday <= 38) {
+        while (nextState.matchday <= this.seasonState.schedule.length) {
             const matches = nextState.schedule[nextState.matchday - 1];
             let matchResults = [];
 

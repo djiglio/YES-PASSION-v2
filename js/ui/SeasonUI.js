@@ -15,7 +15,7 @@ export class SeasonUI {
     }
 
     render() {
-        if (this.state.matchday > 38) {
+        if (this.state.matchday > this.state.schedule.length) {
             this.renderEndSeason();
             return;
         }
@@ -29,7 +29,7 @@ export class SeasonUI {
             <div class="season-container">
                 <div class="season-left">
                     <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h2>Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.state.matchday}/38)</span></h2>
+                        <h2>Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.state.matchday}/${this.state.schedule.length})</span></h2>
                         <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">Stagione: ${this.state.currentSeason.season_name}</span>
                     </div>
                     <div class="standings-table">
@@ -107,14 +107,14 @@ export class SeasonUI {
     }
 
     simulateMatchday() {
-        if (this.state.matchday > 38) return;
+        if (this.state.matchday > this.state.schedule.length) return;
 
         const currentMatches = this.state.schedule[this.state.matchday - 1];
         
         // Aggiorna dinamicamente l'intestazione e il riquadro della partita durante la simulazione veloce
         const dayHeader = this.container.querySelector('.season-left h2 span');
         if (dayHeader) {
-            dayHeader.textContent = `(Giornata ${this.state.matchday}/38)`;
+            dayHeader.textContent = `(Giornata ${this.state.matchday}/${this.state.schedule.length})`;
         }
 
         const userMatch = currentMatches.find(m => m.home === 'user_team' || m.away === 'user_team');
@@ -288,7 +288,7 @@ export class SeasonUI {
     }
 
     fastSimLoop() {
-        if (!this.isSimulatingFast || this.state.matchday > 38) {
+        if (!this.isSimulatingFast || this.state.matchday > this.state.schedule.length) {
             this.isSimulatingFast = false;
             this.render();
             return;
@@ -305,7 +305,7 @@ export class SeasonUI {
     }
 
     simulateRemainingSeason() {
-        while(this.state.matchday <= 38) {
+        while(this.state.matchday <= this.state.schedule.length) {
             const currentMatches = this.state.schedule[this.state.matchday - 1];
             const matchResults = [];
             currentMatches.forEach(match => {
