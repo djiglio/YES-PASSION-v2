@@ -1059,3 +1059,26 @@ input[type=range] {
     border-color: #ef4444;
     text-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
 }
+
+/* Roster Table (Responsive) */
+.roster-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+.roster-table th, .roster-table td {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 500px) {
+    .roster-table {
+        font-size: 0.75rem;
+    }
+    .roster-table th, .roster-table td {
+        padding: 0.4rem 0.1rem;
+    }
+    .roster-table th {
+        font-size: 0.7rem;
+    }
+}
