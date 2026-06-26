@@ -126,9 +126,9 @@ export class LeaderboardUI {
         };
 
         const displayStyle = this.columnsExpanded ? '' : 'display: none;';
-        const thStyle = "padding: 1rem; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); user-select: none; transition: color 0.2s; white-space: nowrap;";
+        const thStyle = "padding: 1rem; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); user-select: none; transition: color 0.2s; white-space: nowrap; text-align: center;";
         const thStyleSec = `${thStyle} ${displayStyle}`;
-        const tdStyleSec = `padding: 1rem; ${displayStyle}`;
+        const tdStyleSec = `padding: 1rem; text-align: center; ${displayStyle}`;
 
         const thHoverClass = "class='sortable-th'"; 
 
@@ -161,7 +161,7 @@ export class LeaderboardUI {
                     <table style="width: 100%; border-collapse: collapse; text-align: left;">
                         <thead style="background: rgba(0,0,0,0.6); color: var(--text-muted); font-size: 0.9rem;">
                             <tr>
-                                <th ${thHoverClass} style="${thStyle}" data-col="username">Manager${renderSortIcon('username')}</th>
+                                <th ${thHoverClass} style="${thStyle} text-align: left;" data-col="username">Manager${renderSortIcon('username')}</th>
                                 <th ${thHoverClass} style="${thStyle}" data-col="avg_points">Media Punti${renderSortIcon('avg_points')}</th>
                                 <th ${thHoverClass} style="${thStyle}" data-col="completed_seasons">Stagioni${renderSortIcon('completed_seasons')}</th>
                                 
@@ -179,9 +179,9 @@ export class LeaderboardUI {
                                 <tr><td colspan="10" style="text-align:center; padding: 2rem; color:var(--text-muted);">Nessun dato disponibile. Gioca una stagione!</td></tr>
                             ` : this.data.map((row, index) => `
                                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: ${index % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)'}; transition: background 0.2s;">
-                                    <td style="padding: 1rem;"><strong>${row.username}</strong></td>
-                                    <td style="padding: 1rem; color: var(--accent); font-weight: bold;">${row.avg_points.toFixed(2)}</td>
-                                    <td style="padding: 1rem;">${row.completed_seasons}</td>
+                                    <td style="padding: 1rem; text-align: left;"><strong>${row.username}</strong></td>
+                                    <td style="padding: 1rem; color: var(--accent); font-weight: bold; text-align: center;">${row.avg_points.toFixed(2)}</td>
+                                    <td style="padding: 1rem; text-align: center;">${row.completed_seasons}</td>
                                     
                                     <td style="${tdStyleSec}; color: #fbbf24; font-weight: bold;">${row.scudetti_won}</td>
                                     <td style="${tdStyleSec}; color: #10b981;">${row.champions_qualifications}</td>
