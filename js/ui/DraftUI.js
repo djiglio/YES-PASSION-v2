@@ -671,6 +671,7 @@ export class DraftUI {
                 // Randomly select a season for the championship
                 const randomSeasonId = this.availableSeasons[Math.floor(Math.random() * this.availableSeasons.length)];
                 DataLoader.loadSeason(randomSeasonId).then(seasonData => {
+                    this.state.gameMode = this.budgetMode ? 'budget' : 'classica';
                     this.state.startSeason(seasonData);
                 });
             });

@@ -481,7 +481,7 @@ export class LobbyUI {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             if (user) {
-                const isBudget = this.lobby.settings ? this.lobby.settings.isBudget : false;
+                const isBudget = this.lobby.mode === 'budget' || (this.lobby.mode === 'custom' && this.lobby.draft_state && this.lobby.draft_state.customSettings && this.lobby.draft_state.customSettings.isBudget);
                 await StatsEngine.markSeasonStart(user.id, true, isBudget);
             }
         } catch(e) { console.error(e); }
