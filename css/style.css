@@ -227,9 +227,9 @@ input[type=range] {
 .mini-pitch {
     position: relative;
     width: 100%;
-    margin: -115px auto 10px auto;
+    margin: -155px auto 10px auto;
     aspect-ratio: auto;
-    height: 450px;
+    height: 500px;
     perspective: 800px;
     transform-style: preserve-3d;
 }
@@ -237,7 +237,7 @@ input[type=range] {
 .mini-pitch-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: rotateX(42deg);
+    transform: rotateX(40deg);
     transform-origin: bottom center;
     transform-style: preserve-3d;
     background: linear-gradient(180deg, #0b2247 0%, #05132b 100%);
@@ -259,7 +259,7 @@ input[type=range] {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 25%; aspect-ratio: 1;
+    width: 27%; aspect-ratio: 1;
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 50%;
 }
@@ -287,22 +287,22 @@ input[type=range] {
     left: 27.5%; width: 45%;
     border: 1px solid rgba(255,255,255,0.15);
 }
-.penalty-area.top::before { top: 0; height: 35%; border-top: none; }
-.penalty-area.bottom::before { bottom: 0; height: 35%; border-bottom: none; }
+.penalty-area.top::before { top: 0; height: 32.5%; border-top: none; }
+.penalty-area.bottom::before { bottom: 0; height: 32.5%; border-bottom: none; }
 
 .penalty-arc {
     position: absolute;
-    left: 40%; width: 20%; aspect-ratio: 1;
+    left: 36.5%; width: 27%; aspect-ratio: 1;
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 50%;
 }
 .penalty-arc.top {
-    top: 5%;
-    clip-path: inset(55% 0 0 0);
+    top: -0.4%;
+    clip-path: inset(75% 0 0 0);
 }
 .penalty-arc.bottom {
-    bottom: 5%;
-    clip-path: inset(0 0 55% 0);
+    bottom: -0.4%;
+    clip-path: inset(0 0 75% 0);
 }
 
 .mini-pitch-players {
