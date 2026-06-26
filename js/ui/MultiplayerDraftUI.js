@@ -53,6 +53,11 @@ export class MultiplayerDraftUI {
         this.render();
     }
 
+    handleBack() {
+        window.showAlert("Non puoi tornare indietro durante il draft multiplayer!");
+        return true;
+    }
+
     async loadSeasonData(seasonId) {
         if (!seasonId) return;
         const rawData = await DataLoader.loadSeason(seasonId);
@@ -69,9 +74,18 @@ export class MultiplayerDraftUI {
     generateSnakeOrder() {
         const order = [];
         const n = this.players.length;
+        
+        let baseOrder = [];
+        for (let i = 0; i < n; i++) baseOrder.push(i);
+        
+        // Shuffle baseOrder (Fisher-Yates)
+        for (let i = baseOrder.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [baseOrder[i], baseOrder[j]] = [baseOrder[j], baseOrder[i]];
+        }
+        
         for (let r = 0; r < 11; r++) {
-            let roundOrder = [];
-            for (let i = 0; i < n; i++) roundOrder.push(i);
+            let roundOrder = [...baseOrder];
             if (r % 2 !== 0) roundOrder.reverse();
             order.push(...roundOrder);
         }
@@ -227,6 +241,24 @@ export class MultiplayerDraftUI {
         const turnIndex = this.draftState.snake_order[this.draftState.current_pick_number];
         const activeUser = this.players[turnIndex];
         const isMyTurn = activeUser.user_id === this.currentUser.id;
+
+        if (this.lastPickNumber !== this.draftState.current_pick_number) {
+            this.lastPickNumber = this.draftState.current_pick_number;
+            if (isMyTurn) {
+                if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+                this.showTurnBanner();
+                setTimeout(() => {
+                    const myPitch = document.getElementById(`pitch-wrapper-${this.currentUser.id}`);
+                    if (myPitch) {
+                        const carousel = document.getElementById('pitches-carousel');
+                        if (carousel) {
+                            const scrollLeft = myPitch.offsetLeft - carousel.offsetLeft;
+                            carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                        }
+                    }
+                }, 100);
+            }
+        }
         
         let nextUser = null;
         if (this.draftState.current_pick_number + 1 < this.draftState.snake_order.length) {
@@ -269,50 +301,83 @@ export class MultiplayerDraftUI {
         if (budgetPercent > 70) budgetColor = '#f59e0b';
         if (budgetPercent > 90) budgetColor = '#ef4444';
 
-        const myIndex = this.players.findIndex(p => p.user_id === this.currentUser.id);
-        const myColorClass = `player-color-${(myIndex % 4) + 1}`;
+        const playerColors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
+        const getPlayerColor = (uid) => {
+            const idx = this.players.findIndex(p => p.user_id === uid);
+            return playerColors[idx % playerColors.length];
+        };
 
-        let pitchHtml = '';
-        let tempIndex = 0;
-        const rowsWithSlots = [];
-        layoutRows.forEach(rowRoles => {
-            let rowSlots = [];
-            rowRoles.forEach(() => {
-                rowSlots.push(myRoster[tempIndex++]);
+        let carouselHtml = `<div class="pitches-carousel" id="pitches-carousel" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
+            <style>.pitches-carousel::-webkit-scrollbar { display: none; }</style>`;
+        
+        this.players.forEach((player) => {
+            const isCurrentUserPitch = player.user_id === this.currentUser.id;
+            const playerColor = getPlayerColor(player.user_id);
+            const teamName = player.profiles.team_name || 'Squadra';
+            const roster = this.draftState.rosters[player.user_id];
+            const form = this.draftState.formations[player.user_id];
+            const layoutRows = this.formations[form];
+
+            let singlePitchHtml = '';
+            let tempIndex = 0;
+            const rowsWithSlots = [];
+            layoutRows.forEach(rowRoles => {
+                let rowSlots = [];
+                rowRoles.forEach(() => {
+                    rowSlots.push(roster[tempIndex++]);
+                });
+                rowsWithSlots.push(rowSlots);
             });
-            rowsWithSlots.push(rowSlots);
-        });
 
-        [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
-            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
-            rowSlots.forEach(slot => {
-                const isFilled = slot.player !== null;
-                const isGold = isFilled && slot.player.Overall >= 85 && !isBlind;
-                const displayOvr = isFilled ? (isBlind ? '' : slot.player.Overall) : '';
-                const p = slot.player;
-                let shortName = '';
-                if (isFilled && p) {
-                    shortName = p.Nome.replace(/^[A-Z]\.\s*/i, '');
-                }
+            [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
+                singlePitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
+                rowSlots.forEach(slot => {
+                    const isFilled = slot.player !== null;
+                    const isGold = isFilled && slot.player.Overall >= 85 && !isBlind;
+                    const displayOvr = isFilled ? (isBlind ? '' : slot.player.Overall) : '';
+                    const p = slot.player;
+                    let shortName = '';
+                    if (isFilled && p) {
+                        shortName = p.Nome.replace(/^[A-Z]\.\s*/i, '');
+                    }
 
-                pitchHtml += `
-                    <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
-                        <div class="slot ${isFilled ? `filled ${myColorClass}` : ''} ${isGold ? 'gold-card' : ''}">
-                            ${displayOvr ? `<span class="slot-ovr-inside">${displayOvr}</span>` : ''}
-                        </div>
-                        ${isFilled ? `
-                            <div class="card-name-outside">
-                                ${isBudget && p.Value ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}" style="font-size: 0.7rem; padding: 1px 4px; margin-bottom: 2px;">${p.Value}</div>` : ''}
-                                <span style="font-size: 0.8rem;">${shortName}</span>
+                    singlePitchHtml += `
+                        <div class="slot-wrapper ${isFilled ? 'filled-wrapper' : 'empty-wrapper'}" data-slot-id="${slot.id}" data-owner-id="${player.user_id}" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative; ${!isCurrentUserPitch ? 'pointer-events: none;' : ''}">
+                            <div class="slot ${isFilled ? `filled` : ''} ${isGold ? 'gold-card' : ''}" style="${isFilled ? `border-color: ${playerColor};` : ''}">
+                                ${displayOvr ? `<span class="slot-ovr-inside">${displayOvr}</span>` : ''}
                             </div>
-                        ` : `
-                            <div class="slot-role">${slot.requiredRole}</div>
-                        `}
-                    </div>
-                `;
+                            ${isFilled ? `
+                                <div class="card-name-outside">
+                                    ${isBudget && p.Value ? `<div class="budget-tag-pitch ${this.getPriceTierClass(p.ValueNum)}" style="font-size: 0.7rem; padding: 1px 4px; margin-bottom: 2px;">${p.Value}</div>` : ''}
+                                    <span style="font-size: 0.8rem;">${shortName}</span>
+                                </div>
+                            ` : `
+                                <div class="slot-role">${slot.requiredRole}</div>
+                            `}
+                        </div>
+                    `;
+                });
+                singlePitchHtml += `</div>`;
             });
-            pitchHtml += `</div>`;
+
+            carouselHtml += `
+                <div class="pitch-container-wrapper" id="pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; position: relative;">
+                    <div style="text-align: center; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: ${playerColor}; text-shadow: 0 0 5px rgba(0,0,0,0.5);">
+                        ${player.profiles.username} - ${teamName}
+                    </div>
+                    <div class="pitch-container" style="position: relative; width: 100%;">
+                        <div class="pitch-bg">
+                            <div class="pitch-lines"></div>
+                        </div>
+                        <div class="pitch-players">
+                            ${singlePitchHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
         });
+        
+        carouselHtml += `</div>`;
 
         let teamPlayers = this.playersData.filter(p => p.Squadra === this.draftState.currentTeam);
         
@@ -339,12 +404,6 @@ export class MultiplayerDraftUI {
         activeRoster.forEach(slot => {
             if (slot.player === null) activeRemainingRoles.add(slot.requiredRole);
         });
-
-        const playerColors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
-        const getPlayerColor = (uid) => {
-            const idx = this.players.findIndex(p => p.user_id === uid);
-            return playerColors[idx % playerColors.length];
-        };
 
         let compatibleCount = 0;
 
@@ -400,19 +459,18 @@ export class MultiplayerDraftUI {
 
         this.container.innerHTML = `
             <div class="draft-container">
-                <div class="draft-left">
+                <div class="draft-left" style="overflow: hidden;">
                     <div class="draft-header-info" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 15px; padding: 10px; background: rgba(0,0,0,0.4); border-radius: 8px; border: 1px solid var(--border-color);">
                         <div style="display: flex; flex-direction: column;">
                             <span style="font-size: 0.9rem; color: var(--text-muted);">Turno Corrente:</span>
                             <span style="font-size: 1.2rem; font-weight: bold; color: ${isMyTurn ? 'var(--accent)' : 'white'};"><span class="aura-role">${isMyTurn ? 'IL TUO TURNO' : activeUser.profiles.username}</span></span>
+                            ${nextUser ? `
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">Prossimo: <span style="color: white; font-weight: bold;">${nextUser.profiles.username}</span></span>
+                            ` : ''}
                         </div>
-                        <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="display: flex; flex-direction: column; align-items: flex-end;">
                             <span style="font-size: 0.8rem; color: var(--text-muted);">Tempo Rimasto</span>
                             <span id="draft-timer" style="font-size: 2rem; font-weight: bold; font-family: monospace;">--</span>
-                        </div>
-                        <div style="display: flex; flex-direction: column; text-align: right;">
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Prossimo:</span>
-                            <span style="font-size: 1rem; color: white;">${nextUser ? nextUser.profiles.username : '-'}</span>
                             <span class="picks-badge" style="margin-top: 4px;">${11 - round}/11</span>
                         </div>
                     </div>
@@ -426,14 +484,9 @@ export class MultiplayerDraftUI {
                             <span style="color: ${budgetPercent > 90 ? '#ef4444' : 'white'};">Rimanenti: <b>€${((budgetMax - mySpent)/1000000).toFixed(1)}M</b> / €${(budgetMax/1000000).toFixed(0)}M</span>
                         </div>
                     </div>` : ''}
-                    <div class="pitch-container" style="position: relative;">
-                        <div class="pitch-bg">
-                            <div class="pitch-lines"></div>
-                        </div>
-                        <div class="pitch-players">
-                            ${pitchHtml}
-                        </div>
-                    </div>
+                    
+                    ${carouselHtml}
+
                 </div>
                 <div class="draft-right">
                     <div class="draft-team-info" style="display: flex; justify-content: space-between; align-items: center; padding-right: 0.5rem; margin-bottom: 10px;">
@@ -476,7 +529,7 @@ export class MultiplayerDraftUI {
             });
         }
 
-        const emptyWrappers = this.container.querySelectorAll('.empty-wrapper');
+        const emptyWrappers = this.container.querySelectorAll(`.empty-wrapper[data-owner-id="${this.currentUser.id}"]`);
         emptyWrappers.forEach(s => {
             s.addEventListener('click', (e) => {
                 if (!this.selectedPlayer) return;
@@ -487,7 +540,7 @@ export class MultiplayerDraftUI {
     }
 
     highlightCompatibleSlots() {
-        const wrappers = this.container.querySelectorAll('.empty-wrapper');
+        const wrappers = this.container.querySelectorAll(`.empty-wrapper[data-owner-id="${this.currentUser.id}"]`);
         wrappers.forEach(el => el.classList.remove('compatible'));
 
         if (!this.selectedPlayer) return;
@@ -796,5 +849,54 @@ export class MultiplayerDraftUI {
         
         this.app.state.mpLobby.draft_state = this.draftState;
         this.app.startMultiplayerSeason();
+    }
+
+    showTurnBanner() {
+        const existing = document.getElementById('turn-banner');
+        if (existing) existing.remove();
+        
+        const banner = document.createElement('div');
+        banner.id = 'turn-banner';
+        banner.innerHTML = `
+            <div style="
+                background: linear-gradient(135deg, rgba(255, 0, 50, 0.3), rgba(200, 0, 30, 0.1));
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 100, 100, 0.5);
+                box-shadow: 0 8px 32px 0 rgba(255, 0, 50, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+                border-radius: 16px;
+                padding: 1.2rem 2.5rem;
+                color: white;
+                font-weight: 800;
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+                text-align: center;
+                text-transform: uppercase;
+            ">
+                È IL TUO TURNO!
+            </div>
+        `;
+        banner.style.position = 'fixed';
+        banner.style.bottom = '30px';
+        banner.style.left = '50%';
+        banner.style.transform = 'translateX(-50%) translateY(150px)';
+        banner.style.opacity = '0';
+        banner.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        banner.style.zIndex = '9999';
+        
+        document.body.appendChild(banner);
+        
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                banner.style.transform = 'translateX(-50%) translateY(0)';
+                banner.style.opacity = '1';
+            });
+        });
+        
+        setTimeout(() => {
+            banner.style.transform = 'translateX(-50%) translateY(150px)';
+            banner.style.opacity = '0';
+            setTimeout(() => banner.remove(), 600);
+        }, 3000);
     }
 }
