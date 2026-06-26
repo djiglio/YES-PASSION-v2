@@ -365,7 +365,7 @@ export class SeasonUI {
         });
 
         let rosterHtml = `
-            <div class="stats-card" style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h3 class="table-title" style="margin-bottom: 1rem; text-align: center;">La Tua Rosa</h3>
                 <div class="stats-table-wrapper">
                     <table class="standings-table inner-table" style="width: 100%; text-align: center; border-collapse: collapse;">
@@ -478,7 +478,7 @@ export class SeasonUI {
             <br><br>
         `;
         // Re-use updateStandingsUIOnly but point it to the inner table
-        const table = this.container.querySelector('.inner-table');
+        const table = this.container.querySelector('.tables-grid .inner-table');
         if (table) {
             let rowsHtml = `
                 <div class="s-row s-header">
