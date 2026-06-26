@@ -541,11 +541,38 @@ input[type=range] {
     .stats-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 }
 
+.end-season-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .end-season-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .end-season-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
 .stats-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .stats-card { padding: 1.5rem; }
 }
 
 .user-stats-card .stats-card-title {
@@ -568,7 +595,14 @@ input[type=range] {
 
 .mvp-title { color: gold; text-shadow: 0 0 10px rgba(255,215,0,0.5); margin-bottom: 1rem; }
 .mvp-icon { font-size: 4rem; margin-bottom: 1rem; }
-.mvp-name { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
+.mvp-name {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .mvp-team { color: var(--text-muted); }
 .mvp-stats { margin-top: 1rem; font-size: 1.1rem; }
 
@@ -593,7 +627,7 @@ input[type=range] {
 }
 
 @media (min-width: 768px) {
-    .stats-table-wrapper { padding: 1.5rem; }
+    .stats-table-wrapper { padding: 1.2rem; }
 }
 
 .table-title { color: var(--accent); margin-bottom: 1rem; }
@@ -607,10 +641,19 @@ input[type=range] {
     padding: 0.5rem;
     background: rgba(255,255,255,0.05);
     border-radius: 6px;
+    min-width: 0;
 }
 .stats-list-item.is-user { border-left: 3px solid var(--accent); }
 
-.rank-num { color: var(--text-muted); width: 20px; display: inline-block; }
+.stats-list-item > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.5rem;
+    min-width: 0;
+}
+
+.rank-num { color: var(--text-muted); width: 20px; display: inline-block; flex-shrink: 0; }
 .team-name { font-size: 0.8rem; color: var(--text-muted); }
     margin: 1.5rem 0;
     background: rgba(0,0,0,0.3);
@@ -966,7 +1009,7 @@ input[type=range] {
     .card-name-outside { font-size: 0.8rem; width: 55px; margin-top: 2px; }
     .roster-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
     .season-left, .season-right { min-width: 100%; }
-    .stats-grid, .tables-grid { grid-template-columns: 1fr; padding: 0 0.5rem; }
+    .stats-grid, .tables-grid, .end-season-grid { grid-template-columns: 1fr; padding: 0 0.5rem; }
     .end-season-header h2 { font-size: 2rem !important; }
 }
 /* Budget Mode Enhancements */

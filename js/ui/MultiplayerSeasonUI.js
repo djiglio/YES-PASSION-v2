@@ -559,9 +559,9 @@ export class MultiplayerSeasonUI {
         });
 
         let rosterHtml = `
-            <div style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 class="table-title" style="margin-bottom: 1rem; text-align: center;">La Tua Rosa</h3>
-                <div class="stats-table-wrapper" style="overflow-x: hidden;">
+            <div class="stats-table-wrapper roster-wrapper">
+                <h3 class="table-title">La Tua Rosa</h3>
+                <div style="overflow-x: auto;">
                     <table class="roster-table">
                         <thead>
                             <tr>
@@ -584,7 +584,7 @@ export class MultiplayerSeasonUI {
             
             let valueHtml = '';
             if (isBudget) {
-                valueHtml = `<td style="color: #10b981; font-weight: bold;">€${player.Value}</td>`;
+                valueHtml = `<td style="color: #10b981; font-weight: bold;">${player.Value}</td>`;
             }
             
             const ovrColor = player.Overall >= 85 ? 'gold' : 'white';
@@ -612,9 +612,11 @@ export class MultiplayerSeasonUI {
                 <button id="btn-back-menu" class="btn" style="font-size: 1.2rem; padding: 1rem 3rem;">Torna al Menu Principale</button>
             </div>
             
-            ${rosterHtml}
-            
-            <div class="stats-grid">
+            <div class="end-season-grid">
+                <!-- 1. La Tua Rosa -->
+                ${rosterHtml}
+                
+                <!-- 2. La Tua Squadra -->
                 <div class="stats-card user-stats-card">
                     <h3 class="stats-card-title">${userTeam.name}</h3>
                     <div class="stat-item">
@@ -631,6 +633,7 @@ export class MultiplayerSeasonUI {
                     </div>
                 </div>
 
+                <!-- 3. MVP -->
                 <div class="stats-card mvp-card">
                     <h3 class="mvp-title">Miglior Giocatore (MVP)</h3>
                     <div class="mvp-icon">🏆</div>
@@ -640,15 +643,15 @@ export class MultiplayerSeasonUI {
                         <strong>${topStats.mvp ? topStats.mvp.goals : 0}</strong> Gol | <strong>${topStats.mvp ? topStats.mvp.assists : 0}</strong> Assist
                     </div>
                 </div>
-            </div>
 
-            <div class="tables-grid">
-                <div class="stats-table-wrapper">
+                <!-- 4. Classifica Finale -->
+                <div class="stats-table-wrapper standings-wrapper">
                     <h3 class="table-title">Classifica Finale</h3>
                     <div class="standings-table inner-table" style="overflow-x: auto;"></div>
                 </div>
 
-                <div class="stats-table-wrapper">
+                <!-- 5. Capocannoniere -->
+                <div class="stats-table-wrapper scorers-wrapper">
                     <h3 class="table-title">Capocannoniere (Top 10)</h3>
                     <div class="stats-list">
                         ${topStats.topScorers.map((p, idx) => `
@@ -660,7 +663,8 @@ export class MultiplayerSeasonUI {
                     </div>
                 </div>
 
-                <div class="stats-table-wrapper">
+                <!-- 6. Miglior Assistman -->
+                <div class="stats-table-wrapper assists-wrapper">
                     <h3 class="table-title">Miglior Assistman (Top 10)</h3>
                     <div class="stats-list">
                         ${topStats.topAssists.map((p, idx) => `
@@ -676,7 +680,7 @@ export class MultiplayerSeasonUI {
         `;
         
         // Render Final Standings Table
-        const table = this.container.querySelector('.tables-grid .inner-table');
+        const table = this.container.querySelector('.end-season-grid .inner-table');
         if (table) {
             let rowsHtml = `
                 <div class="s-row s-header">
