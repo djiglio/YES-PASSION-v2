@@ -69,7 +69,7 @@ export class MatchEngine {
         const calcPower = (sum, count) => {
             if (count === 0) return 0;
             const avg = sum / count;
-            return (avg * 0.6) + (sum * 0.4);
+            return (avg * 0.8) + (sum * 0.2);
         };
 
         return {
