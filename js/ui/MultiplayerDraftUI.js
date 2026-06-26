@@ -79,11 +79,11 @@ export class MultiplayerDraftUI {
     }
 
     async initializeDraftState() {
+        const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
         let seasonId;
         if (this.draftState.customSettings && this.draftState.customSettings.customSeason && this.draftState.customSettings.customSeason !== 'all') {
             seasonId = parseInt(this.draftState.customSettings.customSeason);
         } else {
-            const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
             seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
         }
         
@@ -91,6 +91,8 @@ export class MultiplayerDraftUI {
 
         const allTeams = [...new Set(this.playersData.map(p => p.Squadra))];
         const randomTeam = allTeams[Math.floor(Math.random() * allTeams.length)];
+
+        const combo = `${seasonId}-${randomTeam}`;
 
         const initialRosters = {};
         this.players.forEach(p => {
@@ -111,6 +113,7 @@ export class MultiplayerDraftUI {
             initialized: true,
             currentSeasonId: seasonId,
             currentTeam: randomTeam,
+            extractedCombos: [combo],
             current_pick_number: 0,
             snake_order: this.generateSnakeOrder(),
             rosters: initialRosters,
@@ -537,9 +540,28 @@ export class MultiplayerDraftUI {
 
     async skipAndRerollTeam() {
         const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
-        const seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
-        const rawData = await DataLoader.loadSeason(seasonId);
-        const randomTeam = rawData.teams[Math.floor(Math.random() * rawData.teams.length)];
+        
+        let attempts = 0;
+        let seasonId;
+        let rawData;
+        let randomTeam;
+        let combo;
+        
+        if (!this.draftState.extractedCombos) this.draftState.extractedCombos = [];
+
+        do {
+            if (this.draftState.customSettings && this.draftState.customSettings.customSeason && this.draftState.customSettings.customSeason !== 'all') {
+                seasonId = parseInt(this.draftState.customSettings.customSeason);
+            } else {
+                seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
+            }
+            rawData = await DataLoader.loadSeason(seasonId);
+            randomTeam = rawData.teams[Math.floor(Math.random() * rawData.teams.length)];
+            combo = `${seasonId}-${randomTeam.name}`;
+            attempts++;
+        } while (this.draftState.extractedCombos.includes(combo) && attempts < 50);
+        
+        this.draftState.extractedCombos.push(combo);
         
         this.draftState.currentSeasonId = seasonId;
         this.draftState.currentTeam = randomTeam.name;
@@ -553,9 +575,28 @@ export class MultiplayerDraftUI {
 
         if (this.draftState.current_pick_number % this.players.length === 0 && this.draftState.current_pick_number < this.players.length * 11) {
             const availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
-            const seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
-            const rawData = await DataLoader.loadSeason(seasonId);
-            const randomTeam = rawData.teams[Math.floor(Math.random() * rawData.teams.length)];
+            
+            let attempts = 0;
+            let seasonId;
+            let rawData;
+            let randomTeam;
+            let combo;
+            
+            if (!this.draftState.extractedCombos) this.draftState.extractedCombos = [];
+
+            do {
+                if (this.draftState.customSettings && this.draftState.customSettings.customSeason && this.draftState.customSettings.customSeason !== 'all') {
+                    seasonId = parseInt(this.draftState.customSettings.customSeason);
+                } else {
+                    seasonId = availableSeasons[Math.floor(Math.random() * availableSeasons.length)];
+                }
+                rawData = await DataLoader.loadSeason(seasonId);
+                randomTeam = rawData.teams[Math.floor(Math.random() * rawData.teams.length)];
+                combo = `${seasonId}-${randomTeam.name}`;
+                attempts++;
+            } while (this.draftState.extractedCombos.includes(combo) && attempts < 50);
+            
+            this.draftState.extractedCombos.push(combo);
             this.draftState.currentSeasonId = seasonId;
             this.draftState.currentTeam = randomTeam.name;
             await this.loadSeasonData(seasonId);

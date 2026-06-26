@@ -326,16 +326,29 @@ export class DraftUI {
 
         this.renderDraftBoard(true); // show loading
 
-        const randomSeasonId = this.availableSeasons[Math.floor(Math.random() * this.availableSeasons.length)];
-        const seasonData = await DataLoader.loadSeason(randomSeasonId);
-        
-        if (!seasonData) {
-            window.showAlert("Errore nel caricamento dei dati.");
-            return;
-        }
+        let attempts = 0;
+        let randomSeasonId;
+        let seasonData;
+        let randomTeam;
+        let combo;
 
-        const teams = seasonData.teams;
-        const randomTeam = teams[Math.floor(Math.random() * teams.length)];
+        do {
+            randomSeasonId = this.availableSeasons[Math.floor(Math.random() * this.availableSeasons.length)];
+            seasonData = await DataLoader.loadSeason(randomSeasonId);
+            
+            if (!seasonData) {
+                window.showAlert("Errore nel caricamento dei dati.");
+                return;
+            }
+
+            const teams = seasonData.teams;
+            randomTeam = teams[Math.floor(Math.random() * teams.length)];
+            combo = `${randomSeasonId}-${randomTeam.name}`;
+            attempts++;
+        } while (this.extractedCombos && this.extractedCombos.includes(combo) && attempts < 50);
+
+        if (!this.extractedCombos) this.extractedCombos = [];
+        this.extractedCombos.push(combo);
 
         this.currentTeam = randomTeam;
         this.currentSeasonName = seasonData.season_name;
