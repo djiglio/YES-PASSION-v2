@@ -520,7 +520,7 @@ export class SeasonUI {
                     <div class="s-stat">N</div>
                     <div class="s-stat">P</div>
                     <div class="s-stat">DR</div>
-                    <div class="s-stat">R/R</div>
+                    <div class="s-stat">R</div>
                 </div>
             `;
             rowsHtml += this.state.standings.map((t, idx) => `
