@@ -363,17 +363,17 @@ export class SeasonUI {
                 <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
         `;
         
-        this.state.roster.forEach(slot => {
-            if (slot.player) {
+        this.state.userTeam.squad.forEach(player => {
+            if (player) {
                 let valueHtml = '';
                 if (isBudget) {
-                    valueHtml = `<span style="color: #10b981; font-weight: bold; margin-left: auto;">€${slot.player.Value}</span>`;
+                    valueHtml = `<span style="color: #10b981; font-weight: bold; margin-left: auto;">€${player.Value}</span>`;
                 }
                 rosterHtml += `
                     <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; color: var(--accent); width: 40px;">${slot.requiredRole}</span>
-                        <span style="font-weight: bold; color: white; margin-left: 1rem;">${slot.player.Nome}</span>
-                        <span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; margin-left: 1rem; font-size: 0.9rem;">${slot.player.OVR}</span>
+                        <span style="font-weight: bold; color: var(--accent); width: 40px;">${player.Ruolo}</span>
+                        <span style="font-weight: bold; color: white; margin-left: 1rem;">${player.Nome}</span>
+                        <span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; margin-left: 1rem; font-size: 0.9rem;">${player.OVR}</span>
                         ${valueHtml}
                     </div>
                 `;
