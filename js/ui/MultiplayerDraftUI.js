@@ -774,64 +774,92 @@ export class MultiplayerDraftUI {
     }
 
     renderSummary() {
-        const myRoster = this.draftState.rosters[this.currentUser.id];
-        const myForm = this.draftState.formations[this.currentUser.id];
-        const layoutRows = this.formations[myForm];
+        const playerColors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
+        const getPlayerColor = (uid) => {
+            const idx = this.players.findIndex(p => p.user_id === uid);
+            return playerColors[idx % playerColors.length];
+        };
 
-        const myIndex = this.players.findIndex(p => p.user_id === this.currentUser.id);
-        const myColorClass = `player-color-${(myIndex % 4) + 1}`;
+        let carouselHtml = `<div class="pitches-carousel" id="summary-pitches-carousel" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
+            <style>#summary-pitches-carousel::-webkit-scrollbar { display: none; }</style>`;
+            
+        this.players.forEach((player, pIdx) => {
+            const playerColor = getPlayerColor(player.user_id);
+            const playerColorClass = `player-color-${(pIdx % 4) + 1}`;
+            const teamName = player.profiles.team_name || 'Squadra';
+            const roster = this.draftState.rosters[player.user_id];
+            const form = this.draftState.formations[player.user_id];
+            const layoutRows = this.formations[form];
 
-        // Group slots by row
-        const rowsWithSlots = [];
-        let tempIndex = 0;
-        layoutRows.forEach(rowRoles => {
-            let rowSlots = [];
-            rowRoles.forEach(() => {
-                rowSlots.push(myRoster[tempIndex++]);
+            let singlePitchHtml = '';
+            let tempIndex = 0;
+            const rowsWithSlots = [];
+            layoutRows.forEach(rowRoles => {
+                let rowSlots = [];
+                rowRoles.forEach(() => {
+                    rowSlots.push(roster[tempIndex++]);
+                });
+                rowsWithSlots.push(rowSlots);
             });
-            rowsWithSlots.push(rowSlots);
-        });
 
-        let pitchHtml = '';
-        [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
-            pitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
-            rowSlots.forEach(slot => {
-                const p = slot.player;
-                const isFilled = p !== null;
-                const isGold = isFilled && p.Overall >= 85;
-                const displayOvr = isFilled ? p.Overall : '';
-                let shortName = '';
-                if (isFilled) {
-                    shortName = p.Nome.replace(/^[A-Z]\.\s*/i, '');
-                }
+            [...rowsWithSlots].reverse().forEach((rowSlots, rowIdx) => {
+                singlePitchHtml += `<div class="pitch-row" style="z-index: ${10 - rowIdx}; align-items: flex-start;">`;
+                rowSlots.forEach(slot => {
+                    const p = slot.player;
+                    const isFilled = p !== null;
+                    const isGold = isFilled && p.Overall >= 85;
+                    const displayOvr = isFilled ? p.Overall : '';
+                    let shortName = '';
+                    if (isFilled) {
+                        shortName = p.Nome.replace(/^[A-Z]\.\s*/i, '');
+                    }
 
-                pitchHtml += `
-                    <div class="slot-wrapper filled-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative;">
-                        <div class="slot ${isFilled ? `filled ${myColorClass}` : ''} ${isGold ? 'gold-card' : ''}">
-                            <span class="slot-ovr-inside">${displayOvr}</span>
+                    singlePitchHtml += `
+                        <div class="slot-wrapper filled-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 10; position: relative; pointer-events: none;">
+                            <div class="slot ${isFilled ? `filled ${playerColorClass}` : ''} ${isGold ? 'gold-card' : ''}" style="${isFilled ? `border-color: ${playerColor};` : ''}">
+                                <span class="slot-ovr-inside">${displayOvr}</span>
+                            </div>
+                            <div class="card-name-outside">
+                                <span style="font-size: 0.8rem;">${shortName}</span>
+                            </div>
                         </div>
-                        <div class="card-name-outside">
-                            <span style="font-size: 0.8rem;">${shortName}</span>
+                    `;
+                });
+                singlePitchHtml += `</div>`;
+            });
+
+            carouselHtml += `
+                <div class="pitch-container-wrapper" id="summary-pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; position: relative;">
+                    <div style="text-align: center; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: ${playerColor}; text-shadow: 0 0 5px rgba(0,0,0,0.5);">
+                        ${player.profiles.username} - ${teamName}
+                    </div>
+                    <div class="pitch-container" style="position: relative; width: 100%;">
+                        <div class="pitch-bg">
+                            <div class="pitch-lines"></div>
+                        </div>
+                        <div class="pitch-players">
+                            ${singlePitchHtml}
                         </div>
                     </div>
-                `;
-            });
-            pitchHtml += `</div>`;
+                </div>
+            `;
         });
+        
+        carouselHtml += `</div>`;
+
+        let dotsHtml = `<div class="carousel-dots" style="display: flex; justify-content: center; gap: 8px; margin-top: -5px; margin-bottom: 15px;">`;
+        this.players.forEach((player, pIdx) => {
+            dotsHtml += `<div class="carousel-dot" data-index="${pIdx}" style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); background: transparent; cursor: pointer; transition: all 0.3s ease;"></div>`;
+        });
+        dotsHtml += `</div>`;
 
         const stats = this.calculateTeamStats();
 
         this.container.innerHTML = `
             <div class="draft-container">
-                <div class="draft-left">
-                    <div class="pitch-container" style="pointer-events: none; position: relative; margin-top: 2rem;">
-                        <div class="pitch-bg">
-                            <div class="pitch-lines"></div>
-                        </div>
-                        <div class="pitch-players">
-                            ${pitchHtml}
-                        </div>
-                    </div>
+                <div class="draft-left" style="overflow: hidden; padding-top: 2rem;">
+                    ${carouselHtml}
+                    ${dotsHtml}
                 </div>
                 <div class="draft-right">
                     <div class="draft-complete-stats" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height: 100%;">
@@ -878,6 +906,40 @@ export class MultiplayerDraftUI {
                 await supabase.from('lobbies').update({ status: 'simulating', draft_state: this.draftState }).eq('id', this.lobby.id);
             });
         }
+
+        setTimeout(() => {
+            const carousel = this.container.querySelector('#summary-pitches-carousel');
+            const dots = this.container.querySelectorAll('.carousel-dot');
+            if (carousel && dots.length > 0) {
+                const updateDots = () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const width = carousel.offsetWidth || 1;
+                    const index = Math.round(scrollLeft / width);
+                    dots.forEach((dot, i) => {
+                        dot.style.background = i === index ? 'rgba(255,255,255,0.9)' : 'transparent';
+                        dot.style.transform = i === index ? 'scale(1.2)' : 'scale(1)';
+                    });
+                };
+
+                carousel.addEventListener('scroll', updateDots);
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => {
+                        const width = carousel.offsetWidth;
+                        carousel.scrollTo({ left: i * width, behavior: 'smooth' });
+                    });
+                });
+                
+                // Initial snap to user pitch
+                const myPitch = document.getElementById(`summary-pitch-wrapper-${this.currentUser.id}`);
+                if (myPitch) {
+                    const scrollLeft = myPitch.offsetLeft - carousel.offsetLeft;
+                    carousel.scrollTo({ left: scrollLeft, behavior: 'auto' });
+                }
+                
+                updateDots();
+            }
+        }, 50);
     }
 
     async endDraft() {
