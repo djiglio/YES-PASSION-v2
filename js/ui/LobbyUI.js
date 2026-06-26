@@ -105,8 +105,6 @@ export class LobbyUI {
                         <input type="text" id="join-code" placeholder="Codice 4 Lettere/Numeri" maxlength="4" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; text-align: center; text-transform: uppercase; font-weight: bold; letter-spacing: 5px; background: rgba(0,0,0,0.5); color: white; border: 1px solid var(--border-color); border-radius: 6px;">
                         <button id="btn-join" class="btn btn-secondary" style="width: 100%;">Unisciti</button>
                     </div>
-                    
-                    <button id="btn-back-menu" class="btn" style="background: transparent; color: white;">Torna Indietro</button>
                 </div>
             </div>
         `;
@@ -147,7 +145,31 @@ export class LobbyUI {
 
         document.getElementById('btn-create').onclick = async () => await this.createLobby();
         document.getElementById('btn-join').onclick = async () => await this.joinLobby(document.getElementById('join-code').value.trim().toUpperCase());
-        document.getElementById('btn-back-menu').onclick = () => this.app.startHome();
+    }
+
+    handleBack() {
+        // Are we in formation selection?
+        if (document.getElementById('formation-selection')) {
+            // go back to waiting room
+            this.renderWaitingRoom();
+            return true;
+        }
+        // Are we in waiting room?
+        if (this.lobby) {
+            if (this.realtimeChannel) {
+                supabase.removeChannel(this.realtimeChannel);
+                this.realtimeChannel = null;
+            }
+            // Remove user from lobby in db? We can just do a best-effort delete
+            const user = this.app.authUI.currentUser;
+            if (user) {
+                supabase.from('lobby_players').delete().eq('lobby_id', this.lobby.id).eq('user_id', user.id).then();
+            }
+            this.lobby = null;
+            this.renderLobbyMenu();
+            return true;
+        }
+        return false;
     }
 
     generateCode() {

@@ -57,6 +57,11 @@ class GameApp {
     }
 
     async init() {
+        const globalBackBtn = document.getElementById('global-back-btn');
+        if (globalBackBtn) {
+            globalBackBtn.onclick = () => this.handleBack();
+        }
+
         this.state.setPhase(GAME_PHASES.INIT);
         
         // Check Auth Session
@@ -91,6 +96,26 @@ class GameApp {
         this.state.setPhase('LEADERBOARD');
     }
 
+    getCurrentUI() {
+        switch(this.state.phase) {
+            case 'LEADERBOARD': return this.leaderboardUI;
+            case 'MP_LOBBY': return this.lobbyUI;
+            case 'MP_DRAFT': return this.mpDraftUI;
+            case 'MP_SEASON_INIT': return this.mpSeasonUI;
+            case GAME_PHASES.DRAFT: return this.draftUI;
+            case GAME_PHASES.SEASON_INIT: return this.seasonUI;
+            default: return null;
+        }
+    }
+
+    handleBack() {
+        const currentUI = this.getCurrentUI();
+        if (currentUI && typeof currentUI.handleBack === 'function') {
+            if (currentUI.handleBack()) return; // If it returns true, it intercepted the back event
+        }
+        this.state.goBack();
+    }
+
     render(state) {
         const statusBar = document.getElementById('current-phase');
         const content = document.getElementById('game-content');
@@ -101,8 +126,8 @@ class GameApp {
 
         const globalHeader = document.getElementById('global-header');
         if (globalHeader) {
-            // Hide on INIT, HOME, and SETUP (Module selection)
-            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME' || state.phase === 'SETUP' || state.phase === 'LEADERBOARD') ? 'none' : 'block';
+            // Hide only on INIT and HOME
+            globalHeader.style.display = (state.phase === GAME_PHASES.INIT || state.phase === 'HOME') ? 'none' : 'flex';
         }
 
         switch(state.phase) {

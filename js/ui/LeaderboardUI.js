@@ -63,27 +63,16 @@ export class LeaderboardUI {
         `;
     }
 
-    setupHeaderRight() {
-        const headerRight = document.getElementById('global-header-right');
-        if (!headerRight) return;
-        
-        if (this.uiState === 'SELECTION') {
-            headerRight.innerHTML = '';
-        } else {
-            headerRight.innerHTML = `
-                <div id="btn-back-selection" style="margin: 0; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-                    Indietro <span style="font-size: 1.2rem; line-height: 1;">&rarr;</span>
-                </div>
-            `;
-            document.getElementById('btn-back-selection').onclick = () => {
-                this.uiState = 'SELECTION';
-                this.render();
-            };
+    handleBack() {
+        if (this.uiState !== 'SELECTION') {
+            this.uiState = 'SELECTION';
+            this.render();
+            return true;
         }
+        return false;
     }
 
     render() {
-        this.setupHeaderRight();
 
         if (this.uiState === 'SELECTION') {
             this.renderSelection();
@@ -244,8 +233,5 @@ export class LeaderboardUI {
     }
 
     cleanup() {
-        // Clear right header when leaving leaderboard fully
-        const headerRight = document.getElementById('global-header-right');
-        if (headerRight) headerRight.innerHTML = '';
     }
 }

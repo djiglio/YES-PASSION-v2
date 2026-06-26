@@ -609,7 +609,6 @@ export class MultiplayerSeasonUI {
                 <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${pos}° posto</strong>.</p>
                 ${outcomeMsg}
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
-                <button id="btn-back-menu" class="btn" style="font-size: 1.2rem; padding: 1rem 3rem;">Torna al Menu Principale</button>
             </div>
             
             <div class="end-season-grid">
@@ -708,9 +707,13 @@ export class MultiplayerSeasonUI {
             `).join('');
             table.innerHTML = rowsHtml;
         }
+    }
 
-        document.getElementById('btn-back-menu').addEventListener('click', () => {
-            this.app.startHome();
-        });
+    handleBack() {
+        if (!this.seasonState || this.seasonState.isFinished) {
+            return false; // let it go back
+        }
+        window.showAlert("Non puoi tornare indietro durante il campionato!");
+        return true; // intercept
     }
 }

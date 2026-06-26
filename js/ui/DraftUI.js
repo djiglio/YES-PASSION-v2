@@ -69,9 +69,27 @@ export class DraftUI {
     }
 
     async init() {
-        const globalHeader = document.getElementById('global-header');
-        if (globalHeader) globalHeader.style.display = 'none';
         this.renderFormationSelector();
+    }
+
+    handleBack() {
+        if (this.slots && this.slots.length > 0 && this.picksRemaining < 11 && this.picksRemaining > 0) {
+            window.showAlert("Non puoi tornare indietro durante un draft in corso!");
+            return true;
+        }
+
+        const formationSelection = document.getElementById('formation-selection');
+        const modeSelection = document.getElementById('mode-selection');
+        
+        if (formationSelection && formationSelection.style.display === 'block') {
+            formationSelection.style.display = 'none';
+            if (modeSelection) modeSelection.style.display = 'flex';
+            const customPanel = document.getElementById('custom-panel');
+            if(customPanel) customPanel.style.display = 'none';
+            return true; // intercepted
+        }
+
+        return false; // let GameApp handle it
     }
 
     renderFormationSelector() {
@@ -285,8 +303,6 @@ export class DraftUI {
     }
 
     async startDraft(formation) {
-        const globalHeader = document.getElementById('global-header');
-        if (globalHeader) globalHeader.style.display = 'block';
 
         try {
             const { data: { user } } = await supabase.auth.getUser();

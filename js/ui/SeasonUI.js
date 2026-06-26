@@ -80,6 +80,18 @@ export class SeasonUI {
         this.attachEvents();
     }
 
+    handleBack() {
+        if (this.state.phase === 'MATCHDAY') {
+            window.showAlert("Non puoi tornare indietro durante il match!");
+            return true;
+        }
+        if (this.state.phase === 'SEASON_INIT') {
+            window.showAlert("Non puoi tornare indietro durante il campionato!");
+            return true;
+        }
+        return false;
+    }
+
     getTeamName(id) {
         return this.state.standings.find(t => t.id === id)?.name || id;
     }
@@ -415,7 +427,6 @@ export class SeasonUI {
                 <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${finalPosition}° posto</strong>.</p>
                 ${outcomeMsg}
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
-                <button class="btn" onclick="window.location.reload()" style="font-size: 1.2rem; padding: 1rem 3rem;">Gioca Nuova Stagione</button>
             </div>
             
             <div class="end-season-grid">

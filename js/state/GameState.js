@@ -9,6 +9,7 @@ export const GAME_PHASES = {
 export class GameState {
     constructor() {
         this.phase = GAME_PHASES.INIT;
+        this.history = [];
         this.userTeam = {
             formation: null,
             squad: [],
@@ -35,9 +36,26 @@ export class GameState {
         this.listeners.forEach(listener => listener(this));
     }
 
-    setPhase(newPhase) {
+    setPhase(newPhase, isBack = false) {
+        // Don't track INIT or HOME in history as "previous" states you can go back from
+        // wait, actually you CAN go back to HOME. You don't want to go back FROM home.
+        if (!isBack && this.phase !== GAME_PHASES.INIT && this.phase !== 'HOME' && this.phase !== newPhase) {
+            this.history.push(this.phase);
+        } else if (newPhase === 'HOME') {
+            this.history = []; // Reset history when reaching home
+        }
+        
         this.phase = newPhase;
         this.notifyListeners();
+    }
+
+    goBack() {
+        if (this.history.length > 0) {
+            const prevPhase = this.history.pop();
+            this.setPhase(prevPhase, true);
+        } else {
+            this.setPhase('HOME', true);
+        }
     }
 
     startDraft(formation) {
