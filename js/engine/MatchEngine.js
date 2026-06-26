@@ -1,13 +1,18 @@
+export const AVAILABLE_FORMATIONS = {
+    '4-4-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['ES', 'CC', 'CC', 'ED'], ['ATT', 'ATT'] ],
+    '4-3-3': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['AS', 'ATT', 'AD'] ],
+    '3-5-2': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC'], ['ATT', 'ATT'] ],
+    '3-4-3': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['AT', 'ATT', 'AT'] ],
+    '4-2-3-1': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'COC', 'AD'], ['ATT'] ],
+    '5-3-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['ATT', 'ATT'] ],
+    '4-2-4': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'ATT', 'ATT', 'AD'] ]
+};
+
 export class MatchEngine {
     static generateCPUSquad(teamPlayers) {
         if (!teamPlayers || teamPlayers.length === 0) return [];
 
-        const formations = [
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CC', 'CC', 'ES', 'ED', 'ATT', 'ATT'], // 4-4-2
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CC', 'CC', 'AS', 'AD', 'ATT'], // 4-3-3
-            ['POR', 'DC', 'DC', 'DC', 'CC', 'CC', 'ES', 'ED', 'COC', 'ATT', 'ATT'], // 3-5-2
-            ['POR', 'DC', 'DC', 'TS', 'TD', 'CDC', 'CDC', 'COC', 'AS', 'AD', 'ATT'] // 4-2-3-1
-        ];
+        const formations = Object.values(AVAILABLE_FORMATIONS).map(rows => rows.flat());
         const chosenFormation = formations[Math.floor(Math.random() * formations.length)];
         
         let squad = [];

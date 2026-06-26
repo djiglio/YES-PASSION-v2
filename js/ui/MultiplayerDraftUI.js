@@ -1,5 +1,6 @@
 import { supabase } from '../supabase.js';
 import { DataLoader } from '../data/DataLoader.js';
+import { AVAILABLE_FORMATIONS } from '../engine/MatchEngine.js';
 
 export class MultiplayerDraftUI {
     constructor(app, contentDiv) {
@@ -9,15 +10,7 @@ export class MultiplayerDraftUI {
         this.players = this.app.state.mpPlayers; 
         this.teamName = this.app.state.teamName;
         
-        this.formations = {
-            '4-4-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['ES', 'CC', 'CC', 'ED'], ['ATT', 'ATT'] ],
-            '4-3-3': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['AS', 'ATT', 'AD'] ],
-            '3-5-2': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC'], ['ATT', 'ATT'] ],
-            '3-4-3': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['AT', 'ATT', 'AT'] ],
-            '4-2-3-1': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'COC', 'AD'], ['ATT'] ],
-            '5-3-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['ATT', 'ATT'] ],
-            '4-2-4': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'ATT', 'ATT', 'AD'] ]
-        };
+        this.formations = AVAILABLE_FORMATIONS;
 
         this.playersData = [];
         this.realtimeChannel = null;
