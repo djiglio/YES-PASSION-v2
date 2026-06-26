@@ -157,6 +157,7 @@ input[type=range] {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .formation-header {
@@ -180,6 +181,11 @@ input[type=range] {
     letter-spacing: 2px;
 }
 
+.formation-item.active {
+    border: 1px solid rgba(192, 192, 192, 0.8);
+    box-shadow: 0 0 10px 2px rgba(192, 192, 192, 0.3);
+}
+
 .formation-item.active .formation-header {
     background: rgba(0, 230, 255, 0.15);
     border-bottom: 1px solid rgba(0, 230, 255, 0.3);
@@ -187,25 +193,6 @@ input[type=range] {
 
 .formation-item.active .formation-name {
     color: var(--accent);
-}
-
-.btn-confirm-formation {
-    background: #10b981;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
-    transition: transform 0.2s;
-}
-.btn-confirm-formation:hover {
-    transform: scale(1.1);
 }
 
 .formation-body {

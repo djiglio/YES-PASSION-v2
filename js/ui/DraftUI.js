@@ -232,7 +232,6 @@ export class DraftUI {
                 <div class="formation-item" data-form="${f}">
                     <div class="formation-header">
                         <span class="formation-name">${f}</span>
-                        <button class="btn-confirm-formation" style="display: none;">✔</button>
                     </div>
                     <div class="formation-body">
                         <div class="mini-pitch">
@@ -247,39 +246,30 @@ export class DraftUI {
         // Gestione Accordion
         const formationItems = accordionContainer.querySelectorAll('.formation-item');
         formationItems.forEach(item => {
-            const header = item.querySelector('.formation-header');
-            const confirmBtn = item.querySelector('.btn-confirm-formation');
             const f = item.getAttribute('data-form');
 
-            header.addEventListener('click', (e) => {
-                // Se ha cliccato il bottone di conferma, non fare toggle
-                if (e.target === confirmBtn || confirmBtn.contains(e.target)) return;
-
+            item.addEventListener('click', (e) => {
                 const isActive = item.classList.contains('active');
                 
-                // Chiudi tutti
-                formationItems.forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.btn-confirm-formation').style.display = 'none';
-                });
-
-                // Se non era attivo, aprilo
                 if (!isActive) {
+                    // Chiudi tutti
+                    formationItems.forEach(i => {
+                        i.classList.remove('active');
+                    });
+                    // Se non era attivo, aprilo
                     item.classList.add('active');
-                    confirmBtn.style.display = 'flex';
-                }
-            });
-
-            confirmBtn.addEventListener('click', () => {
-                this.budgetSpent = 0;
-                
-                if (this.customSeason && this.customSeason !== 'all') {
-                    this.availableSeasons = [parseInt(this.customSeason)];
                 } else {
-                    this.availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
-                }
+                    // Se è già attivo e ci clicca di nuovo, conferma
+                    this.budgetSpent = 0;
+                    
+                    if (this.customSeason && this.customSeason !== 'all') {
+                        this.availableSeasons = [parseInt(this.customSeason)];
+                    } else {
+                        this.availableSeasons = [15, 16, 17, 18, 19, 20, 21, 22, 23];
+                    }
 
-                this.startDraft(f);
+                    this.startDraft(f);
+                }
             });
         });
     }
