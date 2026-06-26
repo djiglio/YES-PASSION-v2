@@ -550,30 +550,55 @@ export class MultiplayerSeasonUI {
             } catch(e) {}
         }
 
+        const roleOrder = { 'POR': 1, 'DC': 2, 'TD': 3, 'TS': 4, 'CDC': 5, 'CC': 6, 'ED': 7, 'ES': 8, 'COC': 9, 'AT': 10, 'ATT': 11, 'AD': 12, 'AS': 13 };
+        const myRoster = this.lobby.draft_state.rosters[this.currentUser.id] || [];
+        let sortedSquad = myRoster.filter(s => s.player).map(s => s.player).sort((a, b) => {
+            const roleA = a.Ruolo.split(',')[0].trim();
+            const roleB = b.Ruolo.split(',')[0].trim();
+            return (roleOrder[roleA] || 99) - (roleOrder[roleB] || 99);
+        });
+
         let rosterHtml = `
             <div class="stats-card" style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h3 class="table-title" style="margin-bottom: 1rem; text-align: center;">La Tua Rosa</h3>
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                <div class="stats-table-wrapper">
+                    <table class="standings-table inner-table" style="width: 100%; text-align: center; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>Ruolo</th>
+                                <th style="text-align: left;">Nome</th>
+                                <th>OVR</th>
+                                <th>Gol</th>
+                                <th>Assist</th>
+                                ${isBudget ? '<th>Valore</th>' : ''}
+                            </tr>
+                        </thead>
+                        <tbody>
         `;
         
-        const myRoster = this.lobby.draft_state.rosters[this.currentUser.id] || [];
-        myRoster.forEach(slot => {
-            if (slot.player) {
-                let valueHtml = '';
-                if (isBudget) {
-                    valueHtml = `<span style="color: #10b981; font-weight: bold; margin-left: auto;">€${slot.player.Value}</span>`;
-                }
-                rosterHtml += `
-                    <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; color: var(--accent); width: 40px;">${slot.requiredRole}</span>
-                        <span style="font-weight: bold; color: white; margin-left: 1rem;">${slot.player.Nome}</span>
-                        <span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; margin-left: 1rem; font-size: 0.9rem;">${slot.player.OVR}</span>
-                        ${valueHtml}
-                    </div>
-                `;
+        const playerStats = this.seasonState.playerStats || {};
+        
+        sortedSquad.forEach(player => {
+            const statKey = `${player.Nome}_${userTeam.name}`;
+            const stats = playerStats[statKey] || { goals: 0, assists: 0 };
+            
+            let valueHtml = '';
+            if (isBudget) {
+                valueHtml = `<td style="color: #10b981; font-weight: bold;">€${player.Value}</td>`;
             }
+            
+            rosterHtml += `
+                <tr>
+                    <td style="font-weight: bold; color: var(--accent);">${player.Ruolo}</td>
+                    <td style="font-weight: bold; color: white; text-align: left;">${player.Nome}</td>
+                    <td><span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; font-size: 0.9rem;">${player.Overall}</span></td>
+                    <td style="color: #cbd5e1;">${stats.goals}</td>
+                    <td style="color: #cbd5e1;">${stats.assists}</td>
+                    ${valueHtml}
+                </tr>
+            `;
         });
-        rosterHtml += `</div></div>`;
+        rosterHtml += `</tbody></table></div></div>`;
 
         this.container.innerHTML = `
             <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
