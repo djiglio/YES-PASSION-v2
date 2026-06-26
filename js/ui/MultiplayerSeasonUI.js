@@ -550,6 +550,31 @@ export class MultiplayerSeasonUI {
             } catch(e) {}
         }
 
+        let rosterHtml = `
+            <div class="stats-card" style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 class="table-title" style="margin-bottom: 1rem; text-align: center;">La Tua Rosa</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+        `;
+        
+        const myRoster = this.lobby.draft_state.rosters[this.currentUser.id] || [];
+        myRoster.forEach(slot => {
+            if (slot.player) {
+                let valueHtml = '';
+                if (isBudget) {
+                    valueHtml = `<span style="color: #10b981; font-weight: bold; margin-left: auto;">€${slot.player.Value}</span>`;
+                }
+                rosterHtml += `
+                    <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-weight: bold; color: var(--accent); width: 40px;">${slot.requiredRole}</span>
+                        <span style="font-weight: bold; color: white; margin-left: 1rem;">${slot.player.Nome}</span>
+                        <span style="background: rgba(255,215,0,0.2); border: 1px solid rgba(255,215,0,0.5); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; color: gold; margin-left: 1rem; font-size: 0.9rem;">${slot.player.OVR}</span>
+                        ${valueHtml}
+                    </div>
+                `;
+            }
+        });
+        rosterHtml += `</div></div>`;
+
         this.container.innerHTML = `
             <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
                 <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione Multiplayer Conclusa!</h2>
@@ -558,6 +583,8 @@ export class MultiplayerSeasonUI {
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
                 <button id="btn-back-menu" class="btn" style="font-size: 1.2rem; padding: 1rem 3rem;">Torna al Menu Principale</button>
             </div>
+            
+            ${rosterHtml}
             
             <div class="stats-grid">
                 <div class="stats-card user-stats-card">
