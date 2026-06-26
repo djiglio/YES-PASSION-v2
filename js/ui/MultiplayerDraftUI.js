@@ -307,7 +307,7 @@ export class MultiplayerDraftUI {
             return playerColors[idx % playerColors.length];
         };
 
-        let carouselHtml = `<div class="pitches-carousel" id="pitches-carousel" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
+        let carouselHtml = `<div class="pitches-carousel" id="pitches-carousel" style="display: flex; overflow-x: ${isMyTurn ? 'hidden' : 'auto'}; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none;">
             <style>.pitches-carousel::-webkit-scrollbar { display: none; }</style>`;
         
         this.players.forEach((player, pIdx) => {
@@ -528,7 +528,9 @@ export class MultiplayerDraftUI {
                 carousel.addEventListener('scroll', updateDots);
 
                 dots.forEach((dot, i) => {
+                    dot.style.cursor = isMyTurn ? 'default' : 'pointer';
                     dot.addEventListener('click', () => {
+                        if (isMyTurn) return;
                         const width = carousel.offsetWidth;
                         carousel.scrollTo({ left: i * width, behavior: 'smooth' });
                     });

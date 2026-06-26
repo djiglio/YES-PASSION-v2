@@ -287,8 +287,9 @@ export class LobbyUI {
     async fetchPlayers() {
         const { data, error } = await supabase
             .from('lobby_players')
-            .select('user_id, profiles(username, team_name)')
-            .eq('lobby_id', this.lobby.id);
+            .select('user_id, turn_position, profiles(username, team_name)')
+            .eq('lobby_id', this.lobby.id)
+            .order('turn_position', { ascending: true });
             
         if (!error) {
             this.players = data;
