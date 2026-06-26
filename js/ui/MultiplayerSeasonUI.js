@@ -550,7 +550,7 @@ export class MultiplayerSeasonUI {
             } catch(e) {}
         }
 
-        const roleOrder = { 'POR': 1, 'DC': 2, 'TD': 3, 'TS': 4, 'CDC': 5, 'CC': 6, 'ED': 7, 'ES': 8, 'COC': 9, 'AT': 10, 'ATT': 11, 'AD': 12, 'AS': 13 };
+        const roleOrder = { 'POR': 1, 'TD': 2, 'DC': 3, 'TS': 4, 'CDC': 5, 'ED': 6, 'CC': 7, 'ES': 8, 'COC': 9, 'AD': 10, 'AT': 11, 'AS': 12, 'ATT': 13 };
         const myRoster = this.lobby.draft_state.rosters[this.currentUser.id] || [];
         let sortedSquad = myRoster.filter(s => s.player).map(s => s.player).sort((a, b) => {
             const roleA = (a.DeployedRole || a.Ruolo).split(',')[0].trim();
@@ -565,12 +565,12 @@ export class MultiplayerSeasonUI {
                     <table class="standings-table inner-table" style="width: 100%; text-align: center; border-collapse: collapse;">
                         <thead>
                             <tr>
-                                <th style="padding: 0.5rem;">Ruolo</th>
-                                <th style="text-align: left; padding: 0.5rem;">Nome</th>
-                                <th style="padding: 0.5rem;">OVR</th>
-                                <th style="padding: 0.5rem;">Gol</th>
-                                <th style="padding: 0.5rem;">Assist</th>
-                                ${isBudget ? '<th style="padding: 0.5rem;">Valore</th>' : ''}
+                                <th style="padding: 0.8rem 1.2rem;">Ruolo</th>
+                                <th style="text-align: left; padding: 0.8rem 1.2rem;">Nome</th>
+                                <th style="padding: 0.8rem 1.2rem;">OVR</th>
+                                <th style="padding: 0.8rem 1.2rem;">Gol</th>
+                                <th style="padding: 0.8rem 1.2rem;">Assist</th>
+                                ${isBudget ? '<th style="padding: 0.8rem 1.2rem;">Valore</th>' : ''}
                             </tr>
                         </thead>
                         <tbody>
@@ -584,16 +584,18 @@ export class MultiplayerSeasonUI {
             
             let valueHtml = '';
             if (isBudget) {
-                valueHtml = `<td style="color: #10b981; font-weight: bold;">€${player.Value}</td>`;
+                valueHtml = `<td style="color: #10b981; font-weight: bold; padding: 0.8rem 1.2rem;">€${player.Value}</td>`;
             }
+            
+            const ovrColor = player.Overall > 85 ? 'gold' : 'white';
             
             rosterHtml += `
                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <td style="font-weight: bold; color: var(--accent); padding: 0.5rem;">${player.DeployedRole || player.Ruolo}</td>
-                    <td style="font-weight: bold; color: white; text-align: left; padding: 0.5rem;">${player.Nome}</td>
-                    <td style="font-weight: bold; color: gold; font-size: 0.9rem; padding: 0.5rem;">${player.Overall}</td>
-                    <td style="color: #cbd5e1; padding: 0.5rem;">${stats.goals}</td>
-                    <td style="color: #cbd5e1; padding: 0.5rem;">${stats.assists}</td>
+                    <td style="font-weight: bold; color: var(--accent); padding: 0.8rem 1.2rem;">${player.DeployedRole || player.Ruolo}</td>
+                    <td style="font-weight: bold; color: white; text-align: left; padding: 0.8rem 1.2rem;">${player.Nome}</td>
+                    <td style="font-weight: bold; color: ${ovrColor}; font-size: 1rem; padding: 0.8rem 1.2rem;">${player.Overall}</td>
+                    <td style="color: #cbd5e1; padding: 0.8rem 1.2rem;">${stats.goals}</td>
+                    <td style="color: #cbd5e1; padding: 0.8rem 1.2rem;">${stats.assists}</td>
                     ${valueHtml}
                 </tr>
             `;
