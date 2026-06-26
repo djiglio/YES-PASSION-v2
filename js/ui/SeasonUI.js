@@ -332,11 +332,11 @@ export class SeasonUI {
         const userTeam = this.state.standings.find(t => t.isUser);
         const finalPosition = this.state.standings.findIndex(t => t.isUser) + 1;
         const topStats = this.state.getTopStats();
+        const isBudget = this.state.gameMode === 'budget';
         
         // Push stats to Supabase if logged in
         const { data: { session } } = await supabase.auth.getSession();
         if (session && session.user) {
-            const isBudget = this.state.gameMode === 'budget';
             await StatsEngine.updateSeasonStats(session.user.id, false, isBudget, {
                 isAbandon: false,
                 position: finalPosition,
