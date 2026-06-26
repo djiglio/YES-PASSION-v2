@@ -91,7 +91,7 @@ export class SeasonUI {
                 if (globalBackBtn) {
                     globalBackBtn.innerHTML = '<span style="font-size: 1.4rem; line-height: 1;">&larr;</span> Indietro';
                 }
-                this.app.state.setPhase('HOME');
+                this.state.setPhase('HOME');
                 return true;
             }
             window.showAlert("Non puoi tornare indietro durante il campionato!");
