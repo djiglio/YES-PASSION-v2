@@ -29,7 +29,7 @@ export class SeasonUI {
             <div class="season-container">
                 <div class="season-left">
                     <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h2>Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.state.matchday}/${this.state.schedule.length})</span></h2>
+                        <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.5rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin:0;">Classifica <span style="font-size:1rem; color:var(--text-muted);">(Giornata ${this.state.matchday}/${this.state.schedule.length})</span></h2>
                         <span class="season-badge" style="font-size: 1.1rem; font-weight: 800; padding: 0.4rem 1rem; background: rgba(0, 230, 255, 0.1); border: 1px solid var(--border-color); color: var(--accent);">Stagione: ${this.state.currentSeason.season_name}</span>
                     </div>
                     <div class="standings-table">
@@ -429,7 +429,7 @@ export class SeasonUI {
 
         this.container.innerHTML = `
             <div class="end-season-header" style="text-align:center; padding: 2rem 1rem;">
-                <h2 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5);">Stagione ${this.state.currentSeason.season_name} Conclusa!</h2>
+                <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 3rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin-bottom: 0.5rem;">Stagione ${this.state.currentSeason.season_name} Conclusa!</h2>
                 <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Hai terminato il campionato al <strong>${finalPosition}° posto</strong>.</p>
                 ${outcomeMsg}
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Punti Totali: <strong style="color: #fff;">${userTeam.points}</strong> (V: ${userTeam.won} | N: ${userTeam.drawn} | P: ${userTeam.lost})</p>
