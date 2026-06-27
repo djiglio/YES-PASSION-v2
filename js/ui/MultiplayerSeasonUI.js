@@ -533,10 +533,13 @@ export class MultiplayerSeasonUI {
         else if (pos === 6) outcomeMsg = '<p style="font-size: 1.2rem; color: #10b981; font-weight: bold; margin-bottom: 0.5rem;">Conference League</p>';
         else if (pos >= 18) outcomeMsg = '<p style="font-size: 1.2rem; color: #ef4444; font-weight: bold; margin-bottom: 0.5rem;">Retrocesso</p>';
 
-        // Push stats to Supabase, but only once
+        // Push stats to Supabase, but only once per lobby
         const isBudget = this.lobby && (this.lobby.mode === 'budget' || (this.lobby.mode === 'custom' && this.lobby.draft_state && this.lobby.draft_state.customSettings && this.lobby.draft_state.customSettings.isBudget));
-        if (!this.statsSaved) {
+        const claimedKey = `stats_claimed_${this.lobby.id}`;
+        
+        if (!this.statsSaved && !localStorage.getItem(claimedKey)) {
             this.statsSaved = true;
+            localStorage.setItem(claimedKey, 'true');
             await StatsEngine.updateSeasonStats(this.currentUser.id, true, isBudget, {
                 isAbandon: false,
                 position: pos,
