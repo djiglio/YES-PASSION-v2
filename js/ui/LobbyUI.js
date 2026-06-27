@@ -23,11 +23,11 @@ export class LobbyUI {
     renderLobbyMenu() {
         this.container.innerHTML = `
             <div class="setup-container">
-                <h2 class="setup-title">MULTIPLAYER LOBBY</h2>
+                <h2 class="setup-title" style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin-bottom: 3rem; text-align: center;">LOBBY MULTIPLAYER</h2>
                 
                 <div style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 style="color: var(--accent); margin-bottom: 1rem;">Crea una nuova Stanza</h3>
+                    <div style="border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); text-align: center;">
+                        <h3 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 1rem;">Crea una nuova Stanza</h3>
                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Crea un codice e condividilo con i tuoi amici (massimo 4 giocatori totali).</p>
                         <div id="mode-selector" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; text-align: left;">
                             <div class="mode-option selected" data-value="classica" style="padding: 12px; border: 2px solid var(--accent); background: rgba(59,130,246, 0.15); border-radius: 8px; cursor: pointer; transition: all 0.2s ease; display: flex; justify-content: space-between; align-items: center;">
@@ -53,8 +53,8 @@ export class LobbyUI {
                             </div>
                         </div>
 
-                        <div id="custom-settings-panel" style="display: none; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
-                            <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Impostazioni Custom</h4>
+                        <div id="custom-settings-panel" style="display: none; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                            <h4 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Impostazioni Custom</h4>
                             
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <label style="font-size: 0.9rem;">Mostra Overall Giocatori</label>
@@ -76,7 +76,7 @@ export class LobbyUI {
 
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
                                 <label style="font-size: 0.9rem;">Stagione</label>
-                                <select id="lobby-custom-season" class="input-field" style="max-width: 150px; padding: 0.4rem; font-size: 0.9rem;">
+                                <select id="lobby-custom-season" class="input-field" style="max-width: 150px; padding: 0.4rem; font-size: 0.9rem; border-radius: 4px; background: rgba(0,0,0,0.5); color: white; border: 1px solid rgba(255,255,255,0.2);">
                                     <option value="all">Tutte</option>
                                     <option value="15">2014-15</option>
                                     <option value="16">2015-16</option>
@@ -93,10 +93,10 @@ export class LobbyUI {
                         <button id="btn-create" class="btn btn-primary" style="width: 100%;">Crea Stanza</button>
                     </div>
 
-                    <div style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 style="color: #FFD700; margin-bottom: 1rem;">Unisciti a una Stanza</h3>
-                        <input type="text" id="join-code" placeholder="Codice 4 Lettere/Numeri" maxlength="4" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; text-align: center; text-transform: uppercase; font-weight: bold; letter-spacing: 5px; background: rgba(0,0,0,0.5); color: white; border: 1px solid var(--border-color); border-radius: 6px;">
-                        <button id="btn-join" class="btn btn-secondary" style="width: 100%;">Unisciti</button>
+                    <div style="border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); text-align: center;">
+                        <h3 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 1rem;">Unisciti a una Stanza</h3>
+                        <input type="text" id="join-code" placeholder="Codice 4 Lettere/Numeri" maxlength="4" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; text-align: center; text-transform: uppercase; font-weight: bold; letter-spacing: 5px; background: rgba(0,0,0,0.5); color: white; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px;">
+                        <button id="btn-join" class="btn btn-primary" style="width: 100%;">Unisciti</button>
                     </div>
                 </div>
             </div>
