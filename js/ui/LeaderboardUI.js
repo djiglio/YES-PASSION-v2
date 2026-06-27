@@ -91,17 +91,17 @@ export class LeaderboardUI {
 
     renderSelection() {
         this.container.innerHTML = `
-            <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 2rem; align-items: center; justify-content: center; min-height: 80vh;">
-                <h1 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2.5rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin:0;">CLASSIFICHE</h1>
+            <div style="max-width: 600px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; justify-content: center; min-height: 80vh;">
+                <h1 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2.2rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin:0;">CLASSIFICHE</h1>
                 
-                <div id="select-sp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
-                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 2px;">SINGLE PLAYER</h2>
-                    <p style="color: var(--text-muted); margin: 0;">Consulta le classifiche delle tue carriere solitarie</p>
+                <div id="select-sp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 1.5rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
+                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">SINGLE PLAYER</h2>
+                    <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">Consulta le classifiche delle tue carriere solitarie</p>
                 </div>
 
-                <div id="select-mp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
-                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 2px;">MULTIPLAYER</h2>
-                    <p style="color: var(--text-muted); margin: 0;">Confronta i tuoi risultati con quelli degli altri manager</p>
+                <div id="select-mp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 1.5rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
+                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">MULTIPLAYER</h2>
+                    <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">Confronta i tuoi risultati con quelli degli altri manager</p>
                 </div>
             </div>
         `;
