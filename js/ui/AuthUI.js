@@ -112,10 +112,16 @@ export class AuthUI {
                 
                 <form id="auth-form" style="display: flex; flex-direction: column; gap: 1rem;">
                     <input type="email" id="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
-                    <input type="password" id="password" placeholder="Password" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
+                    <div style="position: relative;">
+                        <input type="password" id="password" placeholder="Password" required style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
+                        <span onclick="const x=document.getElementById('password'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                    </div>
                     
                     ${this.isRegisterMode ? `
-                        <input type="password" id="password-confirm" placeholder="Conferma Password" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
+                    <div style="position: relative;">
+                        <input type="password" id="password-confirm" placeholder="Conferma Password" required style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
+                        <span onclick="const x=document.getElementById('password-confirm'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                    </div>
                     ` : ''}
 
                     <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
