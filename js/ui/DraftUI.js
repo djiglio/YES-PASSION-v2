@@ -459,11 +459,11 @@ export class DraftUI {
                 <div class="draft-left">
                     <div class="draft-header-info">
                         ${this.budgetMode ? `
-                        <div class="budget-header-wrapper">
+                        <div class="budget-header-wrapper" style="margin-bottom: 0.5rem;">
                             <div class="budget-bar-container">
-                                <div class="budget-fill" style="width: ${Math.min((this.budgetSpent / this.budgetMax) * 100, 100)}%; background: ${this.budgetSpent > this.budgetMax ? 'var(--danger-color, #ef4444)' : 'var(--accent)'};"></div>
-                                <div class="budget-text" style="display:flex; justify-content:space-between; padding: 0 15px;">
-                                    <span>BUDGET: €${(this.budgetSpent/1000000).toFixed(1)}M <span style="opacity:0.6; font-weight:normal;">/ €${(this.budgetMax/1000000).toFixed(1)}M</span></span>
+                                <div class="budget-fill" style="width: ${Math.max(((this.budgetMax - this.budgetSpent) / this.budgetMax) * 100, 0)}%; background: ${((this.budgetMax - this.budgetSpent) / this.budgetMax) < 0.1 ? '#ef4444' : (((this.budgetMax - this.budgetSpent) / this.budgetMax) < 0.3 ? '#f59e0b' : '#10b981')};"></div>
+                                <div class="budget-text" style="display:flex; justify-content:space-between; padding: 0 15px; text-shadow: 0 0 5px rgba(0,0,0,0.8);">
+                                    <span>RIMANENTI: €${((this.budgetMax - this.budgetSpent)/1000000).toFixed(1)}M <span style="opacity:0.8; font-weight:normal;">/ €${(this.budgetMax/1000000).toFixed(1)}M</span></span>
                                     <span>${11 - this.picksRemaining}/11</span>
                                 </div>
                             </div>

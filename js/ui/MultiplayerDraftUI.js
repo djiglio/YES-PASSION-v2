@@ -286,10 +286,10 @@ export class MultiplayerDraftUI {
                 }
             });
         }
-        const budgetPercent = Math.min((mySpent / budgetMax) * 100, 100);
+        const remainingPercent = Math.max(((budgetMax - mySpent) / budgetMax) * 100, 0);
         let budgetColor = '#10b981';
-        if (budgetPercent > 70) budgetColor = '#f59e0b';
-        if (budgetPercent > 90) budgetColor = '#ef4444';
+        if (remainingPercent < 30) budgetColor = '#f59e0b';
+        if (remainingPercent < 10) budgetColor = '#ef4444';
 
         const playerColors = ['#ef4444', '#3b82f6', '#10b981', '#8b5cf6'];
         const getPlayerColor = (uid) => {
@@ -474,11 +474,11 @@ export class MultiplayerDraftUI {
                     ${isBudget ? `
                     <div class="budget-container" style="margin-bottom: 15px; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
                         <div class="budget-bar" style="width: 100%; height: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; position: relative;">
-                            <div class="budget-fill" style="height: 100%; background: ${budgetColor}; width: ${budgetPercent}%; transition: width 0.3s ease, background 0.3s ease;"></div>
+                            <div class="budget-fill" style="height: 100%; background: ${budgetColor}; width: ${remainingPercent}%; transition: width 0.3s ease, background 0.3s ease;"></div>
                         </div>
                         <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.9rem;">
-                            <span style="color: white;">Spesi: <b>€${(mySpent/1000000).toFixed(1)}M</b></span>
-                            <span style="color: ${budgetPercent > 90 ? '#ef4444' : 'white'};">Rimanenti: <b>€${((budgetMax - mySpent)/1000000).toFixed(1)}M</b> / €${(budgetMax/1000000).toFixed(0)}M</span>
+                            <span style="color: white;">Rimanenti: <b>€${((budgetMax - mySpent)/1000000).toFixed(1)}M</b></span>
+                            <span style="color: var(--text-muted);">/ €${(budgetMax/1000000).toFixed(0)}M</span>
                         </div>
                     </div>` : ''}
                     
