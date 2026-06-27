@@ -437,10 +437,10 @@ export class DraftUI {
                             <div class="p-left">
                                 ${displayOvr ? `<span class="p-ovr ${isGold ? 'text-gold' : ''}">${displayOvr}</span>` : ''}
                                 <span class="p-name">${p.Nome}</span>
-                                ${this.budgetMode && p.Value ? `<span class="budget-tag-roster ${this.getPriceTierClass(p.ValueNum)}">${p.Value}</span>` : ''}
                             </div>
                             <div class="p-right">
                                 <span class="p-role">${p.Ruolo}</span>
+                                ${this.budgetMode && p.Value ? `<span class="budget-tag-roster ${this.getPriceTierClass(p.ValueNum)}">${p.Value}</span>` : ''}
                             </div>
                         </div>
                         `;
