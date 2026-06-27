@@ -187,6 +187,7 @@ class GameApp {
 
         content.innerHTML = `
             <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+                <img src="assets/logo.png" alt="Yes Passion Logo" style="max-width: 300px; margin-bottom: 2rem; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));">
                 <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 3rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
                 
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; margin-bottom: 3rem;">
