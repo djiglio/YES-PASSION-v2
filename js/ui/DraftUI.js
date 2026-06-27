@@ -50,26 +50,22 @@ export class DraftUI {
 
     renderFormationSelector() {
         let html = `
-            <div class="logo-centered">
-                <div class="yes-part"><span style="color:#008c45">Y</span><span style="color:#f4f9ff">E</span><span style="color:#cd212a">S</span></div>
-                <div class="passion-part">PASSION</div>
-            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; min-height: 70vh;">
+                <div id="mode-selection" style="max-width: 800px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="mode-btn" id="mode-classic">
+                        <h3 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.8rem; letter-spacing: 1px;">CLASSICA</h3>
+                        <p>Draft al buio su tutte le stagioni, nessun limite di spesa. Costruisci il tuo dream team affidandoti alla sorte.</p>
+                    </div>
+                    <div class="mode-btn" id="mode-budget">
+                        <h3 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.8rem; letter-spacing: 1px;">BUDGET (200M)</h3>
+                        <p>Draft al buio su tutte le stagioni. Crea l'11 perfetto senza sforare il tetto salariale di 200 Milioni.</p>
+                    </div>
+                    <div class="mode-btn" id="mode-custom">
+                        <h3 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.8rem; letter-spacing: 1px;">CUSTOM</h3>
+                        <p>Personalizza ogni singolo aspetto: budget, punteggi, difficoltà e annata calcistica.</p>
+                    </div>
 
-            <div id="mode-selection" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
-                <div class="mode-btn" id="mode-classic">
-                    <h3>Classica</h3>
-                    <p>Draft al buio su tutte le stagioni, nessun limite di spesa. Costruisci il tuo dream team affidandoti alla sorte.</p>
-                </div>
-                <div class="mode-btn" id="mode-budget">
-                    <h3>Budget (200M)</h3>
-                    <p>Draft al buio su tutte le stagioni. Crea l'11 perfetto senza sforare il tetto salariale di 200 Milioni.</p>
-                </div>
-                <div class="mode-btn" id="mode-custom">
-                    <h3>Custom</h3>
-                    <p>Personalizza ogni singolo aspetto: budget, punteggi, difficoltà e annata calcistica.</p>
-                </div>
-
-                <div id="custom-panel" class="custom-settings" style="display: none;">
+                    <div id="custom-panel" class="custom-settings" style="display: none;">
                     <div class="setting-row">
                         <label>Mostra Punteggi (NO Draft al buio)</label>
                         <input type="checkbox" id="custom-show-ovr" style="width: 24px; height: 24px;">
@@ -115,6 +111,7 @@ export class DraftUI {
                     
                     <button class="btn" id="btn-custom-confirm" style="margin-top: 1rem;">Conferma Personalizzazione</button>
                 </div>
+            </div>
             </div>
 
             <div id="formation-selection" style="display: none; text-align: center; margin-top: 2rem;">
