@@ -92,15 +92,15 @@ export class LeaderboardUI {
     renderSelection() {
         this.container.innerHTML = `
             <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 2rem; align-items: center; justify-content: center; min-height: 80vh;">
-                <h1 style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0;">CLASSIFICHE</h1>
+                <h1 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2.5rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin:0;">CLASSIFICHE</h1>
                 
-                <div id="select-sp" style="width: 100%; background: rgba(0,20,50,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
-                    <h2 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">SINGLE PLAYER</h2>
+                <div id="select-sp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
+                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 2px;">SINGLE PLAYER</h2>
                     <p style="color: var(--text-muted); margin: 0;">Consulta le classifiche delle tue carriere solitarie</p>
                 </div>
 
-                <div id="select-mp" style="width: 100%; background: rgba(0,20,50,0.8); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
-                    <h2 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">MULTIPLAYER</h2>
+                <div id="select-mp" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); padding: 3rem; text-align: center; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
+                    <h2 style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 2px;">MULTIPLAYER</h2>
                     <p style="color: var(--text-muted); margin: 0;">Confronta i tuoi risultati con quelli degli altri manager</p>
                 </div>
             </div>
@@ -135,14 +135,14 @@ export class LeaderboardUI {
         this.container.innerHTML = `
             <style>
                 .sortable-th:hover { color: var(--accent); }
-                .sub-tab-container { display: flex; background: rgba(0,20,50,0.8); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px 16px 0 0; }
+                .sub-tab-container { display: flex; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); border-bottom: none; border-radius: 16px 16px 0 0; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
                 .lb-sub-tab { flex: 1; text-align: center; padding: 1rem; cursor: pointer; font-weight: bold; border-bottom: 2px solid transparent; transition: all 0.2s; color: rgba(255,255,255,0.5); }
-                .lb-sub-tab.active { color: white; border-bottom: 2px solid var(--accent); background: rgba(255,255,255,0.05); }
+                .lb-sub-tab.active { color: white; border-bottom: 2px solid var(--accent); background: rgba(255,255,255,0.1); }
                 .table-wrapper { overflow-x: auto; }
             </style>
             
             <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-                <h1 class="header-title" style="font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,230,255,0.5); color: var(--accent); margin:0 0 2rem 0; text-transform: uppercase; text-align: center;">
+                <h1 class="header-title" style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 2.5rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4)); margin:0 0 2rem 0; text-transform: uppercase; text-align: center;">
                     ${this.currentMode === 'sp' ? 'SINGLE PLAYER' : 'MULTIPLAYER'}
                 </h1>
 
@@ -151,13 +151,13 @@ export class LeaderboardUI {
                     <div id="sub-tab-budget" class="lb-sub-tab ${this.isBudget ? 'active' : ''}">BUDGET</div>
                 </div>
                 
-                <div style="background: rgba(0,20,50,0.8); border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); padding: 1rem; display: flex; justify-content: flex-end;">
+                <div style="background: rgba(255,255,255,0.05); border-left: 1px solid rgba(255,255,255,0.3); border-right: 1px solid rgba(255,255,255,0.3); padding: 1rem; display: flex; justify-content: flex-end; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
                     <button id="btn-expand-cols" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
                         ${this.columnsExpanded ? 'Comprimi Colonne' : 'Espandi Colonne'}
                     </button>
                 </div>
 
-                <div class="table-wrapper" style="background: rgba(0,20,50,0.8); border: 1px solid rgba(255,255,255,0.2); border-top: none; border-radius: 0 0 16px 16px;">
+                <div class="table-wrapper" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); border-top: none; border-radius: 0 0 16px 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);">
                     <table style="width: 100%; border-collapse: collapse; text-align: left;">
                         <thead style="background: rgba(0,0,0,0.6); color: var(--text-muted); font-size: 0.9rem;">
                             <tr>
