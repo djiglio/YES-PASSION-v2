@@ -3,7 +3,7 @@ export const AVAILABLE_FORMATIONS = {
     '3-4-1-2': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC'], ['ATT', 'ATT'] ],
     '3-4-2-1': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC', 'COC'], ['ATT'] ],
     '3-4-3': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['AS', 'ATT', 'AD'] ],
-    '3-4-3 Rombo': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CDC', 'COC', 'ED'], ['AS', 'ATT', 'AD'] ],
+    '3-4-3 Rombo': [ ['POR'], ['DC', 'DC', 'DC'], ['CDC'], ['ES', 'ED'], ['COC'], ['AS', 'ATT', 'AD'] ],
     '3-5-2': [ ['POR'], ['DC', 'DC', 'DC'], ['CDC', 'CDC'], ['ES', 'COC', 'ED'], ['ATT', 'ATT'] ],
     '4-1-2-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC'], ['CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
     '4-1-3-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC'], ['ES', 'CC', 'ED'], ['ATT', 'ATT'] ],
