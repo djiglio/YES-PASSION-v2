@@ -472,7 +472,7 @@ export class MultiplayerDraftUI {
                         </div>
                     </div>
                     ${isBudget ? `
-                    <div class="budget-container" style="margin-bottom: 15px; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <div class="budget-container" style="margin-bottom: 15px;">
                         <div class="budget-bar-container">
                             <div class="budget-fill" style="background: ${budgetColor}; width: ${remainingPercent}%;"></div>
                         </div>
