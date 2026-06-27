@@ -152,12 +152,12 @@ export class MatchEngine {
         
         const ratio = attackPower / defensePower;
         
-        // Increase the exponent to make the strong teams dominate weak teams more consistently
+        // Use realistic base goals and moderate exponent scaling for realistic football results
         let expectedGoals;
         if (ratio >= 1) {
-            expectedGoals = 5.4 * Math.pow(ratio, 4); // Stronger team scores much more
+            expectedGoals = 1.4 * Math.pow(ratio, 2.5); // Stronger team scores reasonably more
         } else {
-            expectedGoals = 5.4 * Math.pow(ratio, 5); // Weaker team scores much less
+            expectedGoals = 1.4 * Math.pow(ratio, 3); // Weaker team scores less
         }
         
         // Add a bit of random match-day variance (-0.2 to +0.2 xG)
