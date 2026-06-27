@@ -187,12 +187,12 @@ class GameApp {
 
         content.innerHTML = `
             <div class="setup-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
-                <img src="assets/logo.png" alt="Yes Passion Logo" style="max-width: 300px; margin-bottom: 1rem; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));">
+                <img src="assets/logo.png" alt="Yes Passion Logo" style="max-width: 200px; margin-bottom: 1rem; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));">
                 <h1 class="setup-title" style="margin-bottom: 0.5rem; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.3); font-size: 1.5rem; letter-spacing: 2px;">BENTORNATO, <span id="display-username">${this.authUI.profile?.username?.toUpperCase() || 'MANAGER'}</span></h1>
                 
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; margin-bottom: 3rem;">
-                    <button id="btn-edit-user" class="btn btn-secondary" style="width: 220px; padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">MODIFICA PROFILO</button>
-                    <button id="btn-leaderboard" class="btn btn-primary" style="width: 220px; padding: 0.5rem 1rem; font-size: 0.9rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">CLASSIFICHE</button>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <button id="btn-edit-user" class="btn btn-secondary" style="width: 200px; padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">MODIFICA PROFILO</button>
+                    <button id="btn-leaderboard" class="btn btn-primary" style="width: 200px; padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; color: white;">CLASSIFICHE</button>
                 </div>
 
                 <div id="profile-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,20,50,0.8); backdrop-filter: blur(10px); z-index: 1000; justify-content: center; align-items: center;">
@@ -221,21 +221,21 @@ class GameApp {
                     </div>
                 </div>
 
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">Seleziona una modalità di gioco</p>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 1rem; font-size: 1rem;">Seleziona una modalità di gioco</p>
                 
-                <div class="setup-modes" style="max-width: 800px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="setup-modes" style="max-width: 800px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
                     
-                    <button id="btn-sp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease;">
-                        <span style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.8rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));">SINGLE PLAYER</span>
-                        <span style="color: #cbd5e1; font-size: 1rem;">Gioca da solo e competi nelle Leaderboard Globali.</span>
+                    <button id="btn-sp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 1.2rem 1rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; transition: all 0.3s ease;">
+                        <span style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.4rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));">SINGLE PLAYER</span>
+                        <span style="color: #cbd5e1; font-size: 0.85rem;">Gioca da solo e competi nelle Leaderboard.</span>
                     </button>
                     
-                    <button id="btn-mp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease;">
-                        <span style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.8rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));">MULTIPLAYER</span>
-                        <span style="color: #cbd5e1; font-size: 1rem;">Crea o unisciti a una lobby con i tuoi amici (Fino a 4 giocatori).</span>
+                    <button id="btn-mp" class="cl-card" style="width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); padding: 1.2rem 1rem; border-radius: 16px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; transition: all 0.3s ease;">
+                        <span style="background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; font-size: 1.4rem; letter-spacing: 2px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));">MULTIPLAYER</span>
+                        <span style="color: #cbd5e1; font-size: 0.85rem;">Crea o unisciti a una lobby con gli amici.</span>
                     </button>
                     
-                    <button id="btn-logout" class="btn btn-secondary" style="margin-top: 2rem; width: 200px; margin-left: auto; margin-right: auto; display: block; border-radius: 20px; background: rgba(239, 68, 68, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(239, 68, 68, 0.3); box-shadow: 0 4px 15px rgba(0,0,0,0.2); color: #ef4444; transition: all 0.3s ease;">Logout</button>
+                    <button id="btn-logout" class="btn btn-secondary" style="margin-top: 1rem; padding: 0.4rem 1rem; font-size: 0.8rem; width: 120px; margin-left: auto; margin-right: auto; display: block; border-radius: 20px; background: rgba(239, 68, 68, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(239, 68, 68, 0.3); box-shadow: 0 4px 15px rgba(0,0,0,0.2); color: #ef4444; transition: all 0.3s ease;">Logout</button>
                 </div>
             </div>
         `;
