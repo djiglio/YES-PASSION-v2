@@ -1,11 +1,24 @@
 export const AVAILABLE_FORMATIONS = {
-    '4-4-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['ES', 'CC', 'CC', 'ED'], ['ATT', 'ATT'] ],
-    '4-3-3': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['AS', 'ATT', 'AD'] ],
-    '3-5-2': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC'], ['ATT', 'ATT'] ],
-    '3-4-3': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['AT', 'ATT', 'AT'] ],
-    '4-2-3-1': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'COC', 'AD'], ['ATT'] ],
-    '5-3-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CDC', 'CC'], ['ATT', 'ATT'] ],
-    '4-2-4': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['AS', 'ATT', 'ATT', 'AD'] ]
+    '3-1-4-2': [ ['POR'], ['DC', 'DC', 'DC'], ['CDC'], ['ES', 'CC', 'CC', 'ED'], ['ATT', 'ATT'] ],
+    '3-4-1-2': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC'], ['ATT', 'ATT'] ],
+    '3-4-2-1': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['COC', 'COC'], ['ATT'] ],
+    '3-4-3': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CC', 'CC', 'ED'], ['AS', 'ATT', 'AD'] ],
+    '3-4-3 Rombo': [ ['POR'], ['DC', 'DC', 'DC'], ['ES', 'CDC', 'COC', 'ED'], ['AS', 'ATT', 'AD'] ],
+    '3-5-2': [ ['POR'], ['DC', 'DC', 'DC'], ['CDC', 'CDC'], ['ES', 'COC', 'ED'], ['ATT', 'ATT'] ],
+    '4-1-2-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC'], ['CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
+    '4-1-3-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC'], ['ES', 'CC', 'ED'], ['ATT', 'ATT'] ],
+    '4-1-4-1': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC'], ['ES', 'CC', 'CC', 'ED'], ['ATT'] ],
+    '4-2-3-1': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['COC', 'AT', 'COC'], ['ATT'] ],
+    '4-2-3-1 Largo': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CDC', 'CDC'], ['ES', 'COC', 'ED'], ['ATT'] ],
+    '4-2-4': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC'], ['AS', 'ATT', 'ATT', 'AD'] ],
+    '4-3-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
+    '4-3-3': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['AS', 'ATT', 'AD'] ],
+    '4-3-3 Falso 9': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['AS', 'AT', 'AD'] ],
+    '5-1-2-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CDC'], ['CC', 'CC'], ['ATT', 'ATT'] ],
+    '5-2-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
+    '5-2-3': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CC'], ['AS', 'ATT', 'AD'] ],
+    '5-4-1': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['ES', 'CC', 'CC', 'ED'], ['ATT'] ],
+    '5-3-1-1': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['AT'], ['ATT'] ]
 };
 
 export class MatchEngine {
