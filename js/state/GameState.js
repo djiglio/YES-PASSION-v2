@@ -247,9 +247,17 @@ export class GameState {
             for (let i = 0; i < n / 2; i++) {
                 let home = teamIds[i];
                 let away = teamIds[n - 1 - i];
-                // Alternate home/away for the first element
-                if (i === 0 && round % 2 === 1) {
-                    [home, away] = [away, home];
+                
+                // For the fixed element (index 0), alternate every round
+                if (i === 0) {
+                    if (round % 2 === 1) {
+                        [home, away] = [away, home];
+                    }
+                } else {
+                    // For the rotating elements, alternate based on index to avoid long streaks
+                    if (i % 2 === 1) {
+                        [home, away] = [away, home];
+                    }
                 }
                 matchday.push({ home, away });
             }
@@ -258,10 +266,10 @@ export class GameState {
             teamIds.splice(1, 0, teamIds.pop());
         }
 
-        // Second half of the season (reverse home/away AND reverse matchday order)
+        // Second half of the season (reverse home/away, same matchday order)
         let secondHalf = schedule.map(matchday => 
             matchday.map(match => ({ home: match.away, away: match.home }))
-        ).reverse();
+        );
 
         return schedule.concat(secondHalf);
     }
