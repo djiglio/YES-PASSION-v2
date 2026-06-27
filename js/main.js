@@ -211,11 +211,15 @@ class GameApp {
                                 <label style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.3rem; display: block;">Cambio Password (Opzionale)</label>
                                 <div style="position: relative; margin-bottom: 0.5rem;">
                                     <input type="password" id="input-password" placeholder="Nuova password" style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
-                                    <span onclick="const x=document.getElementById('input-password'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                                    <span onclick="const x=document.getElementById('input-password'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none; display: flex; align-items: center;" title="Mostra/Nascondi Password">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </span>
                                 </div>
                                 <div style="position: relative;">
                                     <input type="password" id="input-password-confirm" placeholder="Conferma nuova password" style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white;">
-                                    <span onclick="const x=document.getElementById('input-password-confirm'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                                    <span onclick="const x=document.getElementById('input-password-confirm'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none; display: flex; align-items: center;" title="Mostra/Nascondi Password">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </span>
                                 </div>
                             </div>
                             <div style="display: flex; gap: 1rem; margin-top: 1rem;">

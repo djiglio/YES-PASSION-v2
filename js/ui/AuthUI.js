@@ -114,13 +114,17 @@ export class AuthUI {
                     <input type="email" id="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
                     <div style="position: relative;">
                         <input type="password" id="password" placeholder="Password" required style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
-                        <span onclick="const x=document.getElementById('password'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                        <span onclick="const x=document.getElementById('password'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none; display: flex; align-items: center;" title="Mostra/Nascondi Password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </span>
                     </div>
                     
                     ${this.isRegisterMode ? `
                     <div style="position: relative;">
                         <input type="password" id="password-confirm" placeholder="Conferma Password" required style="width: 100%; padding: 0.8rem; padding-right: 2.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); color: white; outline: none; font-family: inherit;">
-                        <span onclick="const x=document.getElementById('password-confirm'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none;" title="Mostra/Nascondi Password">👁️</span>
+                        <span onclick="const x=document.getElementById('password-confirm'); x.type=x.type==='password'?'text':'password'; this.style.opacity=x.type==='password'?'0.5':'1';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: white; opacity: 0.5; user-select: none; display: flex; align-items: center;" title="Mostra/Nascondi Password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </span>
                     </div>
                     ` : ''}
 
