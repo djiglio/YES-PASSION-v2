@@ -112,13 +112,13 @@ export class DraftUI {
                     <button class="btn" id="btn-custom-confirm" style="margin-top: 1rem;">Conferma Personalizzazione</button>
                 </div>
             </div>
-            </div>
 
-            <div id="formation-selection" style="display: none; text-align: center; margin-top: 2rem;">
+            <div id="formation-selection" style="display: none; text-align: center;">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">SELEZIONA IL MODULO PER INIZIARE</h3>
                 <div class="formation-accordion" id="formation-accordion-container">
                     <!-- Generato via JS -->
                 </div>
+            </div>
             </div>
         `;
         this.container.innerHTML = html;
