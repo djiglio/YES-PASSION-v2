@@ -8,6 +8,7 @@ export const GAME_PHASES = {
 
 export class GameState {
     constructor() {
+        this.id = 'sp_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
         this.phase = GAME_PHASES.INIT;
         this.history = [];
         this.userTeam = {

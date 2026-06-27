@@ -351,10 +351,13 @@ export class SeasonUI {
         const finalPosition = this.state.standings.findIndex(t => t.isUser) + 1;
         const topStats = this.state.getTopStats();
         const isBudget = this.state.gameMode === 'budget';
-        // Push stats to Supabase if logged in, but only once
+        // Push stats to Supabase if logged in, but only once per run ID
         const { data: { session } } = await supabase.auth.getSession();
-        if (session && session.user && !this.statsSaved) {
+        const claimedKey = `stats_claimed_${this.state.id}`;
+
+        if (session && session.user && !this.statsSaved && !localStorage.getItem(claimedKey)) {
             this.statsSaved = true;
+            localStorage.setItem(claimedKey, 'true');
             await StatsEngine.updateSeasonStats(session.user.id, false, isBudget, {
                 isAbandon: false,
                 position: finalPosition,
