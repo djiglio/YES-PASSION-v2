@@ -155,9 +155,9 @@ export class MatchEngine {
         // Use realistic base goals and moderate exponent scaling for realistic football results
         let expectedGoals;
         if (ratio >= 1) {
-            expectedGoals = 1.4 * Math.pow(ratio, 2.5); // Stronger team scores reasonably more
+            expectedGoals = 5.0 * Math.pow(ratio, 2.5); // Stronger team scores reasonably more
         } else {
-            expectedGoals = 1.4 * Math.pow(ratio, 3); // Weaker team scores less
+            expectedGoals = 5.0 * Math.pow(ratio, 3); // Weaker team scores less
         }
         
         // Add a bit of random match-day variance (-0.2 to +0.2 xG)
