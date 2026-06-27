@@ -473,13 +473,10 @@ export class MultiplayerDraftUI {
                     </div>
                     ${isBudget ? `
                     <div class="budget-container" style="margin-bottom: 15px; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
-                        <div class="budget-bar" style="width: 100%; height: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; position: relative;">
-                            <div class="budget-fill" style="height: 100%; background: ${budgetColor}; width: ${remainingPercent}%; transition: width 0.3s ease, background 0.3s ease;"></div>
+                        <div class="budget-bar-container">
+                            <div class="budget-fill" style="background: ${budgetColor}; width: ${remainingPercent}%;"></div>
                         </div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.9rem;">
-                            <span style="color: white;">Rimanenti: <b>€${((budgetMax - mySpent)/1000000).toFixed(1)}M</b></span>
-                            <span style="color: var(--text-muted);">/ €${(budgetMax/1000000).toFixed(0)}M</span>
-                        </div>
+                        <span class="budget-text-below">Budget: ${((budgetMax - mySpent)/1000000).toFixed(1)}M / ${(budgetMax/1000000).toFixed(1)}M</span>
                     </div>` : ''}
                     
                     ${carouselHtml}
