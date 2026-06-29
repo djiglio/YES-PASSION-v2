@@ -555,7 +555,10 @@ export class MultiplayerDraftUI {
 
                 if (window.innerWidth <= 1024) {
                     const pitch = document.getElementById(`pitch-wrapper-${this.currentUser.id}`);
-                    if (pitch) pitch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    if (pitch) {
+                        const y = pitch.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
                 }
             });
         });

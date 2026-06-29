@@ -505,7 +505,10 @@ export class DraftUI {
                 // Auto-scroll on mobile
                 if (window.innerWidth <= 767) {
                     const pitch = this.container.querySelector('.pitch-container');
-                    if (pitch) pitch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    if (pitch) {
+                        const y = pitch.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
                 }
             });
         });
