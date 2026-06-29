@@ -554,7 +554,7 @@ export class MultiplayerDraftUI {
                 this.highlightCompatibleSlots();
 
                 if (window.innerWidth <= 1024) {
-                    const pitch = this.container.querySelector('.pitch-container');
+                    const pitch = document.getElementById(`pitch-wrapper-${this.currentUser.id}`);
                     if (pitch) pitch.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             });
