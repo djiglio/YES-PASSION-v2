@@ -193,6 +193,15 @@ export class MultiplayerDraftUI {
                 if (secondsLeft <= 5) timerEl.style.color = '#ef4444';
                 else timerEl.style.color = 'var(--text-color)';
             }
+            
+            const progressBar = document.getElementById('draft-progress-bar');
+            if (progressBar) {
+                const percent = Math.min(100, Math.max(0, (timeRemainingMs / 32000) * 100));
+                progressBar.style.width = `${percent}%`;
+                if (percent <= 20) progressBar.style.background = '#ef4444';
+                else if (percent <= 50) progressBar.style.background = '#f59e0b';
+                else progressBar.style.background = '#10b981';
+            }
 
             if (secondsLeft <= 0) {
                 const turnIndex = this.draftState.snake_order[this.draftState.current_pick_number];
@@ -491,7 +500,13 @@ export class MultiplayerDraftUI {
                         ${teamHtml}
                     </div>
                 </div>
+                </div>
             </div>
+            ${isMyTurn ? `
+                <div style="position: fixed; bottom: 0; left: 0; width: 100%; height: 6px; background: rgba(0,0,0,0.5); z-index: 1000;">
+                    <div id="draft-progress-bar" style="height: 100%; width: 100%; background: #10b981; transition: width 1s linear, background 0.3s;"></div>
+                </div>
+            ` : ''}
         `;
 
         const newCarousel = this.container.querySelector('#pitches-carousel');
@@ -980,13 +995,14 @@ export class MultiplayerDraftUI {
                 border: 1px solid rgba(255, 100, 100, 0.5);
                 box-shadow: 0 8px 32px 0 rgba(255, 0, 50, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
                 border-radius: 16px;
-                padding: 1.2rem 2.5rem;
+                padding: 0.8rem 1.5rem;
                 color: white;
                 font-weight: 800;
-                font-size: 1.3rem;
+                font-size: 1rem;
                 letter-spacing: 2px;
                 text-align: center;
                 text-transform: uppercase;
+                white-space: nowrap;
             ">
                 È IL TUO TURNO!
             </div>
