@@ -122,10 +122,10 @@ export class MatchEngine {
         
         // Attack vs Defense Power
         const homeAttackPower = (homePowers.att * 0.7 + homeMidControl * 0.3) * homeAdvantage;
-        const awayDefensePower = (awayPowers.def * 0.8 + awayPowers.gk * 0.2);
+        const awayDefensePower = (awayPowers.def * 0.7 + awayPowers.gk * 0.15 + awayMidControl * 0.15);
 
         const awayAttackPower = (awayPowers.att * 0.7 + awayMidControl * 0.3);
-        const homeDefensePower = (homePowers.def * 0.8 + homePowers.gk * 0.2) * homeAdvantage;
+        const homeDefensePower = (homePowers.def * 0.7 + homePowers.gk * 0.15 + homeMidControl * 0.15) * homeAdvantage;
 
         // Calculate goals
         let homeGoals = this.calculateGoals(homeAttackPower, awayDefensePower);
