@@ -361,7 +361,7 @@ export class MultiplayerDraftUI {
             });
 
             carouselHtml += `
-                <div class="pitch-container-wrapper" id="pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; position: relative;">
+                <div class="pitch-container-wrapper" id="pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always; position: relative;">
                     <div style="text-align: center; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: ${playerColor}; text-shadow: 0 0 5px rgba(0,0,0,0.5);">
                         ${player.profiles.username} - ${teamName}
                     </div>
@@ -848,7 +848,7 @@ export class MultiplayerDraftUI {
             });
 
             carouselHtml += `
-                <div class="pitch-container-wrapper" id="summary-pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; position: relative;">
+                <div class="pitch-container-wrapper" id="summary-pitch-wrapper-${player.user_id}" style="flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always; position: relative;">
                     <div style="text-align: center; margin-bottom: 0.5rem; font-weight: bold; font-size: 1.1rem; color: ${playerColor}; text-shadow: 0 0 5px rgba(0,0,0,0.5);">
                         ${player.profiles.username} - ${teamName}
                     </div>
