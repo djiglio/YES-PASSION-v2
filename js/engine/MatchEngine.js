@@ -14,6 +14,7 @@ export const AVAILABLE_FORMATIONS = {
     '4-3-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
     '4-3-3': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['AS', 'ATT', 'AD'] ],
     '4-3-3 Falso 9': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['CC', 'CC', 'CC'], ['AS', 'AT', 'AD'] ],
+    '4-4-2': [ ['POR'], ['TS', 'DC', 'DC', 'TD'], ['ES', 'CC', 'CC', 'ED'], ['ATT', 'ATT'] ],
     '5-1-2-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CDC'], ['CC', 'CC'], ['ATT', 'ATT'] ],
     '5-2-1-2': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CC'], ['COC'], ['ATT', 'ATT'] ],
     '5-2-3': [ ['POR'], ['TS', 'DC', 'DC', 'DC', 'TD'], ['CC', 'CC'], ['AS', 'ATT', 'AD'] ],
